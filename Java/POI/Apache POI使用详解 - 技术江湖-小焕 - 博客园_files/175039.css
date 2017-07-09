@@ -1,0 +1,162 @@
+#Header1_HeaderTitle {
+	color: rgb(255, 153, 153); font-family: Verdana, Consolas, "Courier New", Arial; font-size: 32px; font-weight: bold;
+}
+.postTitle h1 {
+	padding-left: 0px; font-size: 22px;
+}
+a.postTitle2 {
+	padding: 3px; font-family: Î¢ÈíÑÅºÚ, Consolas, Arial, ËÎÌå; text-decoration: none;
+}
+a.postTitle2:hover {
+	padding: 3px; color: rgb(255, 255, 255); text-decoration: none; background-color: rgb(120, 175, 211);
+}
+#cnblogs_post_body {
+	font-family: "Courier New", Î¢ÈíÑÅºÚ, Consolas, Arial, ËÎÌå; font-size: 14px;
+}
+#navCategory {
+	font-family: "Courier New", Î¢ÈíÑÅºÚ, Consolas, Arial, ËÎÌå; font-size: 14px;
+}
+div.articleFooter {
+	font-family: "Courier New", Î¢ÈíÑÅºÚ, Consolas, Arial, ËÎÌå;
+}
+#cnblogs_post_body h1 {
+	margin-top: 24px; margin-bottom: 12px;
+}
+#cnblogs_post_body h2 {
+	margin-top: 24px; margin-bottom: 12px;
+}
+#cnblogs_post_body h3 {
+	margin-top: 24px; margin-bottom: 12px;
+}
+#cnblogs_post_body h1 {
+	background: rgb(77, 169, 194); margin: 15px 0px !important; padding: 5px 0px 5px 20px; border-radius: 6px; height: 25px; color: rgb(255, 255, 255); line-height: 25px; font-family: "Microsoft Yahei", "ËÎÌå", Arial; font-size: 28px;
+}
+#cnblogs_post_body h2 {
+	background: rgb(77, 169, 194); margin: 15px 0px !important; padding: 5px 0px 5px 20px; border-radius: 6px; height: 25px; color: rgb(255, 255, 255); line-height: 25px; font-family: "Microsoft Yahei", "ËÎÌå", Arial; font-size: 28px;
+}
+#cnblogs_post_body pre {
+	margin: 0px; font-family: "Courier New", Consolas; font-size: 10pt;
+}
+#cnblogs_post_body pre.code {
+	border-width: 2px 2px 2px 5px; border-style: solid; border-color: rgb(240, 240, 255) rgb(240, 240, 255) rgb(240, 240, 255) rgb(176, 216, 255); padding: 8px; font-family: "Courier New", Î¢ÈíÑÅºÚ, Consolas, Arial, ËÎÌå; background-color: rgb(247, 247, 255);
+}
+#cnblogs_post_body pre.msdnStyle {
+	padding: 5px; border: 2px solid rgb(240, 240, 255); font-family: "Courier New", Î¢ÈíÑÅºÚ, Consolas, Arial, ËÎÌå; background-color: rgb(247, 247, 255);
+}
+#cnblogs_post_body p {
+	padding: 0px; line-height: 180%;
+}
+#cnblogs_post_body .spaceLine {
+	margin: 0px; padding: 0px; height: 10px;
+}
+div#information {
+	padding: 5px 10px 0px; border: 1px solid rgb(232, 231, 208); color: rgb(102, 102, 102); margin-top: -15px; margin-bottom: 30px; min-height: 10px; background-color: rgb(248, 248, 238);
+}
+.redText {
+	color: rgb(255, 0, 0);
+}
+.blodText {
+	font-weight: bold;
+}
+.x-largeText {
+	font-size: x-large;
+}
+#cnblogs_post_body a {
+	padding: 1px 2px; color: rgb(91, 157, 202); text-decoration: none;
+}
+#cnblogs_post_body a:hover {
+	padding: 1px 2px; color: rgb(255, 255, 255); background-color: rgb(120, 175, 211);
+}
+span.link7z {
+	background: url("data:image/gif;base64,R0lGODlhEAAOALMJAN3d3QQEBP/Mmf//zJmZAMzMZv//mf///wAAgP///wAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAAkALAAAAAAQAA4AAARMMMmJqr2SaIKO/x6SEMAwGN1xdQhRvG/6VSph3rKatqfhy7SQzfebAYdE4LFXBM2Qv9UFKjBUr4JCYDS4Wr+CsHYEK5vHiYB6zWYnIgA7") no-repeat 0px 0px; padding-left: 20px;
+}
+#cnblogs_post_body th {
+	text-align: left;
+}
+#blog_post_info_block a {
+	padding: 3px; color: rgb(91, 157, 202); text-decoration: none;
+}
+#blog_post_info_block a:hover {
+	padding: 3px; color: rgb(255, 255, 255); text-decoration: none; background-color: rgb(120, 175, 211);
+}
+#cnblogs_post_body ul {
+	margin: 0px; padding-left: 20px;
+}
+.icon_expand {
+	background: url("data:image/gif;base64,R0lGODlhEAAQAKIEAMjIwWaZzP//+wAAAAAAAAAAAAAAAAAAACH5BAEAAAQALAAAAAAQABAAAAMxSLrc/jDKqUC4OIAXhP9CwH3HJzqdVwrWeLxvi5Ks3GgAcOQ2g/O5U8OSuWwoyOQkAQA7") no-repeat 0px 0px; padding-left: 16px;
+}
+.icon_collapse {
+	background: url("data:image/gif;base64,R0lGODlhEAAQAKIEAMjIwWaZzP//+QAAAAAAAAAAAAAAAAAAACH5BAEAAAQALAAAAAAQABAAAAMsSLrc/jDKqUC4OIAXhP9CwIGf6HSkNR4sq57p22hAbZuzreOMlV0binA4SQAAOw==") no-repeat 0px 0px; padding-left: 16px;
+}
+.icon_smile {
+	background: url("data:image/gif;base64,R0lGODlhEAAQAOZ/AMiYGPPcpfC4JMCkMLigNO7OZ1QkFPTlrmhAFOzo7erm0fnz3UwYDO7ky/jYOKhQIOCoHui4INCWMGA4EPDAKPDIKPDQQMCoQPDAMPjwSPDQOPj4UODY0Ojg4OCwKMioQNigIPjoUPjwQN/m7fjQMPz13ui4MLiYQNioINvXyuPe0ciIJPjQOLhoKOiwGNioGMq8lciwSPj4WNvh5/r79fbed8CgQPv03dioKL6fV7igSPDAONiwMNHCnNjQyMiAKOTp7uC4MLBgINjAOLiQIOCwIPjQQObs9OiwKOi4KOXWv6hQGMCQHOXYw+/y9NjQ0PDAIPDYWNjQwOXGZufIaNjAQPDYQMiwUPjYQMigKMCoSPDz9PX48/rz9aiQKNigMLiYOPjoQM/BtODY2LeXULafV9CQIL+fWL2lXvbWb/DIMNCwOMiIMNi4MOvl2NTGlvjIKNnKnNzXy/Ht2dCwWNy1XsWlXsCoUPToZPjYMPjgSOiwIPjwUPjoSPjgQP///yH5BAEAAH8ALAAAAAAQABAAAAfxgH+CfzQlBwUFASVdg403NRp+fX0OalRuW40NViIyfCGTYXlBSk6CCxZ4MRd4fH1RFx8WHgp/XGkiV1Icd3wZWmM+H1B0CQsaGwRPHTp8fCcdHGAkKAoHfskGDCe+XgwGNnAQbwV6fGsIEwOgAxMIWRR7ZwV+enpVQ/Z+Rm08GAJ7ygRgUW+SHz9YHDggQSECCBhzMBxsIWGHHwcmVgiJsIdJigRTKjj48oCNBAk/HpgR8ILMjD8KPFQwIeHBgyUPVkBw4XFQExwRkCTZU2QPBAhExIwYdMRNHRAQ9uxBASCHnKWN/iRQEMcOmh4qgDQKBAA7") no-repeat 0px 0px; padding-left: 16px;
+}
+.icon_favorite {
+	background: url("data:image/gif;base64,R0lGODlhEAAQAOZLAK+HMu7er7iNGdGiC//SFEJAPqyFQsyyffDlhu67Af/PCuu9Dv/8kT9ETql/N//9lK+IOP/zdv/iQv/wbP/ZKENJWENKWmpRJ//cQ3NfP//XIf/lUv/jRP/OBv/MAP/cMbyVMv/hP+vgx//TFf/4iP/xp/bptLuZVfPYRv/WIP/WHv/rXf/fOf/RDv/mcYVzV//pV//0ef/uZ//eNv/mTqt/Htq6XauEQsytP//qif/MAv7wsruPFv/ycfzgR//bLf/NA09RWKh6LN3GiP/9qUpQXv/SEu7OOMykInd3d5tqCP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAEsALAAAAAAQABAAAAeegEuCg0tKhIeHSoqIjEpHhoyESgAUAJCRhQJGApeSiooDOgOfi4UIAagHGAooByIBJghKSUoDEgwyMx0qMAwTHwmWSUtJAAshGkAsPQ8bPBcVw4JJLzgEIzQkMTUFFtKDSUMePxEPKwIN34NKLi0+NkQcC0HqgkoEKUIFJzkKEBCJdiS4kS4JiBJIHKhTIiBDkW8GDCg8lKQiRYtLAgEAOw==") no-repeat 0px 0px; padding-left: 16px;
+}
+#cnblogs_post_body p.msdnRef {
+	padding: 15px; border: 1px solid rgb(153, 204, 255); background-color: rgb(230, 242, 255);
+}
+#cnblogs_post_body p.console {
+	padding: 15px; border: 1px solid rgb(192, 192, 192); color: rgb(0, 51, 0); font-family: "Courier New", Consolas; font-size: 10pt; background-color: rgb(234, 234, 234);
+}
+#cnblogs_post_body pre.console {
+	padding: 15px; border: 1px solid rgb(192, 192, 192); color: rgb(0, 51, 0); font-family: "Courier New", Consolas; font-size: 10pt; background-color: rgb(234, 234, 234);
+}
+#cnblogs_post_body .articleFooter {
+	padding: 15px; border: 2px solid rgb(255, 191, 191); background-color: rgb(255, 247, 220);
+}
+#right_content {
+	margin: 0px; width: 96%;
+}
+#side_ing_block ul li {
+	background: rgb(255, 255, 255); padding: 0px;
+}
+#side_ing_block ul li a.ing_lnk {
+	color: rgb(204, 204, 204);
+}
+#post_next_prev {
+	line-height: 1.8; font-size: 14px;
+}
+#div_digg {
+	padding: 8px 8px 8px 10px; border: 1px solid rgb(217, 219, 225); right: -20px; bottom: 0px; position: fixed; background-color: rgb(255, 255, 255);
+}
+#navCategory p {
+	font-size: 12pt; margin-bottom: 0px;
+}
+#navCategory ul {
+	margin: 0px 0px 30px; padding: 0px 0px 0px 30px;
+}
+#navCategory ul li {
+	margin: 0px; padding: 3px;
+}
+#cnblogs_post_body table {
+	margin: 0px; border: 0px currentColor;
+}
+#cnblogs_post_body th {
+	border: 0px currentColor;
+}
+#cnblogs_post_body td {
+	border: 0px currentColor;
+}
+.feedbackItem {
+	padding: 5px 10px; border: 1px dashed rgb(103, 103, 103); line-height: 150%; margin-top: 20px; margin-bottom: 5px; background-color: rgb(250, 250, 255);
+}
+#cnblogs_post_body a.nopadding {
+	padding: 0px;
+}
+#cnblogs_post_body a.nopadding:hover {
+	background-color: rgb(255, 255, 255);
+}
+#cnblogs_post_body table.MyTable {
+	border-collapse: separate; background-color: rgb(192, 192, 192);
+}
+#cnblogs_post_body table.MyTable td {
+	padding: 3px; border-collapse: separate; background-color: rgb(255, 255, 255);
+}
+#cnblogs_post_body table.MyTable thead td {
+	background-color: rgb(216, 216, 216);
+}
+div.feedbackCon img {
+	display: none;
+}

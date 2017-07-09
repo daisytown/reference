@@ -1,0 +1,447 @@
+.hljs {
+	background: rgb(240, 240, 240); padding: 0.5em; display: block;
+}
+.hljs {
+	color: black;
+}
+.hljs-subst {
+	color: black;
+}
+.hljs-tag .hljs-title {
+	color: black;
+}
+.lisp .hljs-title {
+	color: black;
+}
+.clojure .hljs-built_in {
+	color: black;
+}
+.nginx .hljs-title {
+	color: black;
+}
+.hljs-string {
+	color: rgb(136, 0, 0);
+}
+.hljs-title {
+	color: rgb(136, 0, 0);
+}
+.hljs-constant {
+	color: rgb(136, 0, 0);
+}
+.hljs-parent {
+	color: rgb(136, 0, 0);
+}
+.hljs-tag .hljs-value {
+	color: rgb(136, 0, 0);
+}
+.hljs-rules .hljs-value {
+	color: rgb(136, 0, 0);
+}
+.hljs-rules .hljs-value .hljs-number {
+	color: rgb(136, 0, 0);
+}
+.hljs-preprocessor {
+	color: rgb(136, 0, 0);
+}
+.hljs-pragma {
+	color: rgb(136, 0, 0);
+}
+.haml .hljs-symbol {
+	color: rgb(136, 0, 0);
+}
+.ruby .hljs-symbol {
+	color: rgb(136, 0, 0);
+}
+.ruby .hljs-symbol .hljs-string {
+	color: rgb(136, 0, 0);
+}
+.hljs-aggregate {
+	color: rgb(136, 0, 0);
+}
+.hljs-template_tag {
+	color: rgb(136, 0, 0);
+}
+.django .hljs-variable {
+	color: rgb(136, 0, 0);
+}
+.smalltalk .hljs-class {
+	color: rgb(136, 0, 0);
+}
+.hljs-addition {
+	color: rgb(136, 0, 0);
+}
+.hljs-flow {
+	color: rgb(136, 0, 0);
+}
+.hljs-stream {
+	color: rgb(136, 0, 0);
+}
+.bash .hljs-variable {
+	color: rgb(136, 0, 0);
+}
+.apache .hljs-tag {
+	color: rgb(136, 0, 0);
+}
+.apache .hljs-cbracket {
+	color: rgb(136, 0, 0);
+}
+.tex .hljs-command {
+	color: rgb(136, 0, 0);
+}
+.tex .hljs-special {
+	color: rgb(136, 0, 0);
+}
+.erlang_repl .hljs-function_or_atom {
+	color: rgb(136, 0, 0);
+}
+.asciidoc .hljs-header {
+	color: rgb(136, 0, 0);
+}
+.markdown .hljs-header {
+	color: rgb(136, 0, 0);
+}
+.coffeescript .hljs-attribute {
+	color: rgb(136, 0, 0);
+}
+.smartquote {
+	color: rgb(136, 136, 136);
+}
+.hljs-comment {
+	color: rgb(136, 136, 136);
+}
+.hljs-annotation {
+	color: rgb(136, 136, 136);
+}
+.hljs-template_comment {
+	color: rgb(136, 136, 136);
+}
+.diff .hljs-header {
+	color: rgb(136, 136, 136);
+}
+.hljs-chunk {
+	color: rgb(136, 136, 136);
+}
+.asciidoc .hljs-blockquote {
+	color: rgb(136, 136, 136);
+}
+.markdown .hljs-blockquote {
+	color: rgb(136, 136, 136);
+}
+.hljs-number {
+	color: rgb(0, 136, 0);
+}
+.hljs-date {
+	color: rgb(0, 136, 0);
+}
+.hljs-regexp {
+	color: rgb(0, 136, 0);
+}
+.hljs-literal {
+	color: rgb(0, 136, 0);
+}
+.hljs-hexcolor {
+	color: rgb(0, 136, 0);
+}
+.smalltalk .hljs-symbol {
+	color: rgb(0, 136, 0);
+}
+.smalltalk .hljs-char {
+	color: rgb(0, 136, 0);
+}
+.go .hljs-constant {
+	color: rgb(0, 136, 0);
+}
+.hljs-change {
+	color: rgb(0, 136, 0);
+}
+.lasso .hljs-variable {
+	color: rgb(0, 136, 0);
+}
+.makefile .hljs-variable {
+	color: rgb(0, 136, 0);
+}
+.asciidoc .hljs-bullet {
+	color: rgb(0, 136, 0);
+}
+.markdown .hljs-bullet {
+	color: rgb(0, 136, 0);
+}
+.asciidoc .hljs-link_url {
+	color: rgb(0, 136, 0);
+}
+.markdown .hljs-link_url {
+	color: rgb(0, 136, 0);
+}
+.hljs-label {
+	color: rgb(136, 136, 255);
+}
+.hljs-javadoc {
+	color: rgb(136, 136, 255);
+}
+.ruby .hljs-string {
+	color: rgb(136, 136, 255);
+}
+.hljs-decorator {
+	color: rgb(136, 136, 255);
+}
+.hljs-filter .hljs-argument {
+	color: rgb(136, 136, 255);
+}
+.hljs-localvars {
+	color: rgb(136, 136, 255);
+}
+.hljs-array {
+	color: rgb(136, 136, 255);
+}
+.hljs-attr_selector {
+	color: rgb(136, 136, 255);
+}
+.hljs-important {
+	color: rgb(136, 136, 255);
+}
+.hljs-pseudo {
+	color: rgb(136, 136, 255);
+}
+.hljs-pi {
+	color: rgb(136, 136, 255);
+}
+.haml .hljs-bullet {
+	color: rgb(136, 136, 255);
+}
+.hljs-doctype {
+	color: rgb(136, 136, 255);
+}
+.hljs-deletion {
+	color: rgb(136, 136, 255);
+}
+.hljs-envvar {
+	color: rgb(136, 136, 255);
+}
+.hljs-shebang {
+	color: rgb(136, 136, 255);
+}
+.apache .hljs-sqbracket {
+	color: rgb(136, 136, 255);
+}
+.nginx .hljs-built_in {
+	color: rgb(136, 136, 255);
+}
+.tex .hljs-formula {
+	color: rgb(136, 136, 255);
+}
+.erlang_repl .hljs-reserved {
+	color: rgb(136, 136, 255);
+}
+.hljs-prompt {
+	color: rgb(136, 136, 255);
+}
+.asciidoc .hljs-link_label {
+	color: rgb(136, 136, 255);
+}
+.markdown .hljs-link_label {
+	color: rgb(136, 136, 255);
+}
+.vhdl .hljs-attribute {
+	color: rgb(136, 136, 255);
+}
+.clojure .hljs-attribute {
+	color: rgb(136, 136, 255);
+}
+.asciidoc .hljs-attribute {
+	color: rgb(136, 136, 255);
+}
+.lasso .hljs-attribute {
+	color: rgb(136, 136, 255);
+}
+.coffeescript .hljs-property {
+	color: rgb(136, 136, 255);
+}
+.hljs-phony {
+	color: rgb(136, 136, 255);
+}
+.hljs-keyword {
+	font-weight: bold;
+}
+.hljs-id {
+	font-weight: bold;
+}
+.hljs-title {
+	font-weight: bold;
+}
+.hljs-built_in {
+	font-weight: bold;
+}
+.hljs-aggregate {
+	font-weight: bold;
+}
+.css .hljs-tag {
+	font-weight: bold;
+}
+.hljs-javadoctag {
+	font-weight: bold;
+}
+.hljs-phpdoc {
+	font-weight: bold;
+}
+.hljs-yardoctag {
+	font-weight: bold;
+}
+.smalltalk .hljs-class {
+	font-weight: bold;
+}
+.hljs-winutils {
+	font-weight: bold;
+}
+.bash .hljs-variable {
+	font-weight: bold;
+}
+.apache .hljs-tag {
+	font-weight: bold;
+}
+.go .hljs-typename {
+	font-weight: bold;
+}
+.tex .hljs-command {
+	font-weight: bold;
+}
+.asciidoc .hljs-strong {
+	font-weight: bold;
+}
+.markdown .hljs-strong {
+	font-weight: bold;
+}
+.hljs-request {
+	font-weight: bold;
+}
+.hljs-status {
+	font-weight: bold;
+}
+.asciidoc .hljs-emphasis {
+	font-style: italic;
+}
+.markdown .hljs-emphasis {
+	font-style: italic;
+}
+.nginx .hljs-built_in {
+	font-weight: normal;
+}
+.coffeescript .javascript {
+	opacity: 0.5;
+}
+.javascript .xml {
+	opacity: 0.5;
+}
+.lasso .markup {
+	opacity: 0.5;
+}
+.tex .hljs-formula {
+	opacity: 0.5;
+}
+.xml .javascript {
+	opacity: 0.5;
+}
+.xml .vbscript {
+	opacity: 0.5;
+}
+.xml .css {
+	opacity: 0.5;
+}
+.xml .hljs-cdata {
+	opacity: 0.5;
+}
+pre {
+	font-size: 13px;
+}
+pre {
+	font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; -ms-word-wrap: break-word;
+}
+code {
+	font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; -ms-word-wrap: break-word;
+}
+.pln {
+	color: rgb(72, 72, 76);
+}
+.str {
+	color: rgb(221, 17, 68);
+}
+.kwd {
+	color: rgb(30, 52, 123);
+}
+.com {
+	color: rgb(147, 161, 161);
+}
+.typ {
+	color: teal;
+}
+.lit {
+	color: rgb(25, 95, 145);
+}
+.pun {
+	color: rgb(147, 161, 161);
+}
+.opn {
+	color: rgb(147, 161, 161);
+}
+.clo {
+	color: rgb(147, 161, 161);
+}
+.tag {
+	color: rgb(0, 0, 136);
+}
+.atn {
+	color: teal;
+}
+.atv {
+	color: rgb(221, 17, 68);
+}
+.dec {
+	color: teal;
+}
+.var {
+	color: teal;
+}
+.fun {
+	color: rgb(220, 50, 47);
+}
+pre.prettyprint {
+	padding: 10px; border: 1px solid rgb(225, 225, 232); background-color: rgb(247, 247, 249); tab-size: 4;
+}
+pre.linenums.prettyprint {
+	box-shadow: inset 40px 0px 0px #fbfbfc, inset 41px 0px 0px #ececf0;
+}
+pre.linenums.prettyprint ol.linenums {
+	color: rgb(30, 52, 123); padding-left: 30px !important; margin-top: 0px; margin-bottom: 0px;
+}
+pre.linenums.prettyprint ol.linenums li {
+	color: rgb(190, 190, 197); line-height: 18px; padding-left: 12px !important;
+}
+pre.linenums.prettyprint ol.linenums li.L0 {
+	list-style-type: decimal !important;
+}
+pre.linenums.prettyprint ol.linenums li.L1 {
+	list-style-type: decimal !important;
+}
+pre.linenums.prettyprint ol.linenums li.L2 {
+	list-style-type: decimal !important;
+}
+pre.linenums.prettyprint ol.linenums li.L3 {
+	list-style-type: decimal !important;
+}
+pre.linenums.prettyprint ol.linenums li.L4 {
+	list-style-type: decimal !important;
+}
+pre.linenums.prettyprint ol.linenums li.L5 {
+	list-style-type: decimal !important;
+}
+pre.linenums.prettyprint ol.linenums li.L6 {
+	list-style-type: decimal !important;
+}
+pre.linenums.prettyprint ol.linenums li.L7 {
+	list-style-type: decimal !important;
+}
+pre.linenums.prettyprint ol.linenums li.L8 {
+	list-style-type: decimal !important;
+}
+pre.linenums.prettyprint ol.linenums li.L9 {
+	list-style-type: decimal !important;
+}
