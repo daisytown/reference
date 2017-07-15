@@ -1,1 +1,843 @@
+﻿<!DOCTYPE HTML>
+<!-- saved from url=(0038)http://lib.csdn.net/article/java/64033 -->
+<!DOCTYPE html PUBLIC "" ""><HTML><HEAD><META content="IE=11.0000" 
+http-equiv="X-UA-Compatible">
+         
+<META name="baidu-site-verification" content="HmwwEvMGyf">         
+<META http-equiv="content-type" content="text/html; charset=utf-8">         
+<META http-equiv="X-UA-Compatible" content="IE=Edge">         
+<TITLE>Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成） - Java 知识库</TITLE>       
+  
+<META name="Keywords" content="知识库,微信开发,机器学习,swift,Android,Python,Java,大数据,云计算,PHP,Ruby,C++,JavaScript"> 
+        
+<META name="Description" content="CSDN知识库，按照技术领域和知识结构对海量技术资源进行筛选整理，并通过相关机制进行审核收录。保证入库知识的系统性与优质性。并且所含技术知识图谱有清晰的学习脉络，是技术开发者完善自我知识体系、提升进阶的参照坐标"> 
+        <LINK href="/images/web/favicon.ico" rel="SHORTCUT ICON">         <LINK 
+href="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/bootstrap.css" 
 rel="stylesheet">         <LINK href="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/common.css" 
+rel="stylesheet">         <LINK href="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/icon.css" 
+rel="stylesheet">         <LINK href="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/font-awesome.min.css" 
+rel="stylesheet">         <LINK href="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/iconfont.min.css" 
+rel="stylesheet">         <LINK id="colors" href="/min/colors.min.css" rel="stylesheet"> 
+        <LINK href="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/kl_read.min.css" 
+rel="stylesheet">         
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/jquery-1.11.1.min.htm" type="text/javascript"></SCRIPT>
+         
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/bootstrap.min.js" type="text/javascript"></SCRIPT>
+         
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/statist.min.js" type="text/javascript"></SCRIPT>
+         
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/view-history.min.js" type="text/javascript"></SCRIPT>
+         <!--语法高亮-->         <LINK href="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/shCore.min.css" 
+rel="stylesheet">         <LINK href="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/shThemeDefault.min.css" 
+rel="stylesheet">         
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/shCore.min.js" type="text/javascript"></SCRIPT>
+         <!--语法高亮end-->         
+<SCRIPT type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"agent":"","beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"7dc04976a0","applicationID":"15009246","applicationTime":86.868923,"transactionName":"Z10AZEZSD0VTUExYCV4XJ0hEQQRFQVlLHiF1bE0fHhkAREZaW10DHwIMUVlWTgxbVw==","queueTime":0,"ttGuid":"1159f6dad7c00b0","agentToken":null}; window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</SCRIPT>
+     
+<META name="GENERATOR" content="MSHTML 11.00.10570.1001"></HEAD> 
+<BODY>
+<DIV id="wx_pic" style="margin: 0px auto; display: none;"><IMG src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/logos.jpg"> 
+</DIV>
+<STYLE>
+	.fine.addfine.isfine{
+		background-position: -190px -250px;
+	}
+	.fine.addfine.isfine:hover{
+		background-position: -133px -250px;
+	}
+</STYLE>
+ <LINK href="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/jquery-ui.min.css" 
+rel="stylesheet"> 
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/jquery-ui.min.js"></SCRIPT>
+ 
+<STYLE type="text/css">.ui-tooltip{background:#d7eefb!important;color:#688ca1!important;font:12px"Helvetica Neue",Sans-Serif!important;border:1px solid#99CBE7!important;padding:2px 4px!important;border-radius:2px!important;width:auto!important;box-shadow:none!important}</STYLE>
+ 
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/shBrushAppleScript.min.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/shBrushAS3.min.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/shBrushBash.min.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/shBrushColdFusion.min.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/shBrushCpp.min.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/shBrushCSharp.min.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/shBrushCss.min.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/shBrushDelphi.min.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/shBrushDiff.min.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/shBrushErlang.min.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/shBrushGroovy.min.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/shBrushJava.min.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/shBrushJavaFX.min.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/shBrushJScript.min.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/shBrushPerl.min.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/shBrushPhp.min.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/shBrushPlain.min.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/shBrushPowerShell.min.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/shBrushPython.min.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/shBrushRuby.min.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/shBrushSass.min.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/shBrushScala.min.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/shBrushSql.min.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/shBrushVb.min.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/shBrushXml.min.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/view-history.min.js" type="text/javascript"></SCRIPT>
+ <INPUT id="contentId" type="hidden" value="64033"> <INPUT id="sourceId" type="hidden" value="72577445"> 
+<INPUT id="owner" type="hidden" value="wantnrun"> 
+<INPUT id="page" type="hidden" value="1"> <INPUT id="size" type="hidden" value="10"> 
+<INPUT id="support" type="hidden" value="2"> 
+<DIV class="main clearfix">
+<DIV class="mainread">
+<DIV class="infortop clearfix"><A href="http://lib.csdn.net/base/java" target="_blank"><IMG 
+width="40" height="40" alt="" src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/1453701371636_636.jpg"></A>
+			 <SPAN class="text clearfix"><SPAN class="left"><A href="http://lib.csdn.net/base/java" 
+target="_blank">Java </A><EM>-</EM>					 <A href="http://lib.csdn.net/java/node/102" 
+target="_blank">Web应用服务器</A><EM>-</EM>					 <A href="http://lib.csdn.net/java/knowledge/218" 
+target="_blank">Web应用服务器</A>				 </SPAN>				 <SPAN class="right"><I title="阅读数" 
+class="fa fa-eye"></I><B>982</B>					 <SPAN class="addAnchor" style="cursor: pointer;"><I 
+title="评论数" class="fa fa-commenting-o"></I><B>1</B>					 </SPAN>				 </SPAN>
+			 </SPAN>		 </DIV>
+<DIV class="maincontent whitebk showbox">
+<H1>Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）</H1>
+<P class="author"><EM>作者：</EM><A href="http://my.csdn.net/wantnrun" target="_blank">wantnrun</A></P>
+<DIV class="divtexts">
+<H4 id="目的">目的</H4>
+<P>在开发中，需要经常频繁的对测试服务器进行部署，而且在多人协同中开发经常遇到的问题就是别人更新了他的代码，而你去更新你的代码时并没有更新到别人的代码，导致测试环境的代码不是最新，当然这个问题也好解决，那就是每次更新的时候先获取版本控制器上面的代码，然后更新，当然每次这样操作都是耗时耗力的，如果是整个项目更新，一般项目至少3、40M上传到服务器也需要一定的时间，而部分更新，也需要找到指定的文件或者整个代码覆盖，然后重启服务器（Tomcat里面直接覆盖class虽然可以配置热加载，但是容易内存溢出），就我工作中的情况而言，是每次都需要先把代码上传到服务器-解压-找到Tomcat进程id（Linux）-kill线程-启动Tomcat，每次下来就需要最少几分钟时间，而且每天有可能多次部署，所以对整个工作效率是有一定影响的。正是因为以上种种，所以才有了本文，而本文最终的结果就是一旦代码上传到git或者svn的时候，代码能自动部署到服务器上面去，这样我们就只需要吧正确的代码提交的版本控制器，就不用理会服务器的更新了</P>
+<H4 id="jenkins部署">jenkins部署</H4>
+<P>Jenkins是一个开源软件项目，旨在提供一个开放易用的软件平台，使软件的持续集成变成可能 
+<BR>Jenkins是基于Java开发的一种持续集成工具，用于监控持续重复的工作，功能包括： <BR>1、持续的软件版本发布/测试项目。 
+<BR>2、监控外部调用执行的工作。 <BR>(来自百度百科)</P>
+<P>Jenkins能做的东西有很多，不过本文只介绍一个简单的自动编译打包部署，首先下载Jenkins，推荐下载war包，下载地址： <BR><A href="https://jenkins.io/download/">下载主页</A></P>
+<P><A 
+href="http://mirrors.jenkins.io/war-stable/latest/jenkins.war">war包下载</A></P>
+<P>本文是基于war环境部署的，把下载好的war文件直接放到Tomcat中，然后启动Tomcat，启动成功后访问tomcat的jenkins项目如：</P>
+<P><A 
+href="http://localhost:8080/jenkins">http://localhost:8080/jenkins</A>会看到以下界面<IMG 
+title="" alt="jenkins界面" src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/20170516192602.png"> 
+<BR>
+注意红色框中的红色文字，那个是初始密码的路径，直接根据路径找到initialAdminPassword文件并打开，吧密码复制出来，输入到页面中点击continue按钮，进入下一步： 
+<BR><IMG title="" alt="选择安装界面" src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/20170517092859.png"> 
+<BR>Jenkins拥有很多插件，一般在开始我们并不清楚需要什么插件的时候，可以选择自定义安装，把所有基本的插件全部安装好，此页面第一个按钮是安装推荐插件，第二个是自己选择安装，这里我选择第二个按钮 
+<BR><IMG title="" alt="" src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/20170517095313.png"> 
+<BR>此界面是初始化安装插件的界面，先选择All插件，然后点击install <BR><IMG title="" alt="" src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/20170517095655.png">在这个界面需要多等一下，因为是在网上下载插件，而且是外国的网站，所以经常有下载失败的情况，最好打开VPN，当所有插件安装完成后会有continue按钮出现，如果没有则刷新一下页面，当然也可能存在有插件安装失败，根据自己是否需要自行选择retry或continue，这里因为我的都已经安装完成了，所以进入到了下一个页面 
+<BR><IMG title="" alt="" src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/20170517103610.png">在此页面设置用户名和密码，记得点击save 
+and finish按钮，如果选择了Continue as 
+admin，会把用户名重置admin，然后密码也是你设置的密码，而是初始化文件中的密码，设置完成之后的页面 <BR><IMG title="" alt="" 
+src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/20170517103854.png"> 
+<BR>再次点击save and Finish即可</P>
+<P>Jenkins主界面 <BR><IMG title="" alt="Jenkins主界面" src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/20170517104015.png"></P>
+<H4 id="配置jenkins">配置Jenkins</H4>
+<P>创建项目之前先要对Jenkins进行基本的配置，比如jdk的目录，git命令的目录和maven的目录等等</P>
+<P>首先点击系统管理 <BR><IMG title="" alt="点击系统管理" src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/20170517142329.png"> 
+<BR>进入管理页面后如图： <BR><IMG title="" alt="配置管理页面" src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/20170517144545.png"> 
+<BR>点击Global Tool Configuration进入插件配置页面</P>
+<H5 id="配置jdk">配置jdk</H5>
+<P><IMG title="" alt="配置jdk" src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/20170517144710.png"> 
+<BR>点击新增JDK按钮，会显示jdk配置form，如果电脑上已经安装了jdk则可以去掉自动安装，不过如果是用Tomcat运行的Jenkins那么是肯定已经安装了的，这里我们只需要配置好jdk别名和JAVA_HOME即可 
+<BR><IMG title="" alt="" src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/20170517145005.png"></P>
+<H5 id="配置git">配置git</H5>
+<P><IMG title="" alt="配置git" src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/20170517153000.png"> 
+<BR>需要将git.exe的正确路径配置到Path to Git executable中（注意Linux没有exe后缀） </P>
+<H5 id="配置maven">配置maven</H5>
+<P><IMG title="" alt="配置maven" src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/20170517155246.png"> 
+<BR>跟jdk相同，配置好名字和路径即可，当然也可以选择自动安装，不过还是推荐手动安装然后配置，配置好了之后点击save即可</P>
+<H4 id="安装插件">安装插件</H4>
+<P>由于新版默认没有将war部署到Tomcat的插件，所以需要手动安装，在系统管理中选择管理插件，再选择可选插件，搜索Deploy to container 
+Plugin，然后勾选点击直接安装</P>
+<H4 id="创建jenkins任务">创建Jenkins任务</H4>
+<P>点击开始创建一个新任务进入任务创建页面 <BR><IMG title="" alt="创建项目页面" src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/20170517111145.png"> 
+<BR>先输入项目名字，然后选择构建一个maven项目，最后点击ok按钮</P>
+<H5 id="选择版本控制器">选择版本控制器</H5>
+<P>页面中找到源码管理模块，根据项目使用的版本控制器选择，如我们使用的git，则选择git <BR><IMG title="" alt="" src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/20170520100054.png"></P>
+<H5 id="选择构建触发器">选择构建触发器</H5>
+<P>如果是git的话，可以直接通过GitLab（WebHooks）来实现触发，这样你每次提交到配置编译的分支就会git就会通知，不过目前我知道的是git.oschina.net的钩子没有作用，当然如果不是git或者钩子没有作用的时候，可以用最简单的，定时查询 
+<BR><IMG title="" alt="" src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/20170520101554.png">这样是每10分钟查询一次，如果有更新就构建，具体Poll 
+SCM的参数可以百度，那里更加详细</P>
+<H5 id="配置编译命令">配置编译命令</H5>
+<P>编译命令我们可以直接配置最简单的命令编译 <BR><IMG title="" alt="" src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/20170520102920.png"> 
+<BR>选择Execute shell，在出来的界面中配置maven命令就行了，比如</P>
+<PRE class="prettyprint"><CODE class=" hljs cmake">mvn <SPAN class="hljs-keyword">install</SPAN></CODE></PRE>
+<H5 id="配置部署到tomcat">配置部署到Tomcat</H5>
+<P>点击新增构建后操作，选择Deploy war/ear to a container，然后配置WAR/EAR 
+files，这个war的地址，一般都target/xxx.war，xxx是war的文件名</P>
+<P>然后点击Add Container，添加Tomcat服务器 <BR><IMG title="" alt="" src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/20170520105936.png"> 
+<BR>
+配置好Tomcat的管理员用户和密码以及Tomcat的访问地址就ok了，这样只要你上传了代码，并且是配置编译的分支，一般过几分钟就会自动编译然后部署到Tomcat中了，当然最好还是用git,然后通过GitLab实现，这样不仅不用每隔几分钟查询一次，而且延迟很小</P>
+<DIV class="divmark"></DIV></DIV>
+<DIV class="divcodes">
+<DIV class="pmores"><A href="http://lib.csdn.net/article/java/">展开更多<I class="fa fa-caret-down"></I></A>
+				 </DIV></DIV>
+<DIV class="pinfortext"><A href="http://blog.csdn.net/wantnrun/article/details/72577445" 
+target="_blank">查看原文&gt;&gt;</A>				 <SPAN><A title="喜欢" id="click_logo" href="javascript:void(0)"><SPAN><I 
+class="fa fa-heart-o" id="support_logo"></I></SPAN><EM>2</EM>					 </A>					
+				 </SPAN></DIV>
+<DIV class="divcontent bordertop"><SPAN class="title">看过本文的人也看了：</SPAN>				 
+<UL class="clearfix">
+  <LI><A title="Java 知识结构图" class="yellow" href="http://lib.csdn.net/base/java/structure" 
+  target="_blank"><I class="cirle"></I>								 Java 知识结构图							 </A>
+  						 </LI>
+  <LI>
+  <DIV class="csdn-tracking-statistics" data-mod="popu_248_lib_13"><A title="使用 WebSphere Studio Application Developer 集成版，版本 4.1 开发 Java 消息服务应用程序" 
+  href="http://lib.csdn.net/article/java/6137" target="_blank" contentid="6137" 
+  knid="218" basename="java"><I class="cirle"></I>									使用 WebSphere Studio 
+  Application Dev...								 </A>							 </DIV></LI>
+  <LI>
+  <DIV class="csdn-tracking-statistics" data-mod="popu_248_lib_13"><A title="Java笔记---CenOS下配置Java开发环境(OpenJDK+Tomcat8)" 
+  href="http://lib.csdn.net/article/java/17919" target="_blank" contentid="17919" 
+  knid="218" basename="java"><I class="cirle"></I>
+  									Java笔记---CenOS下配置Java开发环境...								 </A>							 </DIV></LI>
+  <LI>
+  <DIV class="csdn-tracking-statistics" data-mod="popu_248_lib_13"><A title="Java动态代理的两种实现方法" 
+  href="http://lib.csdn.net/article/java/63500" target="_blank" contentid="63500" 
+  knid="218" basename="java"><I class="cirle"></I>									 Java动态代理的两种实现方法
+  								 </A>							 </DIV></LI>
+  <LI>
+  <DIV class="csdn-tracking-statistics" data-mod="popu_248_lib_13"><A title="RHEL环境搭建--Nginx|Tomcat|Java|Dubbo|RabbitMQ|Redis|Nexus|MySQL" 
+  href="http://lib.csdn.net/article/java/4835" target="_blank" contentid="4835" 
+  knid="218" basename="java"><I class="cirle"></I>
+  									 RHEL环境搭建--Nginx|Tomcat|Java|Dubb...								 </A>							 </DIV></LI>
+  <LI>
+  <DIV class="csdn-tracking-statistics" data-mod="popu_248_lib_13"><A title="GlassFish：开源的Java EE应用服务器 （转自CSDN读书社区）" 
+  href="http://lib.csdn.net/article/java/5075" target="_blank" contentid="5075" 
+  knid="218" basename="java"><I class="cirle"></I>									GlassFish：开源的Java 
+  EE应用服务器 ...								 </A>							 </DIV></LI></UL>
+<DIV class="clearfix"></DIV></DIV></DIV>
+<DIV class="comments">
+<DIV class="commentdiv"><A name="focustext" id="focustext"></A>				 <SPAN class="title01">发表评论</SPAN>
+				 
+<DIV class="textdiv"><TEXTAREA placeholder="输入评论内容">输入评论内容</TEXTAREA>				 </DIV>
+<DIV 
+class="subdiv"><INPUT onclick="toPassport();return false;" type="submit" value="发表">
+									 </DIV></DIV>
+<DIV class="replaydiv">
+<P class="ptitles"><EM>1</EM>个评论				 </P>
+<UL class="listreplays clearfix bottomxian" id="comment_list">
+  <LI class="clearfix"><A class="photos" href="http://my.csdn.net/sunhuaqiang1" 
+  target="_blank"><IMG width="50" height="50" alt="" src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/4_sunhuaqiang1.jpg">
+  		 </A>		 
+  <DIV class="text"><A href="http://my.csdn.net/sunhuaqiang1" 
+  target="_blank">sunhuaqiang1</A>			 
+  <P class="pcontent">
+  				CSDN博友你好，我是孙华强，现将此篇博文收录进“Java知识库”。CSDN现在在做CSDN博客专栏评选活动，若你感觉我写的博文内容还可以，对你有帮助，请投上你宝贵的一票，愿与君共勉，谢谢。技术问题，可与君探讨~请投票给《Python3进阶》和《JVM进阶》两大专栏，谢谢~（投票地址：https://wj.qq.com/s/1375474/9b8e）
+  			 </P>
+  <P class="editext clearfix"><SPAN class="date">2017-05-21 08:33:35</SPAN><A 
+  onclick="showOrHide(this);return false;" href="javascript:void(0)" parent_id="6847486">回复</A>
+  			 </P>
+  <DIV class="replayinfor" style="display: none;">
+  <DIV class="replaydiv">
+  <DIV class="jiao"></DIV><TEXTAREA></TEXTAREA>				 </DIV>
+  <DIV class="replaybtn"><BUTTON class="replaybtns" onclick="setComment(this)" 
+  parent_id="6847486" parent_name="sunhuaqiang1">回复</BUTTON>
+  				 </DIV></DIV></DIV></LI>
+<SCRIPT>
+	$('.replaybtns').click(function(e){
+		$(this);
+	})
+</SCRIPT>
+  				 </UL></DIV></DIV></DIV>
+<DIV class="fixedyjfk dynamicollect">
+<DIV class="fxd"><A class="fx fxh" href="javascript:void(0);"></A>
+<DIV class="wicon moveshow kl_spread">
+<DIV class="bdsharebuttonbox"><A class="weibo  bds_tsina bds_mid fa fa-weibo wb" 
+data-cmd="tsina"></A><A class="weixin bds_weixin bds_mid fa fa-weixin wx" 
+data-cmd="weixin"></A></DIV>
+<SCRIPT>
+	                window._bd_share_config = {
+	                    common: {
+	                        bdText: 'Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成） \n' + '【Java 知识库 - Web应用服务器 - Web应用服务器】\n' + 'CSDN知识库，你身边的技术百科全书',
+	                        bdDesc: 'Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）',
+	                        bdUrl: window.location.href,
+	                        bdPic : 'http://img.knowledge.csdn.net/upload/base/1453701371636_636.jpg'
+	                    },
+	                    share: [{
+	                        "bdSize": 32
+	                    }]
+	                }
+	                window._bd_share_main = 0;
+	                with (document)0[(getElementsByClassName('kl_spread')[0]).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion=' + ~(-new Date() / 36e5)];
+	            </SCRIPT>
+			 </DIV></DIV><A class="coment" 
+href="http://lib.csdn.net/article/java/"></A><A title="添加收藏" class="editbook triggerlayer collectbtn" 
+href="http://lib.csdn.net/article/java/" data-id="64033-13-218-3"></A><A class="zd" 
+href="http://lib.csdn.net/article/java/"></A>	 </DIV></DIV>
+<DIV class="windowLayer windowLayerwh borders library leavemessage">
+<DIV class="windowContent">
+<DIV class="leavewrap">
+<DIV class="layeropt">
+<DIV class="layer02top"><EM>我要留言</EM><A class="closec" href="http://lib.csdn.net/article/java/">×</A></DIV>
+<DIV class="layercontent">
+<DIV class="layerwrap">
+<P>技术领域：</P><TEXTAREA id="textarea" placeholder="请输入20字以内技术领域描述..." value="">请输入20字以内技术领域描述...</TEXTAREA><SPAN 
+class="error"><I class="fa fa-warning"></I><EM></EM></SPAN></DIV></DIV>
+<DIV class="layerbottom"><A class="subtj" href="http://lib.csdn.net/article/java/">提交</A><A 
+class="cancelbtn" 
+href="http://lib.csdn.net/article/java/">取消</A></DIV></DIV></DIV></DIV></DIV>
+<DIV class="windowLayer windowLayerwh borders library leavemessageinfor">
+<DIV class="windowContent">
+<DIV class="leavewrap">
+<DIV class="layeropt">
+<DIV class="layer02top"><EM>我要留言</EM><A class="closec" href="http://lib.csdn.net/article/java/">×</A></DIV>
+<DIV class="layercontent">
+<DIV class="layerwrap">
+<P class="infor"><I 
+class="fa fa-check-circle"></I>留言成功，我们将在审核后加至投票列表中！</P></DIV></DIV></DIV></DIV></DIV></DIV><!--留言弹框调用 END--> 
+<DIV class="windowLayer windowLayerwh kn_sub_collect">
+<DIV class="windowContent">
+<DIV class="layeropt">
+<DIV class="layer02top"><EM>收藏提示</EM><A class="closec" href="http://lib.csdn.net/article/java/">×</A></DIV>
+<DIV class="layercontent">
+<DIV class="layerwrap">
+<DIV class="collectwrap">
+<DIV class="checkradiro clearfix"></DIV></DIV>
+<DIV class="suballbtns"><A class="confrim_btn" href="http://lib.csdn.net/collection">确定收藏</A><A 
+class="add_btn" href="http://lib.csdn.net/my/create/structure" 
+target="_blank">新建图谱</A></DIV></DIV></DIV></DIV></DIV></DIV>
+<DIV class="windowLayer windowLayerwh borders collectcancel editcollects" style="display: none;">
+<DIV class="windowContent">
+<DIV class="layer02"><A class="closec" 
+href="http://lib.csdn.net/article/java/">×</A>
+<DIV class="layer02top"><EM>取消收藏</EM></DIV>
+<DIV class="layercontent">
+<DIV class="layertop noborder"><I 
+class="fa fa-question-circle"></I><EM>确定要取消收藏吗？</EM></DIV>
+<DIV class="lastbtns"><A class="addbtn addconfrim" href="http://lib.csdn.net/article/java/">确认</A><A 
+class="cancelbtn" 
+href="http://lib.csdn.net/article/java/">取消</A></DIV></DIV></DIV></DIV></DIV>
+<DIV class="windowLayer windowLayerwh collectNewLayer">
+<DIV class="windowContent">
+<DIV class="layeropt">
+<DIV class="layer02top"><EM>提示</EM><A class="closec" href="http://lib.csdn.net/article/java/">x</A></DIV>
+<DIV class="layercontent">
+<DIV class="layerwrap">
+<P class="infor"><SPAN>Java 知识库已成功保存至<A 
+href="http://lib.csdn.net/article/java/">我的图谱</A></SPAN><EM>现在你可以用它来管理自己的知识内容了</EM></P></DIV></DIV></DIV></DIV></DIV>
+<DIV class="windowLayer windowLayerwh deletemaplayer">
+<DIV class="windowContent">
+<DIV class="layeropt">
+<DIV class="layer02top"><EM>删除图谱提示</EM><A class="closec" href="http://lib.csdn.net/article/java/">×</A></DIV>
+<DIV class="layercontent">
+<DIV class="layerwrap">
+<DIV class="deletemapwrap">
+<P>你保存在该图谱下的知识内容也会被删除，建议你先将内容移到其他图谱中。你确定要删除知识图谱及其内容吗？</P></DIV>
+<DIV class="pbottom"><A class="delbutn addconfrim" href="http://lib.csdn.net/article/java/">删除</A><A 
+class="resetbtn cancelbtn" 
+href="http://lib.csdn.net/article/java/">取消</A></DIV></DIV></DIV></DIV></DIV></DIV>
+<DIV class="windowLayer windowLayerwh deletemaplayerall">
+<DIV class="windowContent">
+<DIV class="layeropt">
+<DIV class="layer02top"><EM>删除节点提示</EM><A class="closec" href="http://lib.csdn.net/article/java/">×</A></DIV>
+<DIV class="layercontent">
+<DIV class="layerwrap">
+<DIV class="deletemapwrap">
+<P>无法删除该知识节点，因该节点下仍保存有相关知识内容！</P></DIV>
+<DIV class="pbottom"><A class="confrimbutn cancelbtn" href="http://lib.csdn.net/article/java/">确定</A><A 
+class="resetbtn cancelbtn" 
+href="http://lib.csdn.net/article/java/">取消</A></DIV></DIV></DIV></DIV></DIV></DIV>
+<DIV class="windowLayer windowLayerwh deletemaplayersimple">
+<DIV class="windowContent">
+<DIV class="layeropt">
+<DIV class="layer02top"><EM>删除节点提示</EM><A class="closec" href="http://lib.csdn.net/article/java/">×</A></DIV>
+<DIV class="layercontent">
+<DIV class="layerwrap">
+<DIV class="deletemapwrap">
+<P>你确定要删除该知识节点吗？</P></DIV>
+<DIV class="pbottom"><A class="delbutn addconfrim" href="http://lib.csdn.net/article/java/">删除</A><A 
+class="resetbtn cancelbtn" 
+href="http://lib.csdn.net/article/java/">取消</A></DIV></DIV></DIV></DIV></DIV></DIV>
+<SCRIPT>
+    //==========分享到微博微信============
+    with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    //==========分享到微博微信 End============
+</SCRIPT>
+ 
+<SCRIPT>
+	if(typeof localStorage !== 'undefined' && typeof JSON !== 'undefined') {
+	    var supportHistory = new ViewHistory();
+	    supportHistory.init({
+	        limit: 1000,
+	        storageKey: 'supportHistory',
+	        primaryKey: 'id'
+	    });
+	}
+
+	var contentId = 64033;
+	if(supportHistory && !false) {
+		var histories = supportHistory.getHistories();
+		if(histories && histories.length > 0) {
+			if(histories.indexOf(contentId) != -1){
+				// 支持图标变化
+				$("#click_logo").addClass("clickbtn");
+				$("#support_logo").attr("class","fa fa-heart");
+			}
+		}
+	}
+	function toPassport(){
+		var _url = "http://passport.csdn.net/account/login?from=" + encodeURI(location.href);
+		window.location = _url;
+	}
+	//点击回复 评论框显示 再次点击 隐藏s
+	function showOrHide(_obj){
+			var _replayinfor = $(_obj).parent().siblings('.replayinfor');
+			if(_replayinfor.css('display') === 'block'){
+				_replayinfor.hide();
+			}
+			else{
+				$('.replayinfor').hide();
+				_replayinfor.show();
+			}
+			return false;
+	}
+	$("#click_logo").click(function(){
+		support();
+	})
+	function support(){
+		var _url = "http://lib.csdn.net/article/support";
+		var count = $('#support').val();
+		var contentId = $('#contentId').val();
+		var knowledgeId = parseInt($('a.editbook').attr('data-id').split('-')[2]);
+		var _getCookieValue = csdn.knowledge_web._getCookieValue;
+		var username = _getCookieValue('UserName');
+		var status = false; // 可支持
+		if(supportHistory) {
+			var histories = supportHistory.getHistories();
+			if(histories && histories.length > 0) {
+				if(histories.indexOf(contentId) != -1 && !username){
+					status = true;  // 已支持过
+				}
+			}
+		}
+		if(!status){
+			$.ajax({
+				type: "POST",
+	          	url: _url,
+	          	data:{
+	             	contentId: $('#contentId').val(),
+					knowledgeId: knowledgeId
+	          	},
+	          	error: function(data) {
+	          		alert(JSON.stringify(data));
+	          	},
+	          	success: function(data) {
+	            	if(data.status){
+	            		if(!data.username){
+	            			supportHistory.addHistory($('#contentId').val());
+	            		}
+	            		count = parseInt(count) + 1;
+	            		$(".main .mainread .maincontent .pinfortext a em").first().text(count);
+						$('#support').val(count);
+						$("#click_logo").addClass("clickbtn");
+						$("#support_logo").attr("class","fa fa-heart");
+	              	}else{
+	                  	//alert(data.error);
+	              	}
+	          	}
+	      	});
+		}
+	}
+	function setComment(_obj){
+		var login = csdn.knowledge_web._verificaUser();
+		if(login) {
+			var count = parseInt('1');
+			var _obj = _obj;
+			var _url = "http://lib.csdn.net/comment/set";
+			var article = $('#sourceId').val();
+			var collectBtn = $("a.editbook");
+			var contentId = collectBtn.attr('data-id').split('-')[0];
+			var knowledgeId = collectBtn.attr('data-id').split('-')[2];
+
+			var owner = 'wantnrun';
+			var parentId = $(_obj).attr('parent_id') || '';
+			//评论,直接回复博主不做修改,评论回复添加[reply]
+			var content = parentId ? '[reply]' + $(_obj).attr('parent_name') + '[/reply]' + $(_obj).parent().siblings().find('textarea').val() : $(_obj).parent().siblings().find('textarea').val();
+			var con_length = parentId ? content.split('[/reply]')[1].length : content.length;
+			if (!con_length) {
+				//TODO:评论为空的操作
+				alert('评论不得为空!');
+				return false;
+			}
+			else if (content.length > 1000) {
+				alert('评论字数过长,应维持在1000字符以内!');
+				//TODO:评论字数大于1000的操作
+				return false;
+			}
+			var commentContainer = document.getElementById('comment_list');//整个评论部分
+			var oLi = commentContainer.getElementsByTagName('li');////整个评论部分的li列表
+			//回复博主回复框不隐藏,else隐藏
+			if (!parentId)
+			//回复博主的按钮点击后,textarea置空
+				$(_obj).parent().siblings('.textdiv').find('textarea').val('');
+			else
+			//回复评论的按钮点击后,评论框隐藏,textarea置空
+				$(_obj).parents('.replayinfor').hide()
+						.find('textarea').val('');
+			$.ajax({
+				type: "GET",
+				url: _url,
+				data: {
+					article: article,
+					content: content,
+					parentid: parentId,
+					contentId: contentId,
+					owner: owner,
+					knowledgeId: knowledgeId
+				},
+				error: function (data) {
+					alert(JSON.stringify(data.error));
+				},
+				success: function (data) {
+					if (data.status) {
+						var newli = data.data;
+						var newComment = document.createElement('li');
+						//直接评论博主
+						if (!parentId) {
+							$(newComment).addClass('clearfix');
+							newComment.innerHTML = '<a class="photos" href="http://my.csdn.net/' + newli.username + '" target="_blank"><img src="' + newli.avatar + '" alt="" width="50" height="50"></a>'
+									+ '<div class="text"><a href="http://my.csdn.net/' + newli.username + '" target="_blank">' + newli.username + '</a>'
+									+ '<p class="pcontent">' + content + '</p>'
+									+ '<p class="editext clearfix"><span class="date">' + newli.create_at + '</span>'
+									+ '<a href="javascript:void(0)" parent_id="' + newli.id + '"  onclick="showOrHide(this);return false;">回复</a></p>'
+									+ '<div class="replayinfor" style="display: none;">'
+									+ '<div class="replaydiv"><div class="jiao"></div><textarea></textarea></div>'
+									+ '<div class="replaybtn"><button class="replaybtns"  parent_name="' + newli.username + '" parent_id="' + newli.id + '"  onclick="setComment(this)">回复</button></div></div></div>';
+							//还没有人评论博主
+							if (oLi.length == 0) {
+								$(commentContainer).append(newComment);
+							}
+							//已经有评论了
+							else {
+								commentContainer.insertBefore(newComment, oLi[0]);
+							}
+						}
+						//回复评论 在oLi中 没有replayli class 且子元素或自身parent_id属性为parentId元素的元素
+						else {
+							//增加回复评论的li的class
+							$(newComment).addClass('replayli clearfix');
+							var _length = 0, upstair, _a_list;
+							_a_list = $('li.clearfix > div > p > a');
+							for (var i in _a_list) {
+								if ($(_a_list[i]).attr('parent_id') === parentId) {
+									//被回复的评论
+									upstair = $(_a_list[i]).parents('li');
+									break;
+								}
+							}
+							//被回复的评论后面是否还有直接回复博主的评论
+							if (upstair.length > 0) _length = $(upstair).nextAll('li:not(.replayli)').length;
+							newComment.innerHTML = '<a class="photos" href="http://my.csdn.net/' + newli.username + '" target="_blank"><img src="' + newli.avatar + '" alt="" width="50" height="50"></a>'
+									+ '<div class="text subtext"><a href="http://my.csdn.net/' + newli.username + '" target="_blank">' + newli.username + '</a>'
+									+ '<p class="pcontent"><em>回复<i>' + $(upstair).find('div.text > a').text() + '：</i></em>' + content.split('[/reply]')[1] + '</p>'
+									+ '<p class="editext clearfix"><span class="date">' + newli.create_at + '</span>'
+									+ '<a href="javascript:void(0)" parent_id="' + newli.id + '"  onclick="showOrHide(this);return false;">回复</a></p>'
+									+ '<div class="replayinfor" style="display: none;"><div class="replaydiv"><div class="jiao"></div>'
+									+ '<textarea></textarea></div><div class="replaybtn">'
+									+ '<button class="replaybtns"  parent_name="' + newli.username + '" parent_id="' + newli.id + '"  onclick="setComment(this)">回复</button></div></div></div>';
+							//插入新回复操作
+							if (_length > 0) {
+							//在被回复的评论之后的所有没有'replayli'class的li中的第一个之前插入新回复
+								$(upstair).nextAll('li:not(.replayli)').eq(0).before($(newComment));
+							}
+							else {
+								//在本条被回复的评论之后没有直接评论博主的评论,直接用append方法插入新回复
+								$(commentContainer).append(newComment);
+
+							}
+						}
+						count = parseInt(count) + 1;
+						$(".main .mainread .comments .replaydiv .ptitles em").first().text(count);
+					} else {
+						alert(data.error);
+					}
+				}
+			})
+		}
+	}
+
+	$('.loadingmore').click(function(){
+	    _commentLoad(this);
+	});
+
+	function _commentLoad(event){
+		var _url = "http://lib.csdn.net/comment/loading";
+		var current = $('#page').val();
+		var page = parseInt(current)+1;
+		$.ajax({
+			type: "POST",
+          	url: _url,
+          	data:{
+            	page : page,
+             	size : $('#size').val(),
+             	contentId: $('#contentId').val(),
+             	sourceId: $('#sourceId').val(),
+             	owner: $('#owner').val()
+          	},
+          	error: function(data) {
+          		alert(JSON.stringify(data));
+          	},
+          	success: function(data) {
+            	if(data.status){
+            		if(!data.more){
+            			event.remove();
+            		}
+                  	$("#comment_list").append(data.html);
+                  	$('#page').val(data.page);
+              	}else{
+                  	//alert(data.error);
+              	}
+          	}
+      	});
+	}
+	//阅读页，点击“展开”全部显示
+	$(function(){
+		if($(".divtexts")[0].scrollHeight > 1800) {
+			$('.divtexts').css('max-height', '1600px')
+					.find('.divmark').show();
+			$('.divcodes').show();
+
+		}
+		$('.pmores').click(function (e) {
+			$('.divtexts').css('max-height', '100%')
+					.find('.divmark').hide();
+			$('.divcodes').remove();
+			e.stopPropagation();
+			return false;
+		});
+
+		if($(".fine.addfine").length>0){
+			doTooltip();
+
+			$(".fine.addfine").on("click",function(e) {
+				var This = $(this);
+				if(This.hasClass("isfine")){
+					doElite(0,This);
+				}
+				else{
+					doElite(1,This);
+				}
+			});
+
+			function doElite(action,obj){
+				var _url;
+				if(action){
+					_url = "/manager/doElite";
+				}
+				else{
+					_url = "/manager/cancelElite";
+				}
+				var cId = $('#contentId').val();
+				$.ajax({
+					type: "get",
+					url: _url,
+					data:{
+						cId:cId,
+						baseId:parseInt('13'),
+						knId:parseInt('218'),
+						action:action
+					},
+					error: function(data) {
+						alert(JSON.stringify(data));
+					},
+					success: function(data) {
+						if(data.status){
+							if(action){
+								obj.addClass("isfine").attr("title","取消加精");
+								doTooltip(2);
+							}
+							else{
+								obj.removeClass("isfine").attr("title","文章加精");
+								doTooltip(1);
+							}
+						}
+						else{
+							//alert(data.error);
+						}
+					}
+
+				})
+
+
+			}
+			function doTooltip(action) {
+				if(!action) {
+					$(".addfine").tooltip({
+						hide: {
+							effect: "explode",
+							delay: 200
+						},
+						position: {
+							my: "left center",
+							at: "right+5 center"
+						},
+						open: function (event, ui) {
+							ui.tooltip.animate({top: ui.tooltip.position().top}, "fast");
+						}
+					});
+				}
+				else if(action == 1) {
+					$(".addfine:not(.isfine)").tooltip({
+						items: "[title]",
+						content: "文章加精"
+					})
+				}else {
+					$(".addfine.isfine").tooltip({
+						items: "[title]",
+						content: "取消加精"
+					})
+				}
+			}
+		}
+	})
+	//阅读页　每次展开一部分
+//	$(function(){
+//		if($(".divtexts")[0].scrollHeight > 4000) {
+//			$('.divtexts').css('max-height', '3200px')
+//			.find('.divmark').show();
+//			$('.divcodes').show();
+//
+//		}
+//		$('.pmores').click(function (e) {
+//			$('.divtexts').animate({'max-height':'+=5000px'},600);
+//			var maxHeight = parseInt($('.divtexts').css('max-height').split('px')[0]);
+//			if(maxHeight >= ($(".divtexts")[0].scrollHeight-4000)){
+//				$('.divtexts').animate({'max-height':'100%'},600).find('.divmark').hide("slow");
+//				$('.divcodes').remove();
+//			}
+//
+//			e.stopPropagation();
+//			return false;
+//		});
+//	})
+//	function toPassport(){
+//		location.href = "http://passport.csdn.net/?backurl=" + location.href;
+//	}
+</SCRIPT>
+ 
+<SCRIPT>
+	//markdown
+	$('.divtexts pre.prettyprint code').each(function () {
+		var lines = $(this).text().split('\n').length;
+		var $numbering = $('<ul/>').addClass('pre-numbering').hide();
+		$(this).addClass('has-numbering').parent().append($numbering);
+		for (i = 1; i <= lines; i++) {
+		  $numbering.append($('<li/>').text(i));
+		};
+		$numbering.fadeIn(1700);
+	});
+	//code
+	SyntaxHighlighter.defaults['toolbar'] = false;  //去掉右上角问号图标
+	SyntaxHighlighter.all();
+</SCRIPT>
+ <!--阅读页相关事件--> <!--
+     can used in article/article.ejs,snippet/snippet.ejs
+--> 
+<SCRIPT>
+    var t = null;
+    $(".fixedyjfk").css({"left":($(".mainread").innerWidth()+$(".mainread").offset().left+10)});
+    $(window).on('resize',function(){
+        $(".fixedyjfk").css({"left":($(".mainread").innerWidth()+$(".mainread").offset().left+10)});
+    });
+    $(".fx").hover(function(){
+        clearTimeout(t);
+        t = null;
+        $(".fxd").addClass('fxd1');
+        $(".fx").addClass('fxh');
+    },function(){
+        t = setTimeout(function(){
+            $(".fxd").removeClass('fxd1');
+            $(".fx").removeClass('fxh');
+        },1000);
+    });
+    $(".wicon").on('mouseenter',function(){
+        clearTimeout(t);
+        t = null;
+        $(".fxd").addClass('fxd1');
+        $(".fx").addClass('fxh');
+    });
+    $(".wicon").on('mouseleave',function(){
+        $(".fxd").removeClass('fxd1');
+    });
+
+    $(".zd").on('click',function(event){
+        $("body,html").animate({scrollTop:0},'fast');
+        event.stopPropagation();
+        return false;
+    });
+    $(document).on('scroll',scrolls());
+    function scrolls()
+    {
+        var t,doc;
+        doc = $(this);
+        return function(){
+            clearTimeout(t);
+            t=null;
+            t=setTimeout(function(){
+                if(parseFloat(doc.scrollTop(),10)>=400)
+                {
+                    $(".zd").show();
+                }else{
+                    $(".zd").hide();
+                }
+            },100);
+        }
+    }
+    $(".coment,.addAnchor").on('click',function(){
+        if(window.location.href.indexOf('#focustext') != -1){
+            window.location.href = window.location.href;
+        }
+        else{
+            window.location.href=window.location.href+"#focustext"
+        }
+        $(".textdiv textarea").focus();
+        return false;
+    });
+</SCRIPT>
+ <!--微信分享弹层样式--> 
+<STYLE>
+    .bdshare-button-style0-32 a{
+        float: none;
+        width:40px;
+        height: 40px;
+        line-height: normal;
+        background:none;
+        cursor: pointer;
+        margin: 0;
+        text-indent: -100em;
+        overflow: auto;
+        color:#8295a3;
+    }
+    .bd_weixin_popup {
+        height: 260px !important;
+    }
+    .bd_weixin_popup_foot {
+        display: none;
+    }
+    .sharebtn span{
+        cursor: pointer;
+    }
+</STYLE>
+ 
+<DIV class="marklayer whitebk"></DIV><!--<script type="text/javascript" src="http://c.csdnimg.cn/public/common/toolbar/js/toolbar.js"></script>--> 
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/publib_footer.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="Java配置maven+jenkins+git（svn）+tomcat自动编译和部署（持续集成）%20-%20Java%20知识库_files/knowledge_base_new.min.js" type="text/javascript"></SCRIPT>
+ </BODY></HTML>
