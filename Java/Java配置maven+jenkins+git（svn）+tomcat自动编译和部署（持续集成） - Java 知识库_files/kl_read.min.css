@@ -1,0 +1,690 @@
+.whitebk {
+	background-color: rgb(255, 255, 255);
+}
+.windowLayer {
+	background-color: rgb(255, 255, 255);
+}
+ol {
+	list-style: none;
+}
+ul {
+	list-style: none;
+}
+.mainCol {
+	margin: 0px auto; width: 1170px; min-height: 800px;
+}
+.hide {
+	display: none;
+}
+.show {
+	display: block;
+}
+.kn_left {
+	float: left;
+}
+.closec {
+	float: right;
+}
+.kn_right {
+	float: right;
+}
+a:hover {
+	color: rgb(102, 102, 102);
+}
+.windowLayer {
+	left: 50%; top: 50%; position: fixed; z-index: 9999;
+}
+.closec {
+	font-weight: 700;
+}
+.marklayer {
+	left: 0px; width: 100%; position: absolute; z-index: 8; opacity: 0.8;
+}
+.borders {
+	border: 1px solid rgb(221, 221, 221); border-image: none;
+}
+.windowLayer {
+	width: 415px; height: 180px; margin-top: -90px; margin-left: -202px; display: none;
+}
+.windowLayer .title {
+	background: rgb(255, 255, 255); padding: 0px 20px; height: 48px; line-height: 48px; overflow: hidden; border-bottom-color: rgb(221, 221, 221); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.windowLayer .title span {
+	color: rgb(51, 51, 51); font-size: 16px; float: left;
+}
+.windowLayer .title span em {
+	font-weight: 700; margin-left: 5px; display: inline-block;
+}
+.wrapcontent {
+	padding: 20px;
+}
+.wrapcontent p {
+	color: rgb(102, 102, 102); font-size: 14px;
+}
+.subtn {
+	text-align: center; padding-top: 20px;
+}
+.subtn a {
+	margin: 0px 5px; border-radius: 3px; width: 60px; height: 26px; text-align: center; color: rgb(255, 255, 255); line-height: 26px; display: inline-block; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px;
+}
+.subtn .deletebtn {
+	background-color: rgb(241, 78, 78);
+}
+.subtn .deletebtn:hover {
+	background-color: rgb(213, 43, 43);
+}
+.subtn .cancelbtn {
+	background-color: rgb(184, 184, 189);
+}
+.subtn .cancelbtn:hover {
+	background-color: rgb(144, 144, 152);
+}
+.closec {
+	color: rgb(153, 153, 153); font-size: 20px;
+}
+.closec:hover {
+	color: rgb(102, 102, 102);
+}
+.editcollects {
+	border: 1px solid rgb(221, 221, 221); border-image: none; width: 460px; height: auto; overflow: hidden; box-shadow: 0px 1px 3px #ccc; -webkit-box-shadow: 0 1px 3px #ccc; -moz-box-shadow: 0 1px 3px #ccc; -o-box-shadow: 0 1px 3px #ccc; -ms-box-shadow: 0 1px 3px #ccc;
+}
+.editcollects .layer02 {
+	position: relative;
+}
+.editcollects .layer02 .closec {
+	top: 16px; right: 20px; color: rgb(187, 187, 187); font-size: 20px; font-weight: 700; position: absolute;
+}
+.editcollects .layer02 .layer02top {
+	padding: 0px 20px; height: 50px; line-height: 50px; border-bottom-color: rgb(221, 221, 221); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.editcollects .layer02 .layer02top em {
+	color: rgb(51, 51, 51); font-size: 16px;
+}
+.editcollects .layercontent {
+	padding: 0px 20px;
+}
+.editcollects .layercontent .layertop {
+	padding: 40px 0px; text-align: center; border-bottom-color: rgb(221, 221, 221); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.editcollects .layercontent .layertop .fa-check-circle {
+	color: rgb(145, 214, 60);
+}
+.editcollects .layercontent .layertop .fa-question-circle {
+	color: rgb(60, 151, 214);
+}
+.editcollects .layercontent .layertop .fa {
+	font-size: 80px; margin-bottom: 15px; display: block;
+}
+.editcollects .layercontent .layertop em {
+	color: rgb(51, 51, 51); font-size: 16px;
+}
+.editcollects .layercontent .layerbottom .one {
+	color: rgb(153, 153, 153); font-size: 12px; margin-top: 20px;
+}
+.editcollects .layercontent .layerbottom .one span {
+	border-radius: 15px; width: 15px; height: 15px; text-align: center; margin-right: 5px; vertical-align: middle; display: inline-block; background-color: rgb(177, 223, 255); -webkit-border-radius: 15px; -moz-border-radius: 15px; -ms-border-radius: 15px; -o-border-radius: 15px;
+}
+.editcollects .layercontent .layerbottom .one span .fa {
+	color: rgb(255, 255, 255); font-size: 12px; margin-top: -5px; vertical-align: middle;
+}
+.editcollects .layercontent .layerbottom .mylists {
+	margin-top: 23px;
+}
+.editcollects .layercontent .layerbottom .mylists span {
+	color: rgb(102, 102, 102); font-size: 12px; margin-right: 10px;
+}
+.editcollects .layercontent .layerbottom .mylists a {
+	padding: 3px 6px; border: 1px solid rgb(229, 234, 240); border-image: none; color: rgb(102, 102, 102); margin-right: 15px; margin-bottom: 15px; display: inline-block;
+}
+.editcollects .layercontent .layerbottom .mylists .root {
+	border-color: rgb(235, 157, 56);
+}
+.editcollects .layercontent .layerbottom .two {
+	margin-top: 5px;
+}
+.editcollects .layercontent .layerbottom .two .fa {
+	color: rgb(61, 124, 168); margin-right: 5px;
+}
+.editcollects .layercontent .layerbottom .two input[type=text] {
+	padding: 5px; outline: 0px; border: 1px solid rgb(235, 157, 56); border-image: none; width: 100%; display: none; background-color: rgb(249, 249, 252); resize: none;
+}
+.editcollects .layercontent .layerbottom .two a {
+	color: rgb(61, 124, 168);
+}
+.editcollects .layercontent .lastbtns {
+	padding: 10px 0px; width: 110%; text-align: center; margin-top: 20px; margin-left: -20px; background-color: rgb(242, 242, 245);
+}
+.editcollects .layercontent .lastbtns .addbtn {
+	background-color: rgb(235, 157, 56);
+}
+.editcollects .layercontent .lastbtns .cancelbtn {
+	background-color: rgb(184, 184, 189);
+}
+.editcollects .layercontent .lastbtns .addbtn {
+	margin: 0px 5px; border-radius: 3px; width: 60px; height: 26px; text-align: center; color: rgb(255, 255, 255); line-height: 26px; display: inline-block; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px;
+}
+.editcollects .layercontent .lastbtns .cancelbtn {
+	margin: 0px 5px; border-radius: 3px; width: 60px; height: 26px; text-align: center; color: rgb(255, 255, 255); line-height: 26px; display: inline-block; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px;
+}
+.noborder {
+	border: currentColor !important; border-image: none !important;
+}
+.attention {
+	width: 460px; margin-left: -230px;
+}
+.attentionwrap {
+	width: 460px; height: auto; overflow: hidden;
+}
+.attentionwrap .layer02 {
+	position: relative;
+}
+.attentionwrap .layer02 .closec {
+	top: 16px; right: 20px; color: rgb(187, 187, 187); font-size: 20px; font-weight: 700; position: absolute;
+}
+.attentionwrap .layer02 .layer02top {
+	padding: 0px 20px; height: 50px; line-height: 50px; border-bottom-color: rgb(221, 221, 221); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.attentionwrap .layer02 .layer02top em {
+	color: rgb(51, 51, 51); font-size: 16px;
+}
+.attentionwrap .layercontent .layertop {
+	padding: 30px 0px; text-align: center;
+}
+.attentionwrap .layercontent .layertop .fa-check-circle {
+	color: rgb(145, 214, 60);
+}
+.attentionwrap .layercontent .layertop .fa-question-circle {
+	color: rgb(60, 151, 214);
+}
+.attentionwrap .layercontent .layertop .fa {
+	font-size: 80px; margin-bottom: 15px; display: block;
+}
+.attentionwrap .layercontent .layertop em {
+	color: rgb(51, 51, 51); font-size: 16px;
+}
+.attentionwrap .layercontent .layertop .infors {
+	color: rgb(102, 102, 102); font-size: 14px; margin-top: 12px;
+}
+.attentionwrap .layercontent .layertop .infors a {
+	color: rgb(82, 149, 178); font-weight: 700; margin-left: 5px;
+}
+.attentionwrap .layercontent .layerbottom {
+	height: 50px; text-align: center; line-height: 50px; margin-top: 15px; background-color: rgb(242, 242, 245);
+}
+.attentionwrap .layercontent .layerbottom a {
+	margin: 12px 5px 0px; display: inline-block;
+}
+.attentionwrap .layercontent .layerbottom .getstructorbtns {
+	border-radius: 4px; width: 84px; height: 26px; color: rgb(255, 255, 255); line-height: 26px; background-color: rgb(217, 136, 31); -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px;
+}
+.attentionwrap .layercontent .layerbottom .cancelabtn {
+	border-radius: 4px; width: 60px; height: 26px; color: rgb(255, 255, 255); line-height: 26px; background-color: rgb(144, 144, 152); -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px;
+}
+.attencancel p {
+	padding: 30px 20px; color: rgb(102, 102, 102); line-height: 1.8; font-size: 14px;
+}
+.whitebk {
+	background: rgb(255, 255, 255);
+}
+.showbox {
+	box-shadow: 0px 0px 1px 1px #ccc; -webkit-box-shadow: 0 0 1px 1px #ccc; -moz-box-shadow: 0 0 1px 1px #ccc; -o-box-shadow: 0 0 1px 1px #ccc; -ms-box-shadow: 0 0 1px 1px #ccc;
+}
+body {
+	font-family: Microsoft Yahei; background-color: rgb(233, 239, 243);
+}
+.mainread {
+	margin: 0px auto; width: 760px; padding-top: 36px;
+}
+.mainread .infortop {
+	margin-bottom: 12px; vertical-align: middle;
+}
+.mainread .infortop a {
+	float: left;
+}
+.mainread .infortop a img {
+	border-radius: 40px; vertical-align: middle; -webkit-border-radius: 40px; -moz-border-radius: 40px; -ms-border-radius: 40px; -o-border-radius: 40px;
+}
+.mainread .infortop .text {
+	width: 94%; color: rgb(213, 213, 213); margin-top: 10px; margin-left: 5px; float: left; display: inline-block;
+}
+.mainread .infortop .text .left {
+	color: rgb(187, 187, 187); float: left;
+}
+.mainread .infortop .text .left a {
+	margin: 0px 10px; color: rgb(75, 102, 164); font-size: 14px; float: left; display: inline-block;
+}
+.mainread .infortop .text .left a:hover {
+	color: rgb(33, 53, 98);
+}
+.mainread .infortop .text .left em {
+	color: rgb(187, 187, 187); float: left;
+}
+.mainread .infortop .text .right {
+	float: right;
+}
+.mainread .infortop .text .right i {
+	color: rgb(119, 138, 153); font-size: 14px; font-weight: 400;
+}
+.mainread .infortop .text .right b {
+	color: rgb(51, 51, 51); font-size: 14px; font-weight: 400; margin-left: 5px; display: inline-block;
+}
+.mainread .infortop .text .right .fa-commenting-o {
+	margin-left: 20px;
+}
+.mainread .maincontent {
+	padding: 20px 30px; position: relative;
+}
+.mainread .maincontent h1 {
+	text-align: center; color: rgb(48, 87, 134); font-family: Microsoft Yahei; font-size: 22px; font-weight: 400; margin-top: 30px;
+}
+.mainread .maincontent .author {
+	padding: 30px 0px 0px; text-align: center; color: rgb(85, 146, 193); font-size: 14px;
+}
+.mainread .maincontent .author a {
+	color: rgb(85, 146, 193);
+}
+.mainread .maincontent .author a:hover {
+	color: rgb(33, 53, 98);
+}
+.mainread .maincontent .author em {
+	color: rgb(153, 153, 153);
+}
+.mainread .maincontent .divtexts {
+	color: rgb(86, 95, 105); line-height: 1.8; overflow: hidden; font-family: Microsoft Yahei; font-size: 14px; margin-top: 30px; position: relative;
+}
+.mainread .maincontent .divtexts .divmark {
+	background: url("../images/web/newimgs/mark.png") no-repeat top; left: 0px; width: 100%; height: 70px; bottom: -2px; display: none; position: absolute;
+}
+.mainread .maincontent .divcodes {
+	padding: 5px; margin-top: 25px; display: none; position: relative; background-color: rgb(249, 249, 249);
+}
+.mainread .maincontent .divcodes .pmores {
+	left: 0px; width: 100%; height: 38px; text-align: center; bottom: 0px; line-height: 38px; position: absolute; background-color: rgb(232, 239, 243);
+}
+.mainread .maincontent .divcodes .pmores a {
+	color: rgb(136, 136, 136); font-size: 12px;
+}
+.mainread .maincontent .divcodes .pmores a i {
+	color: rgb(102, 102, 102); margin-left: 5px;
+}
+.mainread .maincontent .pinfortext {
+	padding: 25px 0px; text-align: right; font-size: 12px;
+}
+.mainread .maincontent .pinfortext a {
+	color: rgb(153, 153, 153);
+}
+.mainread .maincontent .pinfortext span {
+	text-align: center; margin-top: 20px; display: block;
+}
+.mainread .maincontent .pinfortext span a {
+	width: 70px; display: inline-block;
+}
+.mainread .maincontent .pinfortext span a:hover span {
+	border-color: rgb(234, 157, 56);
+}
+.mainread .maincontent .pinfortext span span {
+	border-radius: 70px; border: 1px solid rgb(235, 241, 245); border-image: none; width: 70px; height: 70px; line-height: 80px; display: block; -webkit-border-radius: 70px; -moz-border-radius: 70px; -ms-border-radius: 70px; -o-border-radius: 70px;
+}
+.mainread .maincontent .pinfortext span span i {
+	color: rgb(236, 167, 76); font-size: 30px;
+}
+.mainread .maincontent .pinfortext span em {
+	color: rgb(234, 157, 56); font-size: 18px; font-weight: 700; margin-top: 10px; display: inline-block;
+}
+.mainread .maincontent .pinfortext span .clickbtn span {
+	border-color: rgb(234, 157, 56);
+}
+.mainread .maincontent .bordertop {
+	border-top-color: rgb(232, 239, 243); border-top-width: 1px; border-top-style: solid;
+}
+.mainread .maincontent .divcontent {
+	padding: 20px 30px 0px; left: -30px; width: 110%; bottom: 0px; position: relative;
+}
+.mainread .maincontent .divcontent .title {
+	color: rgb(51, 51, 51); font-size: 14px; font-weight: 700;
+}
+.mainread .maincontent .divcontent ul {
+	width: 123%; margin-top: 10px; margin-left: -83px;
+}
+.mainread .maincontent .divcontent ul li {
+	margin: 0px 0px 0px 83px; padding: 5px 0px; width: 310px; float: left;
+}
+.mainread .maincontent .divcontent ul li a {
+	color: rgb(46, 64, 87); font-size: 14px;
+}
+.mainread .maincontent .divcontent ul li a:hover {
+	color: rgb(69, 108, 158);
+}
+.mainread .maincontent .divcontent ul li a .cirle {
+	border-radius: 2px; border: 2px solid rgb(178, 174, 174); border-image: none; width: 0px; height: 0px; margin-right: 5px; vertical-align: middle; display: inline-block; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px;
+}
+.mainread .maincontent .divcontent ul li .yellow {
+	color: rgb(234, 157, 56);
+}
+.mainread .comments {
+	margin-top: 40px;
+}
+.mainread .comments .commentdiv .title01 {
+	color: rgb(51, 51, 51); font-size: 14px; font-weight: 700;
+}
+.mainread .comments .commentdiv .textdiv {
+	padding: 10px; border: 1px solid rgb(216, 227, 232); border-image: none; margin-top: 15px; background-color: rgb(245, 249, 251);
+}
+.mainread .comments .commentdiv .textdiv textarea {
+	outline: 0px; border: currentColor; border-image: none; width: 100%; color: rgb(164, 175, 183); font-size: 14px; min-height: 60px; background-color: rgb(245, 249, 251); resize: none;
+}
+.mainread .comments .commentdiv .subdiv {
+	text-align: right; margin-top: 10px;
+}
+.mainread .comments .commentdiv .subdiv input[type=submit] {
+	border-radius: 5px; border: currentColor; border-image: none; width: 56px; height: 30px; color: rgb(255, 255, 255); line-height: 30px; font-size: 14px; background-color: rgb(234, 157, 56); -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px;
+}
+.mainread .comments .replaydiv .ptitles {
+	color: rgb(51, 51, 51); padding-bottom: 11px; font-size: 14px; font-weight: 700; border-bottom-color: rgb(221, 221, 221); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.mainread .comments .replaydiv .ptitles em {
+	color: rgb(234, 157, 56);
+}
+.mainread .comments .replaydiv .replayli {
+	width: 91%; margin-left: 1px; float: right !important;
+}
+.mainread .comments .replaydiv .listreplays {
+	padding-bottom: 20px;
+}
+.mainread .comments .replaydiv .listreplays li {
+	padding: 20px 0px 0px; float: left;
+}
+.mainread .comments .replaydiv .listreplays li .photos {
+	float: left;
+}
+.mainread .comments .replaydiv .listreplays li .photos img {
+	border-radius: 50px; -webkit-border-radius: 50px; -moz-border-radius: 50px; -ms-border-radius: 50px; -o-border-radius: 50px;
+}
+.mainread .comments .replaydiv .listreplays li .text {
+	width: 690px; margin-left: 20px; float: left;
+}
+.mainread .comments .replaydiv .listreplays li .text a {
+	color: rgb(85, 146, 193); font-size: 14px; font-weight: 700;
+}
+.mainread .comments .replaydiv .listreplays li .text .pcontent {
+	color: rgb(102, 102, 102); line-height: 1.6; font-size: 14px; margin-top: 8px;
+}
+.mainread .comments .replaydiv .listreplays li .text .pcontent em {
+	color: rgb(153, 153, 153);
+}
+.mainread .comments .replaydiv .listreplays li .text .pcontent em i {
+	color: rgb(85, 146, 193); font-style: normal;
+}
+.mainread .comments .replaydiv .listreplays li .text .editext {
+	margin: 12px 0px; font-size: 12px;
+}
+.mainread .comments .replaydiv .listreplays li .text .editext .date {
+	color: rgb(187, 187, 187); float: left;
+}
+.mainread .comments .replaydiv .listreplays li .text .editext a {
+	color: rgb(234, 157, 56); font-size: 12px; font-weight: 400; float: right;
+}
+.mainread .comments .replaydiv .listreplays li .text .editext em {
+	margin: 0px 10px; color: rgb(221, 221, 221); font-weight: 400; float: right;
+}
+.mainread .comments .replaydiv .listreplays li .text .replayinfor .replaydiv {
+	padding: 10px; border: 1px solid rgb(216, 227, 232); border-image: none; position: relative; background-color: rgb(245, 249, 251);
+}
+.mainread .comments .replaydiv .listreplays li .text .replayinfor .replaydiv .jiao {
+	top: -12px; width: 0px; height: 0px; right: 18px; line-height: 0; font-size: 0px; position: absolute;
+}
+.mainread .comments .replaydiv .listreplays li .text .replayinfor .replaydiv .jiao::after {
+	border-width: 6px; border-style: solid; border-color: transparent transparent rgb(216, 227, 232); border-image: none; left: 0px; top: 0px; width: 10px; height: 10px; position: absolute; content: ".";
+}
+.mainread .comments .replaydiv .listreplays li .text .replayinfor .replaydiv .jiao::before {
+	border-width: 6px; border-style: solid; border-color: transparent transparent rgb(245, 249, 251); border-image: none; left: 0px; top: 1px; width: 10px; height: 10px; position: absolute; z-index: 1; content: ".";
+}
+.mainread .comments .replaydiv .listreplays li .text .replayinfor .replaydiv textarea {
+	outline: 0px; border: currentColor; border-image: none; width: 100%; color: rgb(102, 102, 102); font-size: 12px; background-color: rgb(245, 249, 251); resize: none;
+}
+.mainread .comments .replaydiv .listreplays li .text .replayinfor .replaybtn {
+	text-align: right; margin-top: 10px;
+}
+.mainread .comments .replaydiv .listreplays li .text .replayinfor .replaybtn .replaybtns {
+	border-radius: 3px; border: currentColor; border-image: none; width: 44px; height: 22px; color: rgb(255, 255, 255); font-size: 12px; background-color: rgb(234, 157, 56); -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px;
+}
+.mainread .comments .replaydiv .listreplays li .subtext {
+	width: 619px;
+}
+.fixedyjfk {
+	top: 138px; position: fixed; z-index: 1000;
+}
+.fixedyjfk a {
+	width: 40px; height: 40px; display: block; background-image: url("../images/web/newimgs/fixed.gif"); background-repeat: no-repeat;
+}
+.fixedyjfk .fxd {
+	top: 135px; height: 160px; position: relative; z-index: 2;
+}
+.fixedyjfk .fx {
+	background-position: -133px -150px; bottom: 0px; position: absolute;
+}
+.fixedyjfk .fx:hover {
+	background-position: -190px -150px;
+}
+.fixedyjfk .addfine {
+	background-position: -133px -250px; top: 165px; position: absolute;
+}
+.fixedyjfk .addfine:hover {
+	background-position: -190px -250px;
+}
+.fixedyjfk .coment {
+	background-position: -133px 0px; top: 210px; position: absolute;
+}
+.fixedyjfk .coment:hover {
+	background-position: -190px 0px;
+}
+.fixedyjfk .editbook {
+	background-position: -133px -100px; top: 300px; position: absolute;
+}
+.fixedyjfk .editbook:hover {
+	background-position: -190px -100px;
+}
+.fixedyjfk .zd {
+	background-position: -133px -200px; top: 345px; display: none; position: absolute; z-index: 4;
+}
+.fixedyjfk .zd:hover {
+	background-position: -190px -200px;
+}
+.fixedyjfk .wicon {
+	left: 0px; width: 90px; height: 40px; bottom: 0px; position: absolute; z-index: -1;
+}
+.fixedyjfk .wicon a {
+	left: 0px; top: 0px; position: absolute; z-index: -1;
+}
+.fixedyjfk .wicon .wb {
+	background: url("../images/web/newimgs/subwb.gif") no-repeat top; top: 0px;
+}
+.fixedyjfk .wicon .wx {
+	background: url("../images/web/newimgs/subwx.gif") no-repeat top; top: 0px;
+}
+.fixedyjfk .moveshow {
+	transition:left 0.3s ease-out; -webkit-transition: left .3s ease-out; -moz-transition: left .3s ease-out; -o-transition: left .3s ease-out;
+}
+.fixedyjfk .fxd1:hover .moveshow {
+	left: 40px;
+}
+.fixedyjfk .fxd1:hover .moveshow .wx {
+	left: 50px;
+}
+.fixedyjfk .fxd1:hover .moveshow .wb {
+	left: 5px;
+}
+.fixedyjfk .fxd1:hover .fx {
+	background-position: -190px -150px !important; width: 40px; height: 40px; display: block; background-image: url("../images/web/newimgs/fixed.gif"); background-repeat: no-repeat;
+}
+.mainread .maincontent .divtexts p {
+	margin: 0px 0px 0.5em; line-height: 2; font-family: Microsoft Yahei; font-size: 14px !important;
+}
+.mainread .maincontent .divtexts h1 {
+	margin: 0px 0px 5px; text-align: left; color: rgb(51, 51, 51); font-weight: 400;
+}
+.mainread .maincontent .divtexts h2 {
+	margin: 0px 0px 5px; text-align: left; color: rgb(51, 51, 51); font-weight: 400;
+}
+.mainread .maincontent .divtexts h3 {
+	margin: 0px 0px 5px; text-align: left; color: rgb(51, 51, 51); font-weight: 400;
+}
+.mainread .maincontent .divtexts h4 {
+	margin: 0px 0px 5px; text-align: left; color: rgb(51, 51, 51); font-weight: 400;
+}
+.mainread .maincontent .divtexts h5 {
+	margin: 0px 0px 5px; text-align: left; color: rgb(51, 51, 51); font-weight: 400;
+}
+.mainread .maincontent .divtexts h6 {
+	margin: 0px 0px 5px; text-align: left; color: rgb(51, 51, 51); font-weight: 400;
+}
+.mainread .maincontent .divtexts h1 {
+	font-size: 20px;
+}
+.mainread .maincontent .divtexts h2 {
+	font-size: 18px;
+}
+.mainread .maincontent .divtexts h3 {
+	font-size: 16px;
+}
+.mainread .maincontent .divtexts h4 {
+	font-size: 14px;
+}
+.mainread .maincontent .divtexts h5 {
+	font-size: 14px;
+}
+.mainread .maincontent .divtexts h6 {
+	font-size: 14px;
+}
+.mainread .maincontent .divtexts a {
+	color: rgb(43, 145, 232);
+}
+.mainread .maincontent .divtexts ol {
+	padding: 0px;
+}
+.mainread .maincontent .divtexts img {
+	max-width: 100%;
+}
+.mainread .maincontent .divtexts .prettyprint {
+	padding: 5px 5px 5px 60px; white-space: nowrap; position: relative; -ms-overflow-x: auto; -ms-overflow-y: hidden;
+}
+.mainread .maincontent .divtexts .prettyprint .pre-numbering {
+	list-style: none; margin: 0px; padding: 6px 0px 40px; left: 0px; top: 0px; width: 50px; text-align: right; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid; position: absolute; background-color: rgb(238, 238, 238);
+}
+.mainread .maincontent .divtexts .prettyprint .pre-numbering li {
+	padding: 0px 5px;
+}
+.mainread .maincontent .divtexts pre code {
+	padding: 0px; border-radius: 0px; color: inherit; font-size: inherit; white-space: pre; -ms-word-wrap: normal; background-color: transparent; -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0;
+}
+.mainread .maincontent .divtexts table {
+	border: 1px solid rgb(238, 238, 238); border-image: none; width: 100%; border-collapse: collapse; table-layout: auto; border-spacing: 0; background-color: transparent;
+}
+.mainread .maincontent .divtexts table th {
+	font-weight: 700;
+}
+.mainread .maincontent .divtexts table td {
+	padding: 8px; border: 1px solid rgb(238, 238, 238); border-image: none; text-align: center; color: rgb(85, 85, 85); line-height: 20px; font-size: 14px; vertical-align: top;
+}
+.mainread .maincontent .divtexts table th {
+	padding: 8px; border: 1px solid rgb(238, 238, 238); border-image: none; text-align: center; color: rgb(85, 85, 85); line-height: 20px; font-size: 14px; vertical-align: top;
+}
+.kn_sub_collect {
+	border: 1px solid rgb(221, 221, 221); border-image: none; width: 420px; display: none; box-shadow: 0px 1px 3px #ccc; -webkit-box-shadow: 0 1px 3px #ccc; -moz-box-shadow: 0 1px 3px #ccc; -o-box-shadow: 0 1px 3px #ccc; -ms-box-shadow: 0 1px 3px #ccc;
+}
+.kn_sub_collect .layer02top {
+	padding: 0px 20px; height: 50px; color: rgb(51, 51, 51); line-height: 50px; font-size: 16px;
+}
+.kn_sub_collect .layer02top em {
+	color: rgb(76, 92, 127); letter-spacing: 1px; font-size: 14px; font-weight: 700;
+}
+.kn_sub_collect .layer02top .closec {
+	color: rgb(184, 195, 217); font-size: 18px;
+}
+.kn_sub_collect .layerwrap {
+	color: rgb(184, 195, 217);
+}
+.kn_sub_collect .layerwrap .collectwrap p {
+	color: rgb(124, 137, 166); letter-spacing: 0px; font-size: 14px;
+}
+.kn_sub_collect .layerwrap .pinfor {
+	color: rgb(124, 137, 166); letter-spacing: 0px; font-size: 14px;
+}
+.kn_sub_collect .layerwrap .pinfor {
+	padding: 40px 20px; text-align: center;
+}
+.kn_sub_collect .layerwrap .collectwrap {
+	padding: 20px 20px 30px;
+}
+.kn_sub_collect .layerwrap .collectwrap .checkradiro {
+	margin: 10px 0px; color: rgb(124, 137, 166); letter-spacing: 0px; font-size: 14px;
+}
+.kn_sub_collect .layerwrap .collectwrap .checkradiro input[type=radio] {
+	margin-right: 10px !important;
+}
+.kn_sub_collect .layerwrap .collectwrap .checkradiro .selectbox {
+	background: rgb(255, 255, 255); border-radius: 2px; border: 1px solid rgb(184, 195, 217); border-image: none; width: 190px; height: 30px; color: rgb(76, 92, 127); letter-spacing: 0px; font-size: 13px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px;
+}
+.kn_sub_collect .layerwrap .collectwrap .checkradiro .selectbox select {
+	outline: 0px; border: currentColor; border-image: none; width: 100%; height: 100%;
+}
+.kn_sub_collect .suballbtns .confrim_btn {
+	letter-spacing: 0px; font-size: 14px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px;
+}
+.kn_sub_collect .suballbtns .sub_btn {
+	letter-spacing: 0px; font-size: 14px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px;
+}
+.kn_sub_collect .suballbtns {
+	margin: 20px 10px; text-align: center;
+}
+.kn_sub_collect .suballbtns a {
+	margin: 0px 5px; padding: 0px 10px; height: 28px; text-align: center; line-height: 28px; display: inline-block;
+}
+.kn_sub_collect .suballbtns .sub_btn {
+	background: rgb(32, 146, 217); border-radius: 2px; color: rgb(255, 255, 255);
+}
+.kn_sub_collect .suballbtns .see_btn {
+	border-radius: 2px; border: 1px solid rgb(32, 146, 217); border-image: none; color: rgb(32, 146, 217); letter-spacing: 0px; font-size: 14px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px;
+}
+.kn_sub_collect .suballbtns .confrim_btn {
+	background: rgb(250, 169, 30); border-radius: 2px; color: rgb(255, 255, 255);
+}
+.kn_sub_collect .suballbtns .add_btn {
+	background: rgb(32, 146, 217); border-radius: 2px; color: rgb(255, 255, 255); letter-spacing: 0px; font-size: 14px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px;
+}
+.loadingmore {
+	margin: 10px auto 30px; width: 760px;
+}
+.loadingmore a {
+	height: 36px; text-align: center; color: rgb(102, 102, 102); line-height: 36px; font-size: 12px; display: block; background-color: rgb(219, 228, 233);
+}
+.loadingmore a:hover {
+	background-color: rgb(205, 216, 222);
+}
+.bdshare-button-style0-32 a {
+	margin: 0px !important;
+}
+.marklayer {
+	top: 0px;
+}
+.hotlightIllustrations {
+	border-width: 1px 1px 1px 2px; border-style: solid; border-color: rgb(221, 221, 221) rgb(221, 221, 221) rgb(221, 221, 221) rgb(145, 214, 60); padding: 0px 30px; width: 300px; height: 48px; right: 0px; bottom: -72px; display: none; position: fixed; z-index: 1500; background-color: rgb(255, 255, 255);
+}
+.hotlightIllustrations .closed {
+	top: 14px; right: 30px; color: rgb(153, 153, 153); font-size: 22px; font-weight: 700; position: absolute;
+}
+.hotlightIllustrations .knillcontent p {
+	line-height: 45px;
+}
+.hotlightIllustrations .knillcontent p .fa-lights {
+	background: url("../images/web/newimgs/light.gif") no-repeat top; width: 22px; height: 27px; vertical-align: middle; display: inline-block;
+}
+.hotlightIllustrations .knillcontent p .fa-check-circle {
+	color: rgb(145, 214, 60); font-size: 18px; vertical-align: middle;
+}
+.hotlightIllustrations .knillcontent p em {
+	color: rgb(102, 102, 102); font-size: 16px; margin-left: 10px; vertical-align: middle; display: inline-block;
+}
+.kn_sub_collect {
+	height: auto !important;
+}
