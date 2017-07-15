@@ -1,0 +1,33 @@
+rem 关闭数据库来备份的脚本例子
+connect system/manager as sysdba;
+
+rem 设置环境变量控制输出
+set feedback off
+set heading off
+set verify off
+set trimspool off
+set pagesize 0
+set linesize 200
+
+rem 设置用户变量脚本使用
+define dir='c:\backup'
+define fil='c:\closed_backup_command.sql'
+
+prompt *********** spooling to &fil
+
+rem 创建命令文件用于备份
+spool &fil
+ select 'host copy '|| name || ' &dir' from v$datafile order by 1;
+ select 'host copy '|| member || ' &dir' from v$logfile order by 1;
+ select 'host copy '|| name || ' &dir' from v$controlfile order by 1;
+ select 'host copy '|| name || ' &dir' from v$tempfile order by 1;
+spool off
+
+rem 关闭数据库
+shutdown immediate;
+
+rem 运行脚本备份
+rem @&fil
+
+rem 启动数据库
+rem startup;

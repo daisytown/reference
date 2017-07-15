@@ -1,0 +1,741 @@
+ORACLE函数及解释
+关键字: oracle函数及解释 
+
+number数字类型函数
+
+select lpad('name',10),rpad('name',5,'*') from dual;
+
+initcap(st) 返回st将每个单词的首字母大写，所有其他字母小写
+
+ABS(x) 函数，此函数用来返回一个数的绝对值。
+
+ACOS(x)函数，返回X的反余弦值。X范围从1到-1，输入值从0到派，以弧度为单位。
+
+ASIN(x)函数，返回X的反正弦值。X范围从1到-1，输入值从-PI/2到PI/2，以弧度为单位。
+
+ATAN(x)函数，返回X的反正切值。输入值从-PI/2到PI/2，以弧度为单位。
+
+BITAND(x,y)函数,返回X和Y的与结果。X和Y必须为非负整数。注意没有BITOR函数，但是在UTL_RAW包中有用      于RAW值的位操作符。
+
+CEIL(x)函数，用来返回大于或等于X的最小整数。
+
+COS(x)函数，返回x的余弦值。x是以弧度表示的角度。
+
+COSH(x)函数，返回X的双曲余弦。
+
+EXP(x)函数，与power(x,y)函数类似，不过不用指明基数，返回E的X次幂。E=2.71828183...
+
+FLOOR(x)函数，用来返回小于或等于X的最大整数。
+
+LN(x)函数，返回x的自然对数。x必须大于0。
+
+LOG(x,y)函数，返回以X为底Y的对数。底必须是不为0和1的正数，Y是任意正数。
+
+MOD(被除数，除数)求余函数，如果除数为0，则返回被除数。
+
+POWER(x,y)函数，返回X的Y次幂。底X和指数Y都不必是正整数，但如果X是负数的话，Y必须是整数。
+
+ROUND(x[,y])函数，返回舍入到小数点右边Y位的X值。Y缺省为0，这将X舍入为最接近的整数。如果Y是负数，       那么舍入到小数点左边相应的位上，Y必须为整数。
+
+SIGN(x)函数，此函数用来返回一个数的正负值，若为一个正数则返回1，若为一个负数则返回-1，
+            若为0则仍返回0，有点像把模拟量数字化的意思。  
+
+SIN(x)函数，返回X的正弦。x是以弧度表示的角度。
+
+SINH(x)函数，返回x的双曲正弦。
+
+SQRT(x)函数，返回x的平方根，x不能是负数。
+
+TAN(x)函数，返回x的正切。x是以弧度表示的角度。
+
+TANH(x)函数，返回x的双曲正切。
+
+TRUNC(x[,y])截取值函数，Y缺省为0，这样X被截取成一个整数。如果Y为负数，那么截取到小数点左边相应位置
+
+WIDTH_BUCKET(x,min,max,num_buckets) 只能在SQL语句中使用。
+
+使用WIDTH_BUCKET可以根据输入参数创建等长的段。范围MIN到MAX被分为num_buckets节，每节有相同的大小。返回X所在的那一节。如果X小于MIN，将返回0，如果X大于或等于MAX，将返回num_buckets+1.MIN和MAX
+都不能为NULL，num_buckets必须是一个正整数。如果X是NULL，则返回NULL。
+
+ 
+
+
+时间类型函数：（date）
+
+内部存储格式：
+世纪、年、月、日、小时、分钟、秒
+
+默认格式是：DD-MON-RR。
+
+
+SYSDATE 返回当前的系统时间。
+
+SELECT SYSDATE FROM DUAL；
+
+
+对日期的数学运算
+
+SELECT （SYSDATE-HIRE_DATE）/7 FROM TABLENAME WHERE ROWNUM;
+  数字列
+
+ADD_MONTHS(date,x)函数，返回加上X月后的日期DATE的值。X可以是任意整数。如果结果的月份中所包含的   日分量少于DATE的月份的日分量，则返回结果月份的最后一天。如果不小于，则    结果与DATE的日分量相同。时间分量也相同。
+
+CURRENT_DATE 以DATE类型返回会话时区当前的日期。这个函数同SYSDATE相似，除了SYSDATE不管当               会话时区。
+
+CURRENT_TIMESTAMP[(precision)] 以TIMESTAMP WITH TIMEZONE 类型返回会话时区当前的日期。如果    指定precision，它指返回秒数的精度，缺省为6。
+
+DBTIMEZONE 返回数据库的时区。  
+ 
+LAST_DAY（日期） 指定日期所在月份的最后一天的日期，这个函数可用来确定本月还有多少天。
+
+LOCALTIMESTAMP[(precision)] 以TIMESTAMP类型返回会话时区的当前日期。如果指定precision，它指    返回秒数的精度，缺省为6 。
+
+MONTHS_BETWEEN(离当前比较近的日期date1,以前的日期)  两个日期之间相差的月数（以日作为最小单位来计算的）。返回是相差的月数。如果date1和date2的日分量相同，或者这两个日期都分别是所在月的最后一天，那么返回结果是个整数。否则，返回结果包含一个分数，以一个月31天计算。
+
+NEW_TIME(d,zone1,zone2)函数，当时区zone1中的日期和时间是D的时候，返回时区zone2中的日期和时间。
+              返回类型为DATE。zone1和zone2是字符字符串，另外的时区可在ORACLE9I中
+              通过查询V$TIMEZONE_NAMES得到。  
+
+NEXT_DAY （日期，星期几） 指定日期后将要遇到的后七天的某一天的日期。 
+
+ROUND（日期，‘MONTH/YEAR’） 四舍五入得到新的日期。 保留位置是月和年
+
+SESSIONTIMEZONE 返回当前会话的时区。返回类型是一个时区偏移或时区片名的字符字符串。如果指   定格式，则与 ALTER SESSION 语句中的格式相同。
+
+SYS_EXTRACT_UTC(datetime) 从提供的DATETIME中以UTC(Coordinated Universal Time)返回时间。
+    DATETIME必须包含一个时区。
+
+SYSTIMESTAMP 以TIMESTAMP WITH TIMEZONE 返回当前的日期和时间。当在分布式SQL语句中使用的时  候，返回本地数据库的日期和时间。
+
+TRUNC（日期，‘MONTH/YEAR’） 截取 
+
+TZ_OFFSET(timezone) 以字符字符串返回提供的timezone和UTC之间的偏移量。timezone可以被指定为时   区名或'+/-HH:HI'格式表示的偏移量。也可使用SESSIONTIMEZONE和   DBTIMEZONE函数，返回格式为'+/-HH:HI'。
+
+字符字符串   时区
+AST    大西洋标准时
+ADT    大西洋夏令时
+BST    白令标准时
+BDT    白令夏令时
+CST    中央标准时
+CDT    中央夏令时
+EST    东部标准时
+EDT    东部夏令时
+GMT    格林威治平均时
+HST    阿拉斯加夏威夷标准时
+HDT    阿拉斯加夏威夷夏令时
+MST    Mountain标准时
+MDT    Mountain夏令时
+NST    纽芬兰标准时
+PST    太平洋标准时
+PDT    太平洋夏令时
+YST    YuKon标准时
+YDT    YuKon夏令时 
+    
+
+
+日期和日期时间算术
+
+运算  返回类型
+结果 
+
+d1-d2  NUMBER
+返回D1和D2之间相差的天数。该值是一个数值，其小数部分代表一天的几分之几。
+
+dt1-dt2  INTERVAL
+返回DT1和DT2之间的时间间隔。
+
+i1-i2  INTERVAL
+返回i1和i2之间的差距。
+
+d1+d2  N/A
+非法——仅能进行两个日期之间的相减。
+
+dt1+dt2  N/A
+非法——仅能进行两个日期之间的相减。
+
+i1+i2  INTERVAL
+返回i1和i2的和。
+
+d1+n  DATE
+在D1上加上N天作为DATE类型返回。N可以是实数，它包含一天的几分之几。
+
+d1-n  DATE
+从D1上减去N天作为DATE类型返回。N可以是实数，它包含一天的几分之几。
+
+dt1+i1  DATETIME
+返回DT1和I1的和。
+
+dt1-i1  DATETIME
+返回DT1和I1之间的差距。
+
+i1*n  INTERVAL
+返回I1的N次方。
+
+i1/n  INTERVAL
+返回I1除以N的值。
+
+表中注：
+D1和D2指日期值；
+DT1和DT2指日期时间值；
+I1和I2指时间间隔值；
+N指数字值。
+
+ 
+
+ 
+
+
+显示转换：（conversion）
+
+TO_NUMBER(char[,'format_model'])  字符转换到数字类型
+       
+
+TO_DATE(char[,'format_model'])  字符转换到日期类型
+  格式说明符：要与前边要转换的字符串的格式要相同才能转换（匹配问题：格式和位数）。
+
+ 
+
+TO_CHAR(date[,'format_model'[,nlsparams]])
+  第二个参数可以省略，不指定格式，按系统默认格式输出。
+  区分大小写。
+  使用FM（在格式控制符前添加）符号可以去掉空格或是首位的零。
+  如果指定了NLSPARAMS，则它控制返回字符串的月和日分量所使用的语言。格式为：
+  'NLS_DATA_LANGUAGE=language',language指需要的语言。
+  例：
+  select to_char(sysdate,'FMyyyy-mm-dd') from dual;
+  格式控制符的类型：
+    YYYY 四位的年
+    YEAR 年的拼写      
+    MM  2位数字的月
+    MONTH 月的全名
+    MON 月名的前三个字符
+    DY 星期名的前三个字符
+    DAY 星期名的全称
+    DD 2位的天 
+  时间格式控制符：
+    HH24:MI:SS AM
+    HH12:MI:SS PM
+    
+  通过“”来实现加入特殊字符的格式控制符。
+  SELECT TO_CHAR(SYSDATE,'FMyyyy"年"mm"月"dd"日"') from dual;
+
+  DDSPTH
+  ~~ 
+  DD是格式控制符。 
+  TH是序数词，将日期转换成英文的序数词拼写。
+  SP是基数词，将日期转换成英文的基数词拼写。
+
+TO_CHAR(NUM[,'format_model'[,nlsparams]])转换数字 
+
+将NUMBER类型参数NUM转换成VARCHAR2类型。如果指定FORMAT，它会控制整个转换。
+如果没有指定FORMAT，那么结果字符串中将包含和NUM中有效位的个数相同的字符。NLSPARAMS用来指定小数点和千分符及货币符号。它的格式可为：'NLS_NUMERIC_CHARS=' ' dg ' 'NLS_CURRENCY= ' 'string' ' '
+d和g分别代表小数点和千分符。STRING代表货币符号。  
+
+
+数字格式控制符：
+  9 代表一位数字（替换符。有，数字显示；没有。不什么都显示。） 
+  0 代表一位数字（有数字，显示；没有，强制显示0。） 
+  $ 美圆符号
+  L 本地货币
+  . 小数点
+  , 千分符
+  B 当整数部分为0时，将整数部分填充为空格。 例：B999
+  MI  返回带有后继符号而不是前导负号的负数值，正数值将带有后继的空格。999MI 
+  S 返回一个前导符号或后继符号，正数为+，负数为-。 S9999 或 9999S
+  PR  使用尖括号返回负数。正数将有前导或后继空格。999PR
+  D 在指定位置返回一个小数点。两侧的9的个数指定了最大的位数。99D9
+  G 在指定位置返回千分符，G可以在FORMAT_model中出现多次。9G999G9
+  C 在指定位置返回ISO货币符号。C可以在FORMAT_model中出现多次。C99
+  L 在指定位置上返回本地货币符号。 L99
+  V 返回一个被乘以10的N次方的数值，这里N是V后边9的个数。99V99
+  EEEE 使用科学记数法返回该数值。9.99EEEE
+  RM 使用大写的罗马数字表示返回该数值。 RM
+  rm 使用小写的罗马数字表示返回该数值。 rm
+  FM 返回不含前导和后继空格的数值。 FM99.09
+  
+  格式控制符位数一定要大于或等于NUMBER的位数，不能小于。
+
+
+用RR解决跨世纪问题：
+     小于50的认为是1950-2050
+     大于50的认为是1951-1999   
+
+数字和日期是不能相互转换的。
+
+ASCIISTR(string) 
+
+返回只包含有效的SQL字符和斜线的字符串。string中的任何无效的字符将被转换为一个相当的数字，在之前加上斜线。
+   
+BIN_TO_NUM(num[,num]...) 
+
+将一位矢量转换位相当的数字。它的参数是一系列逗号隔开的NUMS，每一个都必须是0或1。
+例如BIN_TO_NUM(1,0,1,1)将返回11，因为11的二进制表示是1011。当使用分组集合和GROUP BY 子句时该函数很有用。     CHARTOROWID(x)函数，
+
+将字符串转换成一个ROWID类型的值，注意格式必须采用ROWID数据类型格式，即“数据块号:行序号:数据文件号”。
+   
+COMPOSE(string) 
+
+以相同字符集中完全规格化Unicode形式返回string.string可以是CHAR、VARCHAR2、NCHAR、NVARCHAR2、CLOB或NCLOB类型。
+  
+
+DECOMPOSE(string) 
+
+返回一个Unicode字符串。它是string的规范分解。string可以是CHAR、VARCHAR2、 NCHAR、NVARCHAR2、CLOB或NCLOB类型。       
+
+FROM_TZ(timestamp,timezone) 
+
+返回一个TIMESTAMP WITH TIMEZONE 类型值。它将TIMESTAMP(没有时区信息)和提供的TIMEZONE组合在一起。
+
+HEXTORAW(string)
+
+ 将由STRING表示的二进制数值转换为一个RAW数值。STRING应该包含十六进制值。STRING中的每两个字符表示结果RAW中的一个字节。HEXTORAW和RAWTOHEX互为反函数。 
+
+NUMTODSINTERVAL(x,unit) 
+
+将X转换为INTERVAL DAY TO SECOND 值，X应该是一个数字。UNIT是一个字符字符串（可以是CHAR、VARCHAR2、NCHAR或NVARCHAR2），且是'DAY'、'HOUR'、'MINUTE'、'SECOND'之一。unit是不区分大小写的，返回值的缺省精度为9。
+
+NUMTOYMINTERVAL(x,unit)
+
+将X转换成INTERVAL YEAR TO MONTH 值，X应该是一个数字。UNIT是一个字符字符串（可以是CHAR、VARCHAR2、NCHAR或NVARCHAR2），且是'YEAR'或'MONTH'之一。unit是不区分大小写的，返回值的缺省精度为9。 
+
+REFTOHEX(refvalue)
+
+返回一REF refvalue的十六进制表示。
+
+RAWTOHEX(rawvalue)
+
+将RAW类型值rawvalue转换为一个十六进制表示的字符串。rawvalue中的每个字节转换为一个双字符的字符串。
+
+RAWTONHEX(rawvalue)
+ 
+将RAW类型值rawvalue转换为一个十六进制表示的字符串。rawvalue中的每个字节转换为一个双字符的字符串。
+RAWTONHEX返回值是NVARCHAR2类型而不是VARCHAR2类型。
+
+ROWIDTOCHAR(rowid)函数，将ROWID类型值转换成字符串。与CHARTOROWID互为反函数。
+
+ROWIDYONCHAR(rowid) 与ROWIDTOCHAR类似，返回类型是NCHAR，而不是CHAR。
+
+TO_CLOB(string)
+
+将string转换为CLOB。string可以是文字或另一个LOB列。如果参数包含NCHAR数据，它被转换为数据库字符集
+
+TO_DSINTERVAL(string[,nlsparams])
+
+将string(可以是CHAR、VARCHAR2、NCHAR、NVARCHAR2)转换为 INTERVAL DAY TO SECOND 类型。如果
+选定nlsparams,则nlsparams只能包含小数点和千分位字符的NLS_NUMERIC_CHARARCTERS表示。
+
+TO_LOB(long_column)
+
+将long_column转换成LOB。这个函数用于将LONG和LONG RAW分别转换为CLOB和LOB。
+
+TO_MULTI_BYTE(string)
+
+返回将所有单字节字符替换为等价的多字节字符的STRING。该函数仅当数据库字符集同时包含单字节和多字节字符时才使用。否则，STRING不会进行任何处理而被返回，与TO_SINGLE_BYTE 互为反函数。
+TO_NCHAR 
+
+和TO_CHAR相似，结果是属于国家字符集而不是数据库字符集。
+
+TO_NCLOB(string)
+
+将STRING转换为NCLOB。STRING可以是文字或另一LOB列。
+
+TO_SINGLE_BYTE(string)
+
+返回将所有双字节字符替换为等价的单字节字符的STRING。。该函数仅当数据库字符集同时包含单字节和多字节字符时才使用。否则，STRING不会进行任何处理而被返回，与TO_MULTI_BYTE 互为反函数。
+
+TO_TIMESTAMP(string[,format[,nlsparams]])
+
+将其参数CHAR或VARCHAR2类型string转换成TIMESTAMP类型。
+
+TO_TIMESTAMP_TZ(string[,format[,nlsparams]])
+
+将其参数CHAR或VARCHAR2类型string转换成 TIMESTAMP WITH TIMEZONE 类型。
+
+TO_YMINTERVAL(string)
+
+将string(可以是CHAR、VARCHAR2、NCHAR、NVARCHAR2)转换为INTERVAL YEAR TO MONTH 类型。
+TO_YMINTERVAL与TO_DSINTERVAL相似，除了它不能使用NLS参数作为参数并返回YEAR TO MONTH时间间隔而不DAY TO SECOND 时间间隔。
+
+to_label(x[,y])函数，按照格式Y将字符串X转换成MLSLABEL类型的一个值，若默认格式为Y，则按照默认格式进  行转换。
+
+dump(w,[x[,y[,z]]])函数,用来返回字符串EXPR的数据类型，内部的存储位置和字符长度。
+      dump(expr,return_datatype,start_position,length).
+      return_datatype是指定返回返回位置用什么方式表示，可以为8、10、16、17，分别表示      用八进制、十进制、十六进制和字符类型。
+
+例：
+select dump(last_name,8,3,2) ,dump(last_name,10,3,2) ,
+dump(last_name,16,3,2) ,dump(last_name,17,3,2) from employees
+where lower(last_name) = 'smith';
+
+greatest(x,y,...)函数，返回参数列表中的最大值。其参数的类型是由第一个参数决定的，可以为数值型、日期型  、和字符型等，后面的参数被强制转换成此种数据类型。
+  进行字符串的比较时，其大小由字符在字符集中的数值决定，在字符集中的数值大，则此字  符就大，对于字符串，此函数返回VARCHAR2类型。  
+
+least(x,y,......)函数，返回列表参数中的最小值。
+
+与上两个函数类似的有：
+greatest_lb(x,y,....)函数和least_lb(x,y,....)函数，分别求出列表中的标签的最大下限和最小上限，其参数必须为
+MLSLABEL 类型，返回值为 RAW MLSLABEL类型。
+
+user 函数，返回当前用户的数据库用户名。
+uid函数，返回唯一标识当前用户的整数。
+这两个函数在完整性约束检查时会用到，可以当作引用变量一样引用它们。
+
+userenv(x)函数，返回当前会话的一些信息，由X指定返回何种信息。在写一个指定应用的审计测试表或决定为当            前会话指定哪种语言时会用到，但完整性约束时不能用。
+参数：
+ entryid  返回有效的审计条目标识   
+ label    返回当前会话的标签
+ language 以“语言.字符集”形式返回所用的语言和字符集
+ sessionid 返回正在使用的审计会话号
+ terminal 返回当前会话终端所用的操作系统
+
+ 
+
+嵌套函数：
+
+单行函数可以嵌套任意层；
+嵌套函数从最深层开始执行。
+
+ 
+
+
+通用函数：
+
+BFILENAME(directory,file_name)
+返回操作系统中与物理文件file_name相关的BFILE位置指示符。directory必须是数据字典中的一个DIRECTORY类型对象。
+
+COALESCE（，，，，可以多个参数）返回从左到右的第一个非空的表达式。如果所有表达式都为NULL，则返回NULL。
+
+EMPTY_BLOB/EMPTY_CLOB
+返回一个空的LOB位置指示符。EMPTY_CLOB返回一个字符位置指示符，EMPTY_BLOB返回一个二进制位置指示符。
+
+EXISTSNODE(XMLType_instrance,Xpath_string)
+使用Xpath_string中的路径，确定由XMLType_instrance标识的XML文档的TRAVELSAL是否返回任何节点。这个函数将返回一  个NUMBER值，如果没有节点则为0，如果有节点则为大于0。
+
+EXTRACT(XMLType_instrance,Xpath_string)
+应用Xpath_string之后，返回由XMLType_instrance标识的XML文档的一部分。
+
+GREATEST(expr1[,expr2]...)
+返回其参数中最大的表达式。在进行比较之前，每个表达式都被隐式转换为EXPR1的类型，如果EXPR1是字符类型，则使用非填充空格字符比较，返回结果为VARCHAR2类型。
+
+LEAST(expr1[,expr2]...)
+返回其参数中最小的表达式，其余同上。
+
+NVL(EXPR1,EXPR2)
+类型必须匹配，如果EXPR1是NULL，则返回EXPR2，否则返回EXPR1。返回值与EXPR1类型相同，除非EXPR1是字符类型，在这种情况下将返回VARCHAR2类型。这个函数用于确保查询记录集中不包含NULL值。
+
+NVL2(EXPR1,EXPR2,EXPR3)
+如果EXPR1是NULL，则返回EXPR2，否则返回EXPR3。返回值与EXPR2类型相同，除非EXPR2是字符类型，在这种情况下将返回VARCHAR2类型。
+
+SYS_CONNECT_BY_PATH 返回列值的从根到结点的路径，它仅在层次查询中有效。
+
+SYS_CONTEXT(namespace,parameter[,length])
+返回与namespace的内容相关联的patameter的值。使用DBMS_SESSION.SET_CONTEXT过程设置参数和namespace.返回值是VARCHAR2类型，如果没有指定length,则最大长度是255字节。
+
+SYS_DBURIGEN
+产生一个URL用于从数据库中提取XML文档。
+
+SYS_GUID
+以16位RAW类型值形式返回一个全局唯一的标识符。
+
+SYS_TYPEID(object_type)
+返回指定类型object_type的类型ID。
+
+SYS_XMLAGG
+将几个XML文档或文档片段组合为一个文档。
+
+SYS_XMLGEN
+返回一个基于数据库中数据的XML文档片段。
+
+TREAT(expr AS [REF] [schema.]type)
+TREAT用于改变一个表达式的声明类型。仅可以将声明类型改变为给定表达式的子类型或超类型。以类型[schema.]type返回
+expr，如果指定了REF，则返回REF。
+
+UID
+返回一个唯一标识当前数据库用户的整数，UID没有参数。
+
+VSIZE(x)返回X内部表示的字节数。
+
+NULLIF(a,b)如果A等于B返回NULL，如果不等于返回B。
+
+DUMP(expr[,number_format[,start_position][,length]])
+返回一个包含EXPR内部表示信息的VARCHAR值，如果没有指定NUMBER_FORMAT，则返回结果以十进制形式返回。如果指定了start_position和length，则返回从start_position开始，长为length字节的字符串，缺省是返回整个表达式。
+所返回的数据类型是内部数据类型编码的对应数字。
+
+NUMBER_FORMAT
+
+格式  返回结果
+8  8进制符号
+10  10进制符号
+16  16进制符号
+17  单字符
+
+
+编码   数据类型       有效于
+ 
+1   VARCHAR2     ORACLE7
+2   NUMBER      ORACLE7
+8   LONG      ORACLE7
+12   DATE      ORACLE7
+23   RAW      ORACLE7
+24   LONG RAW     ORACLE7
+69   ROWID      ORACLE7 
+96   CHAR      ORACLE7
+112   CLOB      ORACLE8
+113   BLOB      ORACLE8
+114   BFILE      ORACLE8
+180   TIMESTAMP     ORACLE9i 
+181   TIMESTAMP WITH TIMEZONE   ORACLE9i
+182   INTERVAL YEAR TO MONTH   ORACLE9i
+183   INTERVAL DAY TO SECOND   ORACLE9i
+208   UROWID      ORACLE9i
+231   TIMESTAMP WITH LOCAL TIMEZONE   ORACLE9i 
+
+
+USERENV[option]
+基于option返回包含有关当前会话信息的VARCHAR2值。
+
+函数的行为
+
+选项值    USERENV(option)的行为
+
+'OSDBA'    如果当前会话将OSDBA角色的设置打开了，则返回'TRUE',否则返回'FALSE',注意返    回值是VARCHAR2类型，而不是BOOLEAN类型。
+
+'LABEL'    仅对TRUSTED ORACLE 中有效，返回当前会话标志。
+
+'LANGUAGE'   返回当前会话所使用的语言和地域，以及数据库字符集，这是NLS参数，返回形式是
+    LANGUAGE_TERRITORY.CHARACTERSET.
+
+'TERMINAL'   返回当前会话所使用终端的操作系统标识符。对于分布式的SQL语句，返回的是本地    会话的标识符。
+
+'SESSIONID'   如果初始化参数AUDIT_TRAIL被设置为TRUE，那么将返回审计会话标识符。在分布    式SQL语句中，USERENV('SESSIONID')是无效的。
+
+'ENTRYID'   如果初始化参数AUDIT_TRAIL被设置为TRUE，那么将返回可用的审计项标识符。在    分布式SQL语句中USERENV('ENTRYID')是无效的。
+
+'LANG'    返回语言名称的ISO缩写符号。它的格式比USERENV('LANGUAGE')要短。
+
+ 
+
+例：
+select USERENV('TERMINAL'),USERENV('LANGUAGE') from dual;
+
+USERENV('TERMINA USERENV('LANGUAGE')
+---------------- ----------------------------------------------------
+WNJ              SIMPLIFIED CHINESE_CHINA.ZHS16GBK
+
+条件表达式：
+
+CASE表达式（简单CASE）
+
+
+语法：
+
+CASE 表达式 WHEN  条件1 THEN 返回值1
+     WHEN  条件2 THEN 返回值2
+   .
+   .
+   .
+     WHEN  条件n THEN 返回值n
+ELSE 返回值
+END   
+  
+
+DECODE函数
+
+语法：
+
+DECODE（
+ 条件,比较值1，返回值1
+      比较值2，返回值2
+      .
+       .
+      .
+      比较值n，返回值n
+      返回值（不满足条件时）        
+）
+
+select last_name,salary,
+ decode( trunc(salary/2000,0),//条件
+  0, 0.00,//比较值1，返回值1
+  1, 0.09，
+  2, 0.20，
+  3, 0.30，
+  4, 0.40，
+  5, 0.42，
+  6, 0.44，
+   0.45
+       )   TAX_RATE
+from employees
+where department_id=80; 
+
+ 
+
+ 
+
+从多表中显示数据：
+
+SQL（老版本的）
+
+等值查询
+SELECT TABLE1.COLUMN,TABLE2.COLUMN FROM TABLE1,TABLE2 WHERE TABLE1.COLUMN1=TABLE2.COLUMN2;//自然连接
+使用AND操作符增加查询条件
+
+使用表的别名来简化查询。
+提高查询功能。
+
+SELECT E.ID，D.ID FROM EMPL E，DEP D WHERE E.NAME=D.NAME； 
+       ~~     ~
+       表别名
+多表等值连接查询
+为了连接N个表，至少需要N-1个连接条件。
+
+
+  
+非等值查询
+
+使用 BETWEEN AND 查询近似值作为连接条件的多表结果。
+WHERE E.SALARY BETWEEN J.LOW AND J.HIGH 
+
+ 
+
+
+外连接查询
+
+SELECT T1.COL,T2.COL FROM WHERE T1.COL(+)=T2.COL;左外连接
+    所有T2的T1信息。 
+SELECT T1.COL,T2.COL FROM WHERE T1.COL=T2.COL(+);右外连接
+    所有T1的T2信息。
+为了看到与连接条件不匹配的数据，就必须得用外连接。
+
+ 
+
+ 
+
+自连接
+
+通过表的别名来创建虚拟逻辑表,进行自连接查询。
+select worker.last_name || 'work for' || manager.last_name
+from employees worker,employees manager
+where worker.manager_id=manager.employee_id;
+
+ 
+
+
+9I适应性连接：
+
+select t1.col,t2.col
+from table
+ 
+cross join t2 //交叉连接
+
+natural join t2//自然连接:把两表中所有等值的字段都作为连接条件（但这些连接条件不用写）。
+     从两个表中选出连接列的值相等的所有行。 
+     如果两个列的名称相同，但数据类型不同；或是类型相同，意义不同都会出错。
+
+join t2 using (column_name);基于自然连接，只有在USING中出现的，才作为连接条件（在USING中列名前一定不能加前缀）。
+ 
+join t2 on (t1.col=t2.col);基于ON的自然连接。等值、非等值或自连接都可以实现。
+
+left|right|full outer join t2 on(t1.col=t2.col);
+
+ select e.last_name,d.department_name,l.city
+ from employees e
+ left outer join departments d on e.department_id=d.department_id
+        right outer join locations l  on d.location_id=l.location_id;
+*&* 可以连续做左连接或右连接的操作。
+ full outer join 忽略连接条件，把要查询的列的所有行全显示出来。 
+  
+
+
+笛卡尔乘积（多表查询容易产生的错误）形成原因：
+*、忽略连接条件；
+*、连接条件不正确；
+*、笛卡尔乘积是由第一个表的所有行和第二个表的所有行联合形成的；
+*、为了避免笛卡尔乘积的产生，一定要在WHERE条件中正确写出连接条件。 
+set linesize 160;设置显示行的行数。
+
+ 
+
+ 
+
+用字函数产生的总计
+
+对多行的计算产生单行的结果。
+
+组函数用语对每个组的行集进行运算，每个组产生一个结果。
+
+AVG([DISTINCT/ALL]col)只能用与数字。只能对多行的数据进行运算，不能在这个函数中做单行的数学运算。
+
+CORR(x1,x2)
+
+返回表达式X1和X2组成的集合的相关系数。在保证所有行中的X1和X2都不为NULL之后结果通过
+COVAR_POP(x1,x2)/(STDDEV_POP(x1)*STDDEV_POP(x2))得到。
+
+COUNT([DISTINCT/ALL]col)所有非空字段的行数。
+
+COVAR_POP(x1,x2)返回表达式x1和x2组成的集合的人口协方差结果通过(SUM(x1*x2)-SUM(x2)*SUM(x1)/n)/n得到，n是没有  NULL项的集合的数目。
+
+COVAR_SAMP(x1,x2)返回表达式X1和X2组成的集合的相同协方差。
+
+CUME_DIST 返回一组值中一个值的累积分布。
+
+DENSE_RANK返回有序分组的行中一行的秩，秩是从1开始的连续的整数。
+
+GROUP_ID()返回一个唯一数字值用于在GROUP BY 字句中辨别组。
+
+GROUPING_ID返回一个数字对应于一行的GROUPING位矢量。
+
+MAX([DISTINCT/ALL]col)可以用于任何类型，当用于日期类型时代表最晚。忽略空值。字符类型时候，比较字符串首字母的  ASCLL值。
+
+MIN([DISTINCT/ALL]col)可以用于任何类型，当用于日期类型时代表最早。忽略空值。字符类型时候，比较字符串首字母的  ASCLL值。
+
+PERCENTILE_CONT这个函数是一个反分布函数，它假设了一个连续分布模式。
+
+PERCENTILE_DISC一个反分布函数，它假设了一个离散分布模式。
+
+RANK 返回给定行的秩。秩不必是连续的，因为相同的行有相同的秩。
+
+REGR这些函数(REGR_SLOPE,REGR_INTERCEPT,REGR_COUNT,REGR_R2,REGR_AVGX,REGR_AVGY,REGR_SXX
+REGR_SYY,REGR_SXY)得到了双集合的普通最小衰减线。
+
+SUM([DISTINCT/ALL]col)返回选择列表项目的总和，只能用于数字。
+
+STDDEV([DISTINCT/ALL]col) 标准方差
+
+STDDEV_POP(col)计算人口标准差并返回人口方差的平方根。
+
+STDDEV_SAMP(col)计算累计标准差并返回例子方差的平方根。
+
+VAR_POP(x)返回提系列数字在去除了NULL值之后的人口不同。由(SUM(x*x)-SUM(x)*SUM(X)/COUNT(x))/COUNT(x)得到。
+
+VAR_SAMP(x)返回一系列数字在去NULL值之后的范例不同。由(SUM(x*x)-SUM(x)*SUM(X)/COUNT(x))/(COUNT(x)-1)得到。
+
+VARIANCE([DISTINCT/ALL]col)偏移方差，返回COL的方差。
+
+ 
+
+语法：
+select col,group function(col) from table where  条件  group by col;
+GROUP BY
+必须：出现在查询列表中的一个字段，但没有出现在函数中，那么这个字段必须要出现在GROUP BY 中。
+可以：出现在GROUP BY 子句中的字段可以不出现在查询列表中。
+先排列，再运算。
+
+WHERE 子句中不能使用 group function。
+
+限制组必须使用 HAVING 子句。
+
+语法：
+select col,group function from table
+where 条件//可以没有条件限制
+group by col
+having group_condition //组过滤，在过滤以后，再进行分组计算。
+order by col;                                                                                                                        
+                                                                 
+组函数嵌套最多只能有两层。
+select max(avg(salary))
+from employees
+group by employee_id;
+
+
+select * from tab;查询一个用户中的所有表。
+

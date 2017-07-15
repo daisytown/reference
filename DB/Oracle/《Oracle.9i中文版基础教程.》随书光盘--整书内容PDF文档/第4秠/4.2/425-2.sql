@@ -1,0 +1,1 @@
+select empno,ename,job from scott.emp where job>='CLERK' or sal<=2000

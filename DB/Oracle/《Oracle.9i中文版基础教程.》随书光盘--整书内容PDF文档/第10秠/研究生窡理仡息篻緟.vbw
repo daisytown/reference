@@ -1,0 +1,10 @@
+frmMain = 7, 35, 494, 464, C, 11, 30, 616, 527, C
+Module1 = 22, 22, 416, 302, C
+FormInsertGraduate = 0, 0, 354, 280, C, 45, 17, 657, 458, C
+FormUpdateGraduate = 110, 110, 534, 455, C, 15, 5, 644, 495, C
+FormSelectGraduate = 66, 66, 405, 411, C, 44, 44, 383, 389, C
+FormInsertDirector = -101, 92, 541, 437, C, 22, 22, 556, 367, C
+FormUpdateDirector = 124, 79, 766, 424, C, 10, 61, 575, 485, C
+FormInsertMajor = 154, 154, 632, 499, C, 66, 66, 521, 452, C
+FormUpdateMajor = 0, 0, 484, 345, C, 65, 59, 549, 404, C
+FormSelectDirector = 132, 132, 774, 477, C, 88, 88, 374, 433, C

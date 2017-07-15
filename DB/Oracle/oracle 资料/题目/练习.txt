@@ -1,0 +1,18 @@
+1.JDBC程序读出DEPT表中的数据
+
+2.备份表dept成mydept,给mydept增加一个字段num 
+表示部门人数,给num字段填写上每个部门正确的人数
+
+
+3.分别建立用户A,B,C
+让A 能select,delete,update scott下的emp表
+让B 能select scott下的emp
+让C 能delete scott下的emp
+
+练习一下修改用户的密码
+
+
+
+4.打开2个命令窗口,分别连接到A和B,
+在A用户下为emp表加入一条记录,在B用户下如何才能看到
+该条记录?

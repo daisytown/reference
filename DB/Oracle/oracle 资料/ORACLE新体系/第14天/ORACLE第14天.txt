@@ -1,0 +1,145 @@
+XML与JAVA
+
+<1>DOM (Document Object Model)
+文档对象模型
+  思路：把XML文件变成内存中的树型结构
+        利用树的数据结构的特点来访问
+
+<例子> ch12_3_1
+ 编程序的步骤
+  <1>导入必要的包
+import javax.xml.parsers.*;//xml解析
+import org.xml.sax.*; //异常处理
+import org.w3c.dom.*; //dom包
+import java.io.*; //读取文件  
+
+ <2>  文档处理工厂
+  DocumentBuilderFactory dbf =  DocumentBuilderFactory.newInstance();
+
+ <3> 建立DocumentBuilder 文档解析器
+  DocumentBuilder db = dbf.newDocumentBuilder();
+        
+ <4> 导入XML文件 parse方法把一个XML文件变成内存的树
+   Document document = db.parse(new File(args[0]));
+
+ <5>
+Node  对象表示的是XML的节点/元素
+document.getFirstChild() 得到根元素
+
+Node child = (Node)document.getFirstChild();
+
+ <6>
+child.getNextSibling() 得到兄弟节点(同一个层次上相邻的节点)
+child.getNodeName()  得到节点的名字(XML的标记) 
+child.getNodeType() 得到节点的类型()
+   1     元素
+   2     属性
+   3     文本
+
+   for ( ; child != null; child = child.getNextSibling()) {
+               System.out.print("元素: " + child.getNodeName());
+               System.out.println("/类型: " + child.getNodeType());
+               printChildNode(child, 0);
+           }
+
+Node temp   
+temp.hasChildNodes()  判断节点是否还有子节点
+
+NodeList   代表节点的数组
+
+NodeList nodes = temp.getChildNodes();
+
+nodes.item(i) 返回每个节点 Node
+    nodes.item(0)  第 一个dept
+    nodes.item(1)  第 二个dept 
+nodes.item(i).getNodeValue() 得到节点的值
+
+<例子> ch14_2_1 
+// 获取根元素
+        Node root = document.getDocumentElement();
+
+通过指定标记来访问元素
+NodeList node=document.getElementsByTagName("dept");
+  得到dept元素的节点数组
+
+访问节点的属性
+NamedNodeMap atts = tagNodes.item(i).getAttributes();
+
+Node att = atts.item(j);
+                System.out.print("   +-- " + att.getNodeName());
+                System.out.println("/" + att.getNodeValue());       
+
+<举例练习1>
+
+<例子ch12_4_4> 利用DOM来修改XML
+    增加一个节点 删除一个节点 修改一个节点
+
+ DOM技术特点： 
+   <1>XML文件一次性加载到内存变成树，XML文件
+很大，会非常耗内存
+   <2>可以对XML文件 读和写
+   <3>访问效率还是较高的
+   <4>可以随机的访问节点
+
+ SAX规范 (Simple API for XML) 
+   特点:
+  <1>边读取文件 边解析  适合于大型的XML文件
+  <2>只能读取XML文件
+  <3>只能顺序访问节点
+  <4>效率相对较低
+
+ 应用在大型的XML解析，事件监听器的模型
+ DOM技术比SAX技术更为广泛
+
+<如何来用DOM技术>
+  例子： 动态的页面 转化成 静态的页面
+
+   适用在大型网站高点击率的页面
+   要求相应速度快的页面
+  缺点：不是实时的，与用户的交互会差一点
+
+ A) 数据库中的表  转化为 XML文件
+     JDBC   IO操作
+
+ B) 为XML文件 设计 XSL文件
+     XSL XPath 设计一个XSL模版
+
+ C) XSL+XML  生成一个 html文件
+     DOM Transformer对象进行转换
+     例子 ch12-5
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+ 
+
+
+
+
+
+
+  
+
+ 
+
+
+
+
+
+   
+
+
+
+
+ 

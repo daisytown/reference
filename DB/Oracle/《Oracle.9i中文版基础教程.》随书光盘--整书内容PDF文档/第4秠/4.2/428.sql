@@ -1,0 +1,1 @@
+select empno,ename,sal,mgr,sal+mgr from scott.emp

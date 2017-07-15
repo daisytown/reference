@@ -1,0 +1,409 @@
+数据库对象
+<1>表(约束)
+<2>如何自动编号
+SQLserver 
+  --IDENTITY属性
+  create table test(
+    xh int identity(1,2) primary key,
+    name varchar(20)
+);
+  insert into test(name) values ('mike');
+
+ORACLE
+  一个对象(序列sequence)
+  --最简单的一个序列,从1开始每次增加1,最大值38位精度10的38次方
+和SQLSERVEr中的IDENTITY(1,1)类似
+   create sequence seq1;
+
+访问其中的值
+  使用2个伪列 nextval,currval
+    select seq1.nextval from dual;--新值
+    
+    select seq1.currval from dual; --当前值 
+  
+从3开始每次增加2
+  3,5,7,9
+  create sequence seq2 
+        start with 3
+        increment by 2;
+
+从5开始每次增加5,最大值30,最小值是1
+ 循环序列(到最大值后回到最小值)
+
+    5,10,15,20,25,30,1,6,11,......
+  create sequence seq3
+     start with 5      --起始值
+     increment by 5    --步长
+     maxvalue 30       --最大值
+     minvalue 1        --最小值
+     cycle             --循环
+     cache 4           --缓存4个数
+  默认值cache是20个
+
+ 取5的时候,内存中已经算出了10,15,20,25
+  取10的时候,直接取内存中的数
+
+如何用到表中
+   create table testa(
+     xh number(4) primary key,
+     nm varchar2(20));
+   
+ xh字段要实现自动编号
+   insert into testa values (seq3.nextval,'MIKE');
+   insert into testa values (seq3.nextval,'JOHN');
+
+自动编号 保证唯一性 实际中一般用它做主键
+a) 对emp新加入的员工的编号是7944,7954,7964,....
+--建立sequence
+  create sequence s_emp
+    start with 7935;
+--使用  nextval
+  insert into emp(empno,ename) values (s_emp.nextval,'张三');
+     insert into emp(empno,ename) values (s_emp.nextval,'李四');
+
+b) 排名次
+  把员工按工资高低按名次排列
+--加一个名次字段ord
+ alter table emp add (ord number(3));
+--更新ord(名次=工资比我高的人数+1)
+ update emp a set ord = (select count(*)+1
+from emp where sal > a.sal);
+
+--删除序列seq1
+  drop sequence seq1;
+
+<3> 视图(VIEW)
+  create or replace view <名字> as
+   <select 语句>
+例子
+  create or replace view emp_view as
+    select ename,empno,sal from emp;
+
+  select * from emp_view;
+转化为一个子查询来执行
+  select * from (select ename,empno,sal from emp);
+
+视图中是否存放数据???
+  不存放数据,存放的是查询语句
+  隐藏数据
+
+通过视图能改表中的数据吗??
+  是可以的,但是有条件限制的
+   限制条件是:建立视图的查询语句必须是一个简单的select(只查询一个表,并且不含有分组函数),就可以改表中的数据了
+   select * from emp_view;
+
+   update emp_view set sal = 3000;
+
+ select a.*,(select count(*) from
+emp where deptno = a.deptno) as rs
+from dept a;
+
+create or replace view deptrs
+as  select a.*,(select count(*) from
+emp where deptno = a.deptno) as rs
+from dept a;
+
+select * from deptrs;
+
+能否通过视图去改表中的数据呢???
+         有条件的可以:
+           <1>建立视图的select语句必须是简单的select语句
+               简单:不能是多表的查询
+                    不能有分组函数
+           <2>建立视图的时候不能带with readonly关键字
+     create or replace view emp_v2 as --select语句
+         select empno,ename,sal from emp 
+         with read only;
+                   
+  可以改的情况:
+     1)create or replace view emp_v1 as --select语句
+         select empno,ename,sal,comm from emp;
+         
+     update emp_v1 set comm = 1000
+         where empno=7934;
+ 
+     select * from emp;   --发现数据修改了
+
+     2)create or replace view emp_v3
+        as 
+          select empno,ename,hiredate,sal,deptno 
+          from emp
+          where deptno = 10;
+
+       update emp_v3 set deptno=20 where empno=7782;
+ 
+       select * from emp_V3; --7782的数据没有了
+
+    3)create or replace view emp_v4
+      as select empno,ename,sal,comm from emp
+      where sal > 3000
+      with check option;
+       with check option保证where总是成立
+        修改:如果你要把数据从>3000 改成 < 3000 那么就不行
+        插入:如果数据不满足sal>3000,那么也不让通过视图插入
+        删除:不受条件的限制
+
+ 用视图的时候 不要去通过视图来修改基表
+  视图只用于 数据的查询就够了
+ 
+
+
+
+<4>数据字典
+ 一套视图(系统定义的)来管理所建立的对象
+ select * from dict; --查询到所有的数据字典表
+ a) 查看用户下的表
+   connect scott/tiger
+   select table_name from user_tables;
+ b) 查看用户下的对象
+    connect scott/tiger
+    column object_name format a20 --字段格式是字符的20位长度
+    select object_name,object_type
+    from user_objects
+    order by object_type;  --用户所拥有的对象
+
+    select object_name,object_type
+    from user_objects
+    WHERE object_type='TABLE'; --用户所拥有的表
+ 
+    select object_name,object_type
+    from user_objects
+    WHERE object_type='INDEX'; --用户所拥有的索引
+ c) emp和dept的关系
+     emp(deptno reference dept(deptno))
+
+   select a.table_name,a.column_name,
+       c.table_name as "引用它的表",c.column_name "引用它的列"
+from user_cons_columns a,
+     user_constraints b,
+     user_constraints d,
+     user_cons_columns c
+where a.constraint_name = b.constraint_name
+and d.constraint_name = c.constraint_name
+and b.constraint_name = d.r_constraint_name
+and b.table_name='DEPT';
+
+
+
+ create or replace view emprs as
+   select deptno,count(*) rs
+   from emp
+   group by deptno;
+不能通过视图来改表
+ update emprs set rs=10;
+ update emprs set deptno=20;
+
+
+ create or replace view emp_view as
+   select ename,empno,sal from emp
+   with read only;
+--删除视图
+ drop view emp_view;
+
+ 
+<5>同义词synonym
+  设置权限的时候 有用
+a)建立一个新的用户mk  密码m123;
+  connect system/manager;
+  create user mk identified by m123;
+  grant connect,resource to mk;
+b)登录到用户mk 建立一张表
+  connect mk/m123;
+  create table test(
+    xh number(2) primary key,
+    cname varchar2(10) not null);
+  insert into test values (10,'Mike');
+  commit;
+c)希望在scott用户下能看到mk用户中test表的数据???
+  connect mk/m123
+  grant select on test to scott; //授权scott能select 
+  connect scott/tiger
+  select * from mk.test;
+
+  create synonym mtest for mk.test; //为表建立的
+                       //可以为任何对象建立同义词
+  select * from mtest; //相当于select * from mk.test;
+ 
+同义词 增强数据库的安全性
+   connect mk/m123
+   create sequence seq1;
+   grant select on seq1 to scott;
+
+   connect scott/tiger
+   select mk.seq1.nextval from dual;
+
+   为序列建立一个同义词
+   create synonym seqa for mk.seq1;
+   select seqa.nextval from dual;
+
+a)某个用户所拥有的同义词都称为私有的同义词,
+别的用户是不能使用它的
+b)所有用户都能使用的同义词称为公有的同义词public
+只能定义在超级用户下
+ connect system/manager
+ create public synonym ptest for mk.test;
+ connect mk/m123
+  select * from ptest;
+   //同义词只是个名字,到底能否查到数据取决于是否有权限
+  
+  取一个别名semp 相当于 scott.emp
+  简化名字,隐藏表的所有者
+  增强安全性
+  
+  connect mk/m123;
+  
+  create synonym semp for scott.emp;
+
+  select * from semp; 
+     --是否能查到数据
+     --取决于是否有权限查询
+
+
+<6>索引
+  作用:加快查询  select
+       索引一定是建立在表上的
+  如何建立索引?
+
+  a.有的建立表的时候的约束可以自动建索引
+        primary key ------- 唯一性索引
+        unique      ------- 唯一性索引
+
+     create table t1(
+       xh number(2) primary key,
+       name varchar2(10) unique,
+       age number(2) 
+); 
+  
+  b.自己建索引
+      加快查询
+      select * from t1 where age> 70;
+      建立索引
+      create index ind_t1_age on t1(age);
+       //在表t1的age字段上建立索引ind_t1_age
+     索引是自动维护的
+        insert
+        delete
+        update 操作花费的时间变慢了
+     一个表上的索引最好不要超过6个(有频繁的增删改操作的表)
+
+
+
+
+      create index ind_t1_age1 on t1(age);
+       
+      create index ind_dept on dept(dname,loc);
+      //联合索引 分次序的
+      create index ind_dept1 on dept(loc,dname);
+ 
+      --删除索引
+      drop index ind_t1_age;
+ 
+      create unique index ind_x on t1(age);
+      //保证age的值唯一 (唯一性索引)
+
+  <a>select语句是如何来使用索引的?
+      select * from t1 ; --不能用索引,全表扫描
+      select * from t1 where age > 20;
+                    --能用age上的索引
+      select * from t1 where name like '李%';
+                    --能用上name上的索引
+      select * from t1 where xh <45;
+                    --能用上xh上的索引;
+
+      select * from t1 where age > 20;
+                   --能用索引
+      select * from t1 where age+10>30;
+                   --不能用age上的索引
+                   --<1>规则1:索引的字段不能参与运算
+
+      select * from t1 where substr(name,1,1)='李';
+                     --不能用索引
+                     --<2>规则2:索引的字段上不能使用函数 
+      select * from t1 where name like '李%';
+                    --能用索引
+
+  查询emp表中hiredate在1982年10月到1999年9月的员工??
+
+   select * from emp where to_char(hiredate,'yyyymm') 
+>= '198210' and to_char(hiredate,'yyyymm') <='199909';
+  create index ind_hiredate on emp(hiredate);
+
+                --用不上hiredate上的索引
+
+   select * from emp where hiredate <= to_date('19990901','yyyymmdd')  and  
+hiredate >= to_date('19821001','yyyymmdd');
+                --能用上hiredate上的索引      
+
+
+  察看索引的使用情况 看执行计划
+     执行计划 -- 表示ORACLE是如何来执行你的select语句的
+
+  对于复杂的查询的效率 只能看执行计划来确定
+    关联查询 
+      select dname,ename from dept a,emp b
+       where a.deptno = b.deptno;
+
+ 
+
+
+     特殊索引
+    <1> 位图索引
+      create bitmap index ind_aa on emp(job);
+     数据的不同值对于记录的行数来说 是个很小的数
+     这种字段适合使用位图索引
+      select * from emp where job='CLERK';
+      --用bitmap的索引 会比普通索引的效率要高
+
+      create index ind_aa_c on emp(job);
+
+    <2> 簇（cu）
+      关联查询的时候,让相关联的字段在物理位置上放在  
+     一起
+    select dept.dname,empno,ename
+   from dept , emp
+   where dept.deptno = emp.deptno;
+
+ --使dept的deptno字段和emp的deptno字段 在物理上放在    
+    相邻的位置上，这样使得关联查询加快
+   但是 会使得emp和dept的数据的插入变慢 
+
+如何建立簇
+   --簇cluster
+   --建立一个簇表
+     --a)簇键
+create cluster emp_dept(deptno_key number(2));
+
+--b)建立表使用簇
+create table emp1(empno number(4) primary key,
+ename varchar2(10),
+job varchar2(9),
+mgr number(4),
+hiredate date,
+sal number(7,2),
+comm number(7,2),
+deptno number(2) references dept(deptno)
+) cluster emp_dept(deptno);
+
+create table dept1 (deptno number(2) primary key,
+dname varchar2(14),
+loc varchar2(10)) cluster emp_dept(deptno);
+
+--c)建立簇表的索引
+create index clu_emp_dept on cluster emp_dept;
+
+ 表 / 序列 /视图 / 索引 / 同义词
+
+
+
+
+    
+  
+
+    
+  
+     
+
+ 
+
+ 
+

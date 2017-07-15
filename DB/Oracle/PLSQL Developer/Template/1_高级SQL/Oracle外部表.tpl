@@ -1,0 +1,2 @@
+Oracle外部表支持两种类型的驱动：一种是ORACLE_LOADER，外部表的数据必须来源于文件文件，
+另一种则是ORACLE_DATAPUMP，外部表的数据必须是二进制dump文件，该dump文件是先前将Oracle内部表的数据导入到外部表中填充的文件。很显然，Oracle希望将数据保留在数据库内部进行处理。

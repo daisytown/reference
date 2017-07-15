@@ -1,0 +1,1 @@
+select sum(sal) Ð½Ë®×ÜºÍ from scott.emp;

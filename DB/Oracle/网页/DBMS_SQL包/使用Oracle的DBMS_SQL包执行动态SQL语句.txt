@@ -1,0 +1,893 @@
+在某些场合下，存储过程或触发器里的SQL语句需要动态生成。Oracle的DBMS_SQL包可以用来执行动态SQL语句。本文通过一个简单的例子来展示如何利用DBMS_SQL包执行动态SQL语句：
+
+ 
+
+DECLARE
+       v_cursor NUMBER;
+       v_stat NUMBER;
+       v_row NUMBER;
+       v_id NUMBER;
+       v_no VARCHAR(100);
+       v_date DATE;
+       v_sql VARCHAR(200);
+       s_id NUMBER;
+       s_date DATE;
+BEGIN
+     s_id := 3000;
+     s_date := SYSDATE;
+     v_sql := 'SELECT id,qan_no,sample_date FROM "tblno" WHERE id > :sid and sample_date < :sdate';
+     v_cursor := dbms_sql.open_cursor; --打开游标；
+     dbms_sql.parse(v_cursor, v_sql, dbms_sql.native); --解析动态SQL语句；
+     dbms_sql.bind_variable(v_cursor, ':sid', s_id); --绑定输入参数；
+     dbms_sql.bind_variable(v_cursor, ':sdate', s_date);
+     
+     dbms_sql.define_column(v_cursor, 1, v_id); --定义列
+     dbms_sql.define_column(v_cursor, 2, v_no, 100);
+     dbms_sql.define_column(v_cursor, 3, v_date);
+     v_stat := dbms_sql.execute(v_cursor); --执行动态SQL语句。
+     LOOP
+         EXIT WHEN dbms_sql.fetch_rows(v_cursor)<=0; --fetch_rows在结果集中移动游标，如果未抵达末尾，返回1。        
+         dbms_sql.column_value(v_cursor, 1, v_id); --将当前行的查询结果写入上面定义的列中。
+         dbms_sql.column_value(v_cursor, 2, v_no);
+         dbms_sql.column_value(v_cursor, 3, v_date);
+         dbms_output.put_line(v_id || ';' || v_no || ';' || v_date);
+     END LOOP;
+     dbms_sql.close_cursor(v_cursor); --关闭游标。
+END;
+
+
+ 
+ 
+
+
+ 
+
+结果：
+
+ 
+
+3095;S051013XW00010;15-10月-05
+3112;A051013XW00027;10-10月-05
+3113;A051013XW00028;13-10月-05
+3116;S051013XW00031;13-10月-05
+ 
+
+
+  
+
+
+
+附：DBMS_SQL的文档(来源：http://www.psoug.org)
+
+ Oracle DBMS_SQL  
+ Version 10.2  
+
+General 
+Note: DMBS_SQL is the traditional form of dynamic SQL in Oracle.
+
+For most purposes native dynamic sql (NDS) will suffice but there are some things the DBMS_SQL package does that can not be done any other way. This page emphasizes those areas where there is no substitute. 
+Purpose   
+Source {ORACLE_HOME}/rdbms/admin/dbmssql.sql 
+Constants Name Data Type Value 
+v6 INTEGER 0 
+native INTEGER 1 
+v7 INTEGER 2 
+ 
+Defined Data Types General Types
+TYPE desc_rec IS RECORD (
+col_type binary_integer := 0,
+col_max_len binary_integer := 0,
+col_name varchar2(32) := '',
+col_name_len binary_integer := 0,
+col_schema_name varchar2(32) := '',
+col_schema_name_len binary_integer := 0,
+col_precision binary_integer := 0,
+col_scale binary_integer := 0,
+col_charsetid binary_integer := 0,
+col_charsetform binary_integer := 0,
+col_null_ok boolean := TRUE);
+
+TYPE desc_rec2 IS RECORD (
+col_type binary_integer := 0,
+col_max_len binary_integer := 0,
+col_name varchar2(32767) := '',
+col_name_len binary_integer := 0,
+col_schema_name varchar2(32) := '',
+col_schema_name_len binary_integer := 0,
+col_precision binary_integer := 0,
+col_scale binary_integer := 0,
+col_charsetid binary_integer := 0,
+col_charsetform binary_integer := 0,
+col_null_ok boolean := TRUE);
+
+TYPE desc_tab IS TABLE OF desc_rec
+INDEX BY binary_integer;
+
+TYPE desc_tab2 IS TABLE OF desc_rec2
+INDEX BY binary_integer;
+
+TYPE varchar2a IS TABLE OF VARCHAR2(32767)
+INDEX BY binary_integer;
+
+TYPE varchar2s IS TABLE OF VARCHAR2(256)
+INDEX BY binary_integer;
+
+Bulk SQL Types
+TYPE Bfile_Table IS TABLE OF bfile
+INDEX BY binary_integer;
+
+TYPE Binary_Double_Table IS TABLE OF binary_double
+INDEX BY binary_integer;
+
+TYPE Binary_Float_Table IS TABLE OF binary_float
+INDEX BY binary_integer;
+
+TYPE Blob_Table IS TABLE OF blob
+INDEX BY binary_integer;
+
+TYPE Clob_Table IS TABLE OF clob
+INDEX BY binary_integer;
+
+TYPE Date_Table IS TABLE OF date
+INDEX BY binary_integer;
+
+TYPE interval_day_to_second_Table IS TABLE OF 
+dsinterval_unconstrained INDEX BY binary_integer;
+
+TYPE interval_year_to_MONTH_Table IS TABLE OF 
+yminterval_unconstrained
+INDEX BY binary_integer;
+
+TYPE Number_Table IS TABLE OF NUMBER
+INDEX BY binary_integer;
+
+TYPE time_Table IS TABLE OF time_unconstrained
+INDEX BY binary_integer;
+
+TYPE time_with_time_zone_Table IS TABLE OF TIME_TZ_UNCONSTRAINED INDEX BY binary_integer;
+
+TYPE timestamp_Table IS TABLE OF timestamp_unconstrained
+INDEX BY binary_integer;
+
+TYPE timestamp_with_ltz_table IS TABLE OF 
+TIMESTAMP_LTZ_UNCONSTRAINED 
+INDEX BY binary_integer;
+
+TYPE Urowid_Table IS TABLE OF urowid
+INDEX BY binary_integer;
+
+TYPE timestamp_with_time_zone_table IS TABLE OF 
+TIMESTAMP_TZ_UNCONSTRAINED
+INDEX BY binary_integer;
+
+TYPE Varchar2_Table IS TABLE OF VARCHAR2(2000)
+INDEX BY binary_integer; 
+Dependencies SELECT name
+FROM dba_dependencies
+WHERE referenced_name = 'DBMS_SQL'
+UNION
+SELECT referenced_name
+FROM dba_dependencies
+WHERE name = 'DBMS_SQL'; 
+Exceptions Error Code Reason 
+ORA-06562 Inconsistent types: Raised by procedure "column_value" or
+"variable_value" if the type of the given out argument where to put the requested value is different from the type of the value 
+ 
+  
+BIND_ARRAY 
+Binds a given value to a given collection dbms_sql.BIND_ARRAY(
+c                IN INTEGER, 
+name             IN VARCHAR2, 
+<table_variable> IN <datatype> 
+[,index1         IN INTEGER, 
+index2           IN INTEGER)]);  
+DECLARE
+ stmt          VARCHAR2(200);
+ dept_no_array dbms_sql.number_table;
+ c             NUMBER;
+ dummy         NUMBER;
+BEGIN
+  dept_no_array(1) := 10; dept_no_array(2) := 20;
+  dept_no_array(3) := 30; dept_no_array(4) := 40;
+  dept_no_array(5) := 30; dept_no_array(6) := 40;
+  stmt := 'delete from emp where deptno = :dept_array';
+  c := dbms_sql.open_cursor;
+  dbms_sql.parse(c, stmt, dbms_sql.NATIVE);
+  dbms_sql.bind_array(c, ':dept_array', dept_no_array, 1, 4);
+  dummy := dbms_sql.execute(c);
+  dbms_sql.close_cursor(c); 
+
+EXCEPTIONS
+  WHEN OTHERS THEN
+    IF dbms_sql.is_open(c) THEN
+      dbms_sql.close_cursor(c);
+    END IF;
+    RAISE
+END;
+/ 
+  
+BIND_VARIABLE 
+Binds a given value to a given variable dbms_sql.bind_variable (
+c     IN INTEGER,
+name  IN VARCHAR2,
+value IN <datatype>) 
+CREATE OR REPLACE PROCEDURE demo(salary IN NUMBER) AS
+ cursor_name INTEGER;
+ rows_processed INTEGER;
+BEGIN
+  cursor_name := dbms_sql.open_cursor;
+  dbms_sql.parse(cursor_name, 'DELETE FROM emp WHERE sal > :x',
+dbms_sql.NATIVE);
+  dbms_sql.bind_variable(cursor_name, ':x', salary);
+rows_processed := dbms_sql.execute(cursor_name);
+  dbms_sql.close_cursor(cursor_name);
+EXCEPTION
+  WHEN OTHERS THEN
+    dbms_sql.close_cursor(cursor_name);
+END;
+/ 
+  
+BIND_VARIABLE_CHAR 
+Binds a given value to a given variable dbms_sql.bind_variabl_char (
+c     IN INTEGER,
+name  IN VARCHAR2,
+value IN CHAR CHARACTER SET ANY_CS [,out_value_size IN INTEGER]); 
+See bind_variable demo 
+  
+BIND_VARIABLE_RAW 
+Binds a given value to a given variable dbms_sql.bind_variable_raw (
+c     IN INTEGER,
+name  IN VARCHAR2,
+value IN RAW [,out_value_size IN INTEGER]); 
+See bind_variable demo 
+  
+BIND_VARIABLE_ROWID 
+Binds a given value to a given variable dbms_sql.bind_variable_rowid (
+c     IN INTEGER,
+name  IN VARCHAR2,
+value IN ROWID); 
+See bind_variable demo 
+  
+CLOSE_CURSOR 
+Closes cursor and free memory dbms_sql.close_cursor(c IN OUT INTEGER); 
+See is_open demo 
+  
+COLUMN_VALUE 
+Returns value of the cursor element for a given position in a cursor dbms_sql.column_value (
+c               IN  INTEGER,
+position        IN  INTEGER,
+value           OUT <datatype> 
+[,column_error  OUT NUMBER] 
+[,actual_length OUT INTEGER]); 
+See final demo 
+  
+COLUMN_VALUE_CHAR 
+Returns value of the cursor element for a given position in a cursor dbms_sql.column_value_char (
+c               IN  INTEGER,
+position        IN  INTEGER,
+value           OUT CHAR CHARACTER SET ANY_CS
+[,column_error  OUT NUMBER]
+[,actual_length OUT INTEGER]); 
+See column_value in final demo 
+  
+COLUMN_VALUE_LONG 
+Returns a selected part of a LONG column, that has been defined using DEFINE_COLUMN_LONG dbms_sql.column_value_long (
+c            IN  INTEGER,
+position     IN  INTEGER,
+length       IN  INTEGER,
+offset       IN  INTEGER,
+value        OUT VARCHAR2,
+value_length OUT INTEGER); 
+See column_value in final demo 
+  
+COLUMN_VALUE_RAW 
+Returns value of the cursor element for a given position in a cursor dbms_sql.column_value_raw (
+c               IN  INTEGER,
+position        IN  INTEGER,
+value           OUT RAW
+[,column_error  OUT NUMBER]
+[,actual_length OUT INTEGER]); 
+See column_value in final demo 
+  
+COLUMN_VALUE_ROWID 
+Undoc dbms_sql.column_value_rowid (
+c               IN  INTEGER,
+position        IN  INTEGER,
+value           OUT ROWID
+[,column_error  OUT NUMBER]
+[,actual_length OUT INTEGER]); 
+See column_value in final demo 
+  
+DEFINE_ARRAY 
+Defines a collection to be selected from the given cursor, used only with SELECT statements dbms_sql.define_array (
+c                IN INTEGER, 
+position         IN INTEGER,
+<table_variable> IN <datatype> 
+cnt              IN INTEGER, 
+lower_bnd        IN INTEGER); 
+DECLARE
+ c     number;
+ d     number;
+ n_tab dbms_sql.number_table;
+indx number := -10;
+BEGIN
+  c := dbms_sql.open_cursor;
+  dbms_sql.parse(c,'select n from t order by 1',dbms_sql.NATIVE);
+
+  dbms_sql.define_array(c, 1, n_tab, 10, indx);
+
+  d := dbms_sql.execute(c);
+
+  LOOP
+    d := dbms_sql.fetch_rows(c);
+    dbms_sql.column_value(c, 1, n_tab);
+    exit when d != 10;
+  END LOOP;
+
+  dbms_sql.close_cursor(c);
+
+EXCEPTIONS
+  WHEN OTHERS THEN
+    IF dbms_sql.is_open(c) THEN
+      dbms_sql.close_cursor(c);
+    END IF;
+    RAISE;
+END;
+/ 
+  
+DEFINE_COLUMN 
+Defines a column to be selected from the given cursor, used only with SELECT statements dbms_sql.define_column (
+c        IN INTEGER,
+position IN INTEGER,
+column   IN <datatype>) 
+See final demo 
+  
+DEFINE_COLUMN_CHAR 
+Undoc dbms_sql.define_column_char (
+c           IN INTEGER,
+position    IN INTEGER,
+column      IN CHAR CHARACTER SET ANY_CS,
+column_size IN INTEGER); 
+See define_column in final demo 
+  
+DEFINE_COLUMN_LONG 
+Defines a LONG column to be selected from the given cursor, used only with SELECT statements dbms_sql.define_column_long (
+c        IN INTEGER,
+position IN INTEGER); 
+See define_column in final demo 
+  
+DEFINE_COLUMN_RAW 
+Undoc dbms_sql.define_column_raw (
+c           IN INTEGER,
+position    IN INTEGER,
+column      IN RAW,
+column_size IN INTEGER); 
+See define_column in final demo 
+  
+DEFINE_COLUMN_ROWID 
+Undoc dbms_sql.define_column_rowid (
+c        IN INTEGER,
+position IN INTEGER,
+column   IN ROWID); 
+See define_column in final demo 
+  
+DESCRIBE_COLUMNS 
+Describes the columns for a cursor opened and parsed through DBMS_SQL dbms_sql.describe_columns ( 
+c       IN  INTEGER, 
+col_cnt OUT INTEGER, 
+desc_t  OUT DESC_TAB); 
+DECLARE
+ c       NUMBER;
+ d       NUMBER;
+ col_cnt PLS_INTEGER;
+ f       BOOLEAN;
+ rec_tab dbms_sql.desc_tab;
+ col_num NUMBER;
+
+ PROCEDURE print_rec(rec in dbms_sql.desc_rec) IS
+BEGIN
+  dbms_output.new_line;
+  dbms_output.put_line('col_type = '
+|| rec.col_type);
+dbms_output.put_line('col_maxlen = '
+|| rec.col_max_len);
+dbms_output.put_line('col_name = '
+|| rec.col_name);
+dbms_output.put_line('col_name_len = '
+|| rec.col_name_len);
+dbms_output.put_line('col_schema_name = '
+|| rec.col_schema_name);
+dbms_output.put_line('col_schema_name_len = '
+|| rec.col_schema_name_len);
+dbms_output.put_line('col_precision = '
+|| rec.col_precision);
+dbms_output.put_line('col_scale = '
+|| rec.col_scale);
+dbms_output.put('col_null_ok = ');
+if (rec.col_null_ok) then
+dbms_output.put_line('true');
+else
+dbms_output.put_line('false');
+  END IF;
+END;
+
+BEGIN
+  c := dbms_sql.open_cursor;
+
+  dbms_sql.parse(c, 'select * from scott.bonus', dbms_sql.NATIVE);
+
+  d := dbms_sql.execute(c);
+
+  dbms_sql.describe_columns(c, col_cnt, rec_tab);
+
+/*
+* Following loop could simply be for j in 1..col_cnt loop.
+* Here we are simply illustrating some of the PL/SQL table
+* features.
+*/
+  col_num := rec_tab.first;
+
+  IF (col_num IS NOT NULL) THEN
+    LOOP
+      print_rec(rec_tab(col_num));
+      col_num := rec_tab.next(col_num);
+      EXIT WHEN (col_num is null);
+    END LOOP;
+  END IF;
+
+  dbms_sql.close_cursor(c);
+end;
+/ 
+  
+DESCRIBE_COLUMNS2 
+Describes the specified column, an alternative method dbms_sql.describe_columns2 ( 
+c         IN  INTEGER, 
+col_cnt   OUT INTEGER, 
+desc_tab2 OUT DESC_TAB); 
+Why? Research 
+  
+EXECUTE 
+Execute dynamic SQL cursor dbms_sql.execute(c IN INTEGER) RETURN INTEGER; 
+DECLARE
+  sqlstr  VARCHAR2(50);
+  tCursor PLS_INTEGER;
+  RetVal  NUMBER;
+BEGIN
+  sqlstr := 'DROP SYNONYM my_synonym';
+  tCursor := dbms_sql.open_cursor;
+  dbms_sql.parse(tCursor, sqlstr, dbms_sql.NATIVE);
+  RetVal := dbms_sql.execute(tCursor);
+  dbms_sql.close_cursor(tCursor);
+END;
+/ 
+  
+EXECUTE_AND_FETCH 
+Executes a given cursor and fetch rows dbms_sql.execute_and_fetch(c IN INTEGER,
+exact IN BOOLEAN DEFAULT FALSE) RETURN INTEGER; 
+Combine demo w/ last_row_count and last_row_id demos 
+  
+FETCH_ROWS 
+Fetches a row from a given cursor dbms_sql.fetch_rows(c IN INTEGER) RETURN INTEGER; 
+See final demo 
+  
+IS_OPEN 
+Determine whether a  cursor is open dbms_sql.is_open(c IN INTEGER) RETURN BOOLEAN; 
+set serveroutput on
+
+DECLARE
+  tCursor PLS_INTEGER;
+BEGIN
+  tCursor := dbms_sql.open_cursor;
+
+  IF dbms_sql.is_open(tCursor) THEN
+    dbms_output.put_line('1-OPEN');
+  ELSE
+    dbms_output.put_line('1-CLOSED');
+  END IF;
+
+  dbms_sql.close_cursor(tCursor);
+
+  IF dbms_sql.is_open(tCursor) THEN
+    dbms_output.put_line('2-OPEN');
+  ELSE
+    dbms_output.put_line('2-CLOSED');
+  END IF;
+END;
+/ 
+  
+LAST_ERROR_POSITION 
+Returns byte offset in the SQL statement text where the error occurred dbms_sql.last_error_position RETURN INTEGER; 
+  
+  
+LAST_ROW_COUNT 
+Returns cumulative count of the number of rows fetched dbms_sql.last_row_count RETURN INTEGER; 
+  
+  
+LAST_ROW_ID 
+Returns ROWID of last row processed dbms_sql.last_row_id RETURN ROWID; 
+  
+  
+LAST_SQL_FUNCTION_CODE 
+Returns SQL function code for statement dbms_sql.last_sql_function_code RETURN INTEGER; 
+  
+  
+OPEN_CURSOR 
+Open dynamic SQL cursor and return cursor ID number of new cursor dbms_sql.open_cursor RETURN INTEGER; 
+See is_open demo 
+  
+PARSE 
+Parse statement
+Overload 1 dbms_sql.parse(<cursor_variable>, <sql_string>,
+dbms_sql.NATIVE); 
+CREATE SYNONYM test_syn FOR dual;
+
+SELECT *
+FROM test_syn;
+
+SELECT synonym_name
+FROM user_synonyms;
+
+DECLARE
+  sqlstr  VARCHAR2(50);
+  tCursor PLS_INTEGER;
+BEGIN
+  sqlstr := 'DROP SYNONYM test_syn';
+  tCursor := dbms_sql.open_cursor;
+  dbms_sql.parse(tCursor, sqlstr, dbms_sql.NATIVE);
+  dbms_sql.close_cursor(tCursor);
+END;
+/
+
+SELECT synonym_name
+FROM user_synonyms; 
+-- with returning clause
+
+create or replace procedure single_Row_insert
+(c1 number, c2 number, r out number) is
+c number;
+n number;
+begin
+c := dbms_sql.open_cursor;
+dbms_sql.parse(c, 'insert into tab values (:bnd1, :bnd2) ' ||
+'returning c1*c2 into :bnd3', 2);
+dbms_sql.bind_variable(c, 'bnd1', c1);
+dbms_sql.bind_variable(c, 'bnd2', c2);
+dbms_sql.bind_variable(c, 'bnd3', r);
+n := dbms_sql.execute(c); 
+dbms_sql.variable_value(c, 'bnd3', r); -- get value of outbind variable
+dbms_Sql.close_Cursor(c);
+end;
+/ 
+Parse statement
+Overload 2 dbms_sql.parse(
+c             IN INTEGER, 
+statement     IN VARCHAR2A,
+lb            IN INTEGER, 
+ub            IN INTEGER,
+lfflg         IN BOOLEAN, 
+language_flag IN INTEGER); 
+  
+Parse statement
+Overload 3 dbms_sql.parse( 
+c             IN INTEGER, 
+statement     IN VARCHAR2S, 
+lb            IN INTEGER, 
+ub            IN INTEGER, 
+lfflg         IN BOOLEAN, 
+language_flag IN INTEGER);  
+  
+  
+VARIABLE_VALUE 
+Returns value of named variable for given cursor
+Overload 1 dbms_sql.variable_value(
+c     IN  INTEGER,
+name  IN  VARCHAR2,
+value OUT <datatype>); 
+  
+Returns value of named variable for given cursor
+Overload 2 dbms_sql.variable_value(
+c                IN  INTEGER,
+name             IN  VARCHAR2,
+<table_varaible> IN <datatype>); 
+  
+  
+VARIABLE_VALUE_CHAR 
+Undoc dbms_sql.variable_value_char(
+c     IN  INTEGER,
+name  IN  VARCHAR2,
+value OUT CHAR CHARACTER SET ANY_CS); 
+  
+  
+VARIABLE_VALUE_RAW 
+Undoc dbms_sql.variable_value_raw(
+c     IN  INTEGER,
+name  IN  VARCHAR2,
+value OUT RAW); 
+  
+  
+VARIABLE_VALUE_ROWID 
+Undoc dbms_sql.variable_value_rowid(
+c     IN  INTEGER,
+name  IN  VARCHAR2,
+value OUT ROWID); 
+  
+  
+Demos 
+
+Drop Synonym Demo SELECT synonym_name 
+FROM user_synonyms;
+
+CREATE SYNONYM d FOR dept;
+CREATE SYNONYM e FOR emp;
+
+SELECT synonym_name 
+FROM user_synonyms;
+
+CREATE OR REPLACE PROCEDURE dropsyn IS
+
+CURSOR syn_cur IS
+SELECT synonym_name
+FROM user_synonyms;
+
+RetVal  NUMBER;
+sqlstr  VARCHAR2(200);
+tCursor PLS_INTEGER;
+
+BEGIN
+  FOR syn_rec IN syn_cur
+  LOOP
+    sqlstr := 'DROP SYNONYM ' || syn_rec.synonym_name;
+    tCursor := dbms_sql.open_cursor;
+    dbms_sql.parse(tCursor, sqlstr, dbms_sql.NATIVE);
+    RetVal := dbms_sql.execute(tCursor);
+    dbms_sql.close_cursor(tCursor);
+  END LOOP;
+
+EXCEPTION
+  WHEN OTHERS THEN
+    RAISE;
+
+END dropsyn;
+/
+
+exec dropsyn;
+
+SELECT synonym_name 
+FROM user_synonyms; 
+Executing CLOBS Demo Tables CREATE TABLE workstations (
+srvr_id NUMBER(10),
+ws_id NUMBER(10),
+location_id NUMBER(10),
+cust_id VARCHAR2(15),
+status VARCHAR2(1),
+latitude FLOAT(20),
+longitude FLOAT(20),
+netaddress VARCHAR2(15))
+TABLESPACE data_sml;
+
+CREATE TABLE test (test NUMBER(10)); 
+
+Run Demo CREATE OR REPLACE PROCEDURE execute_plsql_block(
+plsql_code_block CLOB) IS
+
+ds_cur    PLS_INTEGER := dbms_sql.open_cursor;
+sql_table dbms_sql.VARCHAR2S;
+
+c_buf_len CONSTANT BINARY_INTEGER := 256;
+v_accum INTEGER := 0;
+v_beg INTEGER := 1;
+v_end INTEGER := 256;
+v_loblen PLS_INTEGER;
+v_RetVal PLS_INTEGER;
+
+---------------------------
+-- local function to the execute_plsql_block procedure
+FUNCTION next_row (
+clob_in IN CLOB, 
+len_in IN INTEGER, 
+off_in IN INTEGER) RETURN VARCHAR2 IS
+
+BEGIN
+   RETURN DBMS_LOB.SUBSTR(clob_in, len_in, off_in);
+END next_row;
+---------------------------
+
+BEGIN
+   v_loblen := DBMS_LOB.GETLENGTH(plsql_code_block);
+   INSERT INTO test VALUES (v_loblen);
+   COMMIT;
+
+   LOOP
+      -- Set the length to the remaining size 
+      -- if there are < c_buf_len characters remaining.
+      IF v_accum + c_buf_len > v_loblen THEN
+         v_end := v_loblen - v_accum;
+      END IF;
+
+      sql_table(NVL(sql_table.LAST, 0) + 1) :=
+     next_row(plsql_code_block, v_end, v_beg);
+
+      v_beg := v_beg + c_BUF_LEN;
+      v_accum := v_accum + v_end;
+
+      IF v_accum >= v_loblen THEN
+         EXIT;
+      END IF;
+   END LOOP;
+
+   -- Parse the pl/sql and execute it
+   dbms_sql.parse(ds_cur, sql_table, sql_table.FIRST,
+   sql_table.LAST, FALSE, dbms_sql.NATIVE);
+   v_RetVal := dbms_sql.execute(ds_cur);
+   dbms_sql.close_cursor(ds_cur);
+
+END execute_plsql_block;
+/ 
+
+Executing CLOBS Demo Data DECLARE
+
+clob_in CLOB;
+
+BEGIN
+clob_in := CAST(
+'BEGIN
+INSERT INTO WORKSTATIONS VALUES (1,1,20075,'''',''Y'',32.97948,-117.2569,'''');
+INSERT INTO WORKSTATIONS VALUES (1,10,20077,'''',''N'',32.97125,-117.2675,'''');
+INSERT INTO WORKSTATIONS VALUES (1,11,20078,'''',''N'',33.03865,-96.83579,'''');
+INSERT INTO WORKSTATIONS VALUES (1,12,20079,'''',''Y'',32.97413,-117.2694,''10.128.48.121'');
+INSERT INTO WORKSTATIONS VALUES (1,2,20081,'''',''N'',32.97948,-117.2569,'''');
+INSERT INTO WORKSTATIONS VALUES (1,3,20082,'''',''Y'',32.97948,-117.2569,''10.128.0.1'');
+INSERT INTO WORKSTATIONS VALUES (1,4,20083,''15689'',''N'',32.98195,-117.2636,'''');
+INSERT INTO WORKSTATIONS VALUES (1,5,20085,'''',''Y'',32.98195,-117.2636,''10.128.16.105'');
+INSERT INTO WORKSTATIONS VALUES (1,6,20086,'''',''N'',32.97096,-117.2689,'''');
+INSERT INTO WORKSTATIONS VALUES (1,7,20077,'''',''Y'',32.97125,-117.2675,''10.128.48.105'');
+INSERT INTO WORKSTATIONS VALUES (1,8,20090,'''',''N'',32.97124,-117.2676,'''');
+INSERT INTO WORKSTATIONS VALUES (1,9,20092,'''',''N'',32.97023,-117.2688,'''');
+INSERT INTO WORKSTATIONS VALUES (10,1,20094,'''',''Y'',61.2224,-149.8047,''10.128.112.1'');
+INSERT INTO WORKSTATIONS VALUES (10,2,20095,'''',''N'',61.2224,-149.8047,'''');
+INSERT INTO WORKSTATIONS VALUES (10,3,20096,'''',''Y'',61.2224,-149.8047,''10.128.112.113'');
+INSERT INTO WORKSTATIONS VALUES (10,4,13545,'''',''Y'',61.14104,-149.9519,''10.128.112.121'');
+INSERT INTO WORKSTATIONS VALUES (10,5,20104,'''',''N'',61.2224,-149.8047,'''');
+INSERT INTO WORKSTATIONS VALUES (10,6,20106,'''',''Y'',61.21685,-149.8002,''10.128.80.113'');
+INSERT INTO WORKSTATIONS VALUES (11,1,20110,'''',''N'',61.137,-149.9395,'''');
+INSERT INTO WORKSTATIONS VALUES (11,10,20113,'''',''N'',61.14104,-149.9519,'''');
+INSERT INTO WORKSTATIONS VALUES (11,11,20116,'''',''N'',61.14104,-149.9519,'''');
+INSERT INTO WORKSTATIONS VALUES (11,12,20117,'''',''Y'',61.137,-149.9395,''10.128.32.193'');
+INSERT INTO WORKSTATIONS VALUES (11,13,20118,'''',''Y'',61.137,-149.9395,''10.128.16.129'');
+INSERT INTO WORKSTATIONS VALUES (11,14,20119,'''',''Y'',61.137,-149.9395,'''');
+INSERT INTO WORKSTATIONS VALUES (11,15,20121,'''',''N'',61.13695,-149.9396,'''');
+INSERT INTO WORKSTATIONS VALUES (11,16,20122,'''',''N'',61.13695,-149.9396,'''');
+INSERT INTO WORKSTATIONS VALUES (11,17,13545,'''',''Y'',61.14104,-149.9519,'''');
+INSERT INTO WORKSTATIONS VALUES (11,18,19922,'''',''Y'',61.13549,-149.959,''10.128.48.153'');
+INSERT INTO WORKSTATIONS VALUES (11,19,19923,'''',''N'',61.13422,-149.962,'''');
+INSERT INTO WORKSTATIONS VALUES (11,2,19924,'''',''N'',61.137,-149.9395,'''');
+INSERT INTO WORKSTATIONS VALUES (11,20,19925,'''',''N'',61.146,-149.9799,'''');
+INSERT INTO WORKSTATIONS VALUES (11,21,19926,'''',''N'',61.146,-149.9799,'''');
+INSERT INTO WORKSTATIONS VALUES (11,22,19927,'''',''N'',61.13695,-149.9396,'''');
+INSERT INTO WORKSTATIONS VALUES (11,23,19928,'''',''N'',61.14104,-149.9519,'''');
+INSERT INTO WORKSTATIONS VALUES (11,24,19930,'''',''N'',61.13422,-149.962,'''');
+INSERT INTO WORKSTATIONS VALUES (11,25,19931,'''',''N'',61.13678,-149.9644,'''');
+INSERT INTO WORKSTATIONS VALUES (11,26,20033,'''',''N'',61.14477,-149.9586,'''');
+INSERT INTO WORKSTATIONS VALUES (11,27,20034,'''',''N'',61.13466,-149.975,'''');
+INSERT INTO WORKSTATIONS VALUES (11,28,20035,'''',''N'',61.14142,-149.9668,'''');
+INSERT INTO WORKSTATIONS VALUES (11,29,20036,'''',''N'',61.13695,-149.9396,'''');
+INSERT INTO WORKSTATIONS VALUES (11,3,20037,'''',''Y'',61.137,-149.9395,''10.128.16.105''); 
+INSERT INTO WORKSTATIONS VALUES (11,30,20038,'''',''N'',61.13695,-149.9396,''''); 
+INSERT INTO WORKSTATIONS VALUES (11,31,20039,'''',''N'',61.13695,-149.9396,''''); 
+INSERT INTO WORKSTATIONS VALUES (11,32,20040,'''',''N'',61.13695,-149.9396,''''); 
+INSERT INTO WORKSTATIONS VALUES (11,33,20042,'''',''N'',61.12887,-149.9578,''''); 
+INSERT INTO WORKSTATIONS VALUES (11,4,20043,'''',''N'',61.137,-149.9395,'''');
+INSERT INTO WORKSTATIONS VALUES (11,5,20044,'''',''Y'',61.137,-149.9395,''10.128.32.129''); 
+INSERT INTO WORKSTATIONS VALUES (11,6,20045,'''',''N'',61.137,-149.9395,'''');
+INSERT INTO WORKSTATIONS VALUES (11,7,20046,'''',''N'',61.137,-149.9395,'''');
+INSERT INTO WORKSTATIONS VALUES (11,8,20047,'''',''N'',61.137,-149.9395,'''');
+--====
+INSERT INTO WORKSTATIONS VALUES (11,9,20048,'''',''Y'',61.137,-149.9395,''10.128.32.169''); 
+INSERT INTO WORKSTATIONS VALUES (12,1,20051,''15706'',''Y'',32.75604,-117.1201,''''); 
+INSERT INTO WORKSTATIONS VALUES (12,10,20053,'''',''N'',32.75689,-117.12,''''); 
+INSERT INTO WORKSTATIONS VALUES (12,100,20054,'''',''N'',32.7596,-117.124,'''');
+INSERT INTO WORKSTATIONS VALUES (12,101,20056,'''',''N'',32.75689,-117.129,''''); 
+INSERT INTO WORKSTATIONS VALUES (12,102,20057,'''',''Y'',32.75677,-117.1241,''10.129.112.25''); 
+INSERT INTO WORKSTATIONS VALUES (12,103,20058,'''',''Y'',32.75662,-117.124,''10.129.112.33'');
+INSERT INTO WORKSTATIONS VALUES (12,104,20060,'''',''N'',32.7571,-117.1242,''''); 
+INSERT INTO WORKSTATIONS VALUES (12,105,20061,'''',''N'',32.75316,-117.1253,'''');
+INSERT INTO WORKSTATIONS VALUES (12,106,20063,'''',''N'',32.76154,-117.1251,'''');
+--====
+COMMIT;
+END;' AS CLOB);
+
+execute_plsql_block(clob_in);
+
+END;
+/ 
+
+Final Demo CREATE OR REPLACE PROCEDURE copy(
+source IN VARCHAR2,
+destination IN VARCHAR2) IS
+
+id_var             NUMBER;
+name_var           VARCHAR2(30);
+birthdate_var      DATE;
+source_cursor      INTEGER;
+destination_cursor INTEGER;
+ignore             INTEGER;
+
+BEGIN
+  -- Prepare a cursor to select from the source table:
+  source_cursor := dbms_sql.open_cursor;
+  dbms_sql.parse(source_cursor,  'SELECT id, name, birthdate FROM ' || source, dbms_sql.NATIVE);
+
+  dbms_sql.DEFINE_COLUMN(source_cursor, 1, id_var);
+  dbms_sql.DEFINE_COLUMN(source_cursor, 2, name_var, 30);
+  dbms_sql.DEFINE_COLUMN(source_cursor, 3, birthdate_var);
+
+  ignore := dbms_sql.execute(source_cursor); 
+
+  -- Prepare a cursor to insert into the destination table: 
+  destination_cursor := dbms_sql.OPEN_CURSOR; 
+  dbms_sql.parse(destination_cursor, 'INSERT INTO ' || destination || ' VALUES (:id_bind, :name_bind, :birthdate_bind)', dbms_sql.NATIVE);
+
+  -- Fetch a row from the source table and insert it into the destination table: 
+  LOOP
+    IF dbms_sql.FETCH_ROWS(source_cursor)>0 THEN 
+      -- get column values of the row 
+      dbms_sql.COLUMN_VALUE(source_cursor, 1, id_var); 
+      dbms_sql.COLUMN_VALUE(source_cursor, 2, name_var); 
+      dbms_sql.COLUMN_VALUE(source_cursor, 3, birthdate_var); 
+
+      -- Bind the row into the cursor that inserts into the destination table. You could alter this example to require the use of dynamic SQL by inserting an if condition before the bind.
+      dbms_sql.bind_variable(destination_cursor, ':id_bind', id_var); 
+      dbms_sql.bind_variable(destination_cursor, ':name_bind', name_var); 
+      dbms_sql.bind_variable(destination_cursor, ':birthdate_bind', birthdate_var); 
+      ignore := dbms_sql.execute(destination_cursor); 
+    ELSE
+      -- No more rows to copy: 
+      EXIT; 
+    END IF;
+  END LOOP; 
+
+  -- Commit and close all cursors: 
+  COMMIT; 
+  dbms_sql.close_cursor(source_cursor); 
+  dbms_sql.close_cursor(destination_cursor); 
+EXCEPTION 
+  WHEN OTHERS THEN 
+    IF dbms_sql.is_open(source_cursor) THEN 
+      dbms_sql.close_cursor(source_cursor); 
+    END IF;
+
+    IF dbms_sql.is_open(destination_cursor) THEN 
+      dbms_sql.close_cursor(destination_cursor); 
+    END IF;
+    RAISE;
+END; 
+/ 
+Bulk Insert Demo DECLARE
+ stmt varchar2(200);
+ empno_array   dbms_sql.number_table;
+ empname_array dbms_sql.varchar2_table;
+ c             NUMBER;
+ dummy         NUMBER;
+BEGIN
+  FOR i IN 0..9
+  LOOP
+    empno_array(i) := 1000 + i;
+    empname_array(I) := get_name(i);
+  END LOOP;
+
+  stmt := 'insert into emp values(:num_array, :name_array)';
+  c := dbms_sql.open_cursor;
+  dbms_sql.parse(c, stmt, dbms_sql.NATIVE);
+  dbms_sql.bind_array(c, ':num_array', empno_array);
+  dbms_sql.bind_array(c, ':name_array', empname_array);
+  dummy := dbms_sql.execute(c);
+  dbms_sql.close_cursor(c);
+
+EXCEPTIONS
+  WHEN OTHERS THEN
+    IF dbms_sql.is_open(c) THEN 
+      dbms_sql.close_cursor(c); 
+    END IF;
+    RAISE;
+END; 
+/  

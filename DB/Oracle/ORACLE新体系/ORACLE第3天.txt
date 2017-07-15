@@ -1,0 +1,382 @@
+《1》子查询和关联查询
+建立表如下:
+
+学生基本信息表
+CREATE Student(
+[Studentid][Int]IDENTITY(1,1)NOT NULL primary key,--主键
+[StudentName][char]NOT NULL
+
+)
+课程信息表
+CREATE Subject(
+[SubjectID][char]NOT NULL primary key,	      --主键
+[SubjectName][char]NOT NULL
+)
+成绩表
+CREATE Grade(
+[Studentid][Int]NOT NULL,		--联合主键
+[SubjectID][char]NOT NULL,		--联合主键
+[Grade] [INT]NOT NULL,
+primary key (studentid,subjectid)
+)
+
+1.将建表命令改为ORACLE语句在ORACLE中建表
+create table student( --学生表
+studentid number(3) primary key, --学生编号
+studentname varchar2(20) --学生的姓名
+); 
+
+create table subject( --课程表
+subjectid char(3) primary key, --课程编号
+subjectname varchar2(20)  --课程的名字
+);
+
+
+create table grade( --分数表
+studentid number(3) references student(studentid), --学生id
+subjectid char(3) references subject(subjectid), --课程id
+mark      number(3), --分数
+primary key (studentid,subjectid) --联合主键
+);
+
+
+
+insert into student values (101,'张三');
+insert into student values (102,'李云');
+insert into student values (103,'未');
+
+insert into subject values ('A01','C++');
+insert into subject values ('A02','ASP');
+insert into subject values ('A03','JAVA');
+
+
+insert into grade values (101,'A01',59);
+insert into grade values (101,'A02',72);
+insert into grade values (101,'A03',90);
+
+insert into grade values (102,'A01',75);
+insert into grade values (102,'A02',91);
+
+insert into grade values (103,'A01',71);
+
+
+
+
+2.作如下4题
+
+第一问：查询出以下信息
+
+学号 学生姓名 课程名称 成绩 （要全部学生信息）
+
+关联查询 (多张表的) 
+别名
+
+select a.studentid as "学  号",studentname "学生姓名",
+subjectname "课程名称",mark "成  绩"
+from student a , subject b , grade c
+where a.studentid = c.studentid
+and b.subjectid = c.subjectid;
+
+[select a.studentid "学  号",studentname "学生姓名",
+subjectname "课程名称",mark "成  绩"
+from student a , subject b , grade c] 笛卡尔积
+
+       3 * 3 * 6 = 54;
+
+
+第二问：查询出以下信息
+
+学号 学生姓名 课程名称 成绩（只显示每科最高分）
+
+select a.studentid "学  号",studentname "学生姓名",
+subjectname "课程名称",mark "成  绩"
+from student a,subject b,grade c
+where a.studentid = c.studentid
+and b.subjectid = c.subjectid
+and (subjectname,mark)
+in (select subjectname "课程名称",max(mark) "成  绩"
+from student a,subject b,grade c
+where a.studentid = c.studentid
+and b.subjectid = c.subjectid
+group by subjectname)
+
+(最高分---分数比我高的学生的人数=0)
+select a.studentid "学  号",studentname "学生姓名",
+subjectname "课程名称",mark "成  绩"
+from student a,subject b,grade c
+where a.studentid = c.studentid
+and b.subjectid = c.subjectid 
+and (select count(*) from grade
+where subjectid = b.subjectid and
+mark > c.mark) = 0
+
+
+第三问：查询出以下信息
+
+学号 学生姓名 课程名称 成绩 （成绩大于60时的显示及格，小于60时的显示不及格）
+
+select a.studentid "学  号",studentname "学生姓名",
+subjectname "课程名称",
+decode(sign(mark-60),-1,'不及格','及格') "成  绩"
+from student a,subject b,grade c
+where a.studentid = c.studentid
+and b.subjectid = c.subjectid
+
+第四问：查询出以下信息
+
+学号 学生姓名 （查询出课程超过1门以上学生的信息）
+
+select a.studentid "学  号",studentname "学生姓名",
+count(subjectname)
+from student a , subject b , grade c
+where a.studentid = c.studentid
+and b.subjectid = c.subjectid
+group by a.studentid,studentname
+having count(subjectname) >= 2
+
+
+
+《2》复制一张表的结构
+ --数据一起复制
+  create table mydept as select * from dept;
+ --只复制结构
+  create table mydept1 as select * from dept where 1=2;
+ --把数据从一个表复制到另一个结构相同的表
+   insert into mydept1 select * from dept;
+ --只复制部分数据
+   insert into mydept1 select * from dept where deptno>20;
+   insert into mydept1(deptno,loc) select deptno,loc
+from dept;
+
+ --表的约束是复制不过来的，需要自己去添加
+
+
+ --列的别名  
+   select ename "员工 姓名" from emp;
+
+ a.没有主键的表如何消重复记录
+
+create table test(
+    id number(2),
+    name varchar2(10));
+
+   insert into test values (1,'aa');
+   insert into test values (1,'aa');
+   insert into test values (1,'aa');
+   insert into test values (2,'bb');
+   insert into test values (3,'cc');
+  
+  create table test1 as select distinct * from
+  test;
+  或者
+  create table test1 as select id,name from test
+  group by id,name;
+
+  
+  rename test to test2;
+  rename test1 to test;
+
+b.有主键消重复行
+  
+create table test(
+    id number(2) primary key,
+    name varchar2(10));
+
+   insert into test values (1,'aa');
+   insert into test values (2,'aa');
+   insert into test values (3,'aa');
+   insert into test values (4,'bb');
+   insert into test values (5,'cc');
+
+ create table test1 as select name from test
+ group by name;
+
+ alter table test1 add (id number(2));
+
+ update test1 set id=(select max(id) from test
+  where name=test1.name);
+
+ create table test2 as select id,name from test1;
+
+ rename test to testb;
+ rename test2 to test;
+
+ alter table test add primary key (id);
+
+
+<<2>>SQL*PLUS中的环境设置命令
+  不需要分号 就可以执行  ---  SQL*PLUS的环境命令
+  需要分号结束 才能执行的 -- SQL命令 (和SQLserver是一样的)
+
+   connect system/manager
+   show user
+   spool c:\aa.txt 
+   spool off
+   clear screen
+   set escape on     打开转义功能
+
+   set linesize 1000  设置一行显示多少个字符
+   set pagesize 20    设置一页显示多少行
+-------
+   define aa = 10  定义一个变量 aa = 10
+   define bb='MANAGER' 定义一个字符 bb = 'MANAGER'
+   
+   prompt Hello World   原样输出prompt后的字符串
+   
+   set feedback off     关闭系统反馈的信息
+   set heading off      列标题关闭
+   set pagesize 0       不分页 
+   set autocommit on    设置自动提交打开
+   set timing on        打开时间统计
+   set time on          打开一个时钟
+
+------
+  a) 自动生成一个脚本
+     利用SQL*PLUS环境命令  生成脚本文件
+        set heading off   --关闭列的标题
+        set feedback off  --关闭反馈信息
+ 
+        spool c:\aa.txt   --缓冲写文件c:\aa.txt
+
+        select 'insert into dept values ('||deptno||
+ ','||''''||dname||''''||','||''''||loc||''''||');' from dept;   --执行select语句
+
+spool off  --关闭缓冲
+
+   用处:在备份 恢复 数据库管理等方面有用处
+
+ <4>ORACLE中建立数据库对象
+   表
+   约束
+
+   序列 sequence  ---  自动编号 ---- IDENTITY (SQLSERVER)
+    <1>建立序列
+     create sequence seq1; 从1开始 每次自动增加1 没有最大值
+    <2>怎么使用
+     select seq1.nextval from dual;
+        nextval 伪列  下一个值
+     select seq1.currval from dual;
+        currval 伪列  当前值 
+      
+      create sequence seq2 
+    start with 1000        --起始值1000
+    increment by 2         --步长2
+    maxvalue 9000          --最大值9000
+    minvalue 900           --最小值900
+    cycle                  --循环序列
+
+   1000开始
+    每次增加2 一直到9000
+    回到900 重新开始
+
+    <3>和表关联作为表的字段的值
+     a) create table student(
+          xh number(4) primary key, --学号
+          xm varchar2(20) not null --姓名
+        );
+
+        要求:学号字段 从1000开始每次增加4 最大值9999
+         --建立序列
+           create sequence xh_seq
+                  start with 1000 --从1000开始
+                  increment by 4  --每次增加4
+                  maxvalue 9999   --最大值 9999
+                  ;
+         --使用SQL语句关联
+         insert into student values
+             (xh_seq.nextval,'Mike');
+         insert into student values
+             (xh_seq.nextval,'John');
+         insert into student values
+             (xh_seq.nextval,'Rose');
+     
+      --特点:能产生唯一的值,但是不能保证值在表中的连续性
+ 
+   b) create table teacher(
+           teacherxh varchar2(10) primary key, 
+           teachername varchar2(20)
+          );
+     要求:教师的编号的格式是TH00001
+                         TH00002
+                          ....
+      
+   --建立序列
+        create sequence teacher_seq
+              maxvalue 99999;
+   --
+     insert into teacher values ('TH'||
+       ltrim(to_char(teacher_seq.nextval,'00000')),
+       '张三');
+       insert into teacher values ('TH'||
+       ltrim(to_char(teacher_seq.nextval,'00000')),
+       '李');
+      insert into teacher values ('TH'||
+       ltrim(to_char(teacher_seq.nextval,'00000')),
+       '王');
+
+  视图 (view)
+   --建立视图(用查询语句 select empno,ename,sal from emp建立了一个emp_v1的视图 )
+     create or replace view emp_v1 as --select语句
+         select empno,ename,sal from emp;
+
+   视图的作用:隐藏数据,增加系统的安全性
+      视图中是否存放了数据???  不存放数据,只存放查询
+                             保证了 查询到的数据是和表
+                             中的数据是一致的 
+   select * from emp_v1;
+     <1>emp_v1先看是否是表
+     <2>不是表 是否是视图
+     <3> select * from  (select empno,ename,sal from emp);
+     <4>执行得到结果
+
+   能否通过视图去改表中的数据呢???
+         有条件的可以:
+           <1>建立视图的select语句必须是简单的select语句
+               简单:不能是多表的查询
+                    不能有分组函数
+           <2>建立视图的时候不能带with readonly关键字
+     create or replace view emp_v2 as --select语句
+         select empno,ename,sal from emp 
+         with read only;
+                   
+  可以改的情况:
+     1)create or replace view emp_v1 as --select语句
+         select empno,ename,sal,comm from emp;
+         
+     update emp_v1 set comm = 1000
+         where empno=7934;
+ 
+     select * from emp;   --发现数据修改了
+
+     2)create or replace view emp_v3
+        as 
+          select empno,ename,hiredate,sal,deptno 
+          from emp
+          where deptno = 10;
+
+       update emp_v3 set deptno=20 where empno=7782;
+ 
+       select * from emp_V3; --7782的数据没有了
+
+    3)
+ 
+  
+
+                 
+       
+      
+
+
+
+
+
+   
+
+
+    
+
+
+
+
+
+

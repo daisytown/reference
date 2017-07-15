@@ -1,0 +1,1 @@
+select mgr, mgr-7800,sign(mgr-7800) from scott.emp;

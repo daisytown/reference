@@ -1,0 +1,87 @@
+在SQLSERVER的pubs数据库中建立员工表emp表,并插入数据
+
+use pubs
+
+create table emp( --员工表
+  empno int primary key, --工号
+  ename varchar(20), --姓名
+  job varchar(20),  --工作
+  mgr int,   --上级编号
+  hiredate datetime, --参加工作时间
+  sal decimal(7,2),  --薪金
+  comm decimal(7,2), --佣金
+  deptno int  --所在部门编号
+)
+go
+
+insert into emp values (7369,'SMITH','CLERK',7902,'12/17/1980',800,null,20)
+insert into emp values (7499,'ALLEN','SALESMAN',7698,'02/20/1981',1600,300,30)
+insert into emp values (7521,'WARD','SALESMAN',7698,'02/22/1981',1250,500,30)
+insert into emp values (7566,'JONES','MANAGER',7839,'04/02/1981',2975,null,20)
+insert into emp values (7654,'MARTIN','SALESMAN',7698,'09/28/1981',1250,1400,30)
+insert into emp values (7698,'BLAKE','MANAGER',7839,'05/01/1981',2850,null,30)
+insert into emp values (7782,'CLARK','MANAGER',7839,'06/09/1981',2450,null,10)
+insert into emp values (7788,'SCOTT','ANALYST',7566,'04/19/1987',3000,null,20)
+insert into emp values (7839,'KING','PRESIDENT',null,'11/17/1981',5000,null,10)
+insert into emp values (7844,'TURNER','SALESMAN',7698,'09/08/1981',1500,0,30)
+insert into emp values (7876,'ADAMS','CLERK',7788,'05/23/1987',1100,null,20)
+insert into emp values (7900,'JAMES','CLERK',7698,'12/03/1981',950,null,30)
+insert into emp values (7902,'FORD','ANALYST',7566,'12/03/1981',3000,null,20)
+insert into emp values (7934,'MILLER','CLERK',7782,'01/23/1982',1300,null,10)
+go
+   
+     
+在SQLSERVER查询分析器中完成以下查询语句:        
+          
+1.选择部门30中的所有员工.
+
+2.列出所有办事员(CLERK)的姓名，编号和部门编号.
+
+3.找出佣金高于薪金的员工.
+
+4.找出佣金高于薪金的60%的员工.
+
+5.找出部门10中所有经理(MANAGER)和部门20中所有办事员(CLERK)的详细资料.
+
+6.找出部门10中所有经理(MANAGER),部门20中所有办事员(CLERK),既不是经理又不是办事员但其薪金大于或等于2000的所有员工的详细资料.
+
+7.找出收取佣金的员工的不同工作.
+
+8.找出不收取佣金或收取的佣金低于100的员工.
+
+9.找出各月倒数第3天受雇的所有员工.
+
+10.找出早于12年前受雇的员工.
+
+11.以首字母大写的方式显示所有员工的姓名.
+
+12.显示正好为5个字符的员工的姓名.
+
+13.显示不带有"R"的员工的姓名.
+
+14.显示所有员工姓名的前三个字符.
+
+15.显示所有员工的姓名,用a替换所有"A"
+
+16.显示满10年服务年限的员工的姓名和受雇日期.
+
+17.显示员工的详细资料,按姓名排序.
+
+18.显示员工的姓名和受雇日期,根据其服务年限,将最老的员工排在最前面.
+
+19.显示所有员工的姓名、工作和薪金,按工作的降序排序,若工作相同则按薪金排序.
+
+20.显示所有员工的姓名、加入公司的年份和月份,按受雇日期所在月排序,若月份相同则将最早年份的员工排在最前面.
+
+21.显示在一个月为30天的情况所有员工的日薪金,忽略余数.
+
+22.找出在(任何年份的)2月受聘的所有员工。
+
+23.对于每个员工,显示其加入公司的天数.
+
+24.显示姓名字段的任何位置包含"A"的所有员工的姓名.
+
+25.以年月日的方式显示所有员工的服务年限. (大概)
+
+
+

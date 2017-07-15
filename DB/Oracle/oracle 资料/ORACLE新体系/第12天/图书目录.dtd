@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!ELEMENT 图书目录 (图书+)>
+<!ELEMENT 图书 (书名,作者+,出版商,出版日期,价格)>
+<!ATTLIST 图书
+	书号 ID #REQUIRED
+	销售 (是 | 否) #REQUIRED
+>
+<!ELEMENT 书名 (#PCDATA)>
+<!ELEMENT 出版商 (#PCDATA)>
+<!ELEMENT 出版日期 (#PCDATA)>
+<!ELEMENT 价格 (#PCDATA)>
+<!ELEMENT 作者 (#PCDATA)>

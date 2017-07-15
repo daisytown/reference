@@ -1,0 +1,36 @@
+企业管理器(OEM)
+
+
+1.使用OEM建立一个用户,用户名test,密码t123.
+
+在用户test中做如下操作
+
+2.建一张表student(id number(4),
+name varchar2(10),
+sex char(2),
+birthday date)
+表有下列约束 
+   name 非空
+   id 主键
+   sex 检查约束(男或女)
+
+3.向表中插入一条数据
+日期使用'12-8月-04',name为'mike'
+
+3.建一个视图stu_view
+   内容是select id,name,to_char(birthday,'yyyymmdd') from student;
+
+4.建一个序列stu_seq
+    从1000开始 每次增加2 最大值是9999
+
+5.利用序列stu_seq产生id的值,向表中插入2条数据
+
+
+6.为scott下的表emp建立一个同义词emp_syn,通过emp_syn
+能查到表scott.emp下的数据
+
+
+7.为student的birthday列建立索引,为sex字段建立bitmap索引
+
+
+

@@ -1,0 +1,3 @@
+CREATE INDEX "SCOTT"."ÐÕÃû×Ö¶ÎË÷Òý" 
+    ON "SCOTT"."STUDENT"("NAME") 
+    TABLESPACE "INDX"

@@ -1,0 +1,128 @@
+TOAD使用笔记
+
+　　1、把鼠标停在sql所在行，然后ctrl+Enter直接执行当前sql。
+
+　　2、解决Toad对中文显示乱码问题(如果数据库所在主机的NLS_LANG是AMERICAN_AMERICA.WE8ISO8859P1)：
+
+　　系统环境变量加 NLS_LANG=AMERICAN_AMERICA.WE8ISO8859P1
+
+　　3、toad中自动提示功能，就像plsql developer那样：
+
+　　输入表名前几个字母，然后用Ctrl + .就可以弹出，如你输入select * from emp t where t. 这时候停顿一下，会弹出emp的字段来供你选择
+
+　　4、如何支持代码自动更正，如输入ndf，自动替换成NO_DATA_FOUND，输入sf自动替换成select * from：
+
+　　点开菜单edit->editer_options->auto_replace中，自己去设定。可以设置任何你想自动替换的单词
+
+　　5、toad如何实现多线程，像plsql developer那样可以取消当前的操作：
+
+　　安装的时候有选项设置，如果未设置进入view-options-oracle-transactions，把第一个选项选上。
+
+　　6、在TOAD的SQL Editor中修改查询的数据：
+
+　　select rowid,b.* from acc_bill b 就可以修改数据了......
+
+　　7、使用Object Palette吧，很棒：
+
+　　在VIEW——Object Palette找到入口。点击后在SQL Editor窗口右侧产生一个窗口，里面可以根据schema选择对象类型，比如table，出现的表名双击后就出现在SQL编辑器里了，下面还有字段名，是不是很方便啊。
+
+　　8、关于TOAD启动的一些问题：
+
+　　有的时候安装完成后突然发现无法同时打开两个TOAD，其实这是一个option控制的。进入option界面，选择General，右侧第四个 “Allow multiple copies ...”，那个就是选项了，打勾后重启程序就可以了。同一个界面里第五个是控制是否显示进入画面，觉得麻烦可以删掉，去掉那个勾就可以了。
+
+　　9、安装好toad后根据需要使用到的特性，需要运行一些脚本：(都在Toad\temps目录下)
+
+　　ü 如果需要用Toad来查看执行计划，必须运行脚本PrepToad.sql或者notoad.sql
+
+　　n 如果希望专门建立一个Toad 用户来存放Toad需要使用的对象的话，就运行preptoad.sql。
+
+　　n 如果希望在当前连接用户模式下建立toad需要使用的对象的话，就运行notoad.sql。
+
+　　n 注意，如果是选择了专门建立toad这个用户的话，需要先修改一下脚本，指定用户的默认表空间和临时表空间。
+
+　　ü 需要使用Oracle8i 的Profile analyzer，必须运行ToadProfiler.sql
+
+　　ü 需要加强Toad的安全性，必须运行ToadSecurity.sql
+
+　　10、以下都是指toad8.0xpert下：
+
+　　执行toad自带的执行计划的方法：
+
+　　view->options->oracle->general配置explain plan的表名和用户名，如图：
+
+　　如果还没有建立计划表plan_table请执行以下脚本：
+
+　　-----------------------------------------------------------------------------
+
+　　SQL> @C:\oracle\ora92\rdbms\admin\utlxplan.sql
+
+　　SQL> create public synonym plan_table for plan_table;
+
+　　SQL> grant select,update,insert,delete on plan_table to public;
+
+　　-----------------------------------------------------------------------------
+
+　　11、TOAD 9.0.1.8 版本的几个不错的功能：
+
+　　Utilities-Unix Job Scheduler 有不少DBA、Backup、Table和Index维护的相关shell脚本，可供学习参考。
+
+　　Utilities-Network Utilities 有telnet/RExec/Ping/TNSPing/SSH等功能。
+
+　　Utilities-Script Manager 有不少常用的数据库查询和维护SQL语句，并且能直接执行测试。
+
+　　View-Object Palette 选上后，会在toad右侧显示数据库对象面板，双击可以在输入区输入对象名，且方便查询。
+
+　　按F8显示最近执行的sql语句，方便查询，并可选择出来修改、执行。
+
+　　Database-Compare-Single Objects 可以比较两个对象脚本之间的差异。
+
+　　Database-Report-HTML Schema Doc Generator 可以生成超文本格式的数据库对象及其代码详细信息文档。
+
+　　Database-Optimizer-Unix Kernel Parms 计算unix主机(包括Solaris/AIX/HPUX/Tru64/Linux)的内核参数信息。
+
+　　Database-Optimizer-Repair Chained Rows 可以计算和修复行链接
+
+　　Database-Optimizer-Rebuild Table 可以生成重建表的脚本(包括索引、约束及其重编译对应存储过程信息)。
+
+　　Database-Optimizer-Pinned Code 可以查询共享池中的代码信息，并且能Fulsh SGA和pin指定的对象到共享池中。
+
+　　12、Toad Database Health Check功能执行前操作：
+
+　　SQL> conn /as sysdba
+
+　　Connected.
+
+　　--为了分析alert.log文件
+
+　　SQL> CREATE OR REPLACE DIRECTORY TOAD_BDUMP_DIR as '/opt/oracle/db01/app/oracle/admin/ORCL/bdump';
+
+　　Directory created.
+
+　　SQL> GRANT READ, WRITE on DIRECTORY TOAD_BDUMP_DIR to wacos;
+
+　　Grant succeeded.
+
+　　[FK Constraints with nonmatching column definitions]太耗时，建议取消
+
+　　13、如何设置使得注释字体是立体字而不是斜体字(Toad 9.1.0.62)
+
+　　编辑区右击 - 选择edit options - 查看Language组合框 - 选择PL/SQL语言 - 点击Edit按钮 - 选择Highlighting标签 - 从左侧Styles里选择Comment - 把Font Style组合框里的Italic选择框的小勾去掉。
+
+　　常用快捷键：
+
+　　F8 调出以前执行的sql命令
+
+　　F9 执行全部sql
+
+　　Ctrl+t 补全table_name
+
+　　Ctrl+. 补全table_name
+
+　　alt+ 箭头上下 看sql history
+
+　　Ctrl+Enter 直接执行当前sql
+
+　　Ctrl+Shift+F 格式化sql语句。
+
+　　如果还觉得不够用的话，可以在系统菜单空白处点击右键，进入menu shortcuts，自行定义快捷键。
+

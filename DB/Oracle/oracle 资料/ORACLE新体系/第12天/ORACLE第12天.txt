@@ -1,0 +1,224 @@
+回顾
+    a)格式正规的XML
+            满足这些要求的XML文件:   *******************************************
+      <1> XML文件的第一行必须是声明 
+      <2> 整个XML文件 一定要有且仅有一个根元素。      
+      <3> 标记必须成对出现正确嵌套
+      <4> 元素和属性的名字符合要求(不含有:或者XML/属性值有""或'')
+   称为格式正规的XML文件
+   
+    b)有效的XML文件
+     结构的限制 _ DTD  文档类型定义
+           元素
+           属性
+           层次结构
+ 
+先有DTD如何写XML文件????
+
+  图书目录
+    DTD  两个书店交换图书
+          数据库分别是SQLServer,ORACLE
+           图书目录的交换 采用XML文件的方案
+    首先定义XML的结构 DTD技术
+    然后写XML文件  
+     IE浏览器只能验证XML的正规性 不能验证有效性
+       下载插件XML VALIDATOR (有效性验证的) 
+       自己编程序来验证有效性
+    DTD还可以写实体 
+     XML 有5个内部定义的实体
+            &gt;  >
+
+     HTML 有20个内部定义的实体
+             &nbsp; 空格
+              
+     XML中自己定义实体 实体定义在DTD中
+          相当于程序中的常量
+          普通实体 ---  用在XML的内容中 
+            	<书名>XML网页制作彻底研究</书名>
+		<作者>&cheng;</作者>
+          参数实体 ---  用在DTD中,对复杂的内容作一个简化的处理
+            <!ENTITY % 图书列表 "书名,作者+,出版商,出版日期,价格">
+            <!ELEMENT 图书 (%图书列表;)>
+
+ DTD文件的不足之处
+    <1>不是XML文件,扩展性不好
+    <2>数据类型太少
+
+ SChema技术 ----  验证XML文件的有效性
+    优点:
+      <1>是一个XML文件 ,扩展性好
+      <2>数据类型丰富,还可以自定义数据类型
+  
+Schema文件的结构 ???
+ Schema文件由哪些内容组成???
+
+<1>Schema文件的结构   
+    根元素<schema></schema>
+    带有命名空间xs
+       xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified"  元素前要使用xs命名空间
+    attributeFormDefault="unqualified"  属性名字不用使用xs命名空间
+ 完整的
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+elementFormDefault="qualified" 
+attributeFormDefault="unqualified">
+
+</xs:schema>
+ 
+DTD中 元素如何定义 ?? <!ELEMENT
+      属性如何定义  <!ATTLIST
+      有哪些数据类型  元素(#PCDATA)   属性 CDATA ID IDREF 
+
+SChema中的 数据类型:(属性和元素)
+   a) 基本数据类型
+     string 字符
+     boolean 布尔值
+     decimal 小数
+     date    日期
+     datetime 日期时间
+     等等
+  b)  扩展数据类型
+    ID  唯一值 
+    IDREF ID唯一值的引用
+    positiveinteger 正整数
+    negativeinteger  负整数
+  c)自定义数据类型
+     基本数据类型 + 限制条件 = 自定义数据类型
+     语法:
+       <xs:simpleType name="">
+         <xs:restriction base="">
+         </xs:restriction>
+       </xs:simpleType>
+ 图书的书号
+   例子1: ISBN 7-113-05064-6
+   Schema 内自定义数据类型来表示书号 (简单类型)
+ 
+<xs:simpleType name="ISBN">
+	<xs:restriction base="xs:string">
+	 <xs:pattern value="ISBN \d{1}-\d{3}-\d{5}-\d{1}"/>   	
+	</xs:restriction>
+</xs:simpleType>
+
+   <xs:pattern   模式   正则表达式
+     设定字符串的格式
+            样式                       正则表达式
+       "ba"  "bba" "bbba" "bbbba"        b+a
+            "a" "ba"                     b?a
+      "ba"  "bba" "bbba" "bbbba" "a"     b*a
+         chapter1 chapter2 chapter3      chapter\d      
+            chapter1 ---- chapter99      chapter\d{1,2}
+        a1 b1 c1  ----- z1               [a-z]1
+          88-0987 89-09090               \d{2}-\d{4,5}
+  E-Mail格式的表示
+       huangchangyu@vip.sina.com
+   SChema 中这样,别的地方有微小的差异                
+       [a-z0-9]*@([a-z0-9]*.)*[a-z0-9]*.[a-z0-9]*
+
+              
+   <例子1>学生考试的分数
+         0< 分数 <=100
+<xs:simpleType name="scoretype">
+	<xs:restriction base="xs:decimal">
+       <xs:minExclusive value="0"/>
+       <xs:maxInclusive value="100"/>
+	</xs:restriction>
+</xs:simpleType>
+
+ 如何定义元素?
+  <1>单个元素************
+    <xs:element name="书号" type="ISBN"/>
+<xs:simpleType name="ISBN">
+	<xs:restriction base="xs:string">
+	 <xs:pattern value="ISBN \d{1}-\d{3}-\d{5}-\d{1}"/>   	
+	</xs:restriction>
+</xs:simpleType>
+  写XML片断
+      <书号>ISBN 7-113-05064-6</书号>
+
+  <2>1个元素由多个元素(子元素)组成的*********
+      <xs:complexType/>  复杂类型
+ 
+ 例子  表示DTD中的 
+        <!ELEMENT 图书  (书名,作者+,出版商,出版日期,价格)>
+
+Schema中
+<xs:element name="图书" type="booklist"/>
+<xs:complexType name="booklist">
+	<xs:sequence>
+	 <xs:element name="书名" type="xs:string" />
+	 <xs:element name="作者" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+<xs:element name="出版商" type="xs:string"/>
+<xs:element name="出版日期" type="xs:date"/>
+<xs:element name="价格" type="xs:decimal"/>
+   </xs:sequence>
+</xs:complexType>
+
++   <xs:element ... minOccurs="1" maxOccurs="unbounded"/>
+?   <xs:element ... minOccurs="0" maxOccurs="1"/>      
+*   <xs:element ... minOccurs="0" maxOccurs="unbounded"/>      
+元素出现2-5次
+    <xs:element ... minOccurs="2" maxOccurs="5"/>      
+
+<xs:sequence/> 表示元素出现的顺序
+<xs:all/>  表示元素出现的顺序是任意的 
+<xs:choice/> 表示在多个元素中选择一个
+<xs:choice minOccurs="2" maxOccurs="2"/> 多个元素选2个
+
+ <例子>   DTD <!ELEMENT 图书目录 (图书+)>
+<xs:element name="图书目录" type="bookcatalog"/>
+<xs:complexType name="bookcatalog">
+	<xs:sequence>
+		<xs:element ref="图书" minOccurs="1" maxOccurs="unbounded"/>
+	</xs:sequence>
+</xs:complexType>
+
+ Schema定义属性**********************
+  <xs:element>
+    <xs:attribute name="" type="" use=""/>
+  </xs:element>
+<例子>
+ <!ATTLIST 图书
+	销售 (是 | 否) #REQUIRED
+>
+
+Schema表示如下
+   <xs:attribute name="销售" type="salesattr" use="required"/>
+	<xs:simpleType name="salesattr">
+		<xs:restriction base="xs:string">
+		   <xs:enumeration value="是"/>
+		   <xs:enumeration value="否"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+    <xs:enumeration/>  枚举类型(多个中选一个)  
+ 
+
+<例子>  只有属性的元素
+     <emp empno="1234" sex="M"/>
+
+<xs:element name="emp" type="emptype"/>
+<xs:complexType name="emptype">
+  <xs:attribute name="empno" type="xs:integer"/>
+  <xs:attribute name="sex" type="xs:string"/>
+</xs:complexType>
+
+复杂类型complexType 是用于定义子元素和属性的
+
+简单类型simpleType 定义元素 = 基本类型 + 限制条件
+   
+    
+ 
+      
+  
+  
+
+
+
+
+           
+         
+      
+
+
+
+     

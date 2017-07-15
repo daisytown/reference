@@ -1,0 +1,564 @@
+回顾
+    游标 ---  处理多行记录
+    存储过程
+    函数
+
+ORACLE中的程序包
+  PACKAGE
+用途: <1>模块化
+<例子> --公司的员工的管理
+         1.增加一个员工
+         2.员工离职
+用存储过程和函数来实现
+1.增加一个员工
+create sequence seq1 start with 7935;
+
+create or replace function insert_emp(
+   enm emp.ename%type,  --员工的名字
+   ejob varchar2, --职务
+   mgr number,   --上级
+   ehiredate date,--参加工作时间
+   esal number,  --工资
+   ecomm number, --津贴
+   dno number)         
+return number
+as
+  a number;
+begin
+  --工号来自序列
+  select seq1.nextval into a
+  from dual; 
+  --增加了一个员工
+  insert into emp values (
+       a,enm,ejob,mgr,ehiredate,esal,ecomm,dno);
+
+  return a;
+end;               
+
+2.员工离职
+ create or replace procedure remove_emp(eno emp.empno%type)
+ as
+ begin
+   delete from emp where empno = eno;
+
+ end;
+    
+把这2个功能设计成一个package(包)
+  包-- 说明部分 + 实现部分
+ 建立说明部分:
+  create or replace package company_gl
+  as
+    --加员工
+    function insert_emp( enm emp.ename%type,  --员工的名字
+   ejob varchar2, --职务
+   mgr number,   --上级
+   ehiredate date,--参加工作时间
+   esal number,  --工资
+   ecomm number, --津贴
+   dno number) return number;
+    --员工离职
+    procedure remove_emp(eno emp.empno%type);
+  end;   
+
+ --实现部分
+  create or replace package body company_gl
+  as
+
+     function insert_emp(
+   enm emp.ename%type,  --员工的名字
+   ejob varchar2, --职务
+   mgr number,   --上级
+   ehiredate date,--参加工作时间
+   esal number,  --工资
+   ecomm number, --津贴
+   dno number)         
+return number
+as
+  a number;
+begin
+  --工号来自序列
+  select seq1.nextval into a
+  from dual; 
+  --增加了一个员工
+  insert into emp values (
+       a,enm,ejob,mgr,ehiredate,esal,ecomm,dno);
+
+  return a;
+end;               
+
+ procedure remove_emp(eno emp.empno%type)
+ as
+ begin
+   delete from emp where empno = eno;
+
+ end;
+
+end;
+怎么用这个PACKAGE????
+  <1>包中存储过程
+   --7369的员工离开公司
+     execute company_gl.remove_emp(7369);
+
+  <2>使用函数 
+    --新增加一个员工
+     declare
+       no number;
+     begin
+      no := company_gl.insert_emp(
+         '张三','CLERK',7499,sysdate,
+         1500,200,10);
+      dbms_output.put_line('员工号='||no);
+     end;
+
+<2>包中的变量是全局变量
+  create or replace package my_pack
+  as
+    nn number; --放员工号
+    procedure get_empno(enm varchar2); 
+
+  end;
+
+  create or replace package body my_pack
+  as
+    
+    procedure get_empno(enm varchar2)     
+    as
+    begin
+      select empno into nn from emp
+        where ename = enm;
+    
+    end;
+  end;
+
+  --独立存储
+  create or replace procedure get_name as
+    nm varchar2(20);
+ begin
+  --my_pack包中的nn是全局的
+   select ename into nm from emp
+     where empno = my_pack.nn;   
+   dbms_output.put_line('员工姓名='||nm);
+ end;
+
+<3>返回结果集合
+  create or replace package emp_pack
+  as
+   --动态游标
+   type curemp is ref cursor return emp%rowtype;
+   --返回引用游标
+   function get_emp_record(ejob varchar2)
+    return curemp;
+
+  end; 
+
+  create or replace package body emp_pack
+  as
+   function get_emp_record(ejob varchar2)
+    return curemp
+   as
+     v_emp curemp;
+   begin
+     open v_emp for select * from emp
+        where job = ejob;
+     return v_emp;      
+   end;
+
+  end; 
+
+  select emp_pack.get_emp_record('MANAGER') from dual;
+
+
+<4>包好处 效率高
+ 
+JAVA 连接ORACLE数据库
+
+  JDBC -- <1>纯JAVA驱动
+          <2>本地驱动
+
+把EMP表中的员工信息取出来显示
+
+<1>使用纯JAVA驱动
+   classes12.jar 路径 D:\oracle\ora90\jdbc\lib
+
+<2>本地驱动(OCI驱动)
+
+<3>增删改查 
+--存储过程
+
+   create or replace procedure p1(eno number,enm out varchar2)
+     as
+begin
+
+  select ename into enm from
+ emp where empno = eno;
+
+end;
+
+
+--函数
+create or replace function f1(eno number) return varchar2
+     as
+enm varchar2(20);
+begin
+
+  select ename into enm from
+ emp where empno = eno;
+ return enm;
+
+end;
+
+--包中的存储
+ create or replace package test_pack
+ as
+   procedure getname(eno number,enm out varchar2);
+  function f_get_name(eno number) return
+     varchar2;
+ end;
+
+ create or replace package body test_pack
+ as
+   procedure getname(eno number,enm out varchar2)
+   as
+   begin
+    select ename into enm from emp
+     where empno = eno;
+   end;
+
+  function f_get_name(eno number) return
+     varchar2 as
+   n varchar2(20);
+  begin
+     select ename into n from emp
+        where empno = eno;
+    return n;
+  end;
+
+ end;
+--编程
+   PL/SQL语言
+
+   存储过程和函数 *********
+
+   模块化-程序包
+ 
+   触发器
+    <1>加强约束条件
+    <2>实现关联操作  在一个表中修改数据 导致另一个表数据的修改
+   
+
+--ORACLE中的 触发器
+ 用途 :加强约束 条件 的 
+ --希望在表中插入的数据的日期大于系统时间
+   Create table test(
+   xh number(2) primary key,
+   hdate date check (hdate > sysdate)
+);
+数据库无法建立的
+
+   Create table test(
+   xh number(2) primary key,
+   hdate date check (hdate > to_date('20050501','yyyymmdd'))
+);
+这个可以建
+
+建立触发器的语法
+  create or replace trigger <触发器名>
+  after/before insert/update/delete on <表名>
+  for each row
+  begin
+
+  exception
+
+  end;
+
+--触发器中的PL/SQL块(DML / tcl)可以写什么样的SQL语句呢
+      DML语句 别的都不能写(COMMIT/rollback都不能写) 
+
+
+after/before 以后/以前  
+insert/update/delete 触发的SQL语句
+for each row 行级 - 语句级
+
+--sql语句和触发器的Pl/SQL形成一个整体的事务
+
+
+
+--当表emp中加入员工的时候，如果这个员工的部门
+在部门表中没有，则在部门表中dept插入该部门信息,
+要求部门编号一定要大于77
+
+--可以使用when的选项来改善触发器的效率
+
+create or replace trigger emptr
+before insert on emp   --insert语句触发
+for each row          --行级触发器
+when (new.deptno >77 and new.ename='JOHN')  --条件 (满足条件才触发)
+declare
+  n_count number;
+begin
+  --先检查加入的员工的部门是否存在
+  --:new代表新插入到EMP中的那条记录 EMP%rowtype
+  --if :new.deptno > 77 then
+   select count(*) into n_count
+   from dept where deptno = :new.deptno;
+  
+  --如果不存在就在部门表中加入该部门
+  if n_count = 0 then
+    insert into dept values (:new.deptno,
+     '人事','北京');
+  end if;       
+
+-- end if;
+
+end;
+
+--触发语句
+insert into emp(empno,ename,deptno) values
+ (9000,'mike',50);
+
+
+--for each row
+--日志表
+ create table log(
+   id number ,
+   ndate date
+);
+
+--触发器
+create or replace trigger emptr2
+after update on emp
+for each row
+begin
+--update
+--改后的值 :new.empno :new.ename
+--改前的值 :old.empno :old.ename
+--insert
+--只有:new
+--delete 
+--只有:old
+  insert into log values (:new.empno,sysdate);
+end;
+
+--修改1条记录,触发器触发几次??(1次)
+update emp set sal=2000 where empno=7369;
+
+
+--改14条记录 ，触发器工作几次？？(14次)
+update emp set sal=1000 ;  14次
+
+
+--语句级
+create or replace trigger emptr2
+after update on emp
+begin
+  insert into log values (222,sysdate);
+end;
+
+
+--一句话，改14条记录 ，触发器工作几次？？？？1次
+update emp set sal=1000; 
+
+--行级 根据sql语句的影响记录的行数来决定触发的次数
+--语句级  根据sql语句的个数来决定触发的次数
+-- 使用最多的是行级触发器
+
+
+
+--什么语句触发的触发器 可以用
+--inserting(boolean值)  insert语句
+--updating(boolean值)   update语句
+--deleting(boolean值)   delete语句
+
+--使用触发器的时候容易犯的错误
+--变异表
+--不能够在触发器对触发表做select操作
+create or replace trigger em1
+after delete on emp
+for each row
+declare
+ n number;
+begin
+  select count(*) into n from emp;
+end;
+
+
+
+
+
+
+--如何防止错误删除???
+delete from dept;
+
+--触发器
+  create or replace trigger tr_del
+  before delete on dept
+  for each row
+  begin
+ --内部引起异常
+    raise_application_error(-20001,'不能删除');
+  end;   
+
+  alter trigger tr_del disable; --使触发器不工作
+  alter trigger tr_del enable; --使触发器工作
+
+--希望在表中插入的数据的日期大于系统时间
+create or replace trigger tr_test
+after insert or update of hdate 
+or delete on test
+for each row 
+begin
+  if inserting then --insert语句触发
+  dbms_output.put_line('insert');
+  --插入的每一行用:new表示(test%rowtype)
+  if :new.hdate <= sysdate  then
+  --不能进行数据插入
+   raise_application_error(-20001,'日期小于系统时间');
+  end if;
+  
+  elsif updating then --update语句触发
+  dbms_output.put_line('update');
+  if :new.hdate <= sysdate  then
+  --不能进行数据插入
+   raise_application_error(-20001,'日期小于系统时间');
+  end if;
+    
+  
+  elsif deleting then --delete语句触发
+  dbms_output.put_line('delete');
+  
+  end if;
+  
+exception
+ when others then
+   raise_application_error(-20002,'日期小于系统时间');
+end;
+
+--希望在表中插入的数据的日期大于系统时间
+   Create table test(
+   xh number(2) primary key,
+   hdate date );
+
+ create or replace trigger tr_test
+ after insert on test
+ for each row
+ begin
+  if :new.hdate <= sysdate then
+    raise_application_error(-20001,'小于系统时间');
+  end if;
+
+ end;
+
+insert into test values (1,to_date('20050401','yyyymmdd'));
+
+insert into test values (1,sysdate+1);
+
+--ORACLE中的内置程序包
+  DBMS_JOB  自动作业调度
+    能不能写一个存储过程 每隔一定时间自动运行(定时器)
+   dbms_job.submit()   提交作业到系统 指定它什么时候运行
+   
+--DBMS_JOB 作业调度包(指定PL/SQL过程定时自动执行)
+--初始化参数init.ora
+ job_queue_processes = 1 --作业队列进程的个数(最大36个)
+ job_queue_interval = 60 --进程每隔多少时间扫描作业队列(60s)
+
+ processes=150  --并发用户的数量
+ open_cursors =300 --存储过程中使用游标的数量
+
+ 
+--DBMS_JOB包中的方法
+ procedure submit(job out binary_integer,
+   what in varchar2,
+   next_date in date default sysdate,
+   interval in varchar2 default null,
+   no_parse in boolean default false);
+
+ procedure change(job in binary_integer,
+   what in varchar2,
+   next_date in date,
+   interval in varchar2);
+
+ procedure what(job in binary_integer,
+    what in varchar2);
+
+ procedure next_date(job in binary_integer,
+    next_date in date);
+ 
+ procedure interval(job in binary_integer,
+   interval in varchar2);
+
+--实际例子 
+ create  sequence temp_seq
+  start with 1;
+
+ create table temp_table(
+       num_col number,
+       char_col varchar2(50));
+
+
+ create or replace procedure tempinsert is
+ begin
+   insert into temp_table(num_col,char_col)
+   values (temp_seq.nextval,to_char(sysdate,'yyyy-mm-dd hh24:mi:ss'));
+   
+   commit;
+ end;
+
+--注册每10秒运行一次
+ declare
+   v_job number;
+ begin
+  dbms_job.submit(v_job,'tempinsert();',sysdate,'sysdate + (10 / (24 * 60 * 60))');
+  commit;
+ end; 
+
+  
+--删除作业
+ dbms_job.remove(job in binary_integer);
+
+--查看作业信息
+ select * from user_jobs;
+ select * from dba_jobs;
+
+ 内置程序包 大约有25个 都是sys拥有
+
+
+
+
+
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+    

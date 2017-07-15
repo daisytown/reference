@@ -1,0 +1,1 @@
+select  mgr,  mod(mgr,1000),  mod(mgr,100),  mod(mgr,10)  from  scott.emp;

@@ -1,0 +1,268 @@
+ORACLE的使用和开发
+  <1> ORACLE的使用
+       启动和关闭
+       工具操作ORACLE -- sql*plus
+                        plsql developer
+  <2> SQL命令
+     4大类
+       DDL 数据定义语言 -  建立数据库对象
+           create /alter/ drop/ truncate
+       DML 数据操纵语言 - 数据的查看和维护
+           select / insert /delete /update
+       TCL 事务控制语言 -  数据是否保存到数据库中
+           commit / rollback / savepoint
+       DCL 数据控制语言 -- 查看对象的权限
+           grant / revoke /如何建用户
+  <3> 子查询和关联查询  *********************
+     关联查询 - 3个表的关联
+         select dname,ename
+           from dept a, emp b
+          where  a.deptno = b.deptno;
+
+     子查询 -- (1)写在where子句中
+               (2) 子查询可以出现在字段的位置上
+       (1) select * from emp where sal > (
+              select avg(sal) from emp );
+           --高于平均工资的所有员工
+ 
+       (2) select * from emp a where sal > (
+               select avg(sal) from emp where deptno = a.deptno);   
+           --高于部门平均工资的所有员工  
+          
+          select dname,(select count(*) from emp
+           where deptno = a.deptno) as rs 
+          from dept a;
+           --部门名称和每个部门的人数
+
+    <4> 如何建立数据库对象
+        表 / 视图 / 序列(自动编号) / 同义词 /索引（加快查询）
+
+    <5> 如何在ORACLE中写程序?
+        PL/SQL  --  PL/SQL块
+         declare
+         begin
+         exception
+         end;
+       基本的语法 - 变量 ， 变量的赋值(select ... into ...)
+         数据类型 (变量定义要有长度) a varchar2(10);
+         条件判断 if .. then
+                 elsif .. then
+                 ..
+                 else
+                  end if;
+         三种循环 : while / loop / for
+       游标- 多行记录的处理****
+          declare
+            cursor c1 is select * from dept
+			order by deptno desc; 
+            c1rec c1%rowtype;
+           begin
+             for c1rec in c1 loop
+               dbms_output.put_line(c1rec.dname||'-'||c1rec.loc);
+             end loop;
+
+
+           end;
+          for循环游标 / 参数游标 /ref 游标
+       存储过程 **
+       函数
+       程序包
+       触发器
+    <6> ORACLE的内部的程序包
+          DBMS_OUTPUT   输出
+          DBMS_JOB      定时执行任务
+
+    <7> JAVA 访问ORACLE ***************
+        jar包--- classes12.jar
+        
+        驱动程序的方式--(1)thin驱动
+             url = "jdbc:oracle:thin:@localhost:1521:accp" 
+         (2)FAT驱动 (需要安装ORACLE客户端才能使用)
+            url = "jdbc:oracle:oci8:@accp_con"
+               accp_con是需要配置的一个连接字符串
+        
+        程序的编写 --JDBC(案例) 
+
+
+ORACLE的数据库管理
+
+<1>ORACLE数据库的体系结构
+<2>ORACLE的应用程序的性能优化和调整
+<3>ORACLE数据库的备份和恢复
+
+<1>体系结构
+  物理结构 --- 在操作系统上可以看到的数据库的文件
+  逻辑结构 --- ORACLE内部来看 如何组成的
+  进程的结构 ---  进程有哪些 有什么作用
+
+数据库的启动和关闭
+ <1>用服务中的service来启动和关闭数据库
+
+ <2>可以使用命令行来启动和关闭数据库
+    a)第一次启动必须用<1>来启动的
+    b)sqlplus /nolog   启动SQLPLUS不用提供用户
+    c)connect / as sysdba  sysdba代表了sys的权限
+                           / 表示登录ORACLE数据库使用操作系统的用户 
+    d)shutdown immediate 立即关闭
+          如果有别的用户连到数据库,自动断开连接,没有提交的事务自动回滚
+    c) startup 启动
+
+SYS用户的密码 可以通过数据库来改
+     也可以通过操作系统的一个命令来改
+ORAPWD file=pwdaccp.ora password=m123 entries=1
+ --把sys用户的密码改为m123
+ --pwdaccp.ora pwd密码 accp数据库的名字
+  重新启动ORACLE数据库后生效  
+ 
+
+   <3>用企业管理器来启动和关闭
+      启动
+      关闭
+
+ORACLE的物理文件
+  <1>数据文件-----存放数据
+  <2>控制文件----记录了数据库中其他文件的位置
+                 数据库的创建实践
+                 数据库的名字
+                 镜像 最多可以有8个 
+     拷贝一个控制文件 到目标磁盘改名字
+     在init.ora文件中引用这个文件,重启数据库
+  <3>初始化文件--- 数据库启动的时候用到的参数、位置D:\oracle\admin\accp\pfile下 
+
+       D:\oracle\ora90\accp\admin\pfile
+      文件init.ora
+      每次启动ORACLE的时候读取该文件
+      调整ORACLE启动的内存????
+        show SGA 察看ORACLE所占用的内存
+        SGA的大小一般为物理内存的1/2
+        通过修改init.ora中的参数来调整内存
+           compatible=9.0.0  --版本兼容性
+           db_name=accp  --数据库的名字
+           control_files=("D:\oracle\oradata\accp\CONTROL01.CTL", "D:\oracle\oradata\accp\CONTROL02.CTL", "D:\oracle\oradata\accp\CONTROL03.CTL") --控制文件的位置
+
+单位:字节
+java_pool_size=33554432改为10M  --jVM使用的内存
+large_pool_size=1048576  不变--恢复的内存
+shared_pool_size=33554432 改为10M --PL/SQL 游标用的内存
+db_cache_size=33554432    --数据缓冲区大小33M 
+
+SPFILEaccp.ora服务器端的参数文件 是 二进制文件 不能直接改 通过OEM(企业管理器)来改 
+
+如果你 想使用 init.ora来 启动 ？？？？
+   startup pfile=D:\oracle\admin\accp\pfile\init.ora
+
+用户 的 并发数量 150
+  processes=150 支持的终端是 150 * 2=300
+游标的 支持 （PL/SQL中游标的使用数量）
+open_cursors=300
+  <4>警告日志文件 -- 查看数据库运行中是否有错误的
+   D:\oracle\admin\accp\bdump下 的 accpALRT.log 需要经常查看，大小会逐渐变大
+  定期删除此文件，ORACLE会自动重建
+  <5>重做日志文件 存放对数据库的修改信息
+    （insert/delete/update语句会存在此文件中)二进制
+   日志文件重用的时候是覆盖原有的内容，而原有的内容不产生备份(非归档模式)
+   应把数据库改为工作在归档日志模式下（安全的） 
+archive log list 查看工作模式
+     archivelog 归档
+     noarchivelog 非归档
+  <6>归档日志文件
+    用于数据库恢复
+
+逻辑结构－－ORACLE如何构成的
+    一个库
+   <1>表空间 
+    由表空间组成的(SYSTEM表空间是必须有的，数据字典放在其下)
+ create user test identified by t123;
+
+
+         --在SYSTEM这个表空间，不好
+－－先建立一个永久表空间 
+CREATE TABLESPACE TEST 
+    LOGGING 
+    DATAFILE 'D:\ORACLE\ORADATA\ACCP\TEST.ora' SIZE 5M AUTOEXTEND
+    ON NEXT  5M MAXSIZE UNLIMITED EXTENT MANAGEMENT LOCAL
+-- 再建立一个临时 表空间
+CREATE 
+    TEMPORARY TABLESPACE MYTMP TEMPFILE 
+    'D:\ORACLE\ORADATA\ACCP\MYTMP.ora' SIZE 5M EXTENT MANAGEMENT 
+    LOCAL UNIFORM SIZE 1M
+－－建用户
+ create user test identified by t123
+ default tablespace test --指定永久表空间
+ temporary tablespace mytmp; --指定临时表空间 
+－－授权
+ grant connect,resource to test;
+--连接
+ connect test/t123;
+ create table t(xh number(2));
+ <2>段 (segment)
+   表，视图 ,索引
+ <3>区 (extent)
+ <4>数据库块 (block)
+      一般应设置为8K，数据库装好后不能改，只有重装才能改变
+
+ --应用中 提示 表空间已满 ---  是否数据文件已满 又不能扩展？？？？
+
+
+<例子>
+1. 如何让ORACLE数据库工作在安全的模式下？？
+   a) 工作在归档日志模式下，可以恢复
+   b) 删除用户组ORA_DBA 和下面的用户 －－登陆必须提供用户名和密码
+   C)改所有默认用户的密码
+   
+
+2.如果一个ORACLE数据库什么密码都不知道，怎么来找到密码？？？
+  1) 检查connect / as sysdba是否还有效,有效
+    a) select user_name from dba_users;看用户
+    b) alter user scott identified by m123;
+ 2)检查connect / as sysdba是否还有效,无效
+   a)orapwd file=pwd<数据库名字>.ora password=hello entries=1
+   b) 数据库重新启动
+   c) connect sys/hello as sysdba连接
+   d) select user_name from dba_users;看用户
+    f) alter user scott identified by m123;
+
+3.数据库如果出现问题，看哪个文件来找到？？
+  警告日志文件 alrtaccp.ora
+
+  文件逐渐变大 定期删除这个文件
+   ORACLE会自动重建
+  
+  
+
+
+
+ 
+
+ 
+    
+
+
+
+  
+ 
+
+
+  
+                   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+  
+
+  

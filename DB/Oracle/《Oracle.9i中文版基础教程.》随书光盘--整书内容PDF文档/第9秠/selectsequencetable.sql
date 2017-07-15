@@ -1,0 +1,1 @@
+select *  from  scott.sequence_table;

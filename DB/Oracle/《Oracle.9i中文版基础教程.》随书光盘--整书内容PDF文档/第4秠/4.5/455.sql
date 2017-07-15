@@ -1,0 +1,1 @@
+select mgr, round(mgr/100,2),round(mgr/1000,2) from scott.emp;

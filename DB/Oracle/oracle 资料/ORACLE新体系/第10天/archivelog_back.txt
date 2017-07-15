@@ -1,0 +1,17 @@
+set feedback off
+set pagesize 0
+set heading off
+set verify off
+set linesize 200
+set trimspool on
+
+define dir = 'c:\backup'
+define fil= 'c:\archive_backup_commands.sql'
+spool &fil
+prompt archive log next; ;
+select 'host move '||name||' &dir' from v$archived_log
+where completion_time >= trunc(sysdate)-1 
+and completion_time < trunc(sysdate);
+spool off;
+rem @&fil
+

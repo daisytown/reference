@@ -1,0 +1,16 @@
+--帐户转帐
+
+小王和小李在工行各自开设了一个帐户，分别有资金2000元（小王）和3000元（小李），
+现在要从小王的帐户上转1000元到小李的帐户上，最后小王的帐户剩下1000元，小李的
+帐户上应有4000元，请设计一个安全转帐的程序，用jsp+ORACLE实现。
+
+假设帐户表结构
+create table account(
+accname varchar2(20) primary key, --帐户名
+tot     number(10,2) --帐户余额
+);
+数据
+insert into account values ('小王',2000);
+insert into account values ('小李',3000);
+
+(考虑事务的概念)

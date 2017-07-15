@@ -1,0 +1,18 @@
+oracle汉字转拼音package
+1.获得全拼
+2.拼音首字母
+3.拼音截取等
+
+需要用的时候，调用这个包里的函数，就可以获得全部拼音
+
+SQL codeselect GetHZPY.GetHzFullPY('汉字') from dual
+result:HanZi
+
+
+调用这个
+SQL codeselect GetHZPY.GetHzPYCAP('汉字') from dual
+result:HZ
+
+调用这个
+SQL codeselect GetHZPY.GetHzPYCAPsubstr('汉字',0,1) from dual
+result:H

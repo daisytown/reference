@@ -1,0 +1,55 @@
+使用scott/tiger用户下的emp表和dept表完成下列练习，表的结构说明如下
+
+emp员工表(empno员工号/ename员工姓名/job工作/mgr上级编号/hiredate受雇日期/sal薪金/comm佣金/deptno部门编号)
+
+dept部门表(deptno部门编号/dname部门名称/loc地点)
+
+工资 ＝ 薪金 ＋ 佣金
+
+1．列出至少有一个员工的所有部门。
+2．列出薪金比“SMITH”多的所有员工。
+
+3．列出所有员工的姓名及其直接上级的姓名。
+
+select a.ename,
+(select ename from emp where empno= a.mgr) mgrname from emp a;
+
+自连接
+select a.ename,b.ename mgrname from emp a,emp b
+where a.mgr = b.empno;
+
+
+4．列出受雇日期早于其直接上级的所有员工。
+
+
+
+5．列出部门名称和这些部门的员工信息，同时列出那些没有员工的部门。
+
+6．列出所有“CLERK”（办事员）的姓名及其部门名称。
+
+
+
+7．列出最低薪金大于1500的各种工作。
+8．列出在部门“SALES”（销售部）工作的员工的姓名，假定不知道销售部的部门编号。
+9．列出薪金高于公司平均薪金的所有员工。
+10．列出与“SCOTT”从事相同工作的所有员工。
+11．列出薪金等于部门30中员工的薪金的所有员工的姓名和薪金。
+12．列出薪金高于在部门30工作的所有员工的薪金的员工姓名和薪金。
+13．列出在每个部门工作的员工数量、平均工资和平均服务期限。
+14．列出所有员工的姓名、部门名称和工资。
+15．列出从事同一种工作但属于不同部门的员工的一种组合。
+
+16．列出所有部门的详细信息和部门人数。
+select a.*,(select count(*) from emp where deptno = a.deptno) rs from dept a;
+
+17．列出各种工作的最低工资。
+18．列出各个部门的MANAGER（经理）的最低薪金。
+19．列出所有员工的年工资,按年薪从低到高排序。
+
+
+
+-----orcle的等连接
+SELECT * FROM EMP E ,DEPT D WHERE E.DEPTNO=D.DEPTNO;
+-----orcla的外连接
+SELECT * FROM EMP E ,DEPT D WHERE E.DEPTNO(+)=D.DEPTNO;
++放在没有匹配行的表一侧，所以dept表的记录完全显示

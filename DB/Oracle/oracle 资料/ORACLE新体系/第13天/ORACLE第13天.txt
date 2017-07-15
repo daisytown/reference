@@ -1,0 +1,175 @@
+XML
+  格式正规的XML
+
+  有效的XML文件 (DTD  +  Schema)
+
+  显示XML文件 (css串级样式表  /  XSL  - XML SHeet Language)
+
+    css -  功能有限 HTML 使用在XML上功能少
+ 
+    xsl - XML样式语言  把HTML和XML中元素结合起来   
+
+   
+ <1> CSS显示
+    在XML中加入样式指令
+      <?xml-stylesheet type="text/css" href="hello.css"?>
+              
+    css样式表的结构
+       <元素名>{
+         <显示样式的描述> 
+       }
+
+    . 含有属性class的元素
+   answer.ans  含有class属性并且属性的值是"ans"的answer元素
+
+   表格来显示??? css1 中没有层次结构的表现
+                css2  各种丰富的表现 IE不支持css2
+    
+    .css文件不是XML文件 
+
+
+  <2>xsl  XML样式语言
+      .xsl文件 是一个XML文件
+  <?xml-stylesheet type="text/xsl" href="student.xsl"?>
+  
+XSL文件如何来写??
+   HTML  +  选择XML中的元素的语言(XPath)
+                XPath 路径表达式 类似于数据库中的SELECT语句
+                选择元素或属性(XPath)
+
+ 根元素 
+  <xsl:stylesheet xmlns:xsl="http://www.w3.org/TR/WD-xsl"/>
+    xsl命名空间有2个
+        a)xmlns:xsl="http://www.w3.org/TR/WD-xsl"  工作草案
+        b)xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+               工作标准
+  建议大家都使用工作标准
+   2个命名空间中所定义的元素有微小的不同
+
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"中
+定义的XSL中所能使用的标记
+
+  Html文件的基本结构
+   <html>
+     <head><title></title>
+</head>
+     <body>
+ 
+</body>
+   </html>
+
+最基本的XSL标记
+  a)  <xsl:template match="/"> 定义一个模板去匹配/所指的内容
+        match中所写的内容 就是一个XPath表达式
+        / 代表整个XMl文件
+  b) <xsl:value-of select="name"/> 取出name元素的内容
+       select中写的也是一个XPath表达式
+       name  代表XML中name元素
+     <xsl:value-of/>  表示取当前元素的值
+
+  c) <xsl:for-each select="/roster/student" 
+order-by="-score"> for循环选择 
+select 表示选择所有的/roster/student
+order-by="-score" 表示排序按score降序
+          +score  表示排序按score升序   
+ 
+ 
+扩展的几个标记
+  d) <xsl:apply-templates select="/roster/student"/>
+     递归(循环)使用模板的标记  可以达到筛选的目的
+     和<xsl:for-each select=""/> 都表示了循环
+  
+ 选择元素时可以使用的XPath表达式
+  
+     /roster/student     表示student元素
+    /roster/student[position()=2]  表示第2个student元素
+    /roster/student[position()=1]  表示第1个student元素
+    /roster/student[last()]  表示最后一个student元素
+
+    /roster/student[@ID=104]  表示属性ID=104的student元素
+
+    /roster/student@ID    表示student元素的属性ID
+
+ <xsl:apply-templates/> 使用后面定义的每个模板
+
+
+ <xsl:for-each select="" order-by="-score"/> 
+     只能在命名空间 xmlns:xsl="http://www.w3.org/TR/WD-xsl"
+     中使用
+
+ <xsl:for-each select=""/> 
+  <xsl:sort select="price" order="descending"/>
+     只能在命名空间 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+     中使用
+     order = "descending" 降序
+     order = "ascending" 升序
+
+
+ e)单条件选择
+  <xsl:if test="条件">
+            .....
+        </xsl:if>
+
+
+ f)多条件选择
+
+<xsl:choose>
+	<xsl:when test="条件">
+          ....
+	</xsl:when>
+	<xsl:when test="条件">
+          ....
+	</xsl:when>
+	<xsl:when test="条件">
+          ....
+	</xsl:when>
+         .
+         .
+         .
+	<xsl:otherwise>
+          ....
+	</xsl:otherwise>
+</xsl:choose>
+
+<例子>
+ 部门和员工表的查询(emp 和 dept)
+
+XML的显示  css/xsl
+  xsl 显示XML数据的
+     HTML + xsl标记  + XPath
+
+
+
+  
+
+ 
+        
+
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+  
+
+
+
+
+     
+
+
+
+
+
+

@@ -1,0 +1,1 @@
+truncate table  scott.director drop  storage;

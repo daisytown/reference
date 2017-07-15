@@ -1,0 +1,535 @@
+
+ORACLE下应用程序的优化
+   a)数据库本身的优化
+       初始化文件 init.ora
+         open_cursors = 150 打开的游标的个数 
+            很多的存储过程的时候 可以把它调大些
+         processes = 150  并发连接的用户数
+            同时在线的用户很多 可以把它调大 processes = (在线用户数)/2
+
+   b)应用程序的优化 ********
+
+<1>序列的使用
+ 自动编号
+
+ a) 最大号+1(存在缺陷的,不能用,并发的时候出现随机的错误)
+     create or replace function f_getmax
+     return number
+     as 
+      maxno number;
+      newmax number;
+     begin
+     --取出表中的最大的员工号
+         select max(empno) into maxno from
+         emp ;
+     --让这个值+1后返回
+         return (maxno +1);
+
+     end;
+
+ b)序列  
+  --建立序列 
+  create sequence seq1 start with 7935;
+  --从序列中取出员工号
+  create or replace function f_getmax
+     return number
+     as 
+      maxno number;
+
+     begin
+     --取出序列中的值
+     select seq1.nextval into maxno 
+     from dual;
+
+     --让这个值返回
+         return maxno;
+
+     end;
+
+<2> 并发 -- 多个人在使用
+
+   甲:update emp
+      set sal =1000
+      where empno = 7369;
+   乙:update emp
+      set sal =1500
+      where empno = 7369;
+   丙:update emp
+      set sal =2000
+      where empno = 7369; 
+  到底7369的工资是多少了?????
+
+甲先执行给这条记录加锁了,
+  乙和丙的修改相同记录的操作被禁止了
+
+ commit; a)提交数据到数据库、
+         B)会把加在记录上的锁给解除
+ rollback; a)回滚事务,使修改撤消
+           b)解除锁
+
+行锁-作用在每条记录上的
+  update emp set sal = null;
+   会给所影响到的记录加上锁;锁上了14条记录
+
+哪些SQL语句会产生锁????
+   update / insert /delete /
+
+ select是不会产生锁的
+
+  产生锁的前提:对相同的记录进行同时操作
+  <1> 甲:a)update emp set sal =1000
+       where empno = 7369;
+     
+        b)update emp set sal =1500
+        where empno = 7839;
+      
+      乙:a)update  emp set sal =1000
+       where empno = 7839;
+
+      b)update emp set sal =2000
+        where empno = 7369;
+
+  这种情况会产生死锁 ,死锁出现后ORACLE会
+自己处理这种情况,解除死锁
+
+ <2>甲: insert into emp(empno,ename)
+    values (9000,'mike');
+   
+   乙:insert into emp(empno,ename)
+    values (9000,'mike');
+   插入相同的记录
+
+ <3>甲:delete from emp where empno = 7369;
+    
+    乙:delete from emp where empno=7369;
+   删除相同的记录 
+
+  <4> select * from emp;不会产生锁
+   特殊的select语句(带for update关键字)
+     select * from emp for update  
+      把查询出的记录全上锁
+
+     select dname,ename from emp,dept
+     where dept.deptno = emp.deptno
+     for update;
+      对2个表中满足条件的记录加锁
+
+     select dname,ename from emp,dept
+     where dept.deptno = emp.deptno
+     for update of dname;
+      只对dept表(dname字段只有dept表才有)中满足条件的记录加锁
+
+表锁 : lock table emp in exclusive mode;
+       对emp表加的表锁
+       一般不使用表锁;
+
+我们怎么使用锁???
+ <1>在写update/delete/insert的时候要
+   及时的commit或rollback,锁存在的时间短
+    甲:update emp set sal=1000
+        where empno=7369;     
+       commit;
+
+    乙:update emp set job='MANAGER'
+        where empno=7369;
+ <2>不要使用自动提交,因为这样效率低,一定要自己控制提交和回滚
+ <3>必须使用锁的情况(订票系统)
+  --票的余数表
+   create table ticket(
+      train_no number(2) primary key,--车次
+      train_name varchar2(30),
+      remain_sl number(3));
+
+   insert into ticket values (
+        1,'北京-长沙',3);
+
+
+  --告诉顾客票的余数的时候
+   select remain_sl from   ticket
+     where train_no = 1 ;
+  --
+  
+  --写订票的存储过程
+    create or replace procedure get_ticket(no number)
+    as
+     sl number;
+     no_ticket exception;
+    begin
+    --<1>查出余数(加锁)
+      select remain_sl into sl
+       from ticket where train_no = no
+       for update;
+    --<2>判断余数的数量
+      if sl > 0 then 
+        --修改
+         update ticket set remain_sl
+            =remain_sl - 1 
+         where train_no = no;
+         dbms_output.put_line('订票成功');
+      else
+        raise no_ticket;
+      end if;
+    --<3>
+       commit;   --必须的  
+    exception
+       when no_ticket then
+         raise_application_error(-20001,'票已经售完了');
+         rollback;  --很关键的,解除锁
+    end;
+  <4>锁一般使用在对相同记录做修改的场合
+
+产生唯一编号
+   <1>序列,性能最好,优先使用序列
+
+   <2>可以使用锁来做
+
+   --表
+   号表 
+      create table h_table(
+         serial number(5) primary key);
+
+      insert into h_table values (7935);
+ 
+   产生员工表的编号
+--存储过程产生员工编号
+      create or replace procedure getno(n out number)
+      as
+        no number;
+      begin
+        --select加锁
+         select serial into  no
+         from h_table for update;
+
+        --号表更新
+         update h_table set serial = serial + 1;
+        
+         
+         commit;      
+         --返回号
+         n:=no;  
+
+       end;  
+
+--插入操作  
+  create or replace procedure insertemp(enm varchar2,
+    dno number)
+  as
+   a number;
+  begin
+     getno(a);
+            
+       insert into emp(empno,ename,deptno)
+          values(a,enm,dno);
+  end ;
+
+
+  
+
+ a)行锁的使用
+ B)使用序列    
+      数据库中的并发处理 
+
+<3>大表的处理
+    记录多的表  几百万条记录
+    查询的速度的变慢
+ 分区表技术：
+   把表分成若干个部分 来存放数据
+ 分区的规则不同 有如下的分区表
+a)范围分区
+  create table emp1(
+   empno number(5) primary key,
+   ename varchar2(20)
+  )
+  partition by range(empno) 
+  (partition p1 values less than (3000), -- empno < 3000
+   partition p2 values less than (5000)  -- empno <5000 and empno>= 3000
+);
+
+insert into emp1 values (1001,'mike');
+insert into emp1 values (3000,'john');
+insert into emp1 values (3400,'john');
+--5000没有插入表中，5000不在任何分区中
+insert into emp1 values (5000,'john');
+
+--查询分区p1中的数据
+select * from emp1 partition (p1);
+
+--分区表的维护
+--增加一个分区 empno>=5000
+alter table emp1 add partition p3
+values less than (MAXVALUE);
+
+insert into emp1 values (5000,'john');
+   范围               分区
+empno < 3000           p1
+5000 > empno >= 3000   p2
+       empno >=5000    p3
+
+--这样的查询会从范围分区中获得好处
+select * from emp where 
+  empno > 5600;
+
+--门诊的处方表
+create table receipt(
+  receipt_no number, --处方号
+  receipt_time date, --处方的时间
+  med_name varchar2(10), --药名
+  med_num number(3), --数量
+  primary key (receipt_no,med_name)
+)
+partition by range(receipt_time)
+(partition p0 values less than (to_date('20050101','yyyymmdd')),
+ partition p1 values less than (to_date('20050201','yyyymmdd')),
+ partition p2 values less than (to_date('20050301','yyyymmdd')),
+ partition p3 values less than (to_date('20050401','yyyymmdd')),
+ partition p4 values less than (to_date('20050501','yyyymmdd')));
+
+--添加分区
+alter table receipt add partition p5
+values less than (to_date('20050601','yyyymmdd'));
+
+alter table receipt add partition p6
+values less than (to_date('20050701','yyyymmdd'));
+
+
+
+b) 散列分区
+ --散列分区(哈希分区)
+create table dept1(
+deptno number(2),	--部门号
+dname varchar2(14),	--部门名称
+loc varchar2(13))	--位置
+partition by hash(deptno)
+ ( partition p1,partition p2);
+
+对这个查询起到加快查询的好处
+select * from dept1 where 
+    deptno > 30;
+
+c)--复合分区
+create table salgrade1(
+grade number,
+losal number,
+hisal number)
+partition by range(grade)
+subpartition by hash(losal,hisal)
+(partition p1 values less than (10)
+ (subpartition sp1,subpartition sp2),
+partition p2 values less than (20)
+(subpartition sp3,subpartition sp4) );
+
+d)--列表分区
+create table sales_details(
+sales_id number(6),
+sman_name varchar2(20),
+sales_state varchar2(15),
+sales_date date,
+amount number(10))
+partition by list(sman_name)
+(
+partition sales_east values ('antony','henry','jack'),
+partition sales_west values ('peter','serena','venus')
+);
+
+--人员的分区表
+create table student(
+  xh number(4) primary key,
+  xm varchar2(20) not null,
+  sex char(2) check (sex in ('男','女'))
+)
+partition by list(sex)
+(partition p1 values ('男'),
+partition p2 values ('女')
+);
+
+---这4中分区 用的多是范围分区，其次是散列
+
+范围分区按时间来做：：：
+
+create table ord_mast_2(
+orderno varchar2(5) primary key,--定单号
+odate date,--定单的日期
+vencode varchar2(5) ,--供应商的代码
+o_status char(1) ,--定单的状态
+del_date date  --定单处理的日期
+)
+partition by  range(odate)
+(
+partition om1 values less than (to_date('1999-06-01',
+'YYYY-MM-DD')),
+partition om2 values less than (to_date('1999-07-01',
+'YYYY-MM-DD')),
+partition om3 values less than (to_date('1999-08-01',
+'YYYY-MM-DD'))
+);
+
+--增加分区
+--定期维护分区表，增加一些分区
+--增加了维护的成本
+alter table ord_mast_2 add partition
+om4 values less than (to_date('1999-09-01',
+'YYYY-MM-DD'));
+
+普通表 变成一个分区表？？？？？
+  没有简单的命令来改变普通表成为分区表
+
+ <例子>把emp表变为分区表
+ a)建立分区表
+create table emp_b(
+     empno number(4) primary key,
+     ename varchar2(20),               
+JOB      VARCHAR2(9),                         
+MGR      NUMBER(4),
+HIREDATE DATE,
+SAL      NUMBER(7,2),
+COMM     NUMBER(7,2),
+DEPTNO   NUMBER(2))    
+partition by range(empno)
+ (partition p1 values less than (3000),
+   partition p2 values less than (5000),
+   partition p3 values less than (MAXVALUE)
+);
+b) 复制数据
+insert into emp_b select
+     * from emp;
+
+c) 给表改名字
+rename emp to emp_n
+   rename emp_b to emp
+
+数据量大的表 --- 数据仓库中这样的表特别多
+   存放大量数据的一个数据库，表中的记录
+ 不会频繁的更新，（历史的数据）
+insert/update/delete操作少，select多
+
+OLTP -- 在线事务处理系统
+   表的更新比较频繁,适当使用分区表技术
+insert/update/delete操作多，select少
+
+<3>SQL语句的优化
+  a)不要写过于复杂的sql语句，把复杂的sql语句
+变成PL/SQL程序来写
+
+  B)写sql语句要注意使用索引
+   以EMP表为例子,emp表中empno字段有索引
+
+    select * from emp; 用不上索引的
+                       尽量少用
+    select * from emp where empno > 5000; 
+       判断SQL语句是否用了索引，只有看执行计划
+        INDEX RANGE SCAN 索引范围扫描
+        TABLE ACCESS BY INDEX ROWID
+                通过索引的ROWID来找表中的记录
+        TABLE ACCESS FULL 全表扫描
+    select * from emp where ename = 'SMITH';
+        ename 上没有索引
+      create index idx_ename on emp(ename);
+
+    select * from emp where lower(ename) = 'smith';
+           ename上使用了函数 索引用不上
+    select * from emp where empno+0  > 5000;
+           empno参加了运算 索引用不上  
+ 
+规则：有索引的字段不要对它使用函数和运算！！！！！！
+ 
+查询参加工作时间 在1989年1月 到 1990年2月
+之间的员工
+ select * from emp
+   where to_char(hiredate,'yyyymm') >
+   '198901' and 
+to_char(hiredate,'yyyymm') < '199002';
+改写成
+select * from emp
+ where hiredate >= to_date('19890101',
+'yyyymmdd') and
+hiredate < to_date('19900201',
+'yyyymmdd')
+
+--update语句和delete语句使用索引的情况
+update emp set sal=490 
+where empno >7946;
+
+delete from emp where empno >7800;
+
+--有where子句的时候都要注意索引的使用
+
+如何找到使用最频繁的SQL语句
+  企业管理器中的TOP SQL功能来查找
+  优化从这里开始 
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+  
+
+
+
+
+
+
+
+
+
+     
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+           
+  
+       
+
+
+
+
+   
+
+  
+      
+
+   
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+
+  
+
+   

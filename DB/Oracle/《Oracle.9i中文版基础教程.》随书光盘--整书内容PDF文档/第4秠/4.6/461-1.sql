@@ -1,0 +1,1 @@
+select empno, ename, hiredate from scott.emp;

@@ -1,0 +1,1 @@
+select *  from scott.emp where empno=7999;

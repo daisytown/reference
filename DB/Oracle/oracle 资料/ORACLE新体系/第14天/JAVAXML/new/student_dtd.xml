@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!-- edited with XML Spy v4.2 U (http://www.xmlspy.com) by hcy (accp) -->
+<?xml-stylesheet type="text/xsl" href="student.xsl"?>
+<!DOCTYPE roster SYSTEM "student.dtd">
+<roster>
+	<student ID="101">
+		<name>李华</name>
+		<sex>男</sex>
+		<birthday>1978.9.12</birthday>
+		<score>92</score>
+		<skill>Java</skill>
+		<skill>Oracle</skill>
+		<skill>C Sharp</skill>
+		<skill>SQL Server</skill>
+	</student>
+	<student ID="102">
+		<name>倪冰</name>
+		<sex>女</sex>
+		<birthday>1979.1.12</birthday>
+		<score>89</score>
+		<skill>Visual Basic</skill>
+		<skill>SQL Server</skill>
+		<skill>ASP</skill>
+	</student>
+	<student ID="103">
+		<name>张君宝</name>
+		<sex>男</sex>
+		<birthday>1982.9.9</birthday>
+		<score>98</score>
+		<skill>C Sharp</skill>
+		<skill>SQL Server</skill>
+		<skill>UML</skill>
+	</student>
+	<student ID="104">
+		<name>杨惠</name>
+		<sex>女</sex>
+		<birthday>1980.5.16</birthday>
+		<score>85</score>
+		<skill>Visual C++</skill>
+		<skill>SQL Server</skill>
+		<skill>UML</skill>
+	</student>
+	<student ID="105">
+		<name>崔春晓</name>
+		<sex>男</sex>
+		<birthday>1981.4.19</birthday>
+		<score>86</score>
+		<skill>UML</skill>
+		<skill>C Sharp</skill>
+		<skill>XML</skill>
+		<skill>SQL Server</skill>
+	</student>
+</roster>

@@ -1,0 +1,275 @@
+ORACLE备份和恢复
+
+<1>逻辑备份
+  不用去拷贝数据库的物理文件
+  备份逻辑上的结构
+  外部的工具:导出和导入的工具
+  DOS下的命令 cmd下执行
+    导出exp  export缩写形式
+
+查看帮助 exp help=y
+
+    使用参数文件导出
+     exp parfile=c:\abc.par 
+  >>>abc.par的内容
+a)scott用户连接导出自己的所有对象    
+      userid=scott/tiger --连接的用户scott
+      file=c:\a1.dmp  --导出的文件的名字a1.dmp
+          --导出了scott用户的所有对象
+
+b)用system连接来导出scott下的所有对象  
+     exp parfile=c:\sys.par
+      >>>>sys.par的内容
+       userid=system/manager
+       file=c:\b1.dmp
+       owner=(scott)  --导出scott用户的所有对象
+  导出多个用户的数据
+  建立一个测试用户 test
+   
+    grant connect,resource 
+     to test identified by t123;
+   
+    alter user test 
+       default tablespace users
+       temporary tablespace temp;
+ 
+    create table student(
+      stu_id number(4) primary key,
+      stu_name varchar2(20),
+      stu_score number(2)
+   );
+   insert into student values (1000,
+      'Mike',95);
+   insert into student values (1001,
+      'John',90);
+
+ 导出scott和test下的所有对象????
+ >>>userid=system/manager
+    file=c:\st.dmp
+    owner=(scott,test)
+
+ 导出scott下的emp,dept表????
+ >>>userid=system/manager
+    file=c:\st.dmp
+    tables=(scott.emp,scott.dept,test.student)
+
+ 导出整个数据库(备份整个数据库)
+  必须用超级用户 system ,sys
+exp system/manager file=c:\system.dmp full=y feedback=1000
+或者
+exp parfile=c:\sys.par
+>>>sys.par
+ userid=system/manager
+ file=c:\system.dmp
+ full=y  
+
+比较全的一个导出的参数文件
+>>>sys.par
+   userid=system/manager
+   file=c:\aa.dmp
+   buffer=1024000  --缓冲
+   rows=y          --是否导出记录
+   compress=y      --extent是否压缩
+   grants=y        --grant语句是否导出
+   indexes=y       --导出索引
+   full=y          --全库导出
+   feedback=3      --显示导出进度每3行
+
+导出表scott.dept中部门编号是40的记录
+ >>>sys.par
+   userid=system/manager
+   file=c:\sys.dmp
+   tables=(scott.emp) 
+   query="where deptno=10"
+
+导出表scott.emp中的记录
+ >>>sys.par
+   userid=system/manager
+   file=c:\sys.dmp
+   tables=(scott.emp) 
+   feedback=3  --每3行记录显示一个点进度
+
+如何把导出的数据导入到数据库中进行恢复??
+  imp    import缩写形式
+  dos命令
+   imp help=y 查看帮助
+
+ <1>把scott下的表emp导出 ,
+ 然后删除表中的内容(truncate table emp),
+ 利用导出的文件来恢复??
+  a)导出
+   exp parfile=c:\sys.par
+  >>> sys.par
+   userid=system/manager
+   file=c:\emp.dmp
+   tables=(scott.emp)
+  
+  b)删除
+   truncate table emp;  --删数据
+   或者
+   drop table emp;  --删除结构
+
+  ( delete from emp;  --删数据可以恢复)
+
+  c)恢复
+  imp prafile=c:\im.par;
+  >>>im.par
+   userid=system/manager
+   file=c:\emp.dmp 
+   fromuser=scott    --从哪个用户来恢复
+   show=y            --显示导入文件中的SQL语句 
+
+ <2>scott下的对象全部复制到test用户下
+  (克隆用户scott) 
+  a)导出scott用户
+   exp parfile=c:\sys.par
+   >>>sys.par
+     userid=system/manager
+     file=c:\scott.dmp
+     owner=(scott)
+
+  b)导入scott.dmp文件中的内容到test用户下
+    imp parfile=c:\im.par
+    >>>im.par
+     userid=system/manager
+     file=c:\scott.dmp
+     fromuser=scott
+     touser=test
+
+  <3>scott用户导出数据后
+     用户scott被删除了
+     怎么来恢复?????? 
+   a)导出scott用户
+     exp parfile=c:\sys.par
+     >>>sys.par
+      userid=system/manager
+      file=c:\scott.dmp
+      owner=(scott)
+   
+  b)删除scott用户
+   drop user scott cascade;  
+
+
+  c)恢复
+   先建立用户scott
+   grant connect,resource to scott
+    identified by tiger;
+  
+   alter user scott 
+     default tablespace users
+     temporary tablespace temp;
+
+   然后导入
+  imp parfile=c:\im.par
+  >>im.par
+   userid=system/manager
+   file=c:\scott.dmp
+   fromuser=scott
+
+<4>如何进行全库导入
+  imp system/manager 
+file=c:\all.dmp full=y ignore=y
+  full   ---全库
+  ignore  ---忽略导入过程中的错误 
+
+如何建立一个新的数据库 ?????
+  使用DATABASE CONFIGURATION ASSISTANT
+
+ 备份的第二种模式 物理备份
+   拷贝数据文件
+   数据文件 + 归档日志文件 = 整个数据库
+   在数据库不关闭的情况下备份(热备份)
+ <1>数据库可以关闭的物理备份(冷备份)
+     a)关闭数据库
+     b)拷贝数据文件
+     c)打开数据库
+   数据库工作在归档和非归档模式都可以
+  a)关闭数据库
+    connect system/manager
+    
+    shutdown immediate;
+
+  b)拷贝文件
+     数据文件   v$DATAFILE
+     控制文件   v$controlfile
+     日志文件   v$
+     临时数据文件
+  
+
+  c)打开数据库
+     startup;
+ 
+写一个脚本文件 执行上述功能
+   cold_back.txt
+
+ 如何用冷备份来恢复数据库
+   用备份的文件来覆盖原来的文件,就OK
+
+<2>数据库不能关闭的情况下作热备份
+  (24x7运行的系统)
+   a)设置数据库工作在归档模式下
+   b)备份表空间
+   c)作一次日志切换 (把在热备份过程中产生的数据写到归档日志中)
+   d)备份归档日志文件
+
+--数据库有哪些表空间
+ select tablespace_name from dba_tablespaces
+     where status <> 'READ ONLY';
+--每个表空间对应的数据文件
+  select file_name from dba_data_files
+      where tablespace_name='SYSTEM';
+
+--要拷贝SYSTEM表空间所对应的数据文件
+--使表空间system处于热备份状态
+alter tablespace system  begin backup;
+--拷数据文件
+host copy D:\ORACLE\ORADATA\ACCP\SYSTEM01.DBF c:\backup
+--关闭热备份状态
+alter tablespace system end backup;
+
+--
+ recover database;
+
+--数据库损坏的情况下来恢复
+ recover database datafile 4;
+  恢复第4个数据文件
+
+
+
+
+
+
+
+
+
+
+
+     
+
+   
+      
+    
+         
+
+
+ 
+
+
+
+
+
+
+  
+    
+
+   
+
+
+  
+    
+
+      
+
+
+ 
+

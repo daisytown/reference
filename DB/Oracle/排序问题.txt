@@ -1,0 +1,74 @@
+一、中文排序   
+ORACLE中文排序方式
+
+
+Oracle9i之前，中文是按照二进制编码进行排序的。 
+在oracle9i中新增了按照拼音、部首、笔画排序功能。设置NLS_SORT值 
+SCHINESE_RADICAL_M 按照部首（第一顺序）、笔划（第二顺序）排序 
+SCHINESE_STROKE_M 按照笔划（第一顺序）、部首（第二顺序）排序 
+SCHINESE_PINYIN_M 按照拼音排序 
+修改ORACLE字段的默认排序方式：
+按拼音（默认）： alter session set nls_sort = SCHINESE_PINYIN_M;
+按笔画：alter session set nls_sort = SCHINESE_STROKE_M;
+按偏旁：alter session set nls_sort = NLS_SORT=SCHINESE_RADICAL_M;
+
+NLSSORT()，用来进行语言排序
+
+拼音
+SELECT * FROM TEAM ORDER BY NLSSORT(排序字段名,'NLS_SORT = SCHINESE_PINYIN_M')
+笔划
+SELECT * FROM TEAM ORDER BY NLSSORT(排序字段名,'NLS_SORT = SCHINESE_STROKE_M')
+部首
+SELECT * FROM TEAM ORDER BY NLSSORT(排序字段名,'NLS_SORT = SCHINESE_RADICAL_M')
+
+
+
+二、排序字段为空（以下内容转载http://space.itpub.net/10768286/viewspace-269175） 
+   1、缺省处理 
+
+Oracle在Order by 时缺省认为null是最大值，所以如果是ASC升序则排在最后，DESC降序则排在最前 
+2、使用nvl函数 
+
+nvl函数可以将输入参数为空时转换为一特定值，如 
+nvl(employee_name,’张三’)表示当employee_name为空时则返回’张三’，如果不为空则返回employee_name 
+通过这个函数可以定制null的排序位置。 
+3、使用decode函数 
+decode(条件,值1,翻译值1,值2,翻译值2,...值n,翻译值n,缺省值) 
+decode函数比nvl函数更强大，同样它也可以将输入参数为空时转换为一特定值，如 
+decode(employee_name,null,’张三’, employee_name)表示当employee_name为空时则返回’张三’，如果不为空则返回employee_name 
+通过这个函数可以定制null的排序位置。 
+
+DECODE函数是ORACLE PL/SQL是功能强大的函数之一，目前还只有ORACLE公司的SQL提供了此函数，其他数据库厂商的SQL实现还没有此功能。DECODE有什么用途呢？先构造一个例子，假设我们想给智星职员加工资，其标准是：工资在8000元以下的将加20％；工资在8000元以上的加15％，通常的做法是，先选出记录中的工资字段值? select salary into var-salary from employee，然后对变量var-salary用if-then-else或choose case之类的流控制语句进行判断。如果用DECODE函数，那么我们就可以把这些流控制语句省略，通过SQL语句就可以直接完成。如下：select decode(sign(salary - 8000),1,salary*1.15,-1,salary*1.2,salary from employee 是不是很简洁？ DECODE的语法：DECODE(value,if1,then1,if2,then2,if3,then3,...,else)，表示如果value 等于if1时，DECODE函数的结果返回then1,...,如果不等于任何一个if值，则返回else。初看一下，DECODE 只能做等于测试，但刚才也看到了，我们通过一些函数或计算替代value，是可以使DECODE函数具备大于、小于或等于功能。 
+
+
+
+
+
+
+4、使用case语法 
+
+Case语法是Oracle 9i后开始支持的，是一个比较灵活的语法，同样在排序中也可以应用 
+如： 
+select 
+* 
+   from employee 
+     order by (case employee_name 
+                 when null then 
+                    '张三' 
+                        else 
+                          employee_name 
+                                     end) 
+表示当employee_name为空时则返回’张三’，如果不为空则返回employee_name 
+通过case语法同样可以定制null的排序位置。 
+
+5、使用nulls first或者nulls last语法 
+
+Nulls first和nulls last是Oracle Order by支持的语法 
+如果Order by 中指定了表达式Nulls first则表示null值的记录将排在最前(不管是asc 还是 desc) 
+如果Order by 中指定了表达式Nulls last则表示null值的记录将排在最后 (不管是asc 还是 desc) 
+使用语法如下： 
+--将nulls始终放在最前 
+select * from zl_cbqc order by cb_ld nulls first 
+
+--将nulls始终放在最后 
+select * from zl_cbqc order by cb_ld desc nulls last

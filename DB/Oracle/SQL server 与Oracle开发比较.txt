@@ -1,0 +1,768 @@
+SQL server 与Oracle开发比较（同事帮忙整理的，放这里方便查询） 
+  
+   本文档主要从oracle与sql server语法上进行差异性比较，诸如两者在管理，性能，优化等方面的差异不作比较。
+
+●概念上区别
+
+   1.Oracle 是一种对象关系数据库管理系统（ORDBMS),而Sql server 只是关系型数据库管 
+
+     理系统（RDBMS）.
+
+   2.Oracle使用Internet文件系统，该系统基于Java的应用程序，可以使数据库基于成为
+
+     Internet的开发平台；Sql server 是基于windows
+
+   3.Orace 主要的三类文件是：数据文件，控制文件，恢复日志文件
+
+     Sql server: 主要数据文件（必须有且只能有一个），次要数据文件以及日志文件
+
+   4.两者支持的命令类别差不多，数据定义语言，数据操纵语言，事务处理控制语言，
+
+     数据控制语言.在Oracle中，在事务控制语言中除了commit,rollback等还多了一个
+
+     Savepoint，设置保存点。
+
+   5.oracle sql的扩展叫PL/SQL,主要的结构化查询工具有sql*plus，isql*plus, pl/sql等
+
+     Ms sql的扩展叫Transact-SQL，主要的结构化查询工具就是自带的查询分析器
+
+   6.主要数据类型
+
+     Orace:主要支持char ,varchar2,long,number,datetime,raw,long raw,clob,blob,bfie
+
+     前面三个是Character数据类型，varchar2支持可变长度的字符串，long支持可
+
+     变长度的字符数据，raw,long raw用于存储二进制数据，long raw 可变长度
+
+     最后三个是大对象（lob)数据类型,存储非结构化的信息，例如声音剪辑，视频文件
+
+     CLOG表示Character Lob,可以存储大量的字符数据，它对于存储非结构化的XML
+
+     文档非常有用。BLOG表示Binary LOG,此数据类型可以存储大型二进制对象，如
+
+     图形、视频剪辑，声音文件等
+
+     支不支持，money,货币
+
+     Sql server 主要支持的文本类型char ,varchar,nchar,nvarchar,text,ntext,image，货币类型
+
+     Money,二进制 binary,varbinary等等
+
+●开发语法
+
+A.SQL 语法
+
+    两者的SQL语法基本上是相同的，只是一些细节方面的问题
+
+ 一： 表的管理：修改表的结构，如增加，删除列,創建表
+
+       修改表
+
+          1.修改表的列的數據類型，大小的定義不同，如下面修改數據類型。
+
+            Ms sql是ALTER TABLE table_name ALTER COLUMN col DECIMAL (5, 2)
+
+                Oracle是 Alter TABLE table_name modify(col decimal(5,2))
+
+          2.增加和刪除表的列，兩者是相同的 
+
+            Alter tabe table_name add(col definition)
+
+            Alter tabe table_name drop column col_name
+
+          3 .Oracle如果不要用某列，然後又不想刪除，就可以将某个列标记为未用
+
+            Alter tabe table_name set unused(tel_no)
+
+.创建临时表
+
+Oracle 的語法是：
+
+Create global temporary table aa(col number) on commit preserve rows;
+
+临时表只在用户会话时存在的表，或其数据在用户事务处理期间可
+
+持续存在的表,创建临时表时可以指定该表是否应当在用户会话
+
+期间持续存在（使用on commit preserve rows）
+
+On commit delete rows 表示事务处理完成后删除它的行
+
+            Ms sql的語法是:
+
+               Select * into #temptable from existedtable
+
+ 二 查询方面：       
+
+1.查表的前N行记录
+
+oracle 是用rownum 如select * from table_name where rownum<n
+
+              
+
+            Ms sql 是用top 如select top n * from table_name
+
+              
+
+         2.查詢表的結構
+
+ Orace 可以通過desc来查看表的结构 语法是：desc table_name 
+
+       或者使用数据字典表user_tab_coumns也可以查看到
+
+         Select column_name,data_type from user_tab_coumns
+
+         Where table_name=''
+
+           Ms sql可以通過一些系統的存儲過程來看表的結構
+
+             語法是：exec sp_help table_name
+
+         3.将一个表的数据添加到另外一个表中
+
+a.新表存在前提下：兩者語法是一樣的，如
+
+                 insert into newtable（col1）select col1 from old_table
+
+b.新表不存在前提下，可以用
+
+ oracle 可以用Create tabe new _table_name as select * from old_table
+
+             ms sql 可以用 Select * into new_table from old_table
+
+   三 操作符
+
+         1．連接操作符
+
+             Oracle是 ‘||’; Ms sql是‘+’
+
+         2. Oracle的比较操作符中不等于除了'<>'之外，还有一个 '!='
+
+         3. 算术操作符，都是+-*/；逻辑操作符都是and,not,or(相同點)
+
+         4. oracle集合操作符除了union,union all之外还加入intersect,minus
+
+           Intersect是仅返回两个查询都有行，minus返回第一个查询有第
+
+           二个查询没有的行
+
+   四   函數
+
+        1.轉換函數
+
+           Oracle 中有to_char(),to_date(),to_number()
+
+           Ms sql 中有cast,convert
+
+        2.系统日期：
+
+Oracle: sysdate 
+
+Ms sql:  getdate()
+
+          如
+
+            Select sysdate from dual 一定要from子句
+
+            Select getdate() 不一定要from子句
+
+         3.Decode函数相当if else，或者ms 中的case语句
+
+           语法是decode(value,if1,then1,if2,then2....)
+
+             如decode(col1,'1','true','0','fase') 
+
+4.常规函数
+
+Nvl 语法是NVL(EXP1,EXP2) 表示如果ex1为空则返回ex2
+
+Nvl2 语法是nvl(exp1,exp2,exp3)表示如果ex1为空，则返回ex3,否则返回ex2
+
+Nullif 语法是nullif(ex1,ex2) 如果这两个表达式相等则返回空
+
+coalesce语法是coalesce（ex1,ex2,....exn）返回第一个非空表达式
+
+         5.分組函數
+
+Oracle 中的分組函數Rollup,cube
+
+Rollup返回的结果集包含分组行和小计行，cube产生交叉报表
+
+如:
+
+Select a,b,sum(c) from tabname group by rollup(a,b)
+
+Select a,b,sum(c) from tabname group by cube(a,b)
+
+            Ms sql中的分組函數 compute 和 compute by
+
+              Compute子句为行聚集函数生成汇总值，该汇总值做为一个附加的行显示
+
+            在结果集中。没有GROUP BY 子句的情况下，也可以使用关键字COMPUTE.
+
+            此关键字使用MAX,MIN,SUM,COUNT,AVG等函数生成汇总值，而compute by
+
+            则在控制中断时给出该汇总值,compute by 必须包括在order by 子句中。
+
+         還有很多函數，諸如日期函數，字符串函數等等，就不一一作比較了。
+
+         Oracle中還有很多比較好的分析函數，也不列舉了。
+
+五．Oracle中的数据库对象
+
+同义词 
+
+      作用：简化SQL语句；隐藏对象的名称和所有者，提供对象的公共访问等。
+
+      语法：CREATE PUBLIC SYNONYM seqname FOR OBJECT
+
+序列 
+
+     用来生成唯一、边续的整数，它通常用来自动生成主键或唯一值的键。
+
+    創建序列： create sequence seqname [increment by 1] start with 1 maxvalue 10 
+
+     minvalue 1 cycle cache
+
+    访问序列：
+
+                   Select seqname.nextval from dual 将返回序列的初始值
+
+                   Select seqname.currval from dual   返回序列的当前值
+
+       簇（cluster）：
+
+            簇是共享相同数据块的一组表，因为这些表具有相同的列，并且经常一起使用。
+
+          当两个或多个表的存储在物理上十分接近时，可以通过簇来提高使用这些表的
+
+          SQL联接语句的性能。簇是存储表的方法
+
+          应该先创建簇，然后再创建簇中的表，
+
+六．Oracle中的对象类型
+
+1. 抽象数据类型
+
+    此类型是包含一个或多个子类型的数据类型，并且这些数据类型并不局限
+
+   于标准的oracle数据类型
+
+     如：create or replace type t_mm as object(col number(3),
+
+         col2 varchar2(20))/
+
+       此时可以在创建表时使用该类型，如下
+
+         Create table test (aa varchar2(5),bb t_mm, cc number(10))
+
+       插入记录：
+
+          Insert into test values('cccc', t_mm(1,'col'))
+
+       类型声明：
+
+           用户定义的数据类型也可以声明为 final,not final,instantiable,
+
+           not instantiabe
+
+           Not final表示允许类型派生子类型。默认是final
+
+           create or replace type t_mm as object(col number(3),
+
+            col2 varchar2(20)) Not final
+
+           not instantiabe表示类型没有构造函数。
+
+2. 可变数组
+
+    可变数组有助于在单个行中存储和重复记录的属性。
+
+    数据与表中的其它数据是存储在一起的，有限数目的行，不能被索引
+
+    创建可变数组的 语法是：
+
+       create type array1 as varray(5) of varchar2(5)
+
+    向可变数组中插入记录
+
+    Insert into test1 values ('2ee', array1('1','2','3','4','5') )
+
+    Select * from test1 结果集如下
+
+       2ee
+
+       '1','2','3','4','5'
+
+    Select col2 from test1 结果集如下
+
+       '1','2','3','4','5'
+
+    Select * from table(select t.col2 from test1 where col1='2ee'); 结果集如下
+
+       1
+
+       2
+
+       3
+
+       4
+
+       5
+
+3. 嵌套表
+
+   它是包含在表中的表，对每行数据项数目没有限制，一个表在
+
+ 另一表中是作为一列，主表中的每一行的嵌套表可以包含若干行。
+
+    创建嵌套表
+
+       先创建一个类型
+
+       Create type ord_ty as object(itemcode varchar2(5),qty _ord number(5),
+
+      Qty_held number(5));
+
+      创建另一个抽象数据类型，即嵌套表数据类型
+
+      Create type ord_nt as table of ord_ty
+
+      创建嵌套表
+
+       Create table order_mas (orderno varchar2(5),odate date,
+
+       vencode varchar2(5), dets ord_nt) nested table dets store as ord_nt_tab;
+
+      向嵌套表中插入数据：
+
+       Insert into order_mas values（‘001’，to_date('18-07-08','DD-MM-YY'),
+
+       'V009',ord_nt( ord_ty('i001',10,5),ord_ty('i002',34,2));
+
+      更新嵌套表的值：
+
+       Update table(select e.dets from order_mas e where e.orderno='001') p
+
+       Set value（p) =ord_ty('i090',8,9) where p.itemcode='i001';
+
+      删除嵌套表的值：
+
+        Delete from table(select e.dets from order_mas e where e.orderno='001') p
+
+        where p.itemcode='i001';
+
+4. 对象表
+
+              在对象表中每一行都是一个行对象，对象表与关系表不同：
+
+              对象表中的每一行都有一个OID值，即对象标识符值。该值是在创建行时
+
+             分配的。可以使用create table 命令来创建对象表。
+
+               在创建对象类型时，Oracle 中是不允许为属性定义约束条件，但是
+
+             可以在创建对象表时为对象类型的属性指定约束条件。
+
+               Create table vend_master of vend_ty(vencode constraint vc_pk primary key);
+
+               创建对象表与关系表语法不同
+
+               表的使用方法不同 插入数据可以使用抽象数据类型的构造函数，如果对象
+
+              表所基于抽象数据类型又基于另一抽象数据类型，则必须多个构造函数的嵌
+
+              套调用。
+
+                  Insert into vend_master values (vend_ty());
+
+5. 对象视图
+
+       借助对象视图可以将面向对象的结构（如抽象数据类型）应用于现有已经
+
+     投入使用的表，而不需重建整个应用程序
+
+B.PL/SQL與T_SQL语法
+
+ 
+
+ 一批處理
+
+  SQL的能力畢竟有限，諸如事務處理方面，批處理於是oracle與ms 都把它進行了擴展，oracle 的擴展叫PL/SQL由声明部分，可执行部分，异常处理部分组成顺序如下：    
+
+Declare declarations
+
+ Begin
+
+      Executable statements
+
+      Exception
+
+          Handles
+
+ End
+
+   Ms 的擴展叫 Transact_SQL,簡稱T_SQL.
+
+      批处理：就是一次执行处理一组命令的过程。GO关键字樗着批处理的结束。
+
+     如use master
+
+        go
+
+      复杂一点也是由三部分組成：声明部分，可执行部分，异常处理部分。
+
+     不同的是，異常處理部分一般用跳轉語句來實現。     
+
+ 例如：
+
+         Declare declarations
+
+          Begin
+
+             Excutable statements
+
+             IF @ERROR <>0 GOTO ERROR
+
+         End 
+
+         ERROR:
+
+            BEGIN
+
+             RAISERROR(20058, 16, -1)
+
+              return (1)
+
+            END 
+
+  二逻辑控制语句        
+
+   1. 控制结构：
+
+     Oracle
+
+         If condition then ........
+
+         End if 
+
+         Case selector 
+
+          when exp1 then statements
+
+          Else statements
+
+         End case
+
+     SQL SERVER
+
+         IF condition
+
+           Sql statements
+
+         ELSE 
+
+           Sql statements
+
+        Case selector
+
+        When ex1 then statements
+
+        Else statements
+
+        End 
+
+   2. 迭代结构
+
+       oracle
+
+          Loop statements end loop;
+
+          While condition
+
+          Loop statement end loop;
+
+       Sql server
+
+            While condition
+
+            Begin
+
+              Sql statement
+
+            End 
+
+   面象对象编程涉及的概念有对象，类，属性和方法，面向对象的三大特性是：
+
+   封装，继承和多态。
+
+   将数据和函数包装到一个单元中的过程称为封装。不能从外部访问数据，只能包装在
+
+   类中的那些函数才能访问数据
+
+   继承可以是SQL类型的继承和方法的继承。
+
+   多态是一个对象可以呈现多种形式的能力，这使得不同的对象可以具有相同的名称
+
+   的方法，这些方法实现的任务相似，但实现方式却不同。
+
+    三.變量與常量
+
+Pl/sql变量与常量可以具有属性，支持的属性类型有
+
+%type,%rowtype
+
+声明引用数据库列或变量的数据类型的变量时，可以使用%type属性。如：
+
+ Declare 
+
+      Variable_name table_name.col_name %type
+
+        使用这个优点是，不需要知道列vencode的准确数据类型
+
+      %rowtype属性提供表示表中行的记录类型。
+
+     四.過程與函數(Procedure & Function)
+
+       a. 建立存儲過程的語法不同：
+
+           Ms sql 的語法是：
+
+             Create procedure procedure_name 
+
+               ( 
+
+                   @Id int =null,
+
+                   @name varchar(10) out[put] 
+
+               )
+
+ as 
+
+ [變量定義區]
+
+begin sql_statement end
+
+--------------------------------------------------------------------    
+
+             CREATE FUNCTION function_name (@DATE datetime)
+
+RETURNS int
+
+AS begin sql statement end
+
+ 面向對象的特性之一是封裝，程序包就是对相关PL/SQL类型，子程序，游标，异常，变量，和常量的封装，它包含两部分程序包规格说明和程序包主体
+
+在包规格说明书中，可以声明类型，变量，常量，异常，游标，子程序
+
+程序包主体实现在程序包规格中定义的游标、子程序
+
+        包頭語法部分：
+
+Create or replace package package_name is|as
+
+ Public type and item declarations
+
+ Subprogram specifications 
+
+ End package_name
+
+實例如下：
+
+ Create or replace package pack_me is
+
+ Procedure order_proc(orno varchar2);
+
+  Function    order_fun(ornos varchar2) return varchar2;
+
+ End pack_me
+
+包體語法部分：
+
+Create or replace package body package_name is|as
+
+ Private type and item decarations
+
+ Subprogram bodies
+
+End package_name;
+
+         包體具體實例就不寫了，包頭隻是起一個聲明作用，具體實現部分都在包體裡面。
+
+         下面是创建存储过程的语法： 
+
+          Create [or replace] procedure procedure_name[arg1 in|out|in out]type {is|as}
+
+           [變量定義區]
+
+          Begin
+
+             Execute Sql statement
+
+          Exception handlers
+
+End 
+
+         注意：參數列表那裡,oracle是先定義參數是輸入還是輸出參數，然後再定義
+
+參數類型; 而sql server正好相反
+
+         创建函数的语法：
+
+Create function function_name argument 
+
+ Return datatype is|as
+
+ Local decaration
+
+Begin
+
+Excutable statement
+
+Exception
+
+Handles
+
+End;
+
+      b.變量賦值
+
+1.    Oracle里的用法：存储过程中边查询边给变量赋值。 
+
+select 某一列名 into 变量名 from table where ..;
+
+相当于sql server中的select 变量名=列. From table where ….
+
+注意：select * /某一列名 into 表名
+
+        2.   Oracle 直接赋值的符号是：' := ' 
+
+  五 觸發器(Trigger)
+
+        Oracle 
+
+        Create or replace trigger trigger_name [before/after]
+
+       [insert/update/delete] on table_name
+
+        变量声明
+
+        begin
+
+        Sql statement
+
+        end
+
+Ms sql 
+
+Create trigger trigger_name on table
+
+{for |after|instead of} [insert|update|delete] as sql_statements
+
+    六 遊標(Curcor)
+
+        Oracle中提供两种游标类型，它们是静态游标和ref游标
+
+静态游标又分为隐式游标与显式游标
+
+Ref游标，游标变量是一种引用 类型
+
+隐式游标属性包括%notfound,%found,%rowcount,%isopen
+
+如：
+
+       Begin
+
+                    Delete from ta where ord='ddd'
+
+               If sql%notfound then
+
+                     Dbms_output.put_line(''未找到值)
+
+              Else
+
+                     Dbms_output.put_line（找到并删除之）
+
+            End if 
+
+End 
+
+显示游标：可以用下面语句控制游标
+
+      Open cursorname
+
+       Fetch cursor_name into var_name
+
+       Close cursor_name
+
+        创建游标语法：
+
+     Oracle:
+
+       declare variable
+
+       Cursor test is select * from order
+
+    Sql server
+
+       Declare test cursor for select * from order 
+
+    七 .错误处理(Exception & test & debug)
+
+有两种类型的异常：一种预定义，另外一种是用户自定义
+
+預定義的類型有很多，如No_data_found,Cursor_already_open
+
+       對於Oracle的調試，可以借助第三方工具，如toad,Pl.sql Developer,
+
+       对于sql server采用 变量或者print 形式进行调试
+
+        Oracle异常定义部分的示例：
+
+            Exception
+
+          When <exception_name> then statements
+
+           When others then
+
+               Statements
+
+           End;
+
+         其中<exception_name>是系统预定义的名字。
+
+       Raiser_application_error用于创建用户定义的错误信息的过程，用户定义的错误消息
+
+     可以指定的异常描述的更详细 
+
+      Sql server在错误处理上多采用自定义。或者是用goto跳转的方式
+
+       如：
+
+        Begin
+
+        Sql statements 
+
+        if @error<>0 goto error
+
+        end
+
+        Error:
+
+            Return;
+
+      或是直接用raiserror
+
+      if @error<>0
+
+begin
+
+raiserror('发生错误.',-1,-1)
+
+return (1)
+
+end
+
+好了，两者的主要的差异就写到这，但愿我表述清楚了，由于东西比较多，所以还有很多具体东西没有写
+

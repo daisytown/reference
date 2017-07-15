@@ -1,0 +1,108 @@
+--准备记录对emp所做的改动
+--设计一个日志表
+create table emp_log
+as select * from emp where 1=2;
+
+alter table emp_log add (
+dmltype varchar2(20), --DML语句的类型
+dmltime date,  --DML语句的使用时间
+username varchar2(20), --用户
+newempno number(4), --改后的empno
+newename varchar2(20),
+newjob varchar2(20),
+newmgr number(2),
+newhiredate date,
+newsal number(7,2),
+newcomm number(7,2),
+newdeptno number(2)
+);
+
+--序列
+create sequence seq1;
+
+--设置主键
+alter table emp_log add (id number(5));
+alter table emp_log add primary key (id);
+
+
+--实现日志功能
+create or replace trigger tr_emp
+after insert or delete or update 
+on emp 
+for each row
+begin
+ --insert
+  if inserting then 
+    insert into emp_log values(
+    DMLTYPE,                     
+DMLTIME,
+USERNAME,
+NEWEMPNO,
+NEWENAME,
+NEWJOB        ,                 
+NEWMGR       ,                 
+NEWHIREDATE ,                      
+NEWSAL     ,                     
+NEWCOMM   ,                       
+NEWDEPTNO,                         
+ID  )  values ('INSERT',sysdate,
+user,:new.empno,:new.ename,:new.job,
+:new.mgr,:new.hiredate,:new.sal,:new.comm,
+:new.deptno,seq1.nextval);
+                           
+
+ --update
+elsif updating then
+
+ insert into emp_log values(
+ :old.empno,:old.ename,:old.job,
+:old.mgr,:old.hiredate,:old.sal,:old.comm,
+:old.deptno,'UPDATE',sysdate,
+user,:new.empno,:new.ename,:new.job,
+:new.mgr,:new.hiredate,:new.sal,:new.comm,
+:new.deptno,seq1.nextval);
+ 
+ --delete
+elsif deleting then
+insert into emp_log values(
+ :old.empno,:old.ename,:old.job,
+:old.mgr,:old.hiredate,:old.sal,:old.comm,
+:old.deptno,'DELETE',sysdate,
+user,null,null,null,
+null,null,null,null,
+null,seq1.nextval);
+end if;
+
+end;
+
+--测试
+delete from emp where deptno =10;
+
+insert into emp(empno,ename,deptno)
+values (9001,'MIke',20);
+
+
+
+  select LPAD('+',level,' ')||ename from emp
+  connect by prior empno = mgr  
+  start with mgr is null; 
+  
+create or replace procedure p1
+as
+begin
+  update account set tot=tot-1000
+  where accname='小王';
+  
+  update account set tot=tot+1000
+  where accname ='小李';
+  
+  commit;
+  
+exception
+  when others then
+    rollback;
+    raise_application_error(-20001,'转帐失败');
+end;
+  
+  
+  

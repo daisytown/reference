@@ -1,0 +1,173 @@
+用游标编程实现
+
+1.对所有员工,如果该员工职位是MANAGER，并且在DALLAS工作那么就给他薪金加15％；
+如果该员工职位是CLERK，并且在NEW YORK工作那么就给他薪金扣除5％;其他情况不作处理
+declare
+  cursor c1 is select * from emp;
+  c1rec c1%rowtype;
+  v_loc varchar2(20);
+begin
+  for c1rec in c1 loop
+    select loc into v_loc from dept where deptno = c1rec.deptno;
+
+    if c1rec.job = 'MANAGER' and v_loc = 'DALLAS' then
+
+       update emp set sal = sal * 1.15 where empno  = c1rec.empno;
+
+    elsif c1rec.job='CLERK' and v_loc = 'NEW YORK' then
+
+       update emp set sal = sal * 0.95 where empno  = c1rec.empno;
+
+    else
+
+	 null;
+ 
+   end if;
+     
+  end loop;   
+end;  
+
+
+
+2.对直接上级是'BLAKE'的所有员工，按照参加工作的时间加薪：
+    81年6月以前的加薪10％
+    81年6月以后的加薪5％
+
+declare
+  cursor c1 is select * from emp where mgr = (select 
+      empno from emp where ename='BLAKE'); --直接上级是'BLAKE'的所有员工
+  c1rec c1%rowtype;
+begin
+
+  for c1rec in c1 loop
+    if c1rec.hiredate < '01-6月-81' then
+       update emp set sal = sal * 1.1 where empno = c1rec.empno;
+    else
+       update emp set sal = sal * 1.05 where empno = c1rec.empno;     
+    end if;
+  end loop; 
+
+end;
+
+
+3.根据员工在各自部门中的工资高低排出在部门中的名次(允许并列).
+<1>  一条SQL语句
+   select deptno,ename,sal,(select count(*) + 1
+from emp where deptno = a.deptno 
+and sal > a.sal) as ord
+from emp a 
+order by deptno,sal desc;
+
+<2> PL/SQL块
+declare  
+  cursor cc is
+    select * from dept;
+  ccrec cc%rowtype;
+
+  cursor ck(no number) is
+    select * from emp where deptno = no order by sal desc;
+
+  ckrec ck%rowtype;
+
+  i number;
+  j number;
+  v_sal number:=-1;
+
+begin
+  for ccrec in cc loop
+    i := 0;
+    for ckrec in ck(ccrec.deptno) loop
+      i := i + 1;
+      --写入临时表
+      if ckrec.sal = v_sal then               
+         null;
+      else 
+         j:=i;
+      end if;
+
+      --显示
+      DBMS_OUTPUT.put_line(ccrec.deptno||chr(9)||ccrec.ename||chr(9)||ckrec.sal||chr(9)||j);
+       
+
+      v_sal := ckrec.sal;
+    
+    end loop;
+  
+  end loop;
+
+
+end;
+
+
+
+4.设计程序显示公司的组织机构图，即员工之间的领导和被领导关系
+  +KING
+   +JONES
+     +SCOTT
+       +ADAMS
+     +FORD
+       +SMITH
+   +BLAKE
+     +ALLEN
+     +WARD
+     +MARTIN
+     +TURNER
+     +JAMES
+   +CLARK
+     +MILLER	
+
+<1>递归函数(游标)
+  create or replace function getorg(enm varchar2,lev number) return number
+  as
+   cursor c1 is select * from emp where mgr = (select
+        empno from emp where ename = enm);
+   c1rec c1%rowtype;
+   v1 number;
+  begin
+     dbms_output.put_line(lpad('+',2*lev,'  ')||enm);
+     for c1rec in c1 loop
+           v1:=getorg(c1rec.ename,lev+1);
+     end loop;
+     return 0;       
+
+  end;  
+
+--调用 
+(a)  declare
+   n number;  
+  begin
+    n := getorg('KING',1);
+  end;   
+(b)  select getorg('KING',1) from dual;
+
+<2>层次查询语句
+  select lpad('+',level,'  ')||ename from emp
+  connect by prior empno = mgr  --父子关系父节点的empno=子节点的mgr
+  start with mgr is null;  --遍历开始节点mgr is null
+
+
+--level字段 专门层次查询
+
+--java中的事务
+ 数据库中的事务 
+  ORACLE 
+    DML 引起事务
+    commit; 提交
+    rollback; 回滚
+
+ JDBC中也是有事务的
+   这个事务和ORACLE的事务没有关系
+
+  
+
+
+
+
+
+
+
+
+
+
+
+

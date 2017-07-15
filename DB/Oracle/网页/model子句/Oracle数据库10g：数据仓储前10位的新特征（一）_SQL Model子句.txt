@@ -1,0 +1,23 @@
+1、SQL Model子句
+
+　　也许现在最受关注的就是Oracle数据库10g新数据仓储特征中的SQL Model子句。该子句让用户将类似数据表模型插入select语句中，以前这在某种程度上属于的OLAP服务器关注的范围，如Oracle Express以及Oracle 9i OLAP。SQL Model子句给Oracle分析性的查询一个全新的标准并且说明了SQL一般工作模式的一些缺陷。
+
+　　SQL Model子句是为了说明以下的情况：在过去，客户先从关系型数据库中取出数据、然后将它们导入数据表如Microsoft Excel中。通常，这些模式涉及一系列宏，这些宏里的数据集合包括一系列的商业尺度、时间变更周期以及一套复杂的、很难用平常的SQL表示的商务尺度。我设法说服一些客户SQL的局限就是利用一系列独立的Excel表格，而这些给客户提供了他们所需要的分析能力、复制数据的可测量性和可靠性、然而不久缺乏对全局的控制能力也显露出来。
+
+　　SQL Model子句让一般的SQL语句能够在select语句的结果中创建多维数组，在这一数组上执行一些行间和列间的计算，然后对包含模式结果的数据表格进行升级。使用MODEL子句的SQL示例如下：
+
+
+select SUBSTR(country,1,20) country, SUBSTR(prod,1,15) prod, year, sales 
+FROM sales_view 
+where country IN  (’Italy’,’Japan’) 
+MODEL   RETURN updateD ROWS 
+  PARTITION BY (country) 
+  DIMENSION BY (prod, year) 
+  MEASURES (sale sales) 
+  RULES  ( 
+    sales[’Bounce’, 2002] = sales[’Bounce’, 2001] + 
+      sales[’Bounce’, 2000], 
+    sales[’Y Box’, 2002] = sales[’Y Box’, 2001], 
+    sales[’2_Products’, 2002] = sales[’Bounce’, 2002] + sales[’Y Box’, 2002]) 
+ORDER BY country, prod, year; 
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!--网页制作彻底研究系列-->
+<!DOCTYPE booklist SYSTEM "Ch12-4.dtd">
+<booklist>
+   <book sales="N">
+      <code>F8915</code>
+      <title>ASP网页制作彻底研究</title>
+      <authorlist> 
+         <author>陈会安</author>
+      </authorlist>
+      <price>580</price>
+   </book>
+   <book sales="Y">
+      <code>F8916</code>
+      <title>ASP与IIS 4/5网站架设彻底研究</title>
+      <authorlist>
+         <author>陈会安</author>
+      </authorlist>
+      <price>550</price>
+   </book>
+   <book sales="Y">
+      <code>F8421A</code>
+      <title>Windows 98第二版区域网路筑巢专案</title>
+      <authorlist>
+         <author>陈会安</author>
+      </authorlist>
+      <price>480</price>
+   </book>
+</booklist>
+

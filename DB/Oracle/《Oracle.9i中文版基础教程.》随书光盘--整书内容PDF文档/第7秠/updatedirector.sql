@@ -1,0 +1,4 @@
+UPDATE "SCOTT"."DIRECTOR" 
+  SET     ZHIWU = 'Ôº³¤'
+  WHERE   DIRECTOR_ID=200204;
+  

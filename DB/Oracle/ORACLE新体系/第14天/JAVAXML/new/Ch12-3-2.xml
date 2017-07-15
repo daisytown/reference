@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!--网页制作彻底研究系列-->
+<!DOCTYPE booklist SYSTEM "Ch12-3-2.dtd">
+<booklist>
+    <book sales="Y">
+        <code>F8915</code>
+        <title font="细明体">ASP网页制作彻底研究</title>
+        <catalog>网页制作</catalog>
+        <authorlist no="1"><author>陈会安</author></authorlist>
+        <pub_date>05/18/2000</pub_date>
+        <price>580</price>
+    </book>
+    <book sales="N">
+        <code>F8916</code>
+        <title font="标楷体">ASP与IIS4/5网站架设彻底研究</title>
+        <catalog>网站架设</catalog>
+        <authorlist no="1"><author>陈会安</author></authorlist>
+        <pub_date>08/18/2000</pub_date>
+        <price>550</price>
+    </book>
+</booklist>
+
+

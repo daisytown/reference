@@ -1,0 +1,4886 @@
+From: <ÓÉ Windows Internet Explorer 7 ±£´æ>
+Subject: =?gb2312?B?W09yYWNsZSBkYmFdLbTYX09yYWNsZV+/qrei0afUug==?=
+Date: Wed, 29 Sep 2010 23:10:49 +0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="multipart/alternative";
+	boundary="----=_NextPart_000_00B4_01CB602B.8E524E50"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5931
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_00B4_01CB602B.8E524E50
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: 7bit
+Content-Location: http://img.users.51.la/2393496.asp
+
+
+------=_NextPart_000_00B4_01CB602B.8E524E50
+Content-Type: text/css;
+	charset="gb2312"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://edu.codepub.com/layout.css
+
+.tbox {
+	BACKGROUND: url(images/fl-bg.gif) repeat-x 0px 0px; MARGIN: 0px 0px =
+8px; OVERFLOW: hidden; BORDER-BOTTOM: #dff2f5 1px solid
+}
+.tbox DT {
+	CLEAR: both; BORDER-RIGHT: #dff2f5 1px solid; BORDER-TOP: #dff2f5 1px =
+solid; OVERFLOW: hidden; BORDER-LEFT: #dff2f5 1px solid; BORDER-BOTTOM: =
+#dff2f5 1px solid; HEIGHT: 25px
+}
+.tbox DD {
+	BORDER-RIGHT: #dff2f5 1px solid; PADDING-RIGHT: 4px; PADDING-LEFT: 4px; =
+PADDING-BOTTOM: 0px; OVERFLOW: hidden; BORDER-LEFT: #dff2f5 1px solid; =
+PADDING-TOP: 4px
+}
+.tbox DT STRONG {
+	PADDING-RIGHT: 4px; DISPLAY: block; PADDING-LEFT: 22px; BACKGROUND: =
+url(images/fbico.gif) no-repeat 5px 6px; FLOAT: left; COLOR: #397cbe; =
+LINE-HEIGHT: 25px; LETTER-SPACING: 1px; HEIGHT: 26px
+}
+.tbox DT STRONG A {
+	COLOR: #397cbe
+}
+.tbox DT STRONG A:hover {
+	COLOR: #4c94f6; TEXT-DECORATION: none
+}
+.tbox DT SPAN.more {
+	PADDING-RIGHT: 8px; FLOAT: right; COLOR: #397cbe; LINE-HEIGHT: 26px; =
+POSITION: relative
+}
+.tbox DT SPAN.more A {
+	COLOR: #397cbe; TEXT-DECORATION: none
+}
+.tbox DT SPAN.more A:hover {
+	COLOR: #333
+}
+.tbox DT SPAN.label {
+	PADDING-RIGHT: 1px; FLOAT: right; OVERFLOW: hidden; PADDING-TOP: 2px; =
+HEIGHT: 24px
+}
+.tbox DT SPAN.label A {
+	PADDING-RIGHT: 7px; DISPLAY: block; PADDING-LEFT: 8px; FLOAT: left; =
+PADDING-BOTTOM: 0px; OVERFLOW: hidden; BORDER-LEFT: #bfe0f9 1px solid; =
+COLOR: #666; LINE-HEIGHT: 23px; PADDING-TOP: 0px; LETTER-SPACING: 1px; =
+HEIGHT: 25px; TEXT-DECORATION: none
+}
+.tbox DT SPAN.label A:hover {
+	COLOR: #360
+}
+.tbox DT SPAN.label A.thisclass {
+	BORDER-TOP: #bfe0f9 3px solid; BACKGROUND: #fff; COLOR: #333
+}
+.light {
+	BACKGROUND: none transparent scroll repeat 0% 0%; BORDER-TOP-STYLE: =
+none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; =
+BORDER-BOTTOM-STYLE: none
+}
+.light DT {
+	CLEAR: both; BORDER-RIGHT: #bfe0f9 1px solid; BORDER-TOP: #bfe0f9 1px =
+solid; BACKGROUND: url(images/fr-bg2.gif) repeat-x 0px 0px; OVERFLOW: =
+hidden; BORDER-LEFT: #bfe0f9 1px solid; BORDER-BOTTOM: #bfe0f9 1px =
+solid; HEIGHT: 25px
+}
+.light DD {
+	BORDER-RIGHT: #bfe0f9 1px solid; PADDING-RIGHT: 4px; PADDING-LEFT: 4px; =
+PADDING-BOTTOM: 0px; OVERFLOW: hidden; BORDER-LEFT: #bfe0f9 1px solid; =
+PADDING-TOP: 4px; BORDER-BOTTOM: #bfe0f9 1px solid
+}
+DT.light STRONG {
+	BACKGROUND: url(images/fbico2.gif) no-repeat 5px 5px
+}
+.c1 {
+	CLEAR: right; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+4px; PADDING-TOP: 4px
+}
+.c1 LI {
+	PADDING-LEFT: 16px; BACKGROUND: url(images/ico-2.gif) no-repeat 7px =
+11px; OVERFLOW: hidden; LINE-HEIGHT: 27px; HEIGHT: 27px
+}
+.c1 A {
+=09
+}
+.c2 {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+4px; OVERFLOW: hidden; WIDTH: 100%; PADDING-TOP: 4px
+}
+.c2 LI {
+	PADDING-LEFT: 16px; BACKGROUND: url(images/ico-2.gif) no-repeat 7px =
+11px; FLOAT: left; OVERFLOW: hidden; WIDTH: 44%; LINE-HEIGHT: 22px; =
+MARGIN-RIGHT: 1%; HEIGHT: 22px
+}
+.d1 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 4px; =
+PADDING-TOP: 4px
+}
+.d1 LI {
+	WIDTH: 324px; LINE-HEIGHT: 27px; HEIGHT: 27px
+}
+.d1 LI SPAN {
+	FLOAT: right; WIDTH: 40px; COLOR: #777
+}
+.d1 LI A {
+	FLOAT: left; OVERFLOW-X: hidden; WIDTH: 280px! important; LINE-HEIGHT: =
+27px; HEIGHT: 27px
+}
+.d2 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 4px; =
+PADDING-TOP: 4px
+}
+.d2 LI {
+	OVERFLOW: hidden; LINE-HEIGHT: 27px; HEIGHT: 27px
+}
+.d2 LI SPAN {
+	PADDING-RIGHT: 10px; FLOAT: right; MARGIN-LEFT: 10px; COLOR: #777
+}
+.d2 LI A {
+	OVERFLOW: hidden
+}
+.d21 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 2px; PADDING-BOTTOM: 4px; =
+PADDING-TOP: 5px
+}
+.d21 LI {
+	OVERFLOW: hidden; LINE-HEIGHT: 20px; HEIGHT: 20px
+}
+.d21 LI A {
+	OVERFLOW: hidden
+}
+.d4 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; =
+PADDING-TOP: 0px
+}
+.d4 LI {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; PADDING-BOTTOM: 4px; OVERFLOW: =
+hidden; PADDING-TOP: 4px; BORDER-BOTTOM: #dcebd7 1px dashed; HEIGHT: =
+60px
+}
+.d4 LI A {
+	DISPLAY: block; BACKGROUND: url(images/ico-3.gif) no-repeat 4px 9px; =
+OVERFLOW: hidden; TEXT-INDENT: 14px; LINE-HEIGHT: 23px
+}
+.d4 LI P {
+	OVERFLOW: hidden; COLOR: #888; LINE-HEIGHT: 17px; HEIGHT: 33px
+}
+.d5 {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; PADDING-BOTTOM: 8px; =
+PADDING-TOP: 8px; BORDER-BOTTOM: #eee 1px solid
+}
+.d5 LI {
+	PADDING-LEFT: 16px; BACKGROUND: url(images/ico-2.gif) no-repeat 2px =
+17px; LINE-HEIGHT: 41px; HEIGHT: 41px
+}
+.d5 LI A {
+	FONT-SIZE: 14px
+}
+.d5 LI SPAN {
+	MARGIN-LEFT: 10px; COLOR: #777
+}
+.e1 {
+	CLEAR: both; PADDING-BOTTOM: 8px; OVERFLOW: hidden; WIDTH: 100%; =
+PADDING-TOP: 10px
+}
+.e1 LI {
+	PADDING-LEFT: 12px; FLOAT: left; OVERFLOW: hidden; WIDTH: 126px; =
+TEXT-ALIGN: center
+}
+.e1 LI A {
+	DISPLAY: block
+}
+.e1 LI A:hover IMG {
+	BORDER-RIGHT: #999 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #999 1px =
+solid; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; BORDER-LEFT: #999 1px =
+solid; PADDING-TOP: 2px; BORDER-BOTTOM: #999 1px solid
+}
+.e1 LI A IMG {
+	BORDER-RIGHT: #e3e3e3 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: =
+#e3e3e3 1px solid; DISPLAY: block; PADDING-LEFT: 2px; PADDING-BOTTOM: =
+2px; BORDER-LEFT: #e3e3e3 1px solid; WIDTH: 120px; PADDING-TOP: 2px; =
+BORDER-BOTTOM: #e3e3e3 1px solid; HEIGHT: 90px
+}
+.e1 LI A SPAN {
+	DISPLAY: block; LINE-HEIGHT: 17px; PADDING-TOP: 6px
+}
+.e1 LI SPAN {
+=09
+}
+.e2 {
+=09
+}
+.e2 LI {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+12px; OVERFLOW: hidden; WIDTH: 100%; PADDING-TOP: 12px; BORDER-BOTTOM: =
+#eee 1px solid
+}
+.e2 LI A.preview {
+	DISPLAY: inline; FLOAT: left; MARGIN-BOTTOM: 3px; MARGIN-LEFT: 10px; =
+WIDTH: 84px; MARGIN-RIGHT: 7px
+}
+.e2 LI A.preview IMG {
+	BORDER-RIGHT: #eee 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #eee 1px =
+solid; DISPLAY: block; PADDING-LEFT: 1px; PADDING-BOTTOM: 1px; =
+BORDER-LEFT: #eee 1px solid; WIDTH: 80px; PADDING-TOP: 1px; =
+BORDER-BOTTOM: #eee 1px solid
+}
+.e2 LI A.preview:hover IMG {
+	BORDER-RIGHT: #aaa 1px solid; BORDER-TOP: #aaa 1px solid; BORDER-LEFT: =
+#aaa 1px solid; BORDER-BOTTOM: #aaa 1px solid
+}
+.e2 LI A.title {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; MARGIN-LEFT: 2px; OVERFLOW: hidden; =
+LINE-HEIGHT: 25px
+}
+.e2 SPAN.info {
+	DISPLAY: block; PADDING-LEFT: 12px; COLOR: #555; LINE-HEIGHT: 23px
+}
+.e2 SPAN.info SMALL {
+	FONT-SIZE: 12px; MARGIN-LEFT: 3px; COLOR: #aaa
+}
+.e2 SPAN.info A {
+	COLOR: #690
+}
+.e2 P.intro {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; MARGIN-LEFT: 5px; COLOR: =
+#776955; LINE-HEIGHT: 20px
+}
+.e3 {
+	CLEAR: both; OVERFLOW: hidden
+}
+.e3 LI {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px; PADDING-BOTTOM: 6px; OVERFLOW: =
+hidden; PADDING-TOP: 6px; BORDER-BOTTOM: #dcebd7 1px dashed; HEIGHT: =
+50px
+}
+.e3 LI A.preview {
+	DISPLAY: block; FLOAT: left; OVERFLOW: hidden; WIDTH: 58px; =
+MARGIN-RIGHT: 6px; HEIGHT: 48px
+}
+.e3 LI A.preview IMG {
+	WIDTH: 58px; HEIGHT: 48px
+}
+.e3 LI A.title {
+	DISPLAY: block; OVERFLOW: hidden; LINE-HEIGHT: 21px; HEIGHT: 21px
+}
+.e3 LI .intro {
+	DISPLAY: block; FLOAT: left; COLOR: #777; LINE-HEIGHT: 23px
+}
+.e5 {
+	PADDING-LEFT: 8px; FONT-SIZE: 0px; FLOAT: left; WIDTH: 112px; =
+LINE-HEIGHT: 0px
+}
+.e5 LI {
+	DISPLAY: block; OVERFLOW: hidden; WIDTH: 104px; PADDING-TOP: 8px
+}
+.e6 {
+	CLEAR: both; PADDING-LEFT: 6px; OVERFLOW: hidden; HEIGHT: 81px
+}
+.e6 LI {
+	PADDING-RIGHT: 8px; DISPLAY: block; FLOAT: left; OVERFLOW: hidden; =
+WIDTH: 104px; PADDING-TOP: 8px
+}
+.e5 LI A {
+	BORDER-RIGHT: #676767 1px solid; BORDER-TOP: #676767 1px solid; =
+DISPLAY: block; OVERFLOW: hidden; BORDER-LEFT: #676767 1px solid; WIDTH: =
+102px; BORDER-BOTTOM: #676767 1px solid; HEIGHT: 70px
+}
+.e6 LI A {
+	BORDER-RIGHT: #676767 1px solid; BORDER-TOP: #676767 1px solid; =
+DISPLAY: block; OVERFLOW: hidden; BORDER-LEFT: #676767 1px solid; WIDTH: =
+102px; BORDER-BOTTOM: #676767 1px solid; HEIGHT: 70px
+}
+.e5 LI A IMG {
+	DISPLAY: block; WIDTH: 102px; HEIGHT: 70px
+}
+.e6 LI A IMG {
+	DISPLAY: block; WIDTH: 102px; HEIGHT: 70px
+}
+.e5 LI A:hover {
+	BORDER-RIGHT: #333 1px solid; BORDER-TOP: #333 1px solid; BORDER-LEFT: =
+#333 1px solid; BORDER-BOTTOM: #333 1px solid
+}
+.e6 LI A:hover {
+	BORDER-RIGHT: #333 1px solid; BORDER-TOP: #333 1px solid; BORDER-LEFT: =
+#333 1px solid; BORDER-BOTTOM: #333 1px solid
+}
+.e7 {
+	CLEAR: both; OVERFLOW: hidden
+}
+.e7 LI {
+	PADDING-LEFT: 11px; FLOAT: left; OVERFLOW: hidden; WIDTH: 60px; HEIGHT: =
+86px
+}
+.e7 LI A {
+	DISPLAY: block; MARGIN: 0px auto; TEXT-ALIGN: center
+}
+.e7 LI A IMG {
+	BORDER-RIGHT: #ddd 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #ddd 1px =
+solid; DISPLAY: block; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; MARGIN: =
+0px auto 6px; BORDER-LEFT: #ddd 1px solid; WIDTH: 52px; PADDING-TOP: =
+2px; BORDER-BOTTOM: #ddd 1px solid; HEIGHT: 52px
+}
+.e7 LI A:hover IMG {
+	BORDER-RIGHT: #aaa 1px solid; BORDER-TOP: #aaa 1px solid; BORDER-LEFT: =
+#aaa 1px solid; BORDER-BOTTOM: #aaa 1px solid
+}
+.e8 {
+	CLEAR: both; MARGIN-TOP: 16px; MARGIN-LEFT: 12px; OVERFLOW: hidden; =
+WIDTH: 100%
+}
+.e8 LI {
+	DISPLAY: block; FLOAT: left; OVERFLOW: hidden; WIDTH: 168px; =
+MARGIN-RIGHT: 8px; HEIGHT: 184px; TEXT-ALIGN: center
+}
+.e8 LI .pic {
+	DISPLAY: block; BACKGROUND: url(images/picbox-listbg.gif) no-repeat; =
+OVERFLOW: hidden; WIDTH: 160px; HEIGHT: 120px; TEXT-ALIGN: left
+}
+.e8 LI .pic IMG {
+	MARGIN-TOP: 3px; DISPLAY: block; MARGIN-LEFT: 3px; WIDTH: 152px; =
+BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: =
+none; HEIGHT: 112px; BORDER-BOTTOM-STYLE: none
+}
+.e8 LI .title {
+	DISPLAY: block; FONT-WEIGHT: bold; OVERFLOW: hidden; LINE-HEIGHT: 31px; =
+HEIGHT: 31px
+}
+.e8 LI .date {
+	COLOR: #666
+}
+.e8 LI .date SMALL {
+	FONT-SIZE: 12px; COLOR: #999; LINE-HEIGHT: 17px
+}
+.e9 {
+	CLEAR: both; OVERFLOW: hidden; WIDTH: 100%; PADDING-TOP: 4px
+}
+.e9 LI {
+	DISPLAY: inline; FLOAT: left; MARGIN-LEFT: 6px; OVERFLOW: hidden; =
+WIDTH: 106px; HEIGHT: 110px; TEXT-ALIGN: center
+}
+.e9 LI A {
+	COLOR: #777
+}
+.e9 LI A IMG {
+	BORDER-RIGHT: #ddd 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #ddd 1px =
+solid; DISPLAY: block; PADDING-LEFT: 1px; PADDING-BOTTOM: 1px; =
+BORDER-LEFT: #ddd 1px solid; WIDTH: 102px; PADDING-TOP: 1px; =
+BORDER-BOTTOM: #ddd 1px solid; HEIGHT: 76px
+}
+.e9 LI A SPAN.title {
+	DISPLAY: block; OVERFLOW: hidden; LINE-HEIGHT: 29px; HEIGHT: 29px
+}
+.f1 {
+	BACKGROUND: url(images/number-range.gif) no-repeat 5px 5px; OVERFLOW: =
+hidden
+}
+.f1 LI {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 38px; PADDING-BOTTOM: =
+4px; OVERFLOW: hidden; PADDING-TOP: 3px; BORDER-BOTTOM: #dcebd7 1px =
+dashed; HEIGHT: 38px
+}
+.f1 LI A {
+	DISPLAY: block; OVERFLOW: hidden; LINE-HEIGHT: 21px; HEIGHT: 21px
+}
+.f1 LI SPAN {
+	MARGIN-LEFT: 5px; COLOR: #666666; LINE-HEIGHT: 15px
+}
+.f1 LI SPAN SMALL {
+	FONT-SIZE: 12px; COLOR: #999
+}
+.f1 LI SPAN A {
+	DISPLAY: inline; COLOR: #690; LINE-HEIGHT: 15px
+}
+.f2 {
+	OVERFLOW: hidden
+}
+.f2 LI {
+	CLEAR: both; PADDING-RIGHT: 8px; PADDING-LEFT: 8px; PADDING-BOTTOM: =
+0px; OVERFLOW: hidden; PADDING-TOP: 0px; BORDER-BOTTOM: #dcebd7 1px =
+dashed; HEIGHT: 73px
+}
+.f2 SMALL {
+	DISPLAY: block; FONT-SIZE: 12px; OVERFLOW: hidden; COLOR: #999; =
+LINE-HEIGHT: 21px; PADDING-TOP: 6px; HEIGHT: 21px
+}
+.f2 SMALL A.username {
+	COLOR: #666
+}
+.f2 P {
+	BACKGROUND: url(images/ico-comment-quote.gif) no-repeat 0px 4px; =
+OVERFLOW: hidden; COLOR: #888; TEXT-INDENT: 17px; LINE-HEIGHT: 21px; =
+HEIGHT: 42px
+}
+.f4 {
+=09
+}
+.f4 LI {
+	DISPLAY: block; FLOAT: left; MARGIN: 10px 12px 2px 8px; OVERFLOW: =
+hidden; WIDTH: 94px; HEIGHT: 37px
+}
+.f4 LI A {
+	BORDER-RIGHT: #fff 3px solid; BORDER-TOP: #fff 3px solid; FLOAT: left; =
+OVERFLOW: hidden; BORDER-LEFT: #fff 3px solid; WIDTH: 88px; =
+BORDER-BOTTOM: #fff 3px solid; HEIGHT: 31px
+}
+.f4 LI A:hover {
+	BORDER-RIGHT: #eee 3px solid; BORDER-TOP: #eee 3px solid; BORDER-LEFT: =
+#eee 3px solid; BORDER-BOTTOM: #eee 3px solid
+}
+.f5 {
+	CLEAR: both; PADDING-BOTTOM: 2px; OVERFLOW: hidden; WIDTH: 100%
+}
+.f5 LI {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FLOAT: left; PADDING-BOTTOM: =
+0px; LINE-HEIGHT: 14px; PADDING-TOP: 3px; WHITE-SPACE: nowrap
+}
+.f5 LI A {
+	FLOAT: left; COLOR: #666666
+}
+.f6 {
+	CLEAR: both; PADDING-BOTTOM: 10px; OVERFLOW: hidden; WIDTH: 100%
+}
+.f6 LI {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FLOAT: left; PADDING-BOTTOM: =
+0px; LINE-HEIGHT: 14px; PADDING-TOP: 8px; WHITE-SPACE: nowrap
+}
+.f6 LI A {
+	FLOAT: left; COLOR: #666666
+}
+.ico1 LI {
+	PADDING-LEFT: 16px; BACKGROUND: url(images/ico-1.gif) no-repeat 7px =
+11px
+}
+.ico2 LI {
+	PADDING-LEFT: 16px; BACKGROUND: url(images/ico-2.gif) no-repeat 6px =
+11px
+}
+.ico3 LI {
+	PADDING-LEFT: 16px; BACKGROUND: url(images/ico-3.gif) no-repeat 7px =
+11px
+}
+LI.dotline {
+	LINE-HEIGHT: 26px; BORDER-BOTTOM: #cde0fa 1px dashed; HEIGHT: 26px
+}
+.cgg {
+	CLEAR: right; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; PADDING-TOP: 0px
+}
+.cgg LI {
+	OVERFLOW: hidden
+}
+.cgg A {
+=09
+}
+
+------=_NextPart_000_00B4_01CB602B.8E524E50
+Content-Type: text/css;
+	charset="gb2312"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://edu.codepub.com/page.css
+
+.pleft {
+	FLOAT: left; OVERFLOW: hidden; WIDTH: 712px
+}
+.pleft .place {
+	BORDER-TOP: #e0ecf3 1px solid; BACKGROUND: #f2fcfe; OVERFLOW: hidden; =
+WIDTH: 712px; COLOR: #ccc; TEXT-INDENT: 12px; LINE-HEIGHT: 24px; =
+BORDER-BOTTOM: #e0ecf3 1px solid; HEIGHT: 24px
+}
+.pleft .place STRONG {
+	FONT-WEIGHT: normal; COLOR: #397cbe; LETTER-SPACING: 1px
+}
+.pleft .place A {
+	MARGIN: 0px 2px; COLOR: #397cbe
+}
+.pleft .place A:hover {
+	COLOR: #469cf2; TEXT-DECORATION: none
+}
+.pleft .place SMALL {
+	DISPLAY: inline-block; FONT-SIZE: 0px; BACKGROUND: =
+url(images/ico-3.gif) no-repeat 2px 8px; VERTICAL-ALIGN: middle; =
+OVERFLOW: hidden; WIDTH: 8px; HEIGHT: 24px
+}
+.pright {
+	FLOAT: right; OVERFLOW: hidden; WIDTH: 240px
+}
+.dede_pages {
+	CLEAR: both; MARGIN: 15px auto; TEXT-ALIGN: center
+}
+.dede_pages A {
+	BORDER-RIGHT: #b9dff9 1px solid; PADDING-RIGHT: 6px; BORDER-TOP: =
+#b9dff9 1px solid; PADDING-LEFT: 6px; PADDING-BOTTOM: 3px; MARGIN: 4px; =
+BORDER-LEFT: #b9dff9 1px solid; COLOR: #077ac7; PADDING-TOP: 5px; =
+BORDER-BOTTOM: #b9dff9 1px solid; TEXT-ALIGN: center; TEXT-DECORATION: =
+none
+}
+.dede_pages A.now {
+	BORDER-RIGHT: #b9dff9 1px solid; PADDING-RIGHT: 6px; BORDER-TOP: =
+#b9dff9 1px solid; PADDING-LEFT: 6px; BACKGROUND: #077ac7; =
+PADDING-BOTTOM: 3px; BORDER-LEFT: #b9dff9 1px solid; COLOR: #fff; =
+PADDING-TOP: 5px; BORDER-BOTTOM: #b9dff9 1px solid; TEXT-DECORATION: =
+none
+}
+.dede_pages A:hover {
+	BACKGROUND: #077ac7; COLOR: #fff
+}
+.dede_pages SPAN {
+	BORDER-RIGHT: #b9dff9 1px solid; PADDING-RIGHT: 6px; BORDER-TOP: =
+#b9dff9 1px solid; PADDING-LEFT: 6px; BACKGROUND: #077ac7; =
+PADDING-BOTTOM: 2px; MARGIN: 3px; BORDER-LEFT: #b9dff9 1px solid; COLOR: =
+#fff; PADDING-TOP: 3px; BORDER-BOTTOM: #b9dff9 1px solid; TEXT-ALIGN: =
+center
+}
+.index .bignews {
+	BORDER-RIGHT: #dff2f5 1px solid; BORDER-TOP: #dff2f5 1px solid; =
+BACKGROUND: url(images/headbg-top.gif) repeat-x; FLOAT: right; OVERFLOW: =
+hidden; BORDER-LEFT: #dff2f5 1px solid; WIDTH: 424px; BORDER-BOTTOM: =
+#dff2f5 1px solid; HEIGHT: 400px
+}
+.index .bignews A {
+	COLOR: #555
+}
+.index .bignews .onenews {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px; PADDING-BOTTOM: 7px; MARGIN: 0px =
+3px; PADDING-TOP: 7px; BORDER-BOTTOM: #ebebeb 1px dashed
+}
+.index .bignews .onenews H2 {
+	DISPLAY: block; LINE-HEIGHT: 28px; HEIGHT: 32px; TEXT-ALIGN: center
+}
+.index .bignews .onenews H2 A {
+	FONT-SIZE: 16px
+}
+.index .bignews .onenews P {
+	COLOR: #666; LINE-HEIGHT: 19px
+}
+.index .bignews DIV.newarticle {
+	FONT-SIZE: 0px; BACKGROUND: url(images/new-article.gif) no-repeat 8px =
+3px; COLOR: #fff; HEIGHT: 24px
+}
+.index .bignews DIV.d1 {
+	CLEAR: both; PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: =
+6px; OVERFLOW: hidden; WIDTH: 406px; PADDING-TOP: 6px
+}
+.index .bignews DIV.d1arc {
+	FLOAT: left; OVERFLOW: hidden; WIDTH: 190px; LINE-HEIGHT: 24px; =
+MARGIN-RIGHT: 12px; HEIGHT: 24px
+}
+.index .bignews DIV.d1arc A {
+=09
+}
+.index .bignews UL.c2 {
+	CLEAR: both; PADDING-RIGHT: 4px; PADDING-LEFT: 4px; PADDING-BOTTOM: =
+0px; OVERFLOW: hidden; WIDTH: 416px; PADDING-TOP: 0px
+}
+.index .bignews UL.c2 A {
+	FONT-SIZE: 13px
+}
+.index .flashnews {
+	FLOAT: left; OVERFLOW: hidden; WIDTH: 280px; HEIGHT: 192px
+}
+.index .latestnews {
+	MARGIN-TOP: 8px; FLOAT: left; WIDTH: 280px; HEIGHT: 200px
+}
+.index .latestnews DL DD {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 2px; =
+PADDING-TOP: 2px
+}
+.index .latestnews UL A {
+	COLOR: #555
+}
+.index .picnews {
+	CLEAR: both; MARGIN-TOP: 10px; FLOAT: left; OVERFLOW: hidden; WIDTH: =
+712px
+}
+.index .listbox {
+	CLEAR: both; FLOAT: left; OVERFLOW: hidden; WIDTH: 720px
+}
+.index .listbox DL {
+	MARGIN-TOP: 8px; FLOAT: left; WIDTH: 352px; MARGIN-RIGHT: 8px
+}
+.index .listbox UL A {
+	COLOR: #666
+}
+.index .usercenter .tbox DD {
+	DISPLAY: none; HEIGHT: 370px
+}
+.index .usercenter .tbox DD#loading {
+	DISPLAY: block; COLOR: #999999; LINE-HEIGHT: 200px; LETTER-SPACING: =
+2px; TEXT-ALIGN: center
+}
+.index .userlogin {
+	PADDING-TOP: 10px
+}
+.index .userlogin .fb {
+	HEIGHT: 37px
+}
+.index .userlogin .fb SPAN {
+	PADDING-RIGHT: 6px; FLOAT: left; WIDTH: 60px; COLOR: #888; TEXT-ALIGN: =
+right
+}
+.index .userlogin .fb IMG {
+	MARGIN-LEFT: 5px; VERTICAL-ALIGN: middle
+}
+.index .userlogin .submit {
+	PADDING-TOP: 3px; TEXT-ALIGN: center
+}
+.index .userlogin .submit A {
+	MARGIN-LEFT: 7px; COLOR: #030
+}
+.index .userinfo {
+=09
+}
+.index .userinfo .welcome {
+	BORDER-TOP: #eee 1px solid; BACKGROUND: #f9f9f9; MARGIN: 12px auto; =
+WIDTH: 220px; COLOR: #666; TEXT-INDENT: 10px; LINE-HEIGHT: 23px; =
+BORDER-BOTTOM: #eee 1px solid; HEIGHT: 24px
+}
+.index .userinfo .welcome STRONG {
+	FONT-WEIGHT: bold; COLOR: #f60
+}
+.index .userinfo .userface {
+	PADDING-LEFT: 16px; FLOAT: left; OVERFLOW: hidden; WIDTH: 60px; =
+PADDING-TOP: 2px; HEIGHT: 64px
+}
+.index .userinfo .userface A {
+	DISPLAY: block; MARGIN: 0px auto; TEXT-ALIGN: center
+}
+.index .userinfo .userface A IMG {
+	BORDER-RIGHT: #ddd 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #ddd 1px =
+solid; DISPLAY: block; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; MARGIN: =
+0px auto 6px; BORDER-LEFT: #ddd 1px solid; WIDTH: 52px; PADDING-TOP: =
+2px; BORDER-BOTTOM: #ddd 1px solid; HEIGHT: 52px
+}
+.index .userinfo .mylink {
+	FLOAT: left; OVERFLOW: hidden; WIDTH: 144px
+}
+.index .userinfo .mylink UL {
+=09
+}
+.index .userinfo .mylink UL LI {
+	FLOAT: left; WIDTH: 72px; TEXT-INDENT: 12px; LINE-HEIGHT: 21px
+}
+.index .userinfo .mylink UL LI A {
+	COLOR: #555
+}
+.index .userinfo .uclink {
+	CLEAR: both; OVERFLOW: hidden; COLOR: #ddd; LINE-HEIGHT: 31px; HEIGHT: =
+31px; TEXT-ALIGN: center
+}
+.index .userinfo .uclink A {
+	MARGIN: 0px 2px; COLOR: #690
+}
+.index .latestlogin {
+	PADDING-TOP: 16px
+}
+.index .latestlogin STRONG {
+	DISPLAY: block; PADDING-LEFT: 6px; Z-INDEX: 5; BACKGROUND: #fff; WIDTH: =
+102px; COLOR: #555; LINE-HEIGHT: 21px; LETTER-SPACING: 1px; POSITION: =
+relative
+}
+.index .latestlogin UL {
+	BORDER-TOP: #c5ddbc 1px solid; Z-INDEX: 3; MARGIN: -12px auto 0px; =
+WIDTH: 224px; PADDING-TOP: 20px
+}
+.index .commend DL DD {
+	PADDING-TOP: 0px
+}
+.index .hot DL DD {
+	PADDING-TOP: 0px
+}
+.index .hot DL DD .c1 LI {
+	OVERFLOW: hidden; WIDTH: 210px
+}
+.index .vote DL DD STRONG {
+	DISPLAY: block; PADDING-LEFT: 8px; MARGIN: 0px 4px; COLOR: #397cbe; =
+LINE-HEIGHT: 27px; BORDER-BOTTOM: #daedf8 1px solid; LETTER-SPACING: 1px
+}
+.index .vote DL DD .fb {
+	PADDING-LEFT: 10px; COLOR: #555; PADDING-TOP: 10px; HEIGHT: 21px
+}
+.index .vote DL DD .fb INPUT {
+	MARGIN-RIGHT: 4px
+}
+.index .vote DL DD .submit {
+	PADDING-TOP: 8px; HEIGHT: 35px; TEXT-ALIGN: center
+}
+.index .vote DL DD .submit BUTTON {
+	MARGIN-RIGHT: 10px
+}
+.index .vote DL DD .submit A {
+	COLOR: #003300
+}
+.channel .flashnews {
+	BACKGROUND: #f00; FLOAT: left; OVERFLOW: hidden; WIDTH: 280px; HEIGHT: =
+192px
+}
+.channel .topcommand {
+	FLOAT: right; OVERFLOW: hidden; WIDTH: 424px
+}
+.channel .topcommand DL DD {
+	HEIGHT: 162px
+}
+.channel .topcommand A {
+	COLOR: #666
+}
+.channel .topcommand .onenews {
+	PADDING-RIGHT: 12px; PADDING-LEFT: 12px; PADDING-BOTTOM: 3px; =
+PADDING-TOP: 3px; BORDER-BOTTOM: #ebebeb 1px solid
+}
+.channel .topcommand .onenews H2 {
+	DISPLAY: block; LINE-HEIGHT: 25px; HEIGHT: 28px; TEXT-ALIGN: center
+}
+.channel .topcommand .onenews H2 A {
+	FONT-SIZE: 16px
+}
+.channel .topcommand .onenews P {
+	COLOR: #666; LINE-HEIGHT: 19px
+}
+.channel .picnews {
+	CLEAR: both; MARGIN-TOP: 8px; FLOAT: left; OVERFLOW: hidden; WIDTH: =
+712px
+}
+.channel .listbox {
+	CLEAR: both; FLOAT: left; OVERFLOW: hidden; WIDTH: 720px
+}
+.channel .listbox DL {
+	MARGIN-TOP: 8px; FLOAT: left; WIDTH: 352px; MARGIN-RIGHT: 8px
+}
+.channel .listbox UL A {
+	COLOR: #666
+}
+.viewbox {
+	PADDING-BOTTOM: 8px; OVERFLOW: hidden; WIDTH: 712px
+}
+.viewbox .title {
+	OVERFLOW: hidden; LINE-HEIGHT: 56px; PADDING-TOP: 10px; HEIGHT: 56px; =
+TEXT-ALIGN: center
+}
+.viewbox .title H2 {
+	FONT-SIZE: 24px; COLOR: #369
+}
+.viewbox .info {
+	OVERFLOW: hidden; COLOR: #666; LINE-HEIGHT: 17px; HEIGHT: 24px; =
+TEXT-ALIGN: center
+}
+.viewbox .info SMALL {
+	FONT-SIZE: 12px; MARGIN-LEFT: 8px; COLOR: #999; MARGIN-RIGHT: 3px
+}
+.viewbox .info A {
+	COLOR: #690
+}
+.viewbox .intro {
+	BORDER-RIGHT: #ddd 1px solid; PADDING-RIGHT: 16px; BORDER-TOP: #ddd 1px =
+solid; MARGIN-TOP: 8px; PADDING-LEFT: 16px; FONT-SIZE: 14px; BACKGROUND: =
+#fafdfe; PADDING-BOTTOM: 8px; BORDER-LEFT: #ddd 1px solid; COLOR: #555; =
+LINE-HEIGHT: 25px; PADDING-TOP: 8px; BORDER-BOTTOM: #ddd 1px solid
+}
+.viewbox .infolist {
+	FLOAT: left; WIDTH: 368px
+}
+.viewbox .infolist SMALL {
+	CLEAR: left; DISPLAY: block; FONT-SIZE: 12px; FLOAT: left; OVERFLOW: =
+hidden; WIDTH: 100px; COLOR: #999; LINE-HEIGHT: 31px; HEIGHT: 31px; =
+TEXT-ALIGN: right
+}
+.viewbox .infolist SPAN {
+	FLOAT: left; OVERFLOW: hidden; WIDTH: 200px; LINE-HEIGHT: 30px; HEIGHT: =
+31px
+}
+.viewbox .picview {
+	PADDING-RIGHT: 24px; FLOAT: right; WIDTH: 320px; PADDING-TOP: 16px
+}
+.viewbox .labeltitle {
+	CLEAR: both; BACKGROUND: url(images/view-labeltitle-bg.gif) repeat-x =
+left 10px; MARGIN: 0px auto; OVERFLOW: hidden; PADDING-TOP: 10px; =
+HEIGHT: 23px
+}
+.viewbox .labeltitle STRONG {
+	DISPLAY: block; BACKGROUND: url(images/view-labeltitle-bg.gif) =
+no-repeat left -44px; FLOAT: left; OVERFLOW: hidden; WIDTH: 80px; COLOR: =
+#fff; LINE-HEIGHT: 23px; LETTER-SPACING: 1px; HEIGHT: 23px; TEXT-ALIGN: =
+center
+}
+.viewbox .content {
+	PADDING-RIGHT: 16px; PADDING-LEFT: 16px; FONT-SIZE: 14px; =
+PADDING-BOTTOM: 12px; COLOR: #333; LINE-HEIGHT: 25px; PADDING-TOP: 12px
+}
+.viewbox .dede_pages {
+	FLOAT: none; OVERFLOW: hidden; WIDTH: 712px; TEXT-ALIGN: center
+}
+.viewbox .dede_pages UL {
+	CLEAR: both; FLOAT: none; MARGIN: 0px auto; OVERFLOW: hidden; =
+WHITE-SPACE: nowrap; TEXT-ALIGN: center
+}
+.viewbox .dede_pages UL LI {
+	DISPLAY: inline; FLOAT: none
+}
+.viewbox .dede_pages UL LI A {
+	DISPLAY: inline; FLOAT: none
+}
+.viewbox .boxoff {
+	CLEAR: both; BACKGROUND: url(images/boxoff.gif) repeat-x left 15px; =
+MARGIN: 4px auto; OVERFLOW: hidden; PADDING-TOP: 10px; HEIGHT: 10px
+}
+.viewbox .boxoff STRONG {
+	DISPLAY: block; FONT-SIZE: 0px; BACKGROUND: url(images/boxoff.gif) =
+no-repeat right -10px; FLOAT: left; OVERFLOW: hidden; WIDTH: 8px; =
+LINE-HEIGHT: 100px; HEIGHT: 10px
+}
+.viewbox .newdigg {
+	CLEAR: both; PADDING-LEFT: 8px; MARGIN: 8px auto; OVERFLOW: hidden; =
+WIDTH: 406px; HEIGHT: 51px
+}
+.viewbox .diggbox {
+	FLOAT: left; OVERFLOW: hidden; WIDTH: 195px; CURSOR: pointer; =
+MARGIN-RIGHT: 8px; HEIGHT: 51px
+}
+.viewbox .diggbox .digg_act {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; FLOAT: left; OVERFLOW: hidden; =
+TEXT-INDENT: 32px; LINE-HEIGHT: 31px; HEIGHT: 29px
+}
+.viewbox .diggbox .digg_num {
+	FLOAT: left; TEXT-INDENT: 5px; LINE-HEIGHT: 29px
+}
+.viewbox .diggbox .digg_percent {
+	CLEAR: both; PADDING-LEFT: 10px; OVERFLOW: hidden; WIDTH: 180px
+}
+.viewbox .diggbox .digg_percent .digg_percent_bar {
+	BORDER-RIGHT: #ccc 1px solid; MARGIN-TOP: 3px; BACKGROUND: #e8e8e8; =
+FLOAT: left; OVERFLOW: hidden; WIDTH: 100px; HEIGHT: 7px
+}
+.viewbox .diggbox .digg_percent .digg_percent_num {
+	PADDING-LEFT: 10px; FONT-SIZE: 10px; FLOAT: left
+}
+.viewbox .diggbox .digg_percent .digg_percent_bar SPAN {
+	DISPLAY: block; BACKGROUND: #000; OVERFLOW: hidden; HEIGHT: 5px
+}
+.viewbox .newdigg .digg_good {
+	BACKGROUND: url(images/newdigg-bg.png) no-repeat left top
+}
+.viewbox .newdigg .digg_bad {
+	BACKGROUND: url(images/newdigg-bg.png) no-repeat right top
+}
+.viewbox .newdigg .digg_good .digg_act {
+	COLOR: #c30
+}
+.viewbox .newdigg .digg_good .digg_num {
+	COLOR: #c63
+}
+.viewbox .newdigg .digg_bad .digg_act {
+	COLOR: #36c
+}
+.viewbox .newdigg .digg_bad .digg_num {
+	COLOR: #39c
+}
+.viewbox .newdigg .digg_good .digg_percent .digg_percent_bar SPAN {
+	BORDER-RIGHT: #e37f24 1px solid; BORDER-TOP: #e37f24 1px solid; =
+BACKGROUND: #ffc535; BORDER-LEFT: #e37f24 1px solid; BORDER-BOTTOM: =
+#e37f24 1px solid
+}
+.viewbox .newdigg .digg_bad .digg_percent .digg_percent_bar SPAN {
+	BORDER-RIGHT: #689acc 1px solid; BORDER-TOP: #689acc 1px solid; =
+BACKGROUND: #94c0e4; BORDER-LEFT: #689acc 1px solid; BORDER-BOTTOM: =
+#689acc 1px solid
+}
+.viewbox .handle {
+	CLEAR: both; OVERFLOW: hidden; PADDING-TOP: 3px; HEIGHT: 59px
+}
+.viewbox .handle .digg {
+	BACKGROUND: url(images/digg-bg.gif) no-repeat; FLOAT: left; WIDTH: =
+59px; MARGIN-RIGHT: 12px; HEIGHT: 59px
+}
+.viewbox .handle .digg .digg_num {
+	FONT-SIZE: 20px; OVERFLOW: hidden; WIDTH: 56px; COLOR: #6b9169; =
+LINE-HEIGHT: 34px; HEIGHT: 34px; TEXT-ALIGN: center
+}
+.viewbox .handle .digg .digg_act {
+	OVERFLOW: hidden; WIDTH: 56px; LINE-HEIGHT: 23px; HEIGHT: 22px
+}
+.viewbox .handle .digg .digg_act A {
+	FLOAT: left; MARGIN-LEFT: 11px; COLOR: #666
+}
+.viewbox .handle .context {
+	FLOAT: left
+}
+.viewbox .handle .context UL LI {
+	COLOR: #888; LINE-HEIGHT: 29px
+}
+.viewbox .actbox {
+	PADDING-RIGHT: 10px; FLOAT: right; WIDTH: 260px; PADDING-TOP: 20px; =
+TEXT-ALIGN: center
+}
+.viewbox .actbox UL LI {
+	DISPLAY: inline; PADDING-LEFT: 22px; BACKGROUND-IMAGE: =
+url(images/actbox-ico.gif); MARGIN-RIGHT: 10px; BACKGROUND-REPEAT: =
+no-repeat
+}
+.viewbox .actbox UL LI A {
+	COLOR: #666
+}
+.viewbox .actbox UL LI#act-fav {
+	BACKGROUND-POSITION: 4px 0px
+}
+.viewbox .actbox UL LI#act-err {
+	BACKGROUND-POSITION: 4px -37px
+}
+.viewbox .actbox UL LI#act-pus {
+	BACKGROUND-POSITION: 4px -73px
+}
+.viewbox .actbox UL LI#act-pnt {
+	BACKGROUND-POSITION: 4px -109px
+}
+.viewbox .downurllist {
+	CLEAR: both; OVERFLOW: hidden; WIDTH: 100%
+}
+.viewbox .downurllist LI {
+	PADDING-RIGHT: 4px; MARGIN-TOP: 10px; BACKGROUND: =
+url(images/downurl-bg.gif) no-repeat right top; FLOAT: left; OVERFLOW: =
+hidden; MARGIN-RIGHT: 10px; HEIGHT: 27px
+}
+.viewbox .downurllist LI A {
+	PADDING-RIGHT: 5px; DISPLAY: block; FONT-SIZE: 12px; BACKGROUND: =
+url(images/downurl-bg.gif) no-repeat left top; FLOAT: left; COLOR: #555; =
+TEXT-INDENT: 30px; LINE-HEIGHT: 27px; HEIGHT: 27px
+}
+.viewbox .downurllist LI A:hover {
+	COLOR: #f63; TEXT-DECORATION: none
+}
+.viewbox .picbox {
+	FONT-SIZE: 14px; OVERFLOW: hidden; WIDTH: 100%; LINE-HEIGHT: 31px; =
+PADDING-TOP: 10px; TEXT-ALIGN: center
+}
+.viewbox .picbox IMG {
+	DISPLAY: block; MARGIN: 16px auto 6px
+}
+.viewbox .picbox UL.e8 {
+	FONT-SIZE: 12px; LINE-HEIGHT: normal
+}
+.viewbox .picbox UL.e8 LI .pic {
+	BORDER-RIGHT: #eee 1px solid; BORDER-TOP: #eee 1px solid; BACKGROUND: =
+none transparent scroll repeat 0% 0%; OVERFLOW: hidden; BORDER-LEFT: =
+#eee 1px solid; BORDER-BOTTOM: #eee 1px solid
+}
+.viewbox .picbox UL.e8 IMG {
+	MARGIN: 3px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.viewbox .picbox UL.e8 LI .title {
+	PADDING-TOP: 0px
+}
+.specialpic {
+	FLOAT: left; OVERFLOW: hidden; WIDTH: 200px; MARGIN-RIGHT: 20px; =
+PADDING-TOP: 10px
+}
+.specialpic IMG {
+	DISPLAY: block; WIDTH: 200px
+}
+.speciallist {
+	OVERFLOW: hidden; WIDTH: 720px
+}
+.speciallist DL.tbox {
+	MARGIN-TOP: 8px; FLOAT: left; WIDTH: 352px; MARGIN-RIGHT: 8px
+}
+.storypic {
+	FLOAT: left; OVERFLOW: hidden; WIDTH: 160px; MARGIN-RIGHT: 20px; =
+PADDING-TOP: 10px
+}
+.storypic IMG {
+	DISPLAY: block; WIDTH: 160px
+}
+.infos_userinfo {
+	OVERFLOW: hidden; WIDTH: 240px
+}
+.infos_userinfo DD {
+	PADDING-RIGHT: 12px; PADDING-LEFT: 12px; BACKGROUND: #fff; =
+PADDING-BOTTOM: 12px; OVERFLOW: hidden; PADDING-TOP: 12px
+}
+.infos_userinfo DD .userface {
+	BORDER-RIGHT: #ddd 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #ddd 1px =
+solid; PADDING-LEFT: 1px; FLOAT: left; PADDING-BOTTOM: 1px; OVERFLOW: =
+hidden; BORDER-LEFT: #ddd 1px solid; WIDTH: 52px; MARGIN-RIGHT: 8px; =
+PADDING-TOP: 1px; BORDER-BOTTOM: #ddd 1px solid; HEIGHT: 52px
+}
+.infos_userinfo DD .userface IMG {
+	DISPLAY: block; OVERFLOW: hidden; WIDTH: 52px; HEIGHT: 52px
+}
+.infos_userinfo DD .username {
+	DISPLAY: block; FONT-WEIGHT: bold; OVERFLOW: hidden; COLOR: #f60; =
+LINE-HEIGHT: 19px; HEIGHT: 19px
+}
+.infos_userinfo DD .useract {
+	PADDING-LEFT: 4px; FLOAT: left; OVERFLOW: hidden; WIDTH: 140px; HEIGHT: =
+44px
+}
+.infos_userinfo DD .useract-pm {
+	FLOAT: left; OVERFLOW: hidden; WIDTH: 70px; LINE-HEIGHT: 19px; HEIGHT: =
+19px
+}
+.infos_userinfo DD .useract-af {
+	FLOAT: left; OVERFLOW: hidden; WIDTH: 70px; LINE-HEIGHT: 19px; HEIGHT: =
+19px
+}
+.infos_userinfo DD .useract-vi {
+	CLEAR: both; DISPLAY: block; OVERFLOW: hidden; COLOR: #666; =
+LINE-HEIGHT: 19px; HEIGHT: 19px
+}
+.infos_userinfo DD .userinfo-sp {
+	CLEAR: both; DISPLAY: block; PADDING-LEFT: 10px; LINE-HEIGHT: 25px; =
+HEIGHT: 25px
+}
+.infos_userinfo DD .userinfo-sp SMALL {
+	FONT-SIZE: 12px; COLOR: #aaa; MARGIN-RIGHT: 5px
+}
+.infos_search DD {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 8px; PADDING-BOTTOM: 12px; =
+PADDING-TOP: 4px
+}
+.infos_search DD SELECT {
+	MARGIN-TOP: 8px; MARGIN-LEFT: 4px
+}
+.infos_search DD INPUT {
+	MARGIN-TOP: 8px; MARGIN-LEFT: 4px
+}
+.infos_search DD BUTTON {
+	MARGIN-TOP: 8px; MARGIN-LEFT: 4px
+}
+.infos_search DD SELECT {
+	FONT-SIZE: 14px
+}
+.tags_list DD {
+	PADDING-RIGHT: 12px; PADDING-LEFT: 12px; PADDING-BOTTOM: 4px; =
+LINE-HEIGHT: 220%; PADDING-TOP: 4px
+}
+.tags_list DD A {
+	MARGIN-RIGHT: 10px; WHITE-SPACE: nowrap
+}
+.tagc1 {
+	FONT-SIZE: 12px; COLOR: #666
+}
+.tagc2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #555
+}
+.sp-title {
+	PADDING-RIGHT: 12px; BORDER-TOP: #eee 1px solid; PADDING-LEFT: 12px; =
+BACKGROUND: #fafafa; MARGIN-BOTTOM: 8px; PADDING-BOTTOM: 4px; COLOR: =
+#888; PADDING-TOP: 4px; BORDER-BOTTOM: #eee 1px solid
+}
+.sp-title H2 {
+	FONT-SIZE: 16px; LINE-HEIGHT: 27px
+}
+.sp-title H2 A {
+	MARGIN-LEFT: 6px
+}
+.sp-title .more {
+	FLOAT: right; MARGIN: -27px 0px; LINE-HEIGHT: 27px
+}
+.linkbox {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; PADDING-BOTTOM: 10px; =
+PADDING-TOP: 10px; BORDER-BOTTOM: #eee 1px solid
+}
+.linkbox H3 {
+	FONT-SIZE: 14px; COLOR: #693
+}
+.linkbox H3 A {
+	FONT-SIZE: 14px; COLOR: #693
+}
+.buycar {
+=09
+}
+.buycar H2 {
+	FONT-SIZE: 14px; COLOR: #f60; LINE-HEIGHT: 31px
+}
+.buycar .flow {
+	BORDER-RIGHT: #dee79e 1px solid; BORDER-TOP: #dee79e 1px solid; =
+MARGIN-BOTTOM: 16px; BORDER-LEFT: #dee79e 1px solid; WIDTH: 100%
+}
+.buycar .flow TD {
+	BORDER-RIGHT: #eff3cf 1px solid; BORDER-TOP: #fff 3px solid; =
+BACKGROUND: #f8faeb; OVERFLOW: hidden; COLOR: #888; LINE-HEIGHT: 19px; =
+BORDER-BOTTOM: #eff3cf 1px solid; LETTER-SPACING: 3px; HEIGHT: 23px; =
+TEXT-ALIGN: center
+}
+.buycar .flow TD.thisclass {
+	BORDER-TOP: #f8faeb 3px solid; FONT-WEIGHT: bold; BACKGROUND: #fff; =
+COLOR: #333; BORDER-BOTTOM: #fff 1px solid
+}
+.flinkbox {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 4px; =
+PADDING-TOP: 4px
+}
+.formbox {
+	MARGIN: 0px auto; WIDTH: 90%
+}
+.formbox .fb {
+	CLEAR: both; MARGIN: 0px auto; OVERFLOW: hidden; WIDTH: 100%; =
+PADDING-TOP: 10px
+}
+.formbox .fb .name {
+	PADDING-RIGHT: 10px; DISPLAY: block; FONT-SIZE: 14px; FLOAT: left; =
+WIDTH: 180px; COLOR: #666; LINE-HEIGHT: 31px; HEIGHT: 31px; TEXT-ALIGN: =
+right
+}
+.formbox .fb .value {
+	FLOAT: left
+}
+.formbox .fb .value IMG {
+	VERTICAL-ALIGN: middle
+}
+.dede_comment {
+	PADDING-BOTTOM: 6px
+}
+.dede_comment .decmt-box {
+	CLEAR: both; PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: =
+8px; MARGIN: 0px auto; OVERFLOW: hidden; WIDTH: 98%; PADDING-TOP: 6px; =
+BORDER-BOTTOM: #e5e5e5 1px solid
+}
+.dede_comment .decmt-box .decmt-title {
+	COLOR: #999; LINE-HEIGHT: 19px; FONT-FAMILY: Tahoma
+}
+.dede_comment .decmt-box .decmt-title SPAN {
+	VERTICAL-ALIGN: middle; MARGIN-RIGHT: 2px
+}
+.dede_comment .decmt-box .decmt-title .moodico {
+	DISPLAY: inline-block; WIDTH: 18px; HEIGHT: 18px
+}
+.dede_comment .decmt-box .decmt-title .username {
+	COLOR: #669
+}
+.dede_comment .decmt-box .decmt-title .username A {
+	COLOR: #669
+}
+.dede_comment .decmt-box .decmt-title .username A:hover {
+	COLOR: #690; TEXT-DECORATION: none
+}
+.dede_comment .decmt-box .decmt-title .ip {
+	FONT-SIZE: 11px; COLOR: #669
+}
+.dede_comment .decmt-box .decmt-title .date {
+	FONT-SIZE: 11px; COLOR: #555
+}
+.dede_comment .decmt-box .decmt-act {
+	CLEAR: both; PADDING-RIGHT: 10px; MARGIN-TOP: -18px; FLOAT: right; =
+COLOR: #999; POSITION: relative
+}
+.dede_comment .decmt-box .decmt-act SPAN {
+	MARGIN-RIGHT: 7px
+}
+.dede_comment .decmt-box .decmt-act SPAN A {
+	COLOR: #888
+}
+.dede_comment .decmt-box .decmt-content {
+	CLEAR: both; MARGIN: 2px auto 0px; WIDTH: 99%; COLOR: #555; =
+LINE-HEIGHT: 21px
+}
+.dede_comment .decmt-box .decmt-content IMG {
+	VERTICAL-ALIGN: middle
+}
+.dede_comment .decmt-box .decmt-box {
+	BORDER-RIGHT: #ccc 1px solid; BORDER-TOP: #ccc 1px solid; BACKGROUND: =
+#ffe; MARGIN: 6px auto; BORDER-LEFT: #ccc 1px solid; BORDER-BOTTOM: #ccc =
+1px solid
+}
+.dede_comment .decmt-box .decmt-box .decmt-title {
+	TEXT-INDENT: 4px
+}
+.dede_comment .decmt-box .decmt-box .decmt-content {
+	COLOR: #555
+}
+.nocomment {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; COLOR: =
+#666; PADDING-TOP: 10px
+}
+.dede_comment_post {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; =
+PADDING-TOP: 5px
+}
+.dcmp-title {
+	LINE-HEIGHT: 25px
+}
+.dcmp-title STRONG {
+	FONT-WEIGHT: normal; COLOR: #444
+}
+.dcmp-title SMALL {
+	FONT-SIZE: 12px; COLOR: #999999
+}
+.dcmp-stand {
+	CLEAR: both; PADDING-RIGHT: 10px; MARGIN-TOP: -18px; FLOAT: right; =
+COLOR: #999; POSITION: relative
+}
+.dcmp-stand STRONG {
+	FONT-WEIGHT: normal; COLOR: #444
+}
+.dcmp-stand INPUT {
+	MARGIN-RIGHT: 2px
+}
+.dcmp-stand IMG {
+	VERTICAL-ALIGN: middle; MARGIN-RIGHT: 2px
+}
+.dcmp-content {
+	PADDING-TOP: 8px
+}
+.dcmp-content TEXTAREA {
+	WIDTH: 96%; HEIGHT: 60px
+}
+.dcmp-mood {
+	CLEAR: both; OVERFLOW: hidden; WIDTH: 80%; PADDING-TOP: 12px; HEIGHT: =
+25px
+}
+.dcmp-mood STRONG {
+	FONT-WEIGHT: normal; FLOAT: left; COLOR: #444; LINE-HEIGHT: 25px
+}
+.dcmp-mood UL {
+	FLOAT: left
+}
+.dcmp-mood UL LI {
+	FLOAT: left; MARGIN-RIGHT: 8px
+}
+.dcmp-mood UL LI INPUT {
+	VERTICAL-ALIGN: middle; MARGIN-RIGHT: 0px
+}
+.dcmp-mood UL LI IMG {
+	VERTICAL-ALIGN: middle; MARGIN-RIGHT: 0px
+}
+.dcmp-post {
+	CLEAR: both; OVERFLOW: hidden; COLOR: #444; HEIGHT: 35px
+}
+.dcmp-post .dcmp-userinfo {
+	FLOAT: left; MARGIN-RIGHT: 6px
+}
+.dcmp-post .dcmp-userinfo INPUT {
+	PADDING-RIGHT: 0px; HEIGHT: 13px
+}
+.dcmp-post .dcmp-userinfo INPUT {
+	MARGIN: 5px; VERTICAL-ALIGN: middle
+}
+.dcmp-post .dcmp-userinfo IMG {
+	MARGIN: 5px; VERTICAL-ALIGN: middle
+}
+.dcmp-post .dcmp-submit {
+	FLOAT: left; PADDING-TOP: 6px
+}
+.dcmp-post .dcmp-submit INPUT {
+	VERTICAL-ALIGN: middle
+}
+.dcmp-post .dcmp-submit BUTTON {
+	VERTICAL-ALIGN: middle
+}
+.dcmp-post .dcmp-submit BUTTON {
+	BACKGROUND: url(images/btn-bg2.gif) no-repeat; MARGIN-LEFT: 5px; =
+OVERFLOW: hidden; WIDTH: 70px; CURSOR: pointer; COLOR: #444; =
+BORDER-TOP-STYLE: none; LINE-HEIGHT: 25px; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; LETTER-SPACING: 1px; HEIGHT: 25px; =
+BORDER-BOTTOM-STYLE: none
+}
+PRE {
+	FONT-SIZE: 12px; BACKGROUND: #f7f7f7; MARGIN: 0px 0px 1em; OVERFLOW: =
+auto; WIDTH: 99%; FONT-FAMILY: 'Courier New' , Monospace
+}
+PRE OL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+PRE OL LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+PRE OL LI SPAN {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+PRE A {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: none transparent =
+scroll repeat 0% 0%; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-TOP-STYLE: =
+none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: =
+none; BORDER-BOTTOM-STYLE: none
+}
+PRE A:hover {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: none transparent =
+scroll repeat 0% 0%; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-TOP-STYLE: =
+none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: =
+none; BORDER-BOTTOM-STYLE: none
+}
+PRE OL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: #f7f7f7; =
+PADDING-BOTTOM: 5px; MARGIN: 0px 0px 1px 3em; BORDER-LEFT: #146b00 3px =
+solid; COLOR: #5c5c5c; PADDING-TOP: 5px; LIST-STYLE-TYPE: decimal
+}
+PRE OL LI {
+	PADDING-RIGHT: 3px! important; PADDING-LEFT: 10px! important; =
+LIST-STYLE-POSITION: outside! important; PADDING-BOTTOM: 0px! important; =
+MARGIN: 0px; COLOR: #5c5c5c; LINE-HEIGHT: 1.3em; PADDING-TOP: 0px! =
+important
+}
+PRE OL LI.alt {
+=09
+}
+PRE OL LI SPAN {
+	COLOR: black
+}
+PRE .comment {
+	COLOR: #008200
+}
+PRE .comments {
+	COLOR: #008200
+}
+PRE .string {
+	COLOR: blue
+}
+PRE .keyword {
+	FONT-WEIGHT: bold; COLOR: #069
+}
+PRE .preprocessor {
+	COLOR: gray
+}
+PRE .dp-xml .cdata {
+	COLOR: #ff1493
+}
+PRE .dp-xml .tag {
+	FONT-WEIGHT: bold; COLOR: #069
+}
+PRE .dp-xml .tag-name {
+	FONT-WEIGHT: bold; COLOR: #069
+}
+PRE .dp-xml .attribute {
+	COLOR: red
+}
+PRE .dp-xml .attribute-value {
+	COLOR: blue
+}
+PRE .dp-sql .func {
+	COLOR: #ff1493
+}
+PRE .dp-sql .op {
+	COLOR: #808080
+}
+PRE .dp-rb .symbol {
+	COLOR: #a70
+}
+PRE .dp-rb .variable {
+	FONT-WEIGHT: bold; COLOR: #a70
+}
+PRE .dp-py .builtins {
+	COLOR: #ff1493
+}
+PRE .dp-py .magicmethods {
+	COLOR: #808080
+}
+PRE .dp-py .exceptions {
+	COLOR: brown
+}
+PRE .dp-py .types {
+	COLOR: brown; FONT-STYLE: italic
+}
+PRE .dp-py .commonlibs {
+	COLOR: #8a2be2; FONT-STYLE: italic
+}
+PRE .dp-j .annotation {
+	COLOR: #646464
+}
+PRE .dp-j .number {
+	COLOR: #c00000
+}
+PRE .dp-delphi .number {
+	COLOR: blue
+}
+PRE .dp-delphi .directive {
+	COLOR: #008284
+}
+PRE .dp-delphi .vars {
+	COLOR: #000
+}
+PRE .dp-css .value {
+	COLOR: black
+}
+PRE .dp-css .important {
+	COLOR: red
+}
+PRE .dp-c .vars {
+	COLOR: #d00
+}
+PRE .dp-cpp .datatypes {
+	FONT-WEIGHT: bold; COLOR: #2e8b57
+}
+#commetpages {
+	LINE-HEIGHT: 28px; TEXT-ALIGN: center
+}
+#commetpages A {
+	BORDER-RIGHT: #64b1df 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: =
+#64b1df 1px solid; PADDING-LEFT: 3px; PADDING-BOTTOM: 0px; BORDER-LEFT: =
+#64b1df 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #64b1df 1px solid
+}
+.comment {
+	BORDER-RIGHT: #ddd 1px solid; BORDER-TOP: #ddd 1px solid; BACKGROUND: =
+#f7fcfe; MARGIN: 10px 0px; BORDER-LEFT: #ddd 1px solid; WIDTH: 615px; =
+BORDER-BOTTOM: #ddd 1px solid
+}
+.comment .title1 {
+	BACKGROUND: #f7fcfe; COLOR: #000; LINE-HEIGHT: 30px; BORDER-BOTTOM: =
+#ddd 1px solid; HEIGHT: 30px
+}
+.comment .title1 H3 {
+	PADDING-LEFT: 32px; FONT-SIZE: 14px; BACKGROUND: url(images/ico.gif) =
+no-repeat -470px -225px
+}
+.comment .title1 .count {
+	FLOAT: right; MARGIN-RIGHT: 10px
+}
+.comment-con TEXTAREA {
+	BORDER-RIGHT: #99bbdd 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: =
+#99bbdd 1px solid; PADDING-LEFT: 5px; FONT-SIZE: 12px; BACKGROUND: =
+url(images/combg.gif) #fff no-repeat 200px 30px; PADDING-BOTTOM: 5px; =
+MARGIN: 8px 0px 0px 20px; BORDER-LEFT: #99bbdd 1px solid; WIDTH: 560px; =
+PADDING-TOP: 5px; BORDER-BOTTOM: #99bbdd 1px solid
+}
+.checker {
+	MARGIN: 8px 0px 10px 20px; WIDTH: 595px; LINE-HEIGHT: 20px; HEIGHT: =
+20px
+}
+.checker INPUT {
+	BORDER-RIGHT: #ddd 1px solid; BORDER-TOP: #ddd 1px solid; MARGIN: 1px =
+0px 0px; BORDER-LEFT: #ddd 1px solid; WIDTH: 50px; COLOR: #9b9b9b; =
+LINE-HEIGHT: 19px; BORDER-BOTTOM: #ddd 1px solid; HEIGHT: 19px
+}
+.checker INPUT.pub {
+	BACKGROUND: url(images/ico.gif) no-repeat -440px -255px; WIDTH: 60px; =
+BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: =
+none; HEIGHT: 21px; BORDER-BOTTOM-STYLE: none
+}
+.checker INPUT.reset {
+	BACKGROUND: url(images/ico.gif) no-repeat -456px -282px; WIDTH: 45px; =
+BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: =
+none; HEIGHT: 21px; BORDER-BOTTOM-STYLE: none
+}
+.checker IMG {
+	MARGIN-TOP: 3px
+}
+#pages {
+	CLEAR: both; MARGIN: 15px auto; TEXT-ALIGN: center
+}
+#pages A {
+	BORDER-RIGHT: #b9dff9 1px solid; PADDING-RIGHT: 6px; BORDER-TOP: =
+#b9dff9 1px solid; PADDING-LEFT: 6px; PADDING-BOTTOM: 3px; MARGIN: 4px; =
+BORDER-LEFT: #b9dff9 1px solid; COLOR: #077ac7; PADDING-TOP: 5px; =
+BORDER-BOTTOM: #b9dff9 1px solid; TEXT-ALIGN: center; TEXT-DECORATION: =
+none
+}
+#pages A.now {
+	BORDER-RIGHT: #b9dff9 1px solid; PADDING-RIGHT: 6px; BORDER-TOP: =
+#b9dff9 1px solid; PADDING-LEFT: 6px; BACKGROUND: #077ac7; =
+PADDING-BOTTOM: 3px; BORDER-LEFT: #b9dff9 1px solid; COLOR: #fff; =
+PADDING-TOP: 5px; BORDER-BOTTOM: #b9dff9 1px solid; TEXT-DECORATION: =
+none
+}
+#pages A:hover {
+	BACKGROUND: #077ac7; COLOR: #fff
+}
+.tools {
+	CLEAR: both; BORDER-RIGHT: #ddd 1px solid; BORDER-TOP: #ddd 1px solid; =
+PADDING-LEFT: 10px; BACKGROUND: #f9f9f9; MARGIN: 10px auto; BORDER-LEFT: =
+#ddd 1px solid; WIDTH: 650px; COLOR: #666; LINE-HEIGHT: 28px; =
+BORDER-BOTTOM: #ddd 1px solid; HEIGHT: 28px
+}
+.tools .left {
+	OVERFLOW: hidden; WIDTH: 255px; HEIGHT: 28px
+}
+.tools A {
+	PADDING-RIGHT: 5px
+}
+.f-l {
+	FLOAT: left
+}
+.f-r {
+	FLOAT: right
+}
+
+------=_NextPart_000_00B4_01CB602B.8E524E50
+Content-Type: text/css;
+	charset="gb2312"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://edu.codepub.com/templates/dede/skins/default/dedecms.css
+
+@import url( layout.css );
+@import url( page.css );
+* {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+HTML {
+	BACKGROUND: #fff
+}
+BODY {
+	FONT: 12px Verdana,Arial,Tahoma
+}
+IMG {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: =
+none; BORDER-BOTTOM-STYLE: none
+}
+A {
+	COLOR: #256eb1; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #f33; TEXT-DECORATION: underline
+}
+UL {
+	LIST-STYLE-TYPE: none
+}
+INPUT {
+	FONT: 12px Verdana,Arial,Tahoma; VERTICAL-ALIGN: middle
+}
+SELECT {
+	FONT: 12px Verdana,Arial,Tahoma; VERTICAL-ALIGN: middle
+}
+BUTTON {
+	FONT: 12px Verdana,Arial,Tahoma; VERTICAL-ALIGN: middle
+}
+.center {
+	MARGIN: 0px auto
+}
+.w960 {
+	WIDTH: 960px
+}
+.pright .infos_userinfo {
+	MARGIN-BOTTOM: 0px
+}
+.mt1 {
+	MARGIN-TOP: 8px
+}
+.pright .mt1 {
+	MARGIN-TOP: 0px
+}
+.mt2 {
+	MARGIN-TOP: 16px
+}
+.clear {
+	OVERFLOW: hidden
+}
+.fs-12 {
+	FONT-SIZE: 12px
+}
+.fc-f60 {
+	COLOR: #f60
+}
+.fc-f90 {
+	COLOR: #f90
+}
+.ipt-txt {
+	BORDER-RIGHT: #bbb 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #666 1px =
+solid; PADDING-LEFT: 5px; FONT-SIZE: 12px; PADDING-BOTTOM: 4px; =
+BORDER-LEFT: #666 1px solid; LINE-HEIGHT: 15px; MARGIN-RIGHT: 2px; =
+PADDING-TOP: 4px; BORDER-BOTTOM: #bbb 1px solid
+}
+.btn-1 {
+	BACKGROUND: url(images/btn-bg1.gif) no-repeat; OVERFLOW: hidden; WIDTH: =
+56px; CURSOR: pointer; COLOR: #2f592e; BORDER-TOP-STYLE: none; =
+LINE-HEIGHT: 25px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; =
+LETTER-SPACING: 1px; HEIGHT: 23px; BORDER-BOTTOM-STYLE: none
+}
+.btn-2 {
+	BACKGROUND: url(images/btn-bg2.gif) no-repeat left top; OVERFLOW: =
+hidden; WIDTH: 70px; COLOR: #444; BORDER-TOP-STYLE: none; LINE-HEIGHT: =
+25px; MARGIN-RIGHT: 2px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: =
+none; HEIGHT: 25px; BORDER-BOTTOM-STYLE: none
+}
+.header {
+	MARGIN: auto; OVERFLOW: hidden; WIDTH: 960px; PADDING-TOP: 16px
+}
+.header .search {
+	MARGIN-TOP: 5px
+}
+.header A {
+	COLOR: #777
+}
+.header A:hover {
+	COLOR: #390; TEXT-DECORATION: none
+}
+.header .top {
+	CLEAR: both; OVERFLOW: hidden
+}
+.header .title {
+	PADDING-LEFT: 16px; FLOAT: left
+}
+.header .title H1 A {
+	DISPLAY: block; FONT-SIZE: 0px; BACKGROUND: url(images/top-logo.gif) =
+no-repeat center center; OVERFLOW: hidden; WIDTH: 200px; TEXT-INDENT: =
+-200px; HEIGHT: 60px
+}
+.header .banner {
+	FLOAT: left; MARGIN-LEFT: 40px; OVERFLOW: hidden; WIDTH: 480px; HEIGHT: =
+60px
+}
+.header .banner IMG {
+	DISPLAY: block; WIDTH: 480px; HEIGHT: 60px
+}
+.header .rlink {
+	FLOAT: left; MARGIN-LEFT: 32px; OVERFLOW: hidden; WIDTH: 172px; =
+PADDING-TOP: 4px; HEIGHT: 60px
+}
+.header .rlink UL LI {
+	BACKGROUND: url(images/toprlink-bg.gif) no-repeat left top; FLOAT: =
+left; MARGIN-BOTTOM: 8px; OVERFLOW: hidden; WIDTH: 78px; MARGIN-RIGHT: =
+8px; HEIGHT: 21px
+}
+.header .rlink UL LI A {
+	DISPLAY: block; BACKGROUND-IMAGE: url(images/toprlink-bg.gif); COLOR: =
+#777; TEXT-INDENT: 22px; LINE-HEIGHT: 21px; BACKGROUND-REPEAT: no-repeat
+}
+.header .rlink UL LI A:hover {
+	COLOR: #000
+}
+.header .rlink UL LI.r1 A {
+	BACKGROUND-POSITION: 0px -21px
+}
+.header .rlink UL LI.r2 A {
+	BACKGROUND-POSITION: 0px -42px
+}
+.header .rlink UL LI.r3 A {
+	BACKGROUND-POSITION: 0px -63px
+}
+.header .rlink UL LI.r4 A {
+	BACKGROUND-POSITION: 0px -84px
+}
+.header .welcome {
+	PADDING-RIGHT: 10px; MARGIN-TOP: 20px; FLOAT: right; COLOR: #999
+}
+.header .welcome A {
+	MARGIN: 0px 3px
+}
+.header .nav {
+=09
+}
+.module {
+	OVERFLOW: hidden
+}
+.module .mid {
+	OVERFLOW: hidden
+}
+.module .top .t_l {
+	FLOAT: left; OVERFLOW: hidden
+}
+.module .bottom .b_l {
+	FLOAT: left; OVERFLOW: hidden
+}
+.module .top .t_r {
+	FLOAT: right; OVERFLOW: hidden
+}
+.module .bottom .b_r {
+	FLOAT: right; OVERFLOW: hidden
+}
+.module .top EM {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px; FLOAT: left; MARGIN-LEFT: 5px; =
+FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.module .top EM A:link {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px
+}
+.module .top EM A:visited {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px
+}
+.module .top SPAN {
+	FLOAT: right
+}
+.module .top STRONG {
+	FONT-WEIGHT: normal; FLOAT: right; CURSOR: pointer; MARGIN-RIGHT: 4px
+}
+.module .mid .m_l {
+	OVERFLOW: hidden
+}
+.module .mid .m_r {
+	OVERFLOW: hidden
+}
+.module .mid .content {
+	CLEAR: both; MARGIN-LEFT: 8px; OVERFLOW: hidden; MARGIN-RIGHT: 8px; =
+PADDING-TOP: 8px; HEIGHT: 100%
+}
+.module .top {
+	BACKGROUND-IMAGE: url(images/header_bg.png)
+}
+.module .top .t_l {
+	BACKGROUND-IMAGE: url(images/header_bg.png)
+}
+.module .top .t_r {
+	BACKGROUND-IMAGE: url(images/header_bg.png)
+}
+.module .bottom {
+	BACKGROUND-IMAGE: url(images/header_bg.png)
+}
+.module .bottom .b_l {
+	BACKGROUND-IMAGE: url(images/header_bg.png)
+}
+.module .bottom .b_r {
+	BACKGROUND-IMAGE: url(images/header_bg.png)
+}
+.blue .top {
+	BACKGROUND-POSITION: 0px -87px; BACKGROUND-REPEAT: repeat-x; HEIGHT: =
+77px
+}
+.blue .top .t_l {
+	BACKGROUND-POSITION: -13px 0px; WIDTH: 7px; BACKGROUND-REPEAT: =
+no-repeat; HEIGHT: 77px
+}
+.blue .top .t_r {
+	BACKGROUND-POSITION: 0px 0px; WIDTH: 10px; BACKGROUND-REPEAT: =
+no-repeat; HEIGHT: 77px
+}
+.w963 {
+	MARGIN-TOP: 8px; MARGIN-BOTTOM: 0px; WIDTH: 963px
+}
+#navMenu {
+	OVERFLOW: hidden; WIDTH: 940px
+}
+#navMenu LI {
+	BACKGROUND-POSITION: 0px center; FLOAT: left; BACKGROUND-IMAGE: =
+url(images/header_interval.png); MARGIN-LEFT: -2px; LINE-HEIGHT: 34px; =
+BACKGROUND-REPEAT: no-repeat; HEIGHT: 34px
+}
+#navMenu LI A {
+	PADDING-RIGHT: 1em; DISPLAY: block; PADDING-LEFT: 1em; FONT-SIZE: 14px; =
+MARGIN-LEFT: 2px; COLOR: #fff
+}
+#navMenu LI A:hover {
+	BACKGROUND-POSITION: center top; BACKGROUND-IMAGE: =
+url(images/header_hover.png); BACKGROUND-REPEAT: no-repeat; =
+TEXT-DECORATION: none
+}
+#navMenu LI.hover A {
+	BACKGROUND-POSITION: center top; BACKGROUND-IMAGE: =
+url(images/header_hover.png); BACKGROUND-REPEAT: no-repeat; =
+TEXT-DECORATION: none
+}
+.dropMenu {
+	BORDER-RIGHT: #93e1eb 1px solid; BORDER-TOP: #3ca2dc 0px solid; =
+MARGIN-TOP: -1px; Z-INDEX: 100; BACKGROUND: url(images/mmenubg.gif); =
+FILTER: progid:DXImageTransform.Microsoft.Shadow(color=3D#CACACA, =
+direction=3D135, strength=3D4); VISIBILITY: hidden; PADDING-BOTTOM: 6px; =
+BORDER-LEFT: #93e1eb 1px solid; WIDTH: 120px; PADDING-TOP: 6px; =
+BORDER-BOTTOM: #93e1eb 1px solid; POSITION: absolute; TOP: 0px
+}
+.dropMenu LI {
+	MARGIN-TOP: 2px; PADDING-LEFT: 6px; MARGIN-BOTTOM: 4px
+}
+.dropMenu A {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 1.2em; =
+PADDING-BOTTOM: 2px; WIDTH: auto; COLOR: black; PADDING-TOP: 2px
+}
+* HTML .dropMenu A {
+	WIDTH: 100%
+}
+.dropMenu A:hover {
+	COLOR: red; TEXT-DECORATION: underline
+}
+.search-keyword {
+	BORDER-TOP-WIDTH: 0px; PADDING-LEFT: 56px; BORDER-LEFT-WIDTH: 0px; =
+BACKGROUND: url(images/search-bg.gif) no-repeat; BORDER-BOTTOM-WIDTH: =
+0px; WIDTH: 160px; PADDING-TOP: 5px; HEIGHT: 19px; BORDER-RIGHT-WIDTH: =
+0px
+}
+.search-submit {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 0px; =
+BACKGROUND: url(images/search-bt.gif) no-repeat; BORDER-BOTTOM-WIDTH: =
+0px; WIDTH: 68px; CURSOR: pointer; COLOR: #fafafa; HEIGHT: 22px; =
+BORDER-RIGHT-WIDTH: 0px
+}
+.search-option {
+	MARGIN-LEFT: 3px; MARGIN-RIGHT: 3px; HEIGHT: 22px
+}
+.w963 .search {
+	PADDING-LEFT: 10px; LINE-HEIGHT: 32px
+}
+.w963 .form H4 {
+	DISPLAY: none
+}
+.w963 .form {
+	FLOAT: left; MARGIN-RIGHT: 10px
+}
+.w963 .tags {
+	OVERFLOW: hidden; WIDTH: 500px
+}
+.w963 .tags H4 {
+	FONT-SIZE: 0px; BACKGROUND: url(images/search-tags-title.gif) no-repeat =
+0px 6px; FLOAT: left; WIDTH: 66px; COLOR: #fafafa; MARGIN-RIGHT: 6px; =
+HEIGHT: 26px
+}
+.w963 .tags LI {
+	FLOAT: left; MARGIN-RIGHT: 6px
+}
+.header .nav .end {
+=09
+}
+.channel-nav {
+	BORDER-RIGHT: #d5ecfb 1px solid; BORDER-TOP: #d5ecfb 1px solid; =
+MARGIN-TOP: 8px; PADDING-LEFT: 6px; BACKGROUND: url(images/navbg.gif) =
+repeat-x; OVERFLOW: hidden; BORDER-LEFT: #d5ecfb 1px solid; WIDTH: =
+950px; BORDER-BOTTOM: #d5ecfb 1px solid
+}
+.channel-nav .sonnav {
+	FLOAT: left; WIDTH: 830px; LINE-HEIGHT: 26px; PADDING-TOP: 2px
+}
+.channel-nav .sonnav SPAN {
+	PADDING-LEFT: 14px; BACKGROUND: url(images/dd2.gif) no-repeat 0px 1px; =
+OVERFLOW: hidden; MARGIN-RIGHT: 8px
+}
+.channel-nav .sonnav A {
+	COLOR: #333; TEXT-DECORATION: none
+}
+.channel-nav .back {
+	PADDING-RIGHT: 10px; DISPLAY: block; PADDING-LEFT: 20px; BACKGROUND: =
+url(images/ico-home.gif) no-repeat 4px 10px; FLOAT: right; LINE-HEIGHT: =
+21px; PADDING-TOP: 6px; LETTER-SPACING: 2px; HEIGHT: 22px
+}
+.channel-nav .back A {
+	COLOR: #397cbe
+}
+.channel-nav .back A:hover {
+	COLOR: #777; TEXT-DECORATION: none
+}
+.footer {
+	BORDER-TOP: #e5efd6 1px solid; PADDING-BOTTOM: 10px; MARGIN: 8px auto =
+auto; WIDTH: 960px; COLOR: #999; PADDING-TOP: 10px; TEXT-ALIGN: center
+}
+.footer .link {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 5px; =
+PADDING-TOP: 5px; TEXT-ALIGN: center
+}
+.footer .link A {
+	MARGIN: 0px 5px; COLOR: #666666
+}
+.footer .powered {
+	FONT-SIZE: 10px; LINE-HEIGHT: 25px
+}
+.footer .powered STRONG {
+	COLOR: #690
+}
+.footer .powered STRONG SPAN {
+	COLOR: #f93
+}
+.footer .copyright {
+	COLOR: #666666; LINE-HEIGHT: 23px
+}
+
+------=_NextPart_000_00B4_01CB602B.8E524E50
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://cbjs.baidu.com/js/s.js
+
+(function(){var L=3D"SINGLE";var =
+P=3D"http://cb.baidu.com/ecom",c=3D"http://drmcmm.baidu.com/js/img/close.=
+gif",K=3D"http://cpro.baidu.com/cpro/ui/cc.js";CF_URL=3D"http://cpro.baid=
+u.com/cpro/ui/cf.js";function z(Q){return =
+window.encodeURIComponent?encodeURIComponent(Q):escape(Q)}function =
+p(R,T,S,V,U){var Q=3Dnew =
+Date();U&&(Q.setTime(Q.getTime()+U));document.cookie=3DR+"=3D"+escape(T)+=
+(U?";expires=3D"+Q.toGMTString():"")+(S?";domain=3D"+escape(S):"")+(V?";p=
+ath=3D"+escape(V):"")}function i(R){var S=3Dnew RegExp("(^| =
+)"+R+"=3D([^;]*)(;|$)"),Q=3DS.exec(document.cookie);if(Q){return =
+unescape(Q[2]||"")}return""}function =
+y(S){S=3DS||document.domain;if(S.indexOf("www.")=3D=3D=3D0){S=3DS.substr(=
+4)}var =
+R=3D/([a-z0-9][a-z0-9\-]*?\.(?:com|cn|net|org|gov|info|la|cc|co|jp)(?:\.(=
+?:cn|jp))?)$/,Q=3DS.match(R);if(Q){return Q[0]}return S}function =
+F(){return window.screen.width}function v(){return =
+window.screen.height}function h(){return =
+window.screen.availWidth}function O(){return =
+window.screen.availHeight}function C(){return =
+window.screen.colorDepth}function B(){return(new =
+Date(document.lastModified)).getTime()}function l(){var =
+Q=3Dnavigator;return(Q.language||Q.browserLanguage)}function M(){return =
+navigator.javaEnabled()?1:0}function m(){var =
+S,R,Q,T=3Dnavigator;if(T.plugins&&T.mimeTypes.length){Q=3DT.plugins["Shoc=
+kwave Flash"];if(Q&&Q.description){return =
+Q.description.replace(/([a-zA-Z]|\s)+/,"").replace(/(\s)+r/,".")}}else{if=
+(T.userAgent&&T.userAgent.indexOf("Windows =
+CE")>=3D0){R=3D3;S=3D1;while(S){try{S=3Dnew =
+ActiveXObject("ShockwaveFlash.ShockwaveFlash."+(R+1));R++}catch(U){break}=
+}return R.toString()}else{if(k()){try{S=3Dnew =
+ActiveXObject("ShockwaveFlash.ShockwaveFlash.7")}catch(U){var =
+R=3D0;try{S=3Dnew =
+ActiveXObject("ShockwaveFlash.ShockwaveFlash.6");R=3D6;S.AllowScriptAcces=
+s=3D"always"}catch(U){if(R=3D=3D6){return R.toString()}}try{S=3Dnew =
+ActiveXObject("ShockwaveFlash,ShockwaveFlash")}catch(U){}}if(S){return =
+S.GetVariable("$version").split(" =
+")[1].replace(/,/g,".")}}}}return"0"}function A(){var =
+R=3Ddocument.referrer,U=3DR.replace(/^http:\/\//,""),T=3DU.indexOf("/");i=
+f(T!=3D-1){U=3DU.substr(0,T)}U=3DU.replace(/:\d+$/,"");U=3Dy(U);var =
+Q=3Dy(),S=3Di("BAIDU_CLB_REFER");if(Q=3D=3DU&&S!=3D""){return =
+z(S)}else{if(Q!=3DU){p("BAIDU_CLB_REFER",R,Q);return =
+z(R)}}return""}function a(){return z(document.URL)}function G(S,R){var =
+Q=3D"di=3D"+S+(R?"&fn=3D"+R:"")+"&tm=3DBAIDU_CLB_SETJSONADSLOT&mod_t=3D"+=
+B()+"&visi_t=3D"+(new =
+Date()).getTime()+"&flash_v=3D"+m()+"&java=3D"+M()+"&new=3D1";if(window.s=
+creen){Q+=3D"&screen_h=3D"+v()+"&screen_w=3D"+F()+"&page_h=3D"+O()+"&page=
+_w=3D"+h()+"&color=3D"+C()}Q+=3D"&asp_refer=3D"+A()+"&asp_url=3D"+a()+"&b=
+_lang=3D"+l()+"&baidu_id=3D"+i("BAIDUID");return P+"?"+Q}function =
+f(Q){return"baidu_clb_slot_"+Q}function =
+J(Q){return"baidu_clb_slot_iframe_"+Q}function x(R,Q){var =
+S;if(Q._isMlt=3D=3D2){S=3De}else{switch(Q._stype){case =
+0:S=3Ds;break;case 1:S=3Dr;break;default:S=3Dq}}S(R,Q)}function =
+e(S,Q){var U=3Dj(Q._html);var R=3DU?CF_URL:K;var =
+T=3Dwindow[U?"BAIDU_CLB_CPROFSLOT":"BAIDU_CLB_CPROCSLOT"];if(T){T(S,Q)}el=
+se{window.tempClbCproAdObj=3DQ;window.tempClbCproAdSlotId=3DS;document.wr=
+ite('<script type=3D"text/javascript" =
+src=3D"'+R+'"><\/script>')}}function j(S){var =
+W=3DS.split("|"),V=3Dfalse;for(var T=3D0,Q=3DW.length;T<Q;T++){var =
+U=3DW[T].split("=3D");if(U[0]=3D=3D"cpro_template"){var =
+R=3DU[1].split("_");if(R[1].indexOf("xuanfu")=3D=3D0){return true}return =
+V}}return V}function s(T,R){var =
+U=3DR._html,V=3DR._w,Q=3DR._h,S=3Df(T);if(!U&&!R._fxp){return}if(U&&R._is=
+Mlt){document.write(U)}else{if(k()){document.write('<div =
+id=3D"'+S+'">'+w(T,V,Q)+"</div>")}else{document.write('<div =
+id=3D"'+S+'"></div>');g(T,S,V,Q,R._html)}}}function =
+r(R,Q){if(Q._html=3D=3D""){return}if(window.attachEvent){window.attachEve=
+nt("onload",T);window.attachEvent("onresize",S);if(u()<7||o()){window.att=
+achEvent("onscroll",S)}}else{if(window.addEventListener){window.addEventL=
+istener("load",T,false);window.addEventListener("resize",S,false)}}functi=
+on T(){if(k()){N(R,Q)}else{E(R,Q)}var =
+U=3DQ._st;if(U>0){window.setTimeout(function(){var =
+V=3Ddocument.getElementById(f(R));if(V){V.parentNode.removeChild(V)}},U*1=
+000)}}function S(){d(R,Q)}}function q(T,aa){var =
+S=3Daa._h,R=3Daa._w,Z=3D0,ab=3D0,U=3Daa._html,V,Y,Q,W=3D"newwindow"+T,X=3D=
+"about:blank";if(U=3D=3D""){return}if(k()&&document.domain!=3Dlocation.ho=
+stname){X=3D"javascript:void( (function(){var =
+d=3Ddocument;d.open();"+I()+"d.write('');d.close();})() =
+)"}if(aa._top=3D=3D1){Z=3Daa._hs}else{if(window.screen){Z=3DO()-aa._hs-S}=
+}if(aa._left=3D=3D1){ab=3Daa._vs}else{if(window.screen){ab=3Dh()-aa._vs-R=
+}}Q=3D"height=3D"+S+",width=3D"+R+",top=3D"+Z+",left=3D"+ab+",screenX=3D"=
++Z+",screenY=3D"+ab+",toolbar=3Dno,menubar=3Dno,scrollbars=3Dno,resizable=
+=3Dno,location=3Dno,status=3Dno";if(aa._bf||!k()){V=3Dwindow.open(X,W,Q);=
+if(V){Y=3DV.document;Y.open("text/html","replace");Y.write(U);Y.close();i=
+f(aa._st>0){window.setTimeout(function(){V&&(V.close())},aa._st*1000)}}}e=
+lse{if(window.attachEvent){window.attachEvent("onunload",function(){var =
+ac=3Dwindow.event;if((ac.clientY<0&&!ac.ctrlKey)||ac.altKey){var =
+ae=3Dwindow.open(X,W,Q);if(ae){var =
+ad=3Dae.document;ad.open("text/html","replace");ad.write(U);ae.focus()}}}=
+)}}}function d(U,aa){var =
+S=3Ddocument.getElementById(f(U));if(!S){return}var =
+R=3DS.style,W=3Daa._vs,V=3Daa._hs,Q=3Do(),Z=3Ddocument,X=3D(Q?document.bo=
+dy:document.documentElement),Y=3DZ.documentElement.scrollTop||Z.body.scro=
+llTop,T=3DZ.documentElement.scrollLeft||Z.body.scrollLeft;if(k()&&(u()<7|=
+|Q)){if(aa._sf){if(aa._top=3D=3D1){R.top=3D(Y+V)+"px"}else{if(u()<7){R.to=
+p=3D(Y+X.clientHeight-V-aa._h-17)+"px"}else{R.bottom=3DV-Y+"px"}}if(aa._l=
+eft=3D=3D1){R.left=3D(T+W)+"px"}else{R.right=3DW-T+"px"}}else{if(aa._top!=
+=3D1){R.top=3D(X.clientHeight-V-aa._h-17)+"px"}}}}function N(S,R){var =
+Q=3D"absolute",T=3Ddocument.createElement("div");if(R._sf){if(u()>6&&!o()=
+){Q=3D"fixed"}}T.id=3Df(S);T.style.position=3DQ;n(T,R);T.innerHTML=3Dw(S,=
+R._w,R._h)+H();document.body.appendChild(T)}function E(T,Q){var =
+S=3Df(T),Q=3Dwindow[t][T],U=3Ddocument.getElementById(S),R;if(!U){U=3Ddoc=
+ument.createElement("div");U.id=3DS}U.innerHTML=3DH();R=3DU.style;R.posit=
+ion=3DQ._sf?"fixed":"absolute";n(U,Q);document.body.appendChild(U);g(T,S,=
+Q._w,Q._h,Q._html)}function n(R,Q){var =
+S=3DR.style;S[(Q._left=3D=3D1?"left":"right")]=3DQ._vs+"px";S[(Q._top=3D=3D=
+1?"top":"bottom")]=3DQ._hs+"px";S.width=3DQ._w+"px";S.height=3D(Q._h-0+17=
+)+"px";S.border=3D"0";S.zIndex=3D"2147483647"}function g(S,U,R,Y,T){var =
+W=3DJ(S),Q=3Ddocument.getElementById(U),X=3Ddocument.createElement("ifram=
+e");X.id=3DW;X.name=3DW;X.width=3DR;X.height=3DY;X.vspace=3D0;X.hspace=3D=
+0;X.allowTransparency=3D"true";X.scrolling=3D"no";X.marginWidth=3D0;X.mar=
+ginHeight=3D0;X.frameBorder=3D0;X.style.border=3D0;X.style.display=3D"blo=
+ck";Q.insertBefore(X,Q.firstChild);var =
+V=3DX.contentWindow.document;V.write(T);window.setTimeout(function(){V.cl=
+ose()},0)}function w(R,S,Q){var T=3DJ(R);return'<iframe id=3D"'+T+'" =
+name=3D"'+T+'"  width=3D"'+S+'" height=3D"'+Q+'" vspace=3D"0" =
+hspace=3D"0" allowTransparency=3D"true" scrolling=3D"no" =
+marginwidth=3D"0" marginheight=3D"0" frameborder=3D"0" =
+style=3D"border:0px;vertical-align:bottom" =
+src=3D"javascript:void((function(){var =
+d=3Ddocument;d.open(\'text/html\', =
+\'replace\');'+I()+"d.write(parent."+t+"['"+R+"']._html);d.close()})())\"=
+></iframe>"}function H(){return'<div =
+style=3D"height:'+(k()&&o()?"17":"15")+"px;border:1px solid =
+#E1E1E1;background:#F0F0F0;padding:0;margin:0;"+(k()?"overflow:hidden;":"=
+")+'"><div style=3D"float:right;clear:right;margin:2px 5px 0 =
+0;width:39px;height:15px;cursor:pointer;background:transparent =
+url(\''+c+"') no-repeat scroll 0 0;"+(k()?"_display:inline;":"")+'" =
+onmouseover=3D"this.style.backgroundPosition=3D\'0 -20px\';" =
+onmouseout=3D"this.style.backgroundPosition=3D\'0 0\';" =
+onclick=3D"this.parentNode.parentNode.parentNode.removeChild(this.parentN=
+ode.parentNode);"></div></div>'}function =
+I(){if(document.domain!=3Dlocation.hostname){return"document.domain=3D'"+=
+document.domain+"';"}return""}function =
+k(){return/msie/i.test(navigator.userAgent)&&!window.opera}function =
+u(){var R=3Dnavigator.userAgent,Q=3DR.indexOf("MSIE ");return =
+Q=3D=3D-1?0:parseFloat(R.substring(Q+5,R.indexOf(";",Q)))}function =
+o(){return(document.compatMode=3D=3D"CSS1Compat"?false:true)}function =
+D(S){var R,T,U,Q;for(T in S){U=3DS[T];if(typeof =
+U!=3D"function"){R=3DT;Q=3DU}}window[t][R]=3DQ;x(R,Q)}var =
+t=3D"BAIDU_CLB_SLOTS_MAP";if(!window[t]){window[t]=3D{}}var =
+b=3D"BAIDU_CALB_SINGLE_SETJSONADSLOT";if(!window[b]){window[b]=3DD}if(!wi=
+ndow.BAIDU_CLB_singleFillSlot){window.BAIDU_CLB_singleFillSlot=3Dfunction=
+(Q){if(window[t][Q]){return}document.write('<script =
+type=3D"text/javascript" charset=3D"utf-8" =
+src=3D"'+G(Q,b)+'"><\/script>')}}})();
+------=_NextPart_000_00B4_01CB602B.8E524E50
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_001_00BF_01CB602B.8E524E50"
+
+
+------=_NextPart_001_00BF_01CB602B.8E524E50
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://edu.codepub.com/2009/0531/5052.php
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" =
+"http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML xmlns=3D"http://www.w3.org/1999/xhtml"><HEAD><TITLE>[Oracle =
+dba]-=E7=B0=87_Oracle_=E5=BC=80=E5=8F=91=E5=AD=A6=E9=99=A2</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; charset=3Dutf-8">
+<META content=3DOracle,dba,=E7=B0=87 name=3Dkeywords>
+<META=20
+content=3D" =
+=E9=83=BD=E7=9F=A5=E9=81=93=EF=BC=8C=E4=B8=8D=E5=90=8C=E7=9A=84=E8=A1=A8=E7=
+=9A=84=E6=95=B0=E6=8D=AE=E6=98=AF=E5=88=86=E5=B8=83=E5=9C=A8=E4=B8=8D=E5=90=
+=8C=E7=9A=84=E7=89=A9=E7=90=86=E5=9D=97=E4=B8=AD=EF=BC=8C=E5=BD=93=E9=9C=80=
+=E8=A6=81=E8=81=94=E5=90=88=E6=9F=A5=E8=AF=A2=E5=A4=9A=E8=A1=A8=E7=9A=84=E6=
+=97=B6=E5=80=99=EF=BC=8C=E5=B0=B1=E9=9C=80=E8=A6=81=E5=9C=A8=E4=B8=8D=E5=90=
+=8C=E7=9A=84=E5=9D=97=E4=B8=AD=E8=BF=9B=E8=A1=8C=E6=9F=A5=E8=AF=A2=EF=BC=8C=
+=E5=A2=9E=E5=8A=A0=E4=BA=86=E4=B8=8D=E5=BF=85=E8=A6=81=E7=9A=84IO=E6=88=90=
+=E6=9C=AC=EF=BC=8C=E6=9C=89=E4=BB=80=E4=B9=88=E5=8A=9E=E6=B3=95=E5=8F=AF=E4=
+=BB=A5=E8=A7=A3=E5=86=B3=E8=BF=99=E4=B8=AA=E9=97=AE=E9=A2=98=E5=90=97=EF=BC=
+=9F=E5=BD=93=E7=84=B6=E6=98=AFOracle=E7=B0=87=E4=BA=86=EF=BC=8C=E4=BB=96=E5=
+=8F=AF=E4=BB=A5=E6=8A=8A=E4=B8=8D=E5=90=8C=E7=9A=84=E8=A1=A8=E7=9A=84=E6=95=
+=B0=E6=8D=AE=E5=AD=98=E5=82=A8=E5=9C=A8=E5=90=8C=E4=B8=80=E4=B8=AA=E7=89=A9=
+=E7=90=86=E5=9D=97=E4=B8=AD=EF=BC=8C"=20
+name=3Ddescription><LINK href=3D"favicon.ico" rel=3D"shortcut =
+icon"><LINK=20
+href=3D"http://edu.codepub.com/templates/dede/skins/default/dedecms.css" =
+
+type=3Dtext/css rel=3Dstylesheet><LINK title=3D"[Oracle =
+dba]-=E7=B0=87_Oracle_=E5=BC=80=E5=8F=91=E5=AD=A6=E9=99=A2"=20
+href=3D"/rss.php?rssid=3D55" type=3Dapplication/rss+xml rel=3Dalternate>
+<SCRIPT language=3DJavaScript=20
+src=3D"http://edu.codepub.com/data/config.js"></SCRIPT>
+
+<SCRIPT language=3DJavaScript=20
+src=3D"http://edu.codepub.com/images/js/jquery.min.js"></SCRIPT>
+
+<SCRIPT language=3DJavaScript=20
+src=3D"http://edu.codepub.com/images/js/css.js"></SCRIPT>
+
+<SCRIPT language=3DJavaScript=20
+src=3D"http://edu.codepub.com/images/js/common.js"></SCRIPT>
+
+<SCRIPT language=3DJavaScript=20
+src=3D"http://edu.codepub.com/images/js/login.js"></SCRIPT>
+
+<SCRIPT language=3DJavaScript=20
+src=3D"http://edu.codepub.com/images/js/validator.js"></SCRIPT>
+
+<META content=3D"MSHTML 6.00.6000.20815" name=3DGENERATOR></HEAD>
+<BODY class=3Darticleview>
+<DIV class=3Dheader>
+<DIV class=3D"top w960 center">
+<DIV class=3Dtitle>
+<H1><A href=3D"http://edu.codepub.com/">[Oracle =
+dba]-=E7=B0=87_Oracle_=E5=BC=80=E5=8F=91=E5=AD=A6=E9=99=A2</A> =
+</H1></DIV>
+<DIV class=3Dbanner><IFRAME id=3DS1=20
+src=3D"http://edu.codepub.com/edu2009/top-banner.html" frameBorder=3D0 =
+width=3D480=20
+scrolling=3Dno height=3D60></IFRAME></DIV>
+<DIV class=3Drlink>
+<UL>
+  <LI class=3Dr1><A =
+href=3D"http://edu.codepub.com/">=E4=BC=9A=E5=91=98=E4=B8=AD=E5=BF=83</A>=
+ </LI>
+  <LI class=3Dr2><A =
+href=3D"http://edu.codepub.com/tags.php">TAG=E6=A0=87=E7=AD=BE</A> </LI>
+  <LI class=3Dr3><A =
+href=3D"http://edu.codepub.com/">=E7=BD=91=E7=AB=99=E5=9C=B0=E5=9B=BE</A>=
+ </LI>
+  <LI class=3Dr4><A =
+href=3D"http://edu.codepub.com/">RSS=E8=AE=A2=E9=98=85</A> =
+</LI></UL></DIV></DIV><!-- //top --><!-- //=E8=8F=9C=E5=8D=95 -->
+<DIV class=3D"module blue mT10 wrapper w963">
+<DIV class=3Dtop>
+<DIV class=3Dt_l></DIV>
+<DIV class=3Dt_r></DIV>
+<DIV id=3DnavMenu>
+<UL>
+  <LI><A =
+href=3D"http://edu.codepub.com/">=E7=BD=91=E7=AB=99=E9=A6=96=E9=A1=B5</A>=
+ </LI>
+  <LI><A href=3D"http://edu.codepub.com/webmaster/" =
+rel=3Ddropmenu1>=E7=AB=99=E9=95=BF=E5=9C=A8=E7=BA=BF</A> </LI>
+  <LI><A href=3D"http://edu.codepub.com/web/" =
+rel=3Ddropmenu2>=E7=BD=91=E9=A1=B5=E5=88=B6=E4=BD=9C</A> </LI>
+  <LI><A href=3D"http://edu.codepub.com/programme/" =
+rel=3Ddropmenu3>=E7=BC=96=E7=A8=8B=E5=BC=80=E5=8F=91</A> </LI>
+  <LI><A href=3D"http://edu.codepub.com/database/" =
+rel=3Ddropmenu6>=E6=95=B0=E6=8D=AE=E5=BA=93</A> </LI>
+  <LI><A href=3D"http://edu.codepub.com/server/" =
+rel=3Ddropmenu7>=E6=9C=8D=E5=8A=A1=E5=99=A8</A> </LI>
+  <LI><A =
+href=3D"http://edu.codepub.com/blog/">=E5=8D=9A=E5=AE=A2=E6=96=87=E6=91=98=
+</A> </LI>
+  <LI><A href=3D"http://edu.codepub.com/info/" =
+rel=3Ddropmenu5>=E4=BE=9B=E6=B1=82=E4=BF=A1=E6=81=AF</A> </LI>
+  <LI><A href=3D"http://bbs.codepub.com/" =
+target=3D_blank>=E6=BA=90=E7=A0=81=E8=AE=BA=E5=9D=9B</A> =
+</LI></UL></DIV>
+<DIV class=3Dsearch>
+<FORM name=3Dsite_search action=3Dsearch/ target=3D_blank>
+<DIV class=3Dform>
+<H4>=E6=90=9C=E7=B4=A2</H4><INPUT type=3Dhidden value=3Dall name=3Dtype> =
+<INPUT type=3Dhidden value=3Dnews=20
+name=3Dtype> <INPUT class=3Dsearch-keyword name=3Dq> <SELECT =
+class=3Dsearch-option>=20
+  <OPTION value=3Dall selected>=E5=85=A8=E9=83=A8</OPTION> <OPTION =
+value=3Dnews>=E6=96=87=E7=AB=A0</OPTION> <OPTION=20
+  value=3Dinfo>=E4=BF=A1=E6=81=AF</OPTION> <OPTION =
+value=3Dask>=E9=97=AE=E5=90=A7</OPTION></SELECT><BUTTON=20
+class=3Dsearch-submit type=3Dsubmit>=E6=90=9C=E7=B4=A2</BUTTON> =
+</DIV></FORM>
+<DIV class=3Dtags>
+<H4>=E7=83=AD=E9=97=A8=E6=A0=87=E7=AD=BE</H4>
+<UL>
+  <LI><A =
+href=3D"http://edu.codepub.com/tag.php?tag=3DMYSQL">MYSQL</A><!--(5740)--=
+>=20
+  </LI>
+  <LI><A =
+href=3D"http://edu.codepub.com/tag.php?tag=3DASP">ASP</A><!--(4723)-->=20
+</LI>
+  <LI><A =
+href=3D"http://edu.codepub.com/tag.php?tag=3DSQL">SQL</A><!--(4667)-->=20
+</LI>
+  <LI><A=20
+  =
+href=3D"http://edu.codepub.com/tag.php?tag=3D%E6%95%B0%E6%8D%AE%E5%BA%93"=
+>=E6=95=B0=E6=8D=AE=E5=BA=93</A><!--(4568)-->=20
+  </LI>
+  <LI><A =
+href=3D"http://edu.codepub.com/tag.php?tag=3DJavaScript">JavaScript</A><!=
+--(4064)-->=20
+  </LI>
+  <LI><A =
+href=3D"http://edu.codepub.com/tag.php?tag=3DCSS">CSS</A><!--(3634)-->=20
+</LI>
+  <LI><A =
+href=3D"http://edu.codepub.com/tag.php?tag=3DASP.NET">ASP.NET</A><!--(347=
+4)-->=20
+  </LI>
+  <LI><A =
+href=3D"http://edu.codepub.com/tag.php?tag=3DApache">Apache</A><!--(2959)=
+--> </LI>
+  <LI><A =
+href=3D"http://edu.codepub.com/tag.php?tag=3DServer">Server</A><!--(2719)=
+--> </LI>
+  <LI><A =
+href=3D"http://edu.codepub.com/tag.php?tag=3DWindows">Windows</A><!--(245=
+0)-->=20
+  </LI></UL></DIV></DIV><!-- //search --></DIV></DIV></DIV>
+<DIV style=3D"MARGIN-TOP: 5px" align=3Dcenter><IFRAME id=3DS2=20
+src=3D"http://edu.codepub.com/edu2009/tonglan.html" frameBorder=3D0 =
+width=3D960=20
+scrolling=3Dno height=3D90></IFRAME></DIV>
+<DIV class=3D"w960 center clear mt1">
+<DIV class=3Dpleft>
+<DIV =
+class=3Dplace><STRONG>=E5=BD=93=E5=89=8D=E4=BD=8D=E7=BD=AE:</STRONG> <A =
+href=3D"http://edu.codepub.com/">=E9=A6=96=E9=A1=B5</A>=20
+&gt;&gt;&gt; <A =
+href=3D"http://edu.codepub.com/database/">=E6=95=B0=E6=8D=AE=E5=BA=93</A>=
+ &gt;&gt;&gt; <A=20
+href=3D"http://edu.codepub.com/database/oracle/">Oracle</A> &gt;&gt;&gt; =
+=E6=AD=A3=E6=96=87 </DIV>
+<DIV class=3Dviewbox>
+<DIV class=3Dtitle>
+<H2>[Oracle dba]-=E7=B0=87</H2></DIV>
+<DIV class=3Dinfo><SMALL>=E6=97=B6=E9=97=B4:</SMALL>2009-05-31 =
+14:57:28<SMALL>=E6=9D=A5=E6=BA=90:</SMALL>=E7=BD=91=E7=BB=9C=20
+<SMALL>=E4=BD=9C=E8=80=85:</SMALL>=E6=9C=AA=E7=9F=A5 =
+<SMALL>=E7=82=B9=E5=87=BB:</SMALL><SPAN id=3Dhits>0</SPAN>=E6=AC=A1 =
+</DIV>
+<DIV=20
+class=3Dintro>&nbsp;=E9=83=BD=E7=9F=A5=E9=81=93=EF=BC=8C=E4=B8=8D=E5=90=8C=
+=E7=9A=84=E8=A1=A8=E7=9A=84=E6=95=B0=E6=8D=AE=E6=98=AF=E5=88=86=E5=B8=83=E5=
+=9C=A8=E4=B8=8D=E5=90=8C=E7=9A=84=E7=89=A9=E7=90=86=E5=9D=97=E4=B8=AD=EF=BC=
+=8C=E5=BD=93=E9=9C=80=E8=A6=81=E8=81=94=E5=90=88=E6=9F=A5=E8=AF=A2=E5=A4=9A=
+=E8=A1=A8=E7=9A=84=E6=97=B6=E5=80=99=EF=BC=8C=E5=B0=B1=E9=9C=80=E8=A6=81=E5=
+=9C=A8=E4=B8=8D=E5=90=8C=E7=9A=84=E5=9D=97=E4=B8=AD=E8=BF=9B=E8=A1=8C=E6=9F=
+=A5=E8=AF=A2=EF=BC=8C=E5=A2=9E=E5=8A=A0=E4=BA=86=E4=B8=8D=E5=BF=85=E8=A6=81=
+=E7=9A=84IO=E6=88=90=E6=9C=AC=EF=BC=8C=E6=9C=89=E4=BB=80=E4=B9=88=E5=8A=9E=
+=E6=B3=95=E5=8F=AF=E4=BB=A5=E8=A7=A3=E5=86=B3=E8=BF=99=E4=B8=AA=E9=97=AE=E9=
+=A2=98=E5=90=97=EF=BC=9F=E5=BD=93=E7=84=B6=E6=98=AFOracle=E7=B0=87=E4=BA=86=
+=EF=BC=8C=E4=BB=96=E5=8F=AF=E4=BB=A5=E6=8A=8A=E4=B8=8D=E5=90=8C=E7=9A=84=E8=
+=A1=A8=E7=9A=84=E6=95=B0=E6=8D=AE=E5=AD=98=E5=82=A8=E5=9C=A8=E5=90=8C=E4=B8=
+=80=E4=B8=AA=E7=89=A9=E7=90=86=E5=9D=97=E4=B8=AD=EF=BC=8C</DIV>
+<DIV class=3Dcontent>
+<TABLE width=3D"100%">
+  <TBODY>
+  <TR>
+    =
+<TD>&nbsp;=E9=83=BD=E7=9F=A5=E9=81=93=EF=BC=8C=E4=B8=8D=E5=90=8C=E7=9A=84=
+=E8=A1=A8=E7=9A=84=E6=95=B0=E6=8D=AE=E6=98=AF=E5=88=86=E5=B8=83=E5=9C=A8=E4=
+=B8=8D=E5=90=8C=E7=9A=84=E7=89=A9=E7=90=86=E5=9D=97=E4=B8=AD=EF=BC=8C=E5=BD=
+=93=E9=9C=80=E8=A6=81=E8=81=94=E5=90=88=E6=9F=A5=E8=AF=A2=E5=A4=9A=E8=A1=A8=
+=E7=9A=84=E6=97=B6=E5=80=99=EF=BC=8C=E5=B0=B1=E9=9C=80=E8=A6=81=E5=9C=A8=E4=
+=B8=8D=E5=90=8C=E7=9A=84=E5=9D=97=E4=B8=AD=E8=BF=9B=E8=A1=8C=E6=9F=A5=E8=AF=
+=A2=EF=BC=8C=E5=A2=9E=E5=8A=A0=E4=BA=86=E4=B8=8D=E5=BF=85=E8=A6=81=E7=9A=84=
+IO=E6=88=90=E6=9C=AC=EF=BC=8C=E6=9C=89=E4=BB=80=E4=B9=88=E5=8A=9E=E6=B3=95=
+=E5=8F=AF=E4=BB=A5=E8=A7=A3=E5=86=B3=E8=BF=99=E4=B8=AA=E9=97=AE=E9=A2=98=E5=
+=90=97=EF=BC=9F=E5=BD=93=E7=84=B6=E6=98=AFOracle=E7=B0=87=E4=BA=86=EF=BC=8C=
+=E4=BB=96=E5=8F=AF=E4=BB=A5=E6=8A=8A=E4=B8=8D=E5=90=8C=E7=9A=84=E8=A1=A8=E7=
+=9A=84=E6=95=B0=E6=8D=AE=E5=AD=98=E5=82=A8=E5=9C=A8=E5=90=8C=E4=B8=80=E4=B8=
+=AA=E7=89=A9=E7=90=86=E5=9D=97=E4=B8=AD=EF=BC=8C=E5=87=8F=E5=B0=91=E4=B8=8D=
+=E5=BF=85=E8=A6=81=E7=9A=84IO=E6=93=8D=E4=BD=9C=E3=80=82=E4=BD=86=E6=98=AF=
+=EF=BC=8C=E5=AF=B9=E6=8F=92=E5=85=A5=E5=88=A0=E9=99=A4=E6=9B=B4=E6=96=B0=E6=
+=93=8D=E4=BD=9C=EF=BC=8C=E6=AF=94=E4=B8=8D=E5=BB=BA=E7=AB=8B=E7=B0=87=E4=B9=
+=8B=E5=89=8D=E8=A6=81=E6=9B=B4=E6=85=A2=EF=BC=8C=E6=89=80=E4=BB=A5=E8=A6=81=
+=E6=9D=83=E8=A1=A1=E5=AE=9E=E9=99=85=E5=BA=94=E7=94=A8=E6=83=85=E5=86=B5=E3=
+=80=82<SPAN=20
+      style=3D"COLOR: #2a2a2a; LINE-HEIGHT: 25px; FONT-FAMILY: =
+=E5=AE=8B=E4=BD=93">=20
+      <P=20
+      style=3D"BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: =
+0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px 0px 5px; WORD-BREAK: normal; LINE-HEIGHT: 1.5em; =
+PADDING-TOP: 0px; LIST-STYLE-TYPE: none; BORDER-RIGHT-WIDTH: 0px; =
+WORD-WRAP: =
+normal">1=EF=BC=8C=E7=B0=87<BR>=E6=9C=89=E5=85=AC=E5=85=B1=E5=88=97=E7=9A=
+=84=E4=B8=A4=E4=B8=AA=E6=88=96=E5=A4=9A=E4=B8=AA=E8=A1=A8=E7=9A=84=E9=9B=86=
+=E5=90=88<BR>=E7=B0=87=E8=A1=A8=E4=B8=AD=E7=9A=84=E6=95=B0=E6=8D=AE=E5=AD=
+=98=E5=82=A8=E5=9C=A8=E5=85=AC=E5=85=B1=E6=95=B0=E6=8D=AE=E5=9D=97=E4=B8=AD=
+</P>
+      <P=20
+      style=3D"BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: =
+0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px 0px 5px; WORD-BREAK: normal; LINE-HEIGHT: 1.5em; =
+PADDING-TOP: 0px; LIST-STYLE-TYPE: none; BORDER-RIGHT-WIDTH: 0px; =
+WORD-WRAP: =
+normal">2=EF=BC=8C=E7=B0=87=E9=94=AE<BR>=E7=B0=87=E4=B8=AD=E8=A1=8C=E7=9A=
+=84=E5=94=AF=E4=B8=80=E6=A0=87=E8=AF=86=E7=AC=A6<BR>=E7=94=A8=E4=BA=8E=E8=
+=8E=B7=E5=8F=96=E8=A1=8C</P>
+      <P=20
+      style=3D"BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: =
+0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px 0px 5px; WORD-BREAK: normal; LINE-HEIGHT: 1.5em; =
+PADDING-TOP: 0px; LIST-STYLE-TYPE: none; BORDER-RIGHT-WIDTH: 0px; =
+WORD-WRAP: =
+normal">3=EF=BC=8C=E5=88=9B=E5=BB=BA=E7=B0=87<BR>=E5=BA=94=E9=A6=96=E5=85=
+=88=E5=88=9B=E5=BB=BA=E7=B0=87=EF=BC=8C=E7=84=B6=E5=90=8E=E5=88=9B=E5=BB=BA=
+=E7=BB=84=E6=88=90=E7=B0=87=E7=9A=84=E8=A1=A8<BR>CREATE=20
+      CLUSTER=20
+      =
+=E8=AF=AD=E5=8F=A5=E7=94=A8=E4=BA=8E=E5=88=9B=E5=BB=BA=E7=B0=87<BR>=E4=BC=
+=98=E7=82=B9<BR>=E5=87=8F=E5=B0=91=E7=A3=81=E7=9B=98I/O<BR>=E8=8A=82=E7=9C=
+=81=E7=A3=81=E7=9B=98=E7=A9=BA=E9=97=B4=EF=BC=88=E8=A1=A8=E7=9A=84=E5=85=AC=
+=E5=85=B1=E5=88=97=E5=AD=98=E5=82=A8=E5=9C=A8=E7=B0=87=E4=B8=AD=EF=BC=89<=
+BR>=E7=BC=BA=E7=82=B9<BR>=E5=90=91=E8=A1=A8=E4=B8=AD=E6=8F=92=E5=85=A5=E6=
+=95=B0=E6=8D=AE=E6=97=B6=E6=80=A7=E8=83=BD=E9=99=8D=E4=BD=8E<BR>=E6=9C=89=
+=E4=B8=BB=E5=A4=96=E9=94=AE=E5=85=B3=E7=B3=BB=E7=9A=84=E8=A1=A8=EF=BC=8C=E5=
+=8F=AF=E4=BB=A5=E8=80=83=E8=99=91=E5=88=9B=E5=BB=BA=E7=B0=87=EF=BC=8C=E6=8A=
+=8A=E5=85=AC=E5=85=B1=E7=9A=84=E5=88=97=E6=94=BE=E5=88=B0=E7=B0=87=E4=B8=AD=
+</P>
+      <P=20
+      style=3D"BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: =
+0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px 0px 5px; WORD-BREAK: normal; LINE-HEIGHT: 1.5em; =
+PADDING-TOP: 0px; LIST-STYLE-TYPE: none; BORDER-RIGHT-WIDTH: 0px; =
+WORD-WRAP: =
+normal">4=EF=BC=8C=E5=88=9B=E5=BB=BA=E7=B0=87=E7=9A=84=E8=AF=A6=E7=BB=86=E4=
+=BE=8B=E5=AD=90<BR><BR>--=E5=88=9B=E5=BB=BA=E7=B0=87=E6=95=B0=E6=8D=AE=EF=
+=BC=88=E6=8A=8A=E5=85=AC=E5=85=B1=E5=88=97=E5=88=9B=E5=BB=BA=E5=88=B0=E7=B0=
+=87=E4=B8=AD=EF=BC=89<BR>create=20
+      cluster cluster_ClassNo<BR>(<BR>vClassNo =
+varchar2(10)<BR>)tablespace=20
+      users;</P>
+      <P=20
+      style=3D"BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: =
+0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px 0px 5px; WORD-BREAK: normal; LINE-HEIGHT: 1.5em; =
+PADDING-TOP: 0px; LIST-STYLE-TYPE: none; BORDER-RIGHT-WIDTH: 0px; =
+WORD-WRAP: =
+normal">--=E4=B8=BA=E7=B0=87=E9=94=AE=E5=88=9B=E5=BB=BA=E7=B0=87=E7=B4=A2=
+=E5=BC=95<BR>create=20
+      index idxClusterClassNo on cluster cluster_ClassNo;</P>
+      <P=20
+      style=3D"BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: =
+0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px 0px 5px; WORD-BREAK: normal; LINE-HEIGHT: 1.5em; =
+PADDING-TOP: 0px; LIST-STYLE-TYPE: none; BORDER-RIGHT-WIDTH: 0px; =
+WORD-WRAP: =
+normal">--=E5=88=9B=E5=BB=BA=E7=B0=87=E8=A1=A8=EF=BC=88=E4=B8=BB=E9=94=AE=
+=E8=A1=A8=E3=80=81=E5=A4=96=E9=94=AE=E8=A1=A8=EF=BC=89<BR>//=E5=88=9B=E5=BB=
+=BA=E4=B8=BB=E9=94=AE=E8=A1=A8=E2=80=94=E2=80=94=E7=8F=AD=E7=BA=A7=E8=A1=A8=
+</P>
+      <P=20
+      style=3D"BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: =
+0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px 0px 5px; WORD-BREAK: normal; LINE-HEIGHT: 1.5em; =
+PADDING-TOP: 0px; LIST-STYLE-TYPE: none; BORDER-RIGHT-WIDTH: 0px; =
+WORD-WRAP: normal">create=20
+      table classes<BR>(<BR>vClassNo varcahr2(10),<BR>vClassName=20
+      varchar2(20)<BR>)cluster cluster_ClassNo(vClassNo);</P>
+      <P=20
+      style=3D"BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: =
+0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px 0px 5px; WORD-BREAK: normal; LINE-HEIGHT: 1.5em; =
+PADDING-TOP: 0px; LIST-STYLE-TYPE: none; BORDER-RIGHT-WIDTH: 0px; =
+WORD-WRAP: =
+normal">//=E5=88=9B=E5=BB=BA=E5=A4=96=E9=94=AE=E8=A1=A8=E2=80=94=E2=80=94=
+=E5=AD=A6=E7=94=9F=E8=A1=A8</P>
+      <P=20
+      style=3D"BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: =
+0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px 0px 5px; WORD-BREAK: normal; LINE-HEIGHT: 1.5em; =
+PADDING-TOP: 0px; LIST-STYLE-TYPE: none; BORDER-RIGHT-WIDTH: 0px; =
+WORD-WRAP: normal">create=20
+      table students<BR>(<BR>vStudentNo varchar2(10),<BR>vStudentName=20
+      varchar2(20),<BR>vClassNo varchar2(10)<BR>)cluster=20
+      cluster_ClassNo(vClassNo);</P>
+      <P=20
+      style=3D"BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: =
+0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px 0px 5px; WORD-BREAK: normal; LINE-HEIGHT: 1.5em; =
+PADDING-TOP: 0px; LIST-STYLE-TYPE: none; BORDER-RIGHT-WIDTH: 0px; =
+WORD-WRAP: normal">--=E6=92=A4=E6=B6=88=E7=B0=87</P></SPAN>
+      <P><SPAN style=3D"COLOR: #2a2a2a; FONT-FAMILY: =
+=E5=AE=8B=E4=BD=93">drop cluster=20
+      cluster_ClassNo including =
+tables;</SPAN>&nbsp;</P></TD></TR></TBODY></TABLE><BR>
+<SCRIPT>
+document.body.oncopy =3D function ()=20
+{ setTimeout( function () { var text =3D clipboardData.getData("text");=20
+if (text) { text =3D text + =
+"=E6=9C=AC=E7=AF=87=E6=96=87=E7=AB=A0=E6=9D=A5=E6=BA=90=E4=BA=8E=EF=BC=9A=
+=E5=BC=80=E5=8F=91=E5=AD=A6=E9=99=A2 http://edu.codepub.com   =
+=E5=8E=9F=E6=96=87=E9=93=BE=E6=8E=A5=EF=BC=9A"+location.href; =
+clipboardData.setData("text", text); } }, 100 ) }
+</SCRIPT>
+
+<DIV align=3Dcenter><IFRAME id=3DS3=20
+src=3D"http://edu.codepub.com/edu2009/show-center-2.html" =
+frameBorder=3D0 width=3D468=20
+scrolling=3Dno height=3D60></IFRAME></DIV></DIV>
+<DIV class=3Dtools><SPAN class=3D"left =
+f-l">=E5=85=B3=E9=94=AE=E5=AD=97=EF=BC=9A<A class=3Dkeyword=20
+href=3D"http://edu.codepub.com/tag.php?tag=3DOracle">Oracle</A><A =
+class=3Dkeyword=20
+href=3D"http://edu.codepub.com/tag.php?tag=3Ddba">dba</A><A =
+class=3Dkeyword=20
+href=3D"http://edu.codepub.com/tag.php?tag=3D%E7%B0%87">=E7=B0=87</A></SP=
+AN><SPAN class=3Df-r>=20
+
+<FORM id=3Dsendmail name=3Dsendmail action=3Dmail/sendmail.php><INPUT =
+type=3Dhidden=20
+value=3D"=E6=8E=A8=E8=8D=90=EF=BC=9A[Oracle dba]-=E7=B0=87" =
+name=3Dtitle> <INPUT type=3Dhidden=20
+value=3D" <a href=3D'http://edu.codepub.com/2009/0531/5052.php' =
+target=3D'_blank'>[Oracle dba]-=E7=B0=87</a><br/>"=20
+name=3Dcontent> </FORM>
+<FORM id=3Derrors name=3Derrors =
+action=3Derror_report/error_report.php><INPUT=20
+type=3Dhidden value=3D"[Oracle dba]-=E7=B0=87" name=3Dtitle> </FORM><A=20
+href=3D"javascript:$('#errors').submit();">[=E9=94=99=E8=AF=AF=E6=8A=A5=E5=
+=91=8A]</A><A=20
+href=3D"javascript:$('#sendmail').submit();">[=E6=8E=A8=E8=8D=90]</A><A=20
+href=3D"javascript:myAddPanel('[Oracle =
+dba]-=E7=B0=87',window.location.href)">[=E6=94=B6=E8=97=8F]</A><A=20
+href=3D"javascript:window.print();">[=E6=89=93=E5=8D=B0]</A><A=20
+href=3D"javascript:window.close();">[=E5=85=B3=E9=97=AD]</A><A=20
+href=3D"http://edu.codepub.com/2009/0531/5052.php#top">[=E8=BF=94=E5=9B=9E=
+=E9=A1=B6=E9=83=A8]</A></SPAN> </DIV>
+<DIV =
+class=3Dboxoff><STRONG>------=E5=88=86=E9=9A=94=E7=BA=BF-----------------=
+-----------</STRONG> </DIV>
+<DIV class=3Dhandle>
+<DIV class=3Dcontext>
+<UL>
+  <LI>=E4=B8=8A=E4=B8=80=E7=AF=87=EF=BC=9A<A =
+title=3D=E9=80=9A=E8=BF=87oms=E5=AE=9E=E7=8E=B0Oracle=E7=9A=84=E6=95=B0=E6=
+=8D=AE=E5=A4=87=E4=BB=BD=20
+  href=3D"http://edu.codepub.com/2009/0524/4576.php"=20
+  =
+target=3D_blank>=E9=80=9A=E8=BF=87oms=E5=AE=9E=E7=8E=B0Oracle=E7=9A=84=E6=
+=95=B0=E6=8D=AE=E5=A4=87=E4=BB=BD</A>=20
+  <LI>=E4=B8=8B=E4=B8=80=E7=AF=87=EF=BC=9A<A =
+title=3D=E6=95=B0=E6=8D=AE=E5=BA=93=EF=BC=9AOracle=E5=88=9B=E5=BB=BA=E5=AE=
+=9E=E4=BE=8B=E7=9A=84=E6=9C=80=E5=B0=91=E5=8F=82=E6=95=B0=E9=9C=80=E6=B1=82=
+=20
+  href=3D"http://edu.codepub.com/2009/1206/18517.php"=20
+  =
+target=3D_blank>=E6=95=B0=E6=8D=AE=E5=BA=93=EF=BC=9AOracle=E5=88=9B=E5=BB=
+=BA=E5=AE=9E=E4=BE=8B=E7=9A=84=E6=9C=80=E5=B0=91=E5=8F=82=E6=95=B0=E9=9C=80=
+=E6=B1=82</A></LI></UL></DIV></DIV></DIV>
+<DIV class=3Dcomment>
+<DIV class=3Dtitle1>
+<DIV class=3Dcount><A=20
+href=3D"http://edu.codepub.com/comment/?keyid=3Dphpcms-content-title-5052=
+&amp;verify=3Dda972d26cea6424b22f440db20e60f46">=E5=B7=B2=E6=9C=89=20
+<SPAN class=3Df12b-red id=3Dcomments>0</SPAN> =
+=E4=BD=8D=E7=BD=91=E5=8F=8B=E5=8F=91=E8=A1=A8=E4=BA=86=E7=9C=8B=E6=B3=95<=
+/A></DIV>
+<H3>=E5=8F=91=E8=A1=A8=E8=AF=84=E8=AE=BA</H3></DIV>
+<FORM onsubmit=3D"return checkForm();" =
+action=3Dcomment/?action=3Daddpost=20
+method=3Dpost><INPUT type=3Dhidden value=3Dphpcms-content-title-5052 =
+name=3Dkeyid>=20
+<INPUT type=3Dhidden value=3Dda972d26cea6424b22f440db20e60f46 =
+name=3Dverify>=20
+<DIV class=3Dcomment-con><TEXTAREA id=3Dcomment =
+onblur=3Dreply_restoration() onfocus=3Dreply_clearfield() name=3Dcomment =
+rows=3D8 cols=3D85></TEXTAREA>=20
+</DIV>
+<DIV class=3Dchecker><SPAN id=3Dchecker></SPAN><INPUT class=3Dpub =
+id=3Ddosubmit type=3Dsubmit value=3D" " name=3Ddosubmit>=20
+<INPUT class=3Dreset id=3Ddosubmit type=3Dreset value=3D" " =
+name=3Dreset>=20
+=E8=AF=B7=E8=87=AA=E8=A7=89=E9=81=B5=E5=AE=88=E7=9B=B8=E5=85=B3=E6=94=BF=E7=
+=AD=96=E6=B3=95=E8=A7=84=EF=BC=8C=E4=B8=A5=E7=A6=81=E5=8F=91=E5=B8=83=E8=89=
+=B2=E6=83=85/=E6=9A=B4=E5=8A=9B/=E5=8F=8D=E5=8A=A8=E8=A8=80=E8=AE=BA=E3=80=
+=82</DIV></FORM></DIV>
+<SCRIPT src=3D"http://edu.codepub.com/data/js/comment_setting.js"=20
+type=3Dtext/javascript></SCRIPT>
+
+<SCRIPT type=3Dtext/javascript>
+        $().ready(function() {       =20
+            if(setting.ischecklogin =3D=3D 0 && getcookie('auth') =
+=3D=3D=3D null)
+            {
+                =
+$('#comment').val("=E8=AF=B7=E6=82=A8=E7=99=BB=E9=99=86=E5=90=8E=E5=8F=91=
+=E8=A1=A8=E8=AF=84=E8=AE=BA=EF=BC=81");
+                $('#comment').attr("disabled","disabled");
+                $('#dosubmit').attr("disabled","disabled");
+            }
+            else=20
+            {
+                =
+$('#comment').val("=E6=88=91=E4=B9=9F=E6=9D=A5=E8=AF=B4=E4=B8=A4=E5=8F=A5=
+=EF=BC=81");
+            }
+        });
+        function reply_restoration()
+        {
+            if($('#comment').val() =3D=3D '')
+            {
+                =
+$('#comment').val("=E6=88=91=E4=B9=9F=E6=9D=A5=E8=AF=B4=E4=B8=A4=E5=8F=A5=
+=EF=BC=81");
+            }
+        }
+        function reply_clearfield()
+        {
+            if ($('#comment').val() =3D=3D =
+"=E6=88=91=E4=B9=9F=E6=9D=A5=E8=AF=B4=E4=B8=A4=E5=8F=A5=EF=BC=81")=20
+            {
+                $('#comment').val("");  =20
+            }           =20
+            $.ajax({
+                 type: "POST",
+                 url: "comment/?action=3Dajaxcheckcode",
+                 data:   "",
+                 dataType: "html",
+                 success: function(msg)
+                 {
+                    if(msg)
+                    {
+                        =
+$('#checker').html("=E9=AA=8C=E8=AF=81=E7=A0=81=EF=BC=9A"+msg+"&nbsp;");
+                    }                   =20
+                 }=20
+             });
+        }
+        function checkForm()
+        {
+            if($('#comment').val() =3D=3D '' || $('#comment').val() =
+=3D=3D =
+"=E6=88=91=E4=B9=9F=E6=9D=A5=E8=AF=B4=E4=B8=A4=E5=8F=A5=EF=BC=81")
+            {
+                =
+alert("=E5=86=85=E5=AE=B9=E4=B8=8D=E8=83=BD=E4=B8=BA=E7=A9=BA");
+                $('#comment').focus();
+                return false;
+            }
+            if($('#checkcode').val() =3D=3D '' )
+            {
+                =
+alert("=E9=AA=8C=E8=AF=81=E7=A0=81=E4=B8=8D=E8=83=BD=E4=B8=BA=E7=A9=BA");=
+
+                $('#checkcode').focus();
+                return false;
+            }
+            if ($('#comment').val().length > 1000)=20
+            {
+                =
+alert("=E5=86=85=E5=AE=B9=E5=A4=AA=E9=95=BF=EF=BC=8C=E6=9C=80=E5=A4=9A =
+1000 =E4=B8=AA=E6=96=87=E5=AD=97");
+                return false;
+            }
+        }
+      </SCRIPT>
+</DIV>
+<DIV class=3Dpright>
+<DIV class=3D"hot mt1">
+<DL class=3D"tbox light">
+  <DT =
+class=3Dlight><STRONG>=E7=89=B9=E5=88=AB=E6=8E=A8=E8=8D=90</STRONG> =
+</DT>
+  <DD class=3Dlight>
+  <UL class=3Dcgg>
+    <LI><IFRAME id=3DS4 =
+src=3D"http://edu.codepub.com/edu2009/show-right-1.html"=20
+    frameBorder=3D0 width=3D230 scrolling=3Dno=20
+height=3D200></IFRAME></LI></UL></DD></DL></DIV>
+<DIV class=3D"commend mt1">
+<DL class=3D"tbox light">
+  <DT =
+class=3Dlight><STRONG>=E6=8E=A8=E8=8D=90=E5=86=85=E5=AE=B9</STRONG> =
+</DT>
+  <DD class=3Dlight>
+  <UL class=3D"c1 ico2">
+    <LI class=3Ddotline><A =
+href=3D"http://edu.codepub.com/2009/0403/2495.php"=20
+    target=3D"">Access=E5=92=8CSQL =
+Server=E6=95=B0=E6=8D=AE=E5=BA=93=E6=9C=89=E4=BB=80=E4=B9=88=E5=8C=BA=E5=88=
+=AB=EF=BC=9F</A></LI>
+    <LI class=3Ddotline><A =
+href=3D"http://edu.codepub.com/2009/0126/1390.php"=20
+    target=3D"">cherokee=E7=89=9B=E5=88=80=E5=B0=8F=E8=AF=95</A></LI>
+    <LI class=3Ddotline><A =
+href=3D"http://edu.codepub.com/2009/0105/1072.php"=20
+    =
+target=3D"">=E5=B9=B6=E6=9C=AA=E6=B6=88=E9=80=9D=E7=9A=84=E4=B8=AA=E4=BA=BA=
+=E7=AB=99=E9=95=BF</A></LI>
+    <LI class=3Ddotline><A =
+href=3D"http://edu.codepub.com/2009/0104/977.php"=20
+    =
+target=3D"">=E5=AF=B9HTML/XHTML/XML/XSL=E7=9A=84=E4=B8=80=E4=BA=9B=E8=AE=A4=
+=E8=AF=86</A></LI>
+    <LI class=3Ddotline><A =
+href=3D"http://edu.codepub.com/2009/0104/972.php"=20
+    =
+target=3D"">CSS=E5=92=8CHTML=E4=B8=8E=E5=89=8D=E7=AB=AF=E6=8A=80=E6=9C=AF=
+=E5=B1=82=E5=9B=BE=E7=A4=BA</A></LI>
+    <LI class=3Ddotline><A =
+href=3D"http://edu.codepub.com/2009/0104/968.php"=20
+    =
+target=3D"">=E8=8F=9C=E9=B8=9F=E5=AD=A6=E7=94=A8DreamWeaver=E5=81=9AASP</=
+A></LI>
+    <LI class=3Ddotline><A =
+href=3D"http://edu.codepub.com/2009/0103/964.php"=20
+    =
+target=3D"">=E6=B7=B1=E5=BA=A6=E5=88=86=E6=9E=90=EF=BC=9A=E6=89=BE=E5=88=B0=
+MySQL=E7=9A=84=E4=BC=98=E7=82=B9</A></LI>
+    <LI class=3Ddotline><A =
+href=3D"http://edu.codepub.com/2009/0103/942.php"=20
+    =
+target=3D"">2008=E5=B9=B4=E4=B8=AD=E5=9B=BD=E5=8D=81=E5=AE=B6=E6=9C=80=E2=
+=80=9C=E5=9B=A7=E2=80=9DIC=E8=AE=BE=E8=AE=A1=E5=85=AC=E5=8F=B8</A></LI>
+    <LI class=3Ddotline><A =
+href=3D"http://edu.codepub.com/2009/0103/936.php"=20
+    target=3D"">FreeBSD 7.1 =
+=E6=AD=A3=E5=BC=8F=E7=89=88=E5=8F=91=E5=B8=83 =
+&amp;=E5=AE=98=E6=96=B9=E4=B8=8B=E8=BD=BD=E5=9C=B0=E5=9D=80</A></LI>
+    <LI class=3Ddotline><A =
+href=3D"http://edu.codepub.com/2008/1231/803.php"=20
+    =
+target=3D"">=E9=9B=A8=E6=9E=97=E6=9C=A8=E9=A3=8E=E5=B7=A5=E4=BD=9C=E5=AE=A4=
+=E5=91=8A=E5=88=AB=E5=A3=B0=E6=98=8E</A></LI>
+    <LI class=3Ddotline><A =
+href=3D"http://edu.codepub.com/2008/1222/452.php"=20
+    =
+target=3D"">=E8=AE=A9=E4=BD=A0=E7=9A=84=E7=BD=91=E7=AB=99=E4=B9=9F=E5=85=B7=
+=E5=A4=87Google Sitelinks=E7=AB=99=E5=86=85=E9=93=BE=E6=8E=A5</A></LI>
+    <LI class=3Ddotline><A =
+href=3D"http://edu.codepub.com/2009/1102/17267.php"=20
+    target=3D"">=E5=A6=82=E4=BD=95=E5=AD=A6=E4=B9=A0DIV =
+CSS=E5=88=B6=E4=BD=9C=E7=BD=91=E9=A1=B5</A></LI>
+    <LI class=3Ddotline><A =
+href=3D"http://edu.codepub.com/2009/0509/3961.php"=20
+    target=3D"">Sphinx=E9=80=9F=E6=88=90=E6=8C=87=E5=8D=97</A></LI>
+    <LI class=3Ddotline><A =
+href=3D"http://edu.codepub.com/2009/0405/2543.php"=20
+    =
+target=3D"">MagicAjax=E4=BD=BF=E7=94=A8=E5=8F=8A=E6=B3=A8=E6=84=8F=E4=BA=8B=
+=E9=A1=B9</A></LI>
+    <LI class=3Ddotline><A =
+href=3D"http://edu.codepub.com/2009/0201/1447.php"=20
+    target=3D"">40=E4=B8=AAweb2.0 =
+CSS/XHTML=E7=BD=91=E9=A1=B5=E6=A8=A1=E6=9D=BF</A></LI>
+    <LI class=3Ddotline><A =
+href=3D"http://edu.codepub.com/2009/0112/1246.php"=20
+    target=3D"">=E5=9B=BE=E8=A7=A3Windows 2003 =
+Server=E5=AE=89=E5=85=A8=E9=85=8D=E7=BD=AE</A></LI>
+    <LI class=3Ddotline><A =
+href=3D"http://edu.codepub.com/2009/0105/1071.php"=20
+    =
+target=3D"">=E9=A6=96=E9=83=BD=E5=9B=BE=E4=B9=A6=E9=A6=86=E6=83=8A=E7=8E=B0=
+=E6=9C=80=E7=89=9B=E4=B8=AA=E4=BA=BA=E7=AB=99=E9=95=BF</A></LI>
+    <LI class=3Ddotline><A =
+href=3D"http://edu.codepub.com/2009/0104/974.php"=20
+    =
+target=3D"">=E6=9F=B1=E7=8A=B6=E7=BB=9F=E8=AE=A1=E5=9B=BE=E8=A1=A8=E7=9A=84=
+CSS=E5=AE=9E=E7=8E=B0</A></LI>
+    <LI class=3Ddotline><A =
+href=3D"http://edu.codepub.com/2009/0104/969.php"=20
+    target=3D"">PHP =E5=9C=A8Windows 2003 Enterprise =
+Server(IIS6.0)=E4=B8=8B=E7=9A=84=E5=AE=89=E8=A3=85=E6=95=99=E7=A8=8B</A><=
+/LI>
+    <LI class=3Ddotline><A =
+href=3D"http://edu.codepub.com/2009/0103/965.php"=20
+    =
+target=3D"">=E5=88=A9=E7=94=A8=E6=95=B0=E6=8D=AE=E5=BA=93=E6=A8=A1=E7=89=88=
+=E5=88=9B=E5=BB=BA=E6=96=B9=E4=BE=BF=E9=83=A8=E7=BD=B2=E7=9A=84.Net=E9=A1=
+=B9=E7=9B=AE=E8=B0=83=E8=AF=95=E7=8E=AF=E5=A2=83</A></LI>
+    <LI class=3Ddotline><A =
+href=3D"http://edu.codepub.com/2009/0103/943.php"=20
+    =
+target=3D"">ACCESS=E5=85=A5=E9=97=A8=E6=95=99=E7=A8=8B=EF=BC=88=E4=B8=80=EF=
+=BC=89=E5=88=9D=E8=AF=86Access 2000</A></LI>
+    <LI class=3Ddotline><A =
+href=3D"http://edu.codepub.com/2009/0103/937.php"=20
+    =
+target=3D"">Apache=E7=9A=84httpd.conf=E6=96=87=E4=BB=B6=E9=85=8D=E7=BD=AE=
+=E8=AF=A6=E8=A7=A3</A></LI>
+    <LI class=3Ddotline><A =
+href=3D"http://edu.codepub.com/2008/1231/804.php"=20
+    =
+target=3D"">=E5=88=A9=E7=94=A8awstats=E7=BB=9F=E8=AE=A1=E8=9C=98=E8=9B=9B=
+=E8=AF=A6=E7=BB=86=E8=B7=AF=E5=BE=84=E7=9A=84=E6=96=B9=E6=B3=95</A></LI>
+    <LI class=3Ddotline><A =
+href=3D"http://edu.codepub.com/2008/1225/605.php"=20
+    =
+target=3D"">=E6=90=9C=E7=8B=90=E5=8F=91=E5=B8=83=E5=B8=B8=E8=A7=81=E6=B5=8F=
+=E8=A7=88=E5=99=A8=E5=81=87=E6=AD=BB=E9=A1=B5=E9=9D=A2=E4=BB=A3=E7=A0=81=E6=
+=8E=A8=E5=B9=BF=E5=85=B6=E6=B5=8F=E8=A7=88=E5=99=A8</A></LI>
+    <LI class=3Ddotline><A =
+href=3D"http://edu.codepub.com/2008/1214/10.php"=20
+    target=3D"">Windows =
+Xp=E4=B8=8B=E9=85=8D=E7=BD=AEIIS=E7=9A=84=E7=AE=80=E5=8D=95=E6=95=99=E7=A8=
+=8B</A> </LI></UL></DD></DL></DIV>
+<DIV class=3D"hot mt1">
+<DL class=3D"tbox light">
+  <DT =
+class=3Dlight><STRONG>=E7=83=AD=E7=82=B9=E5=86=85=E5=AE=B9</STRONG> =
+</DT>
+  <DD class=3Dlight>
+  <UL class=3D"c1 ico2">
+    <LI><A =
+title=3DSQL=E8=A7=A6=E5=8F=91=E5=99=A8=E5=AE=9E=E4=BE=8B=E8=AE=B2=E8=A7=A3=
+=20
+    =
+href=3D"http://edu.codepub.com/2009/1126/18195.php">SQL=E8=A7=A6=E5=8F=91=
+=E5=99=A8=E5=AE=9E=E4=BE=8B=E8=AE=B2=E8=A7=A3</A> </LI>
+    <LI><A =
+title=3D=E4=B8=A4=E7=A7=8D=E7=BD=91=E9=A1=B5=E6=BB=9A=E5=8A=A8=E5=AD=97=E5=
+=B9=95=E4=BB=A3=E7=A0=81=20
+    =
+href=3D"http://edu.codepub.com/2009/0529/4829.php">=E4=B8=A4=E7=A7=8D=E7=BD=
+=91=E9=A1=B5=E6=BB=9A=E5=8A=A8=E5=AD=97=E5=B9=95=E4=BB=A3=E7=A0=81</A> =
+</LI>
+    <LI><A =
+title=3D=E4=B8=83=E6=AC=BE=E5=A4=A9=E6=B0=94=E9=A2=84=E6=8A=A5=E4=BB=A3=E7=
+=A0=81=20
+    =
+href=3D"http://edu.codepub.com/2009/0529/4835.php">=E4=B8=83=E6=AC=BE=E5=A4=
+=A9=E6=B0=94=E9=A2=84=E6=8A=A5=E4=BB=A3=E7=A0=81</A> </LI>
+    <LI><A title=3D"Windows =
+Xp=E4=B8=8B=E9=85=8D=E7=BD=AEIIS=E7=9A=84=E7=AE=80=E5=8D=95=E6=95=99=E7=A8=
+=8B"=20
+    href=3D"http://edu.codepub.com/2009/0515/4227.php">Windows =
+Xp=E4=B8=8B=E9=85=8D=E7=BD=AEIIS=E7=9A=84=E7=AE=80=E5=8D=95=E6=95=99=E7=A8=
+=8B</A>=20
+    </LI>
+    <LI><A =
+title=3DXP=E9=85=8D=E7=BD=AEIIS+ASP=E8=AF=A6=E8=A7=A3(=E6=96=B0=E6=89=8B=E6=
+=9C=AC=E6=9C=BA=E8=B0=83=E8=AF=95ASP=E7=A8=8B=E5=BA=8F=E5=BF=85=E8=AF=BB)=
+=20
+    =
+href=3D"http://edu.codepub.com/2009/0515/4226.php">XP=E9=85=8D=E7=BD=AEII=
+S+ASP=E8=AF=A6=E8=A7=A3(=E6=96=B0=E6=89=8B=E6=9C=AC=E6=9C=BA=E8=B0=83=E8=AF=
+=95ASP=E7=A8=8B=E5=BA=8F=E5=BF=85=E8=AF=BB)</A>=20
+    </LI>
+    <LI><A =
+title=3DLinux=E4=B8=8BMySQL=E5=AE=89=E8=A3=85=E9=85=8D=E7=BD=AE=EF=BC=8CM=
+ySQL=E9=85=8D=E7=BD=AE=E5=8F=82=E6=95=B0=E8=AF=A6=E8=A7=A3=20
+    =
+href=3D"http://edu.codepub.com/2009/1213/18710.php">Linux=E4=B8=8BMySQL=E5=
+=AE=89=E8=A3=85=E9=85=8D=E7=BD=AE=EF=BC=8CMySQL=E9=85=8D=E7=BD=AE=E5=8F=82=
+=E6=95=B0=E8=AF=A6=E8=A7=A3</A>=20
+    </LI>
+    <LI><A =
+title=3DC=E8=AF=AD=E8=A8=80=E6=96=87=E4=BB=B6=E6=93=8D=E4=BD=9C=E5=87=BD=E6=
+=95=B0=E5=A4=A7=E5=85=A8=20
+    =
+href=3D"http://edu.codepub.com/2009/0815/13576.php">C=E8=AF=AD=E8=A8=80=E6=
+=96=87=E4=BB=B6=E6=93=8D=E4=BD=9C=E5=87=BD=E6=95=B0=E5=A4=A7=E5=85=A8</A>=
+ </LI>
+    <LI><A =
+title=3DMyEclipse=E5=BF=AB=E6=8D=B7=E9=94=AE=E5=A4=A7=E5=85=A8=20
+    =
+href=3D"http://edu.codepub.com/2009/1213/18702.php">MyEclipse=E5=BF=AB=E6=
+=8D=B7=E9=94=AE=E5=A4=A7=E5=85=A8</A> </LI>
+    <LI><A =
+title=3DGOOGLE=E6=8F=90=E4=BE=9B=E6=B0=B8=E4=B9=85=E5=85=8D=E8=B4=B9=E7=91=
+=9E=E6=98=9F=E6=9D=80=E6=AF=92=E8=BD=AF=E4=BB=B6=20
+    =
+href=3D"http://edu.codepub.com/2009/0507/3821.php">GOOGLE=E6=8F=90=E4=BE=9B=
+=E6=B0=B8=E4=B9=85=E5=85=8D=E8=B4=B9=E7=91=9E=E6=98=9F=E6=9D=80=E6=AF=92=E8=
+=BD=AF=E4=BB=B6</A>=20
+</LI>
+    <LI><A =
+title=3D=E6=9C=80=E7=AE=80=E5=8D=95=E7=9A=84=E6=96=B9=E6=B3=95=E5=8E=BB=E6=
+=8E=89iframe=E6=BB=9A=E5=8A=A8=E6=9D=A1=20
+    =
+href=3D"http://edu.codepub.com/2009/0416/3006.php">=E6=9C=80=E7=AE=80=E5=8D=
+=95=E7=9A=84=E6=96=B9=E6=B3=95=E5=8E=BB=E6=8E=89iframe=E6=BB=9A=E5=8A=A8=E6=
+=9D=A1</A> </LI>
+    <LI><A title=3DStruts2=E6=A0=87=E7=AD=BE=E4=BB=8B=E7=BB=8D=20
+    =
+href=3D"http://edu.codepub.com/2009/1114/17648.php">Struts2=E6=A0=87=E7=AD=
+=BE=E4=BB=8B=E7=BB=8D</A> </LI>
+    <LI><A =
+title=3Dlinux=E9=85=8D=E7=BD=AEjava=E7=8E=AF=E5=A2=83=E5=8F=98=E9=87=8F(=E8=
+=AF=A6=E7=BB=86)=20
+    =
+href=3D"http://edu.codepub.com/2009/0630/7473.php">linux=E9=85=8D=E7=BD=AE=
+java=E7=8E=AF=E5=A2=83=E5=8F=98=E9=87=8F(=E8=AF=A6=E7=BB=86)</A>=20
+    </LI>
+    <LI><A title=3D"MDAC2.8 =E4=B8=8B=E8=BD=BD=EF=BC=81"=20
+    href=3D"http://edu.codepub.com/2009/0303/1928.php">MDAC2.8 =
+=E4=B8=8B=E8=BD=BD=EF=BC=81</A> </LI>
+    <LI><A title=3D"Coolite Toolkit =
+=E9=9D=9E=E5=B8=B8=E6=A3=92=E7=9A=84=E6=8E=A7=E4=BB=B6"=20
+    href=3D"http://edu.codepub.com/2009/0602/5262.php">Coolite Toolkit =
+=E9=9D=9E=E5=B8=B8=E6=A3=92=E7=9A=84=E6=8E=A7=E4=BB=B6</A>=20
+    </LI>
+    <LI><A title=3D"" href=3D"http://edu.codepub.com/2009/0713/9603.php" =
+
+    =
+=E6=9C=AA=E6=8C=87=E5=AE=9A=E7=9A=84=E9=94=99=E8=AF=AF?=E7=9A=84=E8=A7=A3=
+=E5=86=B3=E6=96=B9=E6=B3=95?>"=E6=9C=AA=E6=8C=87=E5=AE=9A=E7=9A=84=E9=94=99=
+=E8=AF=AF"=E7=9A=84=E8=A7=A3=E5=86=B3=E6=96=B9=E6=B3=95</A> </LI>
+    <LI><A =
+title=3D10.Java=E5=9F=BA=E7=A1=80=E7=9F=A5=E8=AF=86=E3=80=90=E4=B8=8A=E3=80=
+=91=20
+    =
+href=3D"http://edu.codepub.com/2009/1003/16087.php">10.Java=E5=9F=BA=E7=A1=
+=80=E7=9F=A5=E8=AF=86=E3=80=90=E4=B8=8A=E3=80=91</A> </LI>
+    <LI><A =
+title=3DJava=E7=BA=BF=E7=A8=8B=E6=B1=A0=E7=9A=84=E5=8E=9F=E7=90=86=E4=B8=8E=
+=E5=AE=9E=E7=8E=B0=20
+    =
+href=3D"http://edu.codepub.com/2009/1018/16456.php">Java=E7=BA=BF=E7=A8=8B=
+=E6=B1=A0=E7=9A=84=E5=8E=9F=E7=90=86=E4=B8=8E=E5=AE=9E=E7=8E=B0</A> =
+</LI>
+    <LI><A =
+title=3Doracle=E5=AD=98=E5=82=A8=E8=BF=87=E7=A8=8B=E8=AF=AD=E6=B3=95=20
+    =
+href=3D"http://edu.codepub.com/2009/1029/17050.php">oracle=E5=AD=98=E5=82=
+=A8=E8=BF=87=E7=A8=8B=E8=AF=AD=E6=B3=95</A> </LI>
+    <LI><A =
+title=3D=E8=AE=A1=E7=AE=97=E5=99=A8java=E6=BA=90=E4=BB=A3=E7=A0=81=20
+    =
+href=3D"http://edu.codepub.com/2009/1209/18590.php">=E8=AE=A1=E7=AE=97=E5=
+=99=A8java=E6=BA=90=E4=BB=A3=E7=A0=81</A> </LI>
+    <LI><A =
+title=3DMylyn=E7=AE=80=E4=BB=8B=E2=80=94=E2=80=94=E4=B8=80=E4=B8=AA=E4=B8=
+=8D=E9=94=99=E7=9A=84eclipse=E5=B7=A5=E5=85=B7=20
+    =
+href=3D"http://edu.codepub.com/2009/0619/6662.php">Mylyn=E7=AE=80=E4=BB=8B=
+=E2=80=94=E2=80=94=E4=B8=80=E4=B8=AA=E4=B8=8D=E9=94=99=E7=9A=84eclipse=E5=
+=B7=A5=E5=85=B7</A>=20
+    </LI>
+    <LI><A =
+title=3Djavascript=E5=AD=97=E7=AC=A6=E4=B8=B2=E5=A4=84=E7=90=86=E5=87=BD=E6=
+=95=B0=E6=B1=87=E6=80=BB=20
+    =
+href=3D"http://edu.codepub.com/2009/0416/3001.php">javascript=E5=AD=97=E7=
+=AC=A6=E4=B8=B2=E5=A4=84=E7=90=86=E5=87=BD=E6=95=B0=E6=B1=87=E6=80=BB</A>=
+=20
+    </LI>
+    <LI><A title=3Dmysql=E5=87=BD=E6=95=B0=E6=B1=87=E6=80=BB=20
+    =
+href=3D"http://edu.codepub.com/2009/1124/18117.php">mysql=E5=87=BD=E6=95=B0=
+=E6=B1=87=E6=80=BB</A> </LI>
+    <LI><A =
+title=3DMySQL=E7=9A=84JDBC=E9=A9=B1=E5=8A=A8=E7=A8=8B=E5=BA=8F=20
+    =
+href=3D"http://edu.codepub.com/2009/0408/2621.php">MySQL=E7=9A=84JDBC=E9=A9=
+=B1=E5=8A=A8=E7=A8=8B=E5=BA=8F</A> </LI>
+    <LI><A =
+title=3DApache=E7=9A=84httpd.conf=E6=96=87=E4=BB=B6=E9=85=8D=E7=BD=AE=E8=AF=
+=A6=E8=A7=A3=20
+    =
+href=3D"http://edu.codepub.com/2009/0103/937.php">Apache=E7=9A=84httpd.co=
+nf=E6=96=87=E4=BB=B6=E9=85=8D=E7=BD=AE=E8=AF=A6=E8=A7=A3</A>=20
+    </LI>
+    <LI><A title=3D"C++ =
+=E6=95=B0=E5=AD=97=E8=BD=AC=E5=AD=97=E7=AC=A6=E4=B8=B2 =
+=E5=AD=97=E7=AC=A6=E4=B8=B2=E8=BD=AC=E6=95=B0=E5=AD=97"=20
+    href=3D"http://edu.codepub.com/2009/0917/15494.php">C++ =
+=E6=95=B0=E5=AD=97=E8=BD=AC=E5=AD=97=E7=AC=A6=E4=B8=B2 =
+=E5=AD=97=E7=AC=A6=E4=B8=B2=E8=BD=AC=E6=95=B0=E5=AD=97</A>=20
+  </LI></UL></DD></DL></DIV></DIV></DIV>
+<SCRIPT language=3DJavaScript=20
+src=3D"http://edu.codepub.com/count.php?contentid=3D5052"></SCRIPT>
+
+<SCRIPT src=3D"http://edu.codepub.com/images/js/dropdown.js"=20
+type=3Dtext/javascript></SCRIPT>
+
+<UL class=3DdropMenu id=3Ddropmenu1>
+  <LI><A =
+href=3D"http://edu.codepub.com/webmaster/grzz/">=E4=B8=AA=E4=BA=BA=E7=AB=99=
+=E9=95=BF</A>=20
+  <LI><A =
+href=3D"http://edu.codepub.com/webmaster/wzyy/">=E7=BD=91=E7=AB=99=E8=BF=90=
+=E8=90=A5</A>=20
+  <LI><A =
+href=3D"http://edu.codepub.com/webmaster/bj/">=E7=BD=91=E7=AB=99=E7=BC=96=
+=E8=BE=91</A>=20
+  <LI><A =
+href=3D"http://edu.codepub.com/webmaster/yl/">=E7=9B=88=E5=88=A9=E7=AD=96=
+=E5=88=92</A>=20
+  <LI><A =
+href=3D"http://edu.codepub.com/webmaster/tg/">=E7=BD=91=E7=AB=99=E6=8E=A8=
+=E5=B9=BF</A>=20
+  <LI><A =
+href=3D"http://edu.codepub.com/webmaster/codes/">=E5=BB=BA=E7=AB=99=E7=A8=
+=8B=E5=BA=8F</A>=20
+  <LI><A =
+href=3D"http://edu.codepub.com/webmaster/cy/">=E5=88=9B=E4=B8=9A=E9=A2=91=
+=E9=81=93</A> </LI></UL>
+<UL class=3DdropMenu id=3Ddropmenu2>
+  <LI><A =
+href=3D"http://edu.codepub.com/web/base/">=E5=9F=BA=E7=A1=80=E7=9F=A5=E8=AF=
+=86</A>=20
+  <LI><A =
+href=3D"http://edu.codepub.com/web/logos/">=E8=AE=BE=E8=AE=A1=E7=90=86=E5=
+=BF=B5</A>=20
+  <LI><A =
+href=3D"http://edu.codepub.com/web/html/">HTML=E5=AD=A6=E4=B9=A0</A>=20
+  <LI><A =
+href=3D"http://edu.codepub.com/web/xhtml/">Xhtml=E6=95=99=E7=A8=8B</A>=20
+  <LI><A =
+href=3D"http://edu.codepub.com/web/css/">CSS=E5=AD=A6=E4=B9=A0</A>=20
+  <LI><A href=3D"http://edu.codepub.com/web/javascript/">Javascript</A>=20
+  <LI><A =
+href=3D"http://edu.codepub.com/web/dreamweaver/">Dreamweaver</A>=20
+  <LI><A href=3D"http://edu.codepub.com/web/flash/">Flash</A>=20
+  <LI><A =
+href=3D"http://edu.codepub.com/web/SharePointDesigner/">SharePoint=20
+  Designer</A> </LI></UL>
+<UL class=3DdropMenu id=3Ddropmenu3>
+  <LI><A href=3D"http://edu.codepub.com/programme/asp/">ASP</A>=20
+  <LI><A href=3D"http://edu.codepub.com/programme/php/">PHP</A>=20
+  <LI><A href=3D"http://edu.codepub.com/programme/dotnet/">ASP.NET</A>=20
+  <LI><A href=3D"http://edu.codepub.com/programme/jsp/">JSP</A>=20
+  <LI><A =
+href=3D"http://edu.codepub.com/programme/pbase/">=E7=BC=96=E7=A8=8B=E5=9F=
+=BA=E7=A1=80</A>=20
+  <LI><A href=3D"http://edu.codepub.com/programme/python/">Python</A>=20
+  <LI><A href=3D"http://edu.codepub.com/programme/C/">C/C++</A>=20
+  <LI><A href=3D"http://edu.codepub.com/programme/java/">Java</A>=20
+  <LI><A href=3D"http://edu.codepub.com/programme/visualc/">Visual =
+C++</A>=20
+  <LI><A href=3D"http://edu.codepub.com/programme/delphi/">Delphi</A>=20
+  <LI><A href=3D"http://edu.codepub.com/programme/csharp/">C#</A>=20
+  <LI><A href=3D"http://edu.codepub.com/programme/xml-wml/">XML/WML</A>=20
+  <LI><A href=3D"http://edu.codepub.com/programme/ajax/">Ajax</A>=20
+  <LI><A =
+href=3D"http://edu.codepub.com/programme/Assemble/">=E6=B1=87=E7=BC=96=E8=
+=AF=AD=E8=A8=80</A>=20
+  <LI><A href=3D"http://edu.codepub.com/programme/groovy/">Groovy</A> =
+</LI></UL>
+<UL class=3DdropMenu id=3Ddropmenu5>
+  <LI><A =
+href=3D"http://edu.codepub.com/info/ershou/">=E4=BA=8C=E6=89=8B/=E5=9B=9E=
+=E6=94=B6</A>=20
+  <LI><A =
+href=3D"http://edu.codepub.com/info/xin/">=E5=85=A8=E6=96=B0=E4=BF=A1=E6=81=
+=AF</A>=20
+  <LI><A =
+href=3D"http://edu.codepub.com/info/website/">=E7=BD=91=E7=AB=99=E8=BD=AC=
+=E8=AE=A9</A>=20
+  <LI><A =
+href=3D"http://edu.codepub.com/info/host/">=E5=9F=9F=E5=90=8D=E4=B8=BB=E6=
+=9C=BA</A>=20
+  <LI><A =
+href=3D"http://edu.codepub.com/info/laowu/">=E5=8A=B3=E5=8A=A1=E4=BF=A1=E6=
+=81=AF</A>=20
+  <LI><A =
+href=3D"http://edu.codepub.com/info/zonghe/">=E7=BB=BC=E5=90=88=E4=BF=A1=E6=
+=81=AF</A> </LI></UL>
+<UL class=3DdropMenu id=3Ddropmenu6>
+  <LI><A href=3D"http://edu.codepub.com/database/access/">ACCESS</A>=20
+  <LI><A href=3D"http://edu.codepub.com/database/mssql/">SQL Server</A>=20
+  <LI><A href=3D"http://edu.codepub.com/database/mysql/">MySQL</A>=20
+  <LI><A href=3D"http://edu.codepub.com/database/oracle/">Oracle</A>=20
+  <LI><A =
+href=3D"http://edu.codepub.com/database/postgresql/">PostgreSQL</A>=20
+  <LI><A href=3D"http://edu.codepub.com/database/firebird/">Firebird</A> =
+
+  <LI><A =
+href=3D"http://edu.codepub.com/database/pdata/">=E6=95=B0=E6=8D=AE=E5=BA=93=
+=E5=BC=80=E5=8F=91</A>=20
+  <LI><A href=3D"http://edu.codepub.com/database/sqlite/">SQLite</A> =
+</LI></UL>
+<UL class=3DdropMenu id=3Ddropmenu7>
+  <LI><A href=3D"http://edu.codepub.com/server/iis/">IIS</A>=20
+  <LI><A href=3D"http://edu.codepub.com/server/apache/">Apache</A>=20
+  <LI><A href=3D"http://edu.codepub.com/server/tomcat/">Tomcat</A>=20
+  <LI><A href=3D"http://edu.codepub.com/server/nginx/">Nginx</A>=20
+  <LI><A =
+href=3D"http://edu.codepub.com/server/ftp/">FTP=E6=9C=8D=E5=8A=A1=E5=99=A8=
+</A>=20
+  <LI><A href=3D"http://edu.codepub.com/server/linux/">Linux</A>=20
+  <LI><A =
+href=3D"http://edu.codepub.com/server/mail/">=E9=82=AE=E4=BB=B6=E6=9C=8D=E5=
+=8A=A1=E5=99=A8</A>=20
+  <LI><A href=3D"http://edu.codepub.com/server/freebsd/">FreeBSD</A>=20
+  <LI><A href=3D"http://edu.codepub.com/server/windows/">Windows</A>=20
+  <LI><A href=3D"http://edu.codepub.com/server/cherokee/">Cherokee</A> =
+</LI></UL>
+<SCRIPT =
+type=3Dtext/javascript>cssdropdown.startchrome("navMenu")</SCRIPT>
+
+<DIV class=3D"footer w960 center mt1 clear">
+<P class=3Dpowered>
+<P =
+class=3Dcopyright>=E6=BA=90=E7=A0=81=E7=BD=91=E5=BC=80=E5=8F=91=E5=AD=A6=E9=
+=99=A2,=E4=B8=BA=E4=B8=AD=E5=9B=BD=E4=B8=AD=E5=9B=BDIT=E6=8F=90=E4=BE=9B=E6=
+=BA=90=E5=8A=A8=E5=8A=9B=EF=BC=81=E8=AF=B7=E7=89=A2=E8=AE=B0=E6=88=91=E4=BB=
+=AC=E7=9A=84=E5=9F=9F=E5=90=8D=E5=B9=B6=E5=8A=A0=E5=85=A5=E6=94=B6=E8=97=8F=
+=E5=A4=B9=EF=BC=81<BR>
+<P>Copyright =C2=A9 2005-2008 <A title=3D=E6=BA=90=E7=A0=81=E7=BD=91=20
+href=3D"http://www.codepub.com/">CodePub.Com</A>&nbsp;<A=20
+href=3D"http://www.codepub.com/" =
+target=3D_blank>=E6=BA=90=E7=A0=81=E7=BD=91</A></P><A=20
+href=3D"http://www.miibeian.gov.cn/" =
+target=3D_blank>=E6=BB=87ICP=E5=A4=8705005971=E5=8F=B7</A>
+<SCRIPT language=3Djavascript src=3D"http://js.users.51.la/2393496.js"=20
+type=3Dtext/javascript></SCRIPT>
+ <NOSCRIPT><A href=3D"http://www.51.la/?2393496" target=3D_blank><IMG=20
+style=3D"BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none"=20
+alt=3D=E6=88=91=E8=A6=81=E5=95=A6=E5=85=8D=E8=B4=B9=E7=BB=9F=E8=AE=A1 =
+src=3D"http://img.users.51.la/2393496.asp"></A></NOSCRIPT>=20
+<P></P></DIV></BODY></HTML>
+
+------=_NextPart_001_00BF_01CB602B.8E524E50
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://edu.codepub.com/edu2009/top-banner.html
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=3DContent-Type content=3D"text/html; charset=3Dutf-8">
+<STYLE type=3Dtext/css>BODY {
+	MARGIN: 0px
+}
+</STYLE>
+<!--480=E5=AE=BD=E5=BA=A6X60=E9=AB=98=E5=BA=A6--><!-- =
+=E5=B9=BF=E5=91=8A=E4=BD=8D=EF=BC=9A=E9=A1=B6=E9=83=A8=E5=B9=BF=E5=91=8A =
+-->
+<SCRIPT src=3D"http://cbjs.baidu.com/js/s.js" =
+type=3Dtext/javascript></SCRIPT>
+
+<SCRIPT =
+type=3Dtext/javascript>BAIDU_CLB_singleFillSlot('52339');</SCRIPT>
+
+<META content=3D"MSHTML 6.00.6000.20815" name=3DGENERATOR></HEAD>
+<BODY>
+<DIV align=3Dcenter></DIV></BODY></HTML>
+
+------=_NextPart_001_00BF_01CB602B.8E524E50--
+
+------=_NextPart_000_00B4_01CB602B.8E524E50
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://edu.codepub.com/edu2009/tonglan.html
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=3DContent-Type content=3D"text/html; charset=3Dutf-8">
+<STYLE type=3Dtext/css>BODY {
+	MARGIN: 0px
+}
+</STYLE>
+<!-- =
+=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=CE=BB=EF=BF=BD=EF=BF=BD=C8=AB=D5=BE=CD=
+=A8=EF=BF=BD=EF=BF=BD -->
+<SCRIPT src=3D"http://cbjs.baidu.com/js/s.js" =
+type=3Dtext/javascript></SCRIPT>
+
+<SCRIPT =
+type=3Dtext/javascript>BAIDU_CLB_singleFillSlot('52343');</SCRIPT>
+
+<META content=3D"MSHTML 6.00.6000.20815" name=3DGENERATOR></HEAD>
+<BODY>
+<DIV align=3Dcenter></DIV></BODY></HTML>
+
+------=_NextPart_000_00B4_01CB602B.8E524E50
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://edu.codepub.com/edu2009/show-center-2.html
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=3DContent-Type content=3D"text/html; charset=3Dutf-8">
+<STYLE type=3Dtext/css>BODY {
+	MARGIN: 0px
+}
+</STYLE>
+<!--468=E5=AE=BD=E5=BA=A6X60=E9=AB=98=E5=BA=A6--><!-- =
+=E5=B9=BF=E5=91=8A=E4=BD=8D=EF=BC=9A=E6=AD=A3=E6=96=87=E5=BA=95=E9=83=A84=
+68=E5=B9=BF=E5=91=8A=E4=BD=8D -->
+<SCRIPT src=3D"http://cbjs.baidu.com/js/s.js" =
+type=3Dtext/javascript></SCRIPT>
+
+<SCRIPT =
+type=3Dtext/javascript>BAIDU_CLB_singleFillSlot('52344');</SCRIPT>
+
+<META content=3D"MSHTML 6.00.6000.20815" name=3DGENERATOR></HEAD>
+<BODY>
+<DIV></DIV></BODY></HTML>
+
+------=_NextPart_000_00B4_01CB602B.8E524E50
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://edu.codepub.com/edu2009/show-right-1.html
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=3DContent-Type content=3D"text/html; charset=3Dutf-8">
+<STYLE type=3Dtext/css>BODY {
+	MARGIN: 0px
+}
+</STYLE>
+<!--230=E5=AE=BD=E5=BA=A6X200=E9=AB=98=E5=BA=A6--><!-- =
+=E5=B9=BF=E5=91=8A=E4=BD=8D=EF=BC=9A=E5=8F=B3_=E7=89=B9=E5=88=AB=E6=8E=A8=
+=E8=8D=90 -->
+<SCRIPT src=3D"http://cbjs.baidu.com/js/s.js" =
+type=3Dtext/javascript></SCRIPT>
+
+<SCRIPT =
+type=3Dtext/javascript>BAIDU_CLB_singleFillSlot('52345');</SCRIPT>
+
+<META content=3D"MSHTML 6.00.6000.20815" name=3DGENERATOR></HEAD>
+<BODY>
+<DIV align=3Dcenter></DIV></BODY></HTML>
+
+------=_NextPart_000_00B4_01CB602B.8E524E50
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://edu.codepub.com/data/config.js
+
+var phpcms_path =3D '/';=0A=
+var cookie_pre =3D 'pwIEdRuApC';=0A=
+var cookie_domain =3D '';=0A=
+var cookie_path =3D '/';
+------=_NextPart_000_00B4_01CB602B.8E524E50
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://edu.codepub.com/images/js/jquery.min.js
+
+eval(function(p,a,c,k,e,r){e=3Dfunction(c){return(c<a?'':e(parseInt(c/a))=
+)+((c=3Dc%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace=
+(/^/,String)){while(c--)r[e(c)]=3Dk[c]||e(c);k=3D[function(e){return =
+r[e]}];e=3Dfunction(){return'\\w+'};c=3D1};while(c--)if(k[c])p=3Dp.replac=
+e(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('(H(){J =
+w=3D1b.4M,3m$=3D1b.$;J D=3D1b.4M=3D1b.$=3DH(a,b){I 2B D.17.5j(a,b)};J =
+u=3D/^[^<]*(<(.|\\s)+>)[^>]*$|^#(\\w+)$/,62=3D/^.[^:#\\[\\.]*$/,12;D.17=3D=
+D.44=3D{5j:H(d,b){d=3Dd||S;G(d.16){7[0]=3Dd;7.K=3D1;I 7}G(1j =
+d=3D=3D"23"){J =
+c=3Du.2D(d);G(c&&(c[1]||!b)){G(c[1])d=3DD.4h([c[1]],b);N{J =
+a=3DS.61(c[3]);G(a){G(a.2v!=3Dc[3])I D().2q(d);I D(a)}d=3D[]}}N I =
+D(b).2q(d)}N G(D.1D(d))I D(S)[D.17.27?"27":"43"](d);I =
+7.6Y(D.2d(d))},5w:"1.2.6",8G:H(){I 7.K},K:0,3p:H(a){I =
+a=3D=3D12?D.2d(7):7[a]},2I:H(b){J a=3DD(b);a.5n=3D7;I =
+a},6Y:H(a){7.K=3D0;2p.44.1p.1w(7,a);I 7},P:H(a,b){I =
+D.P(7,a,b)},5i:H(b){J a=3D-1;I D.2L(b&&b.5w?b[0]:b,7)},1K:H(c,a,b){J =
+d=3Dc;G(c.1q=3D=3D56)G(a=3D=3D=3D12)I =
+7[0]&&D[b||"1K"](7[0],c);N{d=3D{};d[c]=3Da}I 7.P(H(i){R(c 1n =
+d)D.1K(b?7.V:7,c,D.1i(7,d[c],b,i,c))})},1g:H(b,a){G((b=3D=3D\'2h\'||b=3D=3D=
+\'1Z\')&&3d(a)<0)a=3D12;I 7.1K(b,a,"2a")},1r:H(b){G(1j =
+b!=3D"49"&&b!=3DU)I 7.4E().3v((7[0]&&7[0].2z||S).5F(b));J =
+a=3D"";D.P(b||7,H(){D.P(7.3t,H(){G(7.16!=3D8)a+=3D7.16!=3D1?7.76:D.17.1r(=
+[7])})});I a},5z:H(b){G(7[0])D(b,7[0].2z).5y().39(7[0]).2l(H(){J =
+a=3D7;1B(a.1x)a=3Da.1x;I a}).3v(7);I 7},8Y:H(a){I =
+7.P(H(){D(7).6Q().5z(a)})},8R:H(a){I 7.P(H(){D(7).5z(a)})},3v:H(){I =
+7.3W(19,M,Q,H(a){G(7.16=3D=3D1)7.3U(a)})},6F:H(){I =
+7.3W(19,M,M,H(a){G(7.16=3D=3D1)7.39(a,7.1x)})},6E:H(){I =
+7.3W(19,Q,Q,H(a){7.1d.39(a,7)})},5q:H(){I =
+7.3W(19,Q,M,H(a){7.1d.39(a,7.2H)})},3l:H(){I 7.5n||D([])},2q:H(b){J =
+c=3DD.2l(7,H(a){I D.2q(b,a)});I 7.2I(/[^+>] =
+[^+>]/.11(b)||b.1h("..")>-1?D.4r(c):c)},5y:H(e){J =
+f=3D7.2l(H(){G(D.14.1f&&!D.4n(7)){J =
+a=3D7.6o(M),5h=3DS.3h("1v");5h.3U(a);I D.4h([5h.4H])[0]}N I 7.6o(M)});J =
+d=3Df.2q("*").5c().P(H(){G(7[E]!=3D12)7[E]=3DU});G(e=3D=3D=3DM)7.2q("*").=
+5c().P(H(i){G(7.16=3D=3D3)I;J c=3DD.L(7,"3w");R(J a 1n c)R(J b 1n =
+c[a])D.W.1e(d[i],a,c[a][b],c[a][b].L)});I f},1E:H(b){I =
+7.2I(D.1D(b)&&D.3C(7,H(a,i){I =
+b.1k(a,i)})||D.3g(b,7))},4Y:H(b){G(b.1q=3D=3D56)G(62.11(b))I =
+7.2I(D.3g(b,7,M));N b=3DD.3g(b,7);J a=3Db.K&&b[b.K-1]!=3D=3D12&&!b.16;I =
+7.1E(H(){I a?D.2L(7,b)<0:7!=3Db})},1e:H(a){I 7.2I(D.4r(D.2R(7.3p(),1j =
+a=3D=3D\'23\'?D(a):D.2d(a))))},3F:H(a){I!!a&&D.3g(a,7).K>0},7T:H(a){I =
+7.3F("."+a)},6e:H(b){G(b=3D=3D12){G(7.K){J c=3D7[0];G(D.Y(c,"2A")){J =
+e=3Dc.64,63=3D[],15=3Dc.15,2V=3Dc.O=3D=3D"2A-2V";G(e<0)I U;R(J =
+i=3D2V?e:0,2f=3D2V?e+1:15.K;i<2f;i++){J =
+d=3D15[i];G(d.2W){b=3DD.14.1f&&!d.at.2x.an?d.1r:d.2x;G(2V)I =
+b;63.1p(b)}}I 63}N I(7[0].2x||"").1o(/\\r/g,"")}I =
+12}G(b.1q=3D=3D4L)b+=3D\'\';I =
+7.P(H(){G(7.16!=3D1)I;G(b.1q=3D=3D2p&&/5O|5L/.11(7.O))7.4J=3D(D.2L(7.2x,b=
+)>=3D0||D.2L(7.34,b)>=3D0);N G(D.Y(7,"2A")){J =
+a=3DD.2d(b);D("9R",7).P(H(){7.2W=3D(D.2L(7.2x,a)>=3D0||D.2L(7.1r,a)>=3D0)=
+});G(!a.K)7.64=3D-1}N 7.2x=3Db})},2K:H(a){I =
+a=3D=3D12?(7[0]?7[0].4H:U):7.4E().3v(a)},7b:H(a){I =
+7.5q(a).21()},79:H(i){I 7.3s(i,i+1)},3s:H(){I =
+7.2I(2p.44.3s.1w(7,19))},2l:H(b){I 7.2I(D.2l(7,H(a,i){I =
+b.1k(a,i,a)}))},5c:H(){I 7.1e(7.5n)},L:H(d,b){J =
+a=3Dd.1R(".");a[1]=3Da[1]?"."+a[1]:"";G(b=3D=3D=3D12){J =
+c=3D7.5C("9z"+a[1]+"!",[a[0]]);G(c=3D=3D=3D12&&7.K)c=3DD.L(7[0],d);I =
+c=3D=3D=3D12&&a[1]?7.L(a[0]):c}N I =
+7.1P("9u"+a[1]+"!",[a[0],b]).P(H(){D.L(7,d,b)})},3b:H(a){I =
+7.P(H(){D.3b(7,a)})},3W:H(g,f,h,d){J e=3D7.K>1,3x;I =
+7.P(H(){G(!3x){3x=3DD.4h(g,7.2z);G(h)3x.9o()}J =
+b=3D7;G(f&&D.Y(7,"1T")&&D.Y(3x[0],"4F"))b=3D7.3H("22")[0]||7.3U(7.2z.3h("=
+22"));J c=3DD([]);D.P(3x,H(){J =
+a=3De?D(7).5y(M)[0]:7;G(D.Y(a,"1m"))c=3Dc.1e(a);N{G(a.16=3D=3D1)c=3Dc.1e(=
+D("1m",a).21());d.1k(b,a)}});c.P(6T)})}};D.17.5j.44=3DD.17;H =
+6T(i,a){G(a.4d)D.3Y({1a:a.4d,31:Q,1O:"1m"});N =
+D.5u(a.1r||a.6O||a.4H||"");G(a.1d)a.1d.37(a)}H 1z(){I+2B =
+8J}D.1l=3DD.17.1l=3DH(){J =
+b=3D19[0]||{},i=3D1,K=3D19.K,4x=3DQ,15;G(b.1q=3D=3D8I){4x=3Db;b=3D19[1]||=
+{};i=3D2}G(1j b!=3D"49"&&1j =
+b!=3D"H")b=3D{};G(K=3D=3Di){b=3D7;--i}R(;i<K;i++)G((15=3D19[i])!=3DU)R(J =
+c 1n 15){J a=3Db[c],2w=3D15[c];G(b=3D=3D=3D2w)6M;G(4x&&2w&&1j =
+2w=3D=3D"49"&&!2w.16)b[c]=3DD.1l(4x,a||(2w.K!=3DU?[]:{}),2w);N =
+G(2w!=3D=3D12)b[c]=3D2w}I b};J =
+E=3D"4M"+1z(),6K=3D0,5r=3D{},6G=3D/z-?5i|8B-?8A|1y|6B|8v-?1Z/i,3P=3DS.3P|=
+|{};D.1l({8u:H(a){1b.$=3D3m$;G(a)1b.4M=3Dw;I D},1D:H(a){I!!a&&1j =
+a!=3D"23"&&!a.Y&&a.1q!=3D2p&&/^[\\s[]?H/.11(a+"")},4n:H(a){I =
+a.1C&&!a.1c||a.2j&&a.2z&&!a.2z.1c},5u:H(a){a=3DD.3k(a);G(a){J =
+b=3DS.3H("6w")[0]||S.1C,1m=3DS.3h("1m");1m.O=3D"1r/4t";G(D.14.1f)1m.1r=3D=
+a;N 1m.3U(S.5F(a));b.39(1m,b.1x);b.37(1m)}},Y:H(b,a){I =
+b.Y&&b.Y.2r()=3D=3Da.2r()},1Y:{},L:H(c,d,b){c=3Dc=3D=3D1b?5r:c;J =
+a=3Dc[E];G(!a)a=3Dc[E]=3D++6K;G(d&&!D.1Y[a])D.1Y[a]=3D{};G(b!=3D=3D12)D.1=
+Y[a][d]=3Db;I d?D.1Y[a][d]:a},3b:H(c,b){c=3Dc=3D=3D1b?5r:c;J =
+a=3Dc[E];G(b){G(D.1Y[a]){2U D.1Y[a][b];b=3D"";R(b 1n =
+D.1Y[a])1X;G(!b)D.3b(c)}}N{1U{2U c[E]}1V(e){G(c.5l)c.5l(E)}2U =
+D.1Y[a]}},P:H(d,a,c){J e,i=3D0,K=3Dd.K;G(c){G(K=3D=3D12){R(e 1n =
+d)G(a.1w(d[e],c)=3D=3D=3DQ)1X}N =
+R(;i<K;)G(a.1w(d[i++],c)=3D=3D=3DQ)1X}N{G(K=3D=3D12){R(e 1n =
+d)G(a.1k(d[e],e,d[e])=3D=3D=3DQ)1X}N R(J =
+b=3Dd[0];i<K&&a.1k(b,i,b)!=3D=3DQ;b=3Dd[++i]){}}I =
+d},1i:H(b,a,c,i,d){G(D.1D(a))a=3Da.1k(b,i);I =
+a&&a.1q=3D=3D4L&&c=3D=3D"2a"&&!6G.11(d)?a+"2X":a},1F:{1e:H(c,b){D.P((b||"=
+").1R(/\\s+/),H(i,a){G(c.16=3D=3D1&&!D.1F.3T(c.1F,a))c.1F+=3D(c.1F?" =
+":"")+a})},21:H(c,b){G(c.16=3D=3D1)c.1F=3Db!=3D12?D.3C(c.1F.1R(/\\s+/),H(=
+a){I!D.1F.3T(b,a)}).6s(" "):""},3T:H(b,a){I =
+D.2L(a,(b.1F||b).6r().1R(/\\s+/))>-1}},6q:H(b,c,a){J e=3D{};R(J d 1n =
+c){e[d]=3Db.V[d];b.V[d]=3Dc[d]}a.1k(b);R(J d 1n =
+c)b.V[d]=3De[d]},1g:H(d,e,c){G(e=3D=3D"2h"||e=3D=3D"1Z"){J =
+b,3X=3D{30:"5x",5g:"1G",18:"3I"},35=3De=3D=3D"2h"?["5e","6k"]:["5G","6i"]=
+;H 5b(){b=3De=3D=3D"2h"?d.8f:d.8c;J =
+a=3D0,2C=3D0;D.P(35,H(){a+=3D3d(D.2a(d,"57"+7,M))||0;2C+=3D3d(D.2a(d,"2C"=
++7+"4b",M))||0});b-=3D29.83(a+2C)}G(D(d).3F(":4j"))5b();N =
+D.6q(d,3X,5b);I 29.2f(0,b)}I D.2a(d,e,c)},2a:H(f,l,k){J e,V=3Df.V;H =
+3E(b){G(!D.14.2k)I Q;J =
+a=3D3P.54(b,U);I!a||a.52("3E")=3D=3D""}G(l=3D=3D"1y"&&D.14.1f){e=3DD.1K(V=
+,"1y");I e=3D=3D""?"1":e}G(D.14.2G&&l=3D=3D"18"){J d=3DV.50;V.50=3D"0 7Y =
+7W";V.50=3Dd}G(l.1I(/4i/i))l=3Dy;G(!k&&V&&V[l])e=3DV[l];N =
+G(3P.54){G(l.1I(/4i/i))l=3D"4i";l=3Dl.1o(/([A-Z])/g,"-$1").3y();J =
+c=3D3P.54(f,U);G(c&&!3E(f))e=3Dc.52(l);N{J =
+g=3D[],2E=3D[],a=3Df,i=3D0;R(;a&&3E(a);a=3Da.1d)2E.6h(a);R(;i<2E.K;i++)G(=
+3E(2E[i])){g[i]=3D2E[i].V.18;2E[i].V.18=3D"3I"}e=3Dl=3D=3D"18"&&g[2E.K-1]=
+!=3DU?"2F":(c&&c.52(l))||"";R(i=3D0;i<g.K;i++)G(g[i]!=3DU)2E[i].V.18=3Dg[=
+i]}G(l=3D=3D"1y"&&e=3D=3D"")e=3D"1"}N G(f.4g){J =
+h=3Dl.1o(/\\-(\\w)/g,H(a,b){I =
+b.2r()});e=3Df.4g[l]||f.4g[h];G(!/^\\d+(2X)?$/i.11(e)&&/^\\d/.11(e)){J =
+j=3DV.1A,66=3Df.65.1A;f.65.1A=3Df.4g.1A;V.1A=3De||0;e=3DV.aM+"2X";V.1A=3D=
+j;f.65.1A=3D66}}I e},4h:H(l,h){J k=3D[];h=3Dh||S;G(1j =
+h.3h=3D=3D\'12\')h=3Dh.2z||h[0]&&h[0].2z||S;D.P(l,H(i,d){G(!d)I;G(d.1q=3D=
+=3D4L)d+=3D\'\';G(1j =
+d=3D=3D"23"){d=3Dd.1o(/(<(\\w+)[^>]*?)\\/>/g,H(b,a,c){I =
+c.1I(/^(aK|4f|7E|aG|4T|7A|aB|3n|az|ay|av)$/i)?b:a+"></"+c+">"});J =
+f=3DD.3k(d).3y(),1v=3Dh.3h("1v");J e=3D!f.1h("<au")&&[1,"<2A =
+7w=3D\'7w\'>","</2A>"]||!f.1h("<ar")&&[1,"<7v>","</7v>"]||f.1I(/^<(aq|22|=
+am|ak|ai)/)&&[1,"<1T>","</1T>"]||!f.1h("<4F")&&[2,"<1T><22>","</22></1T>"=
+]||(!f.1h("<af")||!f.1h("<ad"))&&[3,"<1T><22><4F>","</4F></22></1T>"]||!f=
+.1h("<7E")&&[2,"<1T><22></22><7q>","</7q></1T>"]||D.14.1f&&[1,"1v<1v>","<=
+/1v>"]||[0,"",""];1v.4H=3De[1]+d+e[2];1B(e[0]--)1v=3D1v.5T;G(D.14.1f){J =
+g=3D!f.1h("<1T")&&f.1h("<22")<0?1v.1x&&1v.1x.3t:e[1]=3D=3D"<1T>"&&f.1h("<=
+22")<0?1v.3t:[];R(J =
+j=3Dg.K-1;j>=3D0;--j)G(D.Y(g[j],"22")&&!g[j].3t.K)g[j].1d.37(g[j]);G(/^\\=
+s/.11(d))1v.39(h.5F(d.1I(/^\\s*/)[0]),1v.1x)}d=3DD.2d(1v.3t)}G(d.K=3D=3D=3D=
+0&&(!D.Y(d,"3V")&&!D.Y(d,"2A")))I;G(d[0]=3D=3D12||D.Y(d,"3V")||d.15)k.1p(=
+d);N k=3DD.2R(k,d)});I k},1K:H(d,f,c){G(!d||d.16=3D=3D3||d.16=3D=3D8)I =
+12;J =
+e=3D!D.4n(d),40=3Dc!=3D=3D12,1f=3DD.14.1f;f=3De&&D.3X[f]||f;G(d.2j){J =
+g=3D/5Q|4d|V/.11(f);G(f=3D=3D"2W"&&D.14.2k)d.1d.64;G(f 1n =
+d&&e&&!g){G(40){G(f=3D=3D"O"&&D.Y(d,"4T")&&d.1d)7p"O a3 a1\'t 9V =
+9U";d[f]=3Dc}G(D.Y(d,"3V")&&d.7i(f))I d.7i(f).76;I =
+d[f]}G(1f&&e&&f=3D=3D"V")I D.1K(d.V,"9T",c);G(40)d.9Q(f,""+c);J =
+h=3D1f&&e&&g?d.4G(f,2):d.4G(f);I =
+h=3D=3D=3DU?12:h}G(1f&&f=3D=3D"1y"){G(40){d.6B=3D1;d.1E=3D(d.1E||"").1o(/=
+7f\\([^)]*\\)/,"")+(3r(c)+\'\'=3D=3D"9L"?"":"7f(1y=3D"+c*7a+")")}I =
+d.1E&&d.1E.1h("1y=3D")>=3D0?(3d(d.1E.1I(/1y=3D([^)]*)/)[1])/7a)+\'\':""}f=
+=3Df.1o(/-([a-z])/9H,H(a,b){I b.2r()});G(40)d[f]=3Dc;I =
+d[f]},3k:H(a){I(a||"").1o(/^\\s+|\\s+$/g,"")},2d:H(b){J =
+a=3D[];G(b!=3DU){J i=3Db.K;G(i=3D=3DU||b.1R||b.4I||b.1k)a[0]=3Db;N =
+1B(i)a[--i]=3Db[i]}I a},2L:H(b,a){R(J =
+i=3D0,K=3Da.K;i<K;i++)G(a[i]=3D=3D=3Db)I i;I-1},2R:H(a,b){J =
+i=3D0,T,2S=3Da.K;G(D.14.1f){1B(T=3Db[i++])G(T.16!=3D8)a[2S++]=3DT}N =
+1B(T=3Db[i++])a[2S++]=3DT;I a},4r:H(a){J c=3D[],2o=3D{};1U{R(J =
+i=3D0,K=3Da.K;i<K;i++){J =
+b=3DD.L(a[i]);G(!2o[b]){2o[b]=3DM;c.1p(a[i])}}}1V(e){c=3Da}I =
+c},3C:H(c,a,d){J b=3D[];R(J =
+i=3D0,K=3Dc.K;i<K;i++)G(!d!=3D!a(c[i],i))b.1p(c[i]);I b},2l:H(d,a){J =
+c=3D[];R(J i=3D0,K=3Dd.K;i<K;i++){J b=3Da(d[i],i);G(b!=3DU)c[c.K]=3Db}I =
+c.7d.1w([],c)}});J =
+v=3D9B.9A.3y();D.14=3D{5B:(v.1I(/.+(?:9y|9x|9w|9v)[\\/: =
+]([\\d.]+)/)||[])[1],2k:/75/.11(v),2G:/2G/.11(v),1f:/1f/.11(v)&&!/2G/.11(=
+v),42:/42/.11(v)&&!/(9s|75)/.11(v)};J =
+y=3DD.14.1f?"7o":"72";D.1l({71:!D.14.1f||S.70=3D=3D"6Z",3X:{"R":"9n","9k"=
+:"1F","4i":y,72:y,7o:y,9h:"9f",9e:"9d",9b:"99"}});D.P({6W:H(a){I =
+a.1d},97:H(a){I D.4S(a,"1d")},95:H(a){I D.3a(a,2,"2H")},91:H(a){I =
+D.3a(a,2,"4l")},8Z:H(a){I D.4S(a,"2H")},8X:H(a){I =
+D.4S(a,"4l")},8W:H(a){I D.5v(a.1d.1x,a)},8V:H(a){I D.5v(a.1x)},6Q:H(a){I =
+D.Y(a,"8U")?a.8T||a.8S.S:D.2d(a.3t)}},H(c,d){D.17[c]=3DH(b){J =
+a=3DD.2l(7,d);G(b&&1j b=3D=3D"23")a=3DD.3g(b,a);I =
+7.2I(D.4r(a))}});D.P({6P:"3v",8Q:"6F",39:"6E",8P:"5q",8O:"7b"},H(c,b){D.1=
+7[c]=3DH(){J a=3D19;I 7.P(H(){R(J =
+i=3D0,K=3Da.K;i<K;i++)D(a[i])[b](7)})}});D.P({8N:H(a){D.1K(7,a,"");G(7.16=
+=3D=3D1)7.5l(a)},8M:H(a){D.1F.1e(7,a)},8L:H(a){D.1F.21(7,a)},8K:H(a){D.1F=
+[D.1F.3T(7,a)?"21":"1e"](7,a)},21:H(a){G(!a||D.1E(a,[7]).r.K){D("*",7).1e=
+(7).P(H(){D.W.21(7);D.3b(7)});G(7.1d)7.1d.37(7)}},4E:H(){D(">*",7).21();1=
+B(7.1x)7.37(7.1x)}},H(a,b){D.17[a]=3DH(){I =
+7.P(b,19)}});D.P(["6N","4b"],H(i,c){J b=3Dc.3y();D.17[b]=3DH(a){I =
+7[0]=3D=3D1b?D.14.2G&&S.1c["5t"+c]||D.14.2k&&1b["5s"+c]||S.70=3D=3D"6Z"&&=
+S.1C["5t"+c]||S.1c["5t"+c]:7[0]=3D=3DS?29.2f(29.2f(S.1c["4y"+c],S.1C["4y"=
++c]),29.2f(S.1c["2i"+c],S.1C["2i"+c])):a=3D=3D12?(7.K?D.1g(7[0],b):U):7.1=
+g(b,a.1q=3D=3D56?a:a+"2X")}});H 25(a,b){I =
+a[0]&&3r(D.2a(a[0],b,M),10)||0}J =
+C=3DD.14.2k&&3r(D.14.5B)<8H?"(?:[\\\\w*3m-]|\\\\\\\\.)":"(?:[\\\\w\\8F-\\=
+8E*3m-]|\\\\\\\\.)",6L=3D2B 4v("^>\\\\s*("+C+"+)"),6J=3D2B =
+4v("^("+C+"+)(#)("+C+"+)"),6I=3D2B =
+4v("^([#.]?)("+C+"*)");D.1l({6H:{"":H(a,i,m){I =
+m[2]=3D=3D"*"||D.Y(a,m[2])},"#":H(a,i,m){I =
+a.4G("2v")=3D=3Dm[2]},":":{8D:H(a,i,m){I i<m[3]-0},8C:H(a,i,m){I =
+i>m[3]-0},3a:H(a,i,m){I m[3]-0=3D=3Di},79:H(a,i,m){I =
+m[3]-0=3D=3Di},3o:H(a,i){I i=3D=3D0},3S:H(a,i,m,r){I =
+i=3D=3Dr.K-1},6D:H(a,i){I i%2=3D=3D0},6C:H(a,i){I i%2},"3o-4u":H(a){I =
+a.1d.3H("*")[0]=3D=3Da},"3S-4u":H(a){I =
+D.3a(a.1d.5T,1,"4l")=3D=3Da},"8z-4u":H(a){I!D.3a(a.1d.5T,2,"4l")},6W:H(a)=
+{I =
+a.1x},4E:H(a){I!a.1x},8y:H(a,i,m){I(a.6O||a.8x||D(a).1r()||"").1h(m[3])>=3D=
+0},4j:H(a){I"1G"!=3Da.O&&D.1g(a,"18")!=3D"2F"&&D.1g(a,"5g")!=3D"1G"},1G:H=
+(a){I"1G"=3D=3Da.O||D.1g(a,"18")=3D=3D"2F"||D.1g(a,"5g")=3D=3D"1G"},8w:H(=
+a){I!a.3R},3R:H(a){I a.3R},4J:H(a){I a.4J},2W:H(a){I =
+a.2W||D.1K(a,"2W")},1r:H(a){I"1r"=3D=3Da.O},5O:H(a){I"5O"=3D=3Da.O},5L:H(=
+a){I"5L"=3D=3Da.O},5p:H(a){I"5p"=3D=3Da.O},3Q:H(a){I"3Q"=3D=3Da.O},5o:H(a=
+){I"5o"=3D=3Da.O},6A:H(a){I"6A"=3D=3Da.O},6z:H(a){I"6z"=3D=3Da.O},2s:H(a)=
+{I"2s"=3D=3Da.O||D.Y(a,"2s")},4T:H(a){I/4T|2A|6y|2s/i.11(a.Y)},3T:H(a,i,m=
+){I D.2q(m[3],a).K},8t:H(a){I/h\\d/i.11(a.Y)},8s:H(a){I D.3C(D.3O,H(b){I =
+a=3D=3Db.T}).K}}},6x:[/^(\\[) *@?([\\w-]+) *([!*$^~=3D]*) =
+*(\'?"?)(.*?)\\4 =
+*\\]/,/^(:)([\\w-]+)\\("?\'?(.*?(\\(.*?\\))?[^(]*?)"?\'?\\)/,2B =
+4v("^([:.#]*)("+C+"+)")],3g:H(a,c,b){J d,1t=3D[];1B(a&&a!=3Dd){d=3Da;J =
+f=3DD.1E(a,c,b);a=3Df.t.1o(/^\\s*,\\s*/,"");1t=3Db?c=3Df.r:D.2R(1t,f.r)}I=
+ 1t},2q:H(t,o){G(1j =
+t!=3D"23")I[t];G(o&&o.16!=3D1&&o.16!=3D9)I[];o=3Do||S;J =
+d=3D[o],2o=3D[],3S,Y;1B(t&&3S!=3Dt){J r=3D[];3S=3Dt;t=3DD.3k(t);J =
+l=3DQ,3j=3D6L,m=3D3j.2D(t);G(m){Y=3Dm[1].2r();R(J i=3D0;d[i];i++)R(J =
+c=3Dd[i].1x;c;c=3Dc.2H)G(c.16=3D=3D1&&(Y=3D=3D"*"||c.Y.2r()=3D=3DY))r.1p(=
+c);d=3Dr;t=3Dt.1o(3j,"");G(t.1h(" =
+")=3D=3D0)6M;l=3DM}N{3j=3D/^([>+~])\\s*(\\w*)/i;G((m=3D3j.2D(t))!=3DU){r=3D=
+[];J k=3D{};Y=3Dm[2].2r();m=3Dm[1];R(J j=3D0,3i=3Dd.K;j<3i;j++){J =
+n=3Dm=3D=3D"~"||m=3D=3D"+"?d[j].2H:d[j].1x;R(;n;n=3Dn.2H)G(n.16=3D=3D1){J=
+ =
+g=3DD.L(n);G(m=3D=3D"~"&&k[g])1X;G(!Y||n.Y.2r()=3D=3DY){G(m=3D=3D"~")k[g]=
+=3DM;r.1p(n)}G(m=3D=3D"+")1X}}d=3Dr;t=3DD.3k(t.1o(3j,""));l=3DM}}G(t&&!l)=
+{G(!t.1h(",")){G(o=3D=3Dd[0])d.4s();2o=3DD.2R(2o,d);r=3Dd=3D[o];t=3D" =
+"+t.6v(1,t.K)}N{J h=3D6J;J =
+m=3Dh.2D(t);G(m){m=3D[0,m[2],m[3],m[1]]}N{h=3D6I;m=3Dh.2D(t)}m[2]=3Dm[2].=
+1o(/\\\\/g,"");J f=3Dd[d.K-1];G(m[1]=3D=3D"#"&&f&&f.61&&!D.4n(f)){J =
+p=3Df.61(m[2]);G((D.14.1f||D.14.2G)&&p&&1j =
+p.2v=3D=3D"23"&&p.2v!=3Dm[2])p=3DD(\'[@2v=3D"\'+m[2]+\'"]\',f)[0];d=3Dr=3D=
+p&&(!m[3]||D.Y(p,m[3]))?[p]:[]}N{R(J i=3D0;d[i];i++){J =
+a=3Dm[1]=3D=3D"#"&&m[3]?m[3]:m[1]!=3D""||m[0]=3D=3D""?"*":m[2];G(a=3D=3D"=
+*"&&d[i].Y.3y()=3D=3D"49")a=3D"3n";r=3DD.2R(r,d[i].3H(a))}G(m[1]=3D=3D"."=
+)r=3DD.5m(r,m[2]);G(m[1]=3D=3D"#"){J e=3D[];R(J =
+i=3D0;r[i];i++)G(r[i].4G("2v")=3D=3Dm[2]){e=3D[r[i]];1X}r=3De}d=3Dr}t=3Dt=
+.1o(h,"")}}G(t){J =
+b=3DD.1E(t,r);d=3Dr=3Db.r;t=3DD.3k(b.t)}}G(t)d=3D[];G(d&&o=3D=3Dd[0])d.4s=
+();2o=3DD.2R(2o,d);I 2o},5m:H(r,m,a){m=3D" "+m+" ";J c=3D[];R(J =
+i=3D0;r[i];i++){J b=3D(" "+r[i].1F+" =
+").1h(m)>=3D0;G(!a&&b||a&&!b)c.1p(r[i])}I c},1E:H(t,r,h){J =
+d;1B(t&&t!=3Dd){d=3Dt;J p=3DD.6x,m;R(J =
+i=3D0;p[i];i++){m=3Dp[i].2D(t);G(m){t=3Dt.8r(m[0].K);m[2]=3Dm[2].1o(/\\\\=
+/g,"");1X}}G(!m)1X;G(m[1]=3D=3D":"&&m[2]=3D=3D"4Y")r=3D62.11(m[3])?D.1E(m=
+[3],r,M).r:D(r).4Y(m[3]);N G(m[1]=3D=3D".")r=3DD.5m(r,m[2],h);N =
+G(m[1]=3D=3D"["){J g=3D[],O=3Dm[3];R(J i=3D0,3i=3Dr.K;i<3i;i++){J =
+a=3Dr[i],z=3Da[D.3X[m[2]]||m[2]];G(z=3D=3DU||/5Q|4d|2W/.11(m[2]))z=3DD.1K=
+(a,m[2])||\'\';G((O=3D=3D""&&!!z||O=3D=3D"=3D"&&z=3D=3Dm[5]||O=3D=3D"!=3D=
+"&&z!=3Dm[5]||O=3D=3D"^=3D"&&z&&!z.1h(m[5])||O=3D=3D"$=3D"&&z.6v(z.K-m[5]=
+.K)=3D=3Dm[5]||(O=3D=3D"*=3D"||O=3D=3D"~=3D")&&z.1h(m[5])>=3D0)^h)g.1p(a)=
+}r=3Dg}N G(m[1]=3D=3D":"&&m[2]=3D=3D"3a-4u"){J =
+e=3D{},g=3D[],11=3D/(-?)(\\d*)n((?:\\+|-)?\\d*)/.2D(m[3]=3D=3D"6D"&&"2n"|=
+|m[3]=3D=3D"6C"&&"2n+1"||!/\\D/.11(m[3])&&"8q+"+m[3]||m[3]),3o=3D(11[1]+(=
+11[2]||1))-0,d=3D11[3]-0;R(J i=3D0,3i=3Dr.K;i<3i;i++){J =
+j=3Dr[i],1d=3Dj.1d,2v=3DD.L(1d);G(!e[2v]){J c=3D1;R(J =
+n=3D1d.1x;n;n=3Dn.2H)G(n.16=3D=3D1)n.4q=3Dc++;e[2v]=3DM}J =
+b=3DQ;G(3o=3D=3D0){G(j.4q=3D=3Dd)b=3DM}N =
+G((j.4q-d)%3o=3D=3D0&&(j.4q-d)/3o>=3D0)b=3DM;G(b^h)g.1p(j)}r=3Dg}N{J =
+f=3DD.6H[m[1]];G(1j f=3D=3D"49")f=3Df[m[2]];G(1j =
+f=3D=3D"23")f=3D6u("Q||H(a,i){I "+f+";}");r=3DD.3C(r,H(a,i){I =
+f(a,i,m,r)},h)}}I{r:r,t:t}},4S:H(b,c){J =
+a=3D[],1t=3Db[c];1B(1t&&1t!=3DS){G(1t.16=3D=3D1)a.1p(1t);1t=3D1t[c]}I =
+a},3a:H(a,e,c,b){e=3De||1;J =
+d=3D0;R(;a;a=3Da[c])G(a.16=3D=3D1&&++d=3D=3De)1X;I a},5v:H(n,a){J =
+r=3D[];R(;n;n=3Dn.2H){G(n.16=3D=3D1&&n!=3Da)r.1p(n)}I =
+r}});D.W=3D{1e:H(f,i,g,e){G(f.16=3D=3D3||f.16=3D=3D8)I;G(D.14.1f&&f.4I)f=3D=
+1b;G(!g.24)g.24=3D7.24++;G(e!=3D12){J h=3Dg;g=3D7.3M(h,H(){I =
+h.1w(7,19)});g.L=3De}J =
+j=3DD.L(f,"3w")||D.L(f,"3w",{}),1H=3DD.L(f,"1H")||D.L(f,"1H",H(){G(1j =
+D!=3D"12"&&!D.W.5k)I =
+D.W.1H.1w(19.3L.T,19)});1H.T=3Df;D.P(i.1R(/\\s+/),H(c,b){J =
+a=3Db.1R(".");b=3Da[0];g.O=3Da[1];J =
+d=3Dj[b];G(!d){d=3Dj[b]=3D{};G(!D.W.2t[b]||D.W.2t[b].4p.1k(f)=3D=3D=3DQ){=
+G(f.3K)f.3K(b,1H,Q);N =
+G(f.6t)f.6t("4o"+b,1H)}}d[g.24]=3Dg;D.W.26[b]=3DM});f=3DU},24:1,26:{},21:=
+H(e,h,f){G(e.16=3D=3D3||e.16=3D=3D8)I;J =
+i=3DD.L(e,"3w"),1L,5i;G(i){G(h=3D=3D12||(1j =
+h=3D=3D"23"&&h.8p(0)=3D=3D"."))R(J g 1n =
+i)7.21(e,g+(h||""));N{G(h.O){f=3Dh.2y;h=3Dh.O}D.P(h.1R(/\\s+/),H(b,a){J =
+c=3Da.1R(".");a=3Dc[0];G(i[a]){G(f)2U i[a][f.24];N R(f 1n =
+i[a])G(!c[1]||i[a][f].O=3D=3Dc[1])2U i[a][f];R(1L 1n =
+i[a])1X;G(!1L){G(!D.W.2t[a]||D.W.2t[a].4A.1k(e)=3D=3D=3DQ){G(e.6p)e.6p(a,=
+D.L(e,"1H"),Q);N G(e.6n)e.6n("4o"+a,D.L(e,"1H"))}1L=3DU;2U i[a]}}})}R(1L =
+1n i)1X;G(!1L){J =
+d=3DD.L(e,"1H");G(d)d.T=3DU;D.3b(e,"3w");D.3b(e,"1H")}}},1P:H(h,c,f,g,i){=
+c=3DD.2d(c);G(h.1h("!")>=3D0){h=3Dh.3s(0,-1);J =
+a=3DM}G(!f){G(7.26[h])D("*").1e([1b,S]).1P(h,c)}N{G(f.16=3D=3D3||f.16=3D=3D=
+8)I 12;J =
+b,1L,17=3DD.1D(f[h]||U),W=3D!c[0]||!c[0].32;G(W){c.6h({O:h,2J:f,32:H(){},=
+3J:H(){},4C:1z()});c[0][E]=3DM}c[0].O=3Dh;G(a)c[0].6m=3DM;J =
+d=3DD.L(f,"1H");G(d)b=3Dd.1w(f,c);G((!17||(D.Y(f,\'a\')&&h=3D=3D"4V"))&&f=
+["4o"+h]&&f["4o"+h].1w(f,c)=3D=3D=3DQ)b=3DQ;G(W)c.4s();G(i&&D.1D(i)){1L=3D=
+i.1w(f,b=3D=3DU?c:c.7d(b));G(1L!=3D=3D12)b=3D1L}G(17&&g!=3D=3DQ&&b!=3D=3D=
+Q&&!(D.Y(f,\'a\')&&h=3D=3D"4V")){7.5k=3DM;1U{f[h]()}1V(e){}}7.5k=3DQ}I =
+b},1H:H(b){J =
+a,1L,38,5f,4m;b=3D19[0]=3DD.W.6l(b||1b.W);38=3Db.O.1R(".");b.O=3D38[0];38=
+=3D38[1];5f=3D!38&&!b.6m;4m=3D(D.L(7,"3w")||{})[b.O];R(J j 1n 4m){J =
+c=3D4m[j];G(5f||c.O=3D=3D38){b.2y=3Dc;b.L=3Dc.L;1L=3Dc.1w(7,19);G(a!=3D=3D=
+Q)a=3D1L;G(1L=3D=3D=3DQ){b.32();b.3J()}}}I a},6l:H(b){G(b[E]=3D=3DM)I =
+b;J d=3Db;b=3D{8o:d};J c=3D"8n 8m 8l 8k 2s 8j 47 5d 6j 5E 8i L 8h 8g 4K =
+2y 5a 59 8e 8b 58 6f 8a 88 4k 87 86 84 6d 2J 4C 6c O 82 81 35".1R(" =
+");R(J =
+i=3Dc.K;i;i--)b[c[i]]=3Dd[c[i]];b[E]=3DM;b.32=3DH(){G(d.32)d.32();d.80=3D=
+Q};b.3J=3DH(){G(d.3J)d.3J();d.7Z=3DM};b.4C=3Db.4C||1z();G(!b.2J)b.2J=3Db.=
+6d||S;G(b.2J.16=3D=3D3)b.2J=3Db.2J.1d;G(!b.4k&&b.4K)b.4k=3Db.4K=3D=3Db.2J=
+?b.6c:b.4K;G(b.58=3D=3DU&&b.5d!=3DU){J =
+a=3DS.1C,1c=3DS.1c;b.58=3Db.5d+(a&&a.2e||1c&&1c.2e||0)-(a.6b||0);b.6f=3Db=
+.6j+(a&&a.2c||1c&&1c.2c||0)-(a.6a||0)}G(!b.35&&((b.47||b.47=3D=3D=3D0)?b.=
+47:b.5a))b.35=3Db.47||b.5a;G(!b.59&&b.5E)b.59=3Db.5E;G(!b.35&&b.2s)b.35=3D=
+(b.2s&1?1:(b.2s&2?3:(b.2s&4?2:0)));I =
+b},3M:H(a,b){b.24=3Da.24=3Da.24||b.24||7.24++;I =
+b},2t:{27:{4p:H(){55();I},4A:H(){I}},3D:{4p:H(){G(D.14.1f)I =
+Q;D(7).2O("53",D.W.2t.3D.2y);I M},4A:H(){G(D.14.1f)I =
+Q;D(7).4e("53",D.W.2t.3D.2y);I M},2y:H(a){G(F(a,7))I M;a.O=3D"3D";I =
+D.W.1H.1w(7,19)}},3N:{4p:H(){G(D.14.1f)I Q;D(7).2O("51",D.W.2t.3N.2y);I =
+M},4A:H(){G(D.14.1f)I Q;D(7).4e("51",D.W.2t.3N.2y);I =
+M},2y:H(a){G(F(a,7))I M;a.O=3D"3N";I =
+D.W.1H.1w(7,19)}}}};D.17.1l({2O:H(c,a,b){I =
+c=3D=3D"4X"?7.2V(c,a,b):7.P(H(){D.W.1e(7,c,b||a,b&&a)})},2V:H(d,b,c){J =
+e=3DD.W.3M(c||b,H(a){D(7).4e(a,e);I(c||b).1w(7,19)});I =
+7.P(H(){D.W.1e(7,d,e,c&&b)})},4e:H(a,b){I =
+7.P(H(){D.W.21(7,a,b)})},1P:H(c,a,b){I =
+7.P(H(){D.W.1P(c,a,7,M,b)})},5C:H(c,a,b){I =
+7[0]&&D.W.1P(c,a,7[0],Q,b)},2m:H(b){J =
+c=3D19,i=3D1;1B(i<c.K)D.W.3M(b,c[i++]);I =
+7.4V(D.W.3M(b,H(a){7.4Z=3D(7.4Z||0)%i;a.32();I =
+c[7.4Z++].1w(7,19)||Q}))},7X:H(a,b){I =
+7.2O(\'3D\',a).2O(\'3N\',b)},27:H(a){55();G(D.2Q)a.1k(S,D);N =
+D.3A.1p(H(){I a.1k(7,D)});I =
+7}});D.1l({2Q:Q,3A:[],27:H(){G(!D.2Q){D.2Q=3DM;G(D.3A){D.P(D.3A,H(){7.1k(=
+S)});D.3A=3DU}D(S).5C("27")}}});J x=3DQ;H =
+55(){G(x)I;x=3DM;G(S.3K&&!D.14.2G)S.3K("69",D.27,Q);G(D.14.1f&&1b=3D=3D1S=
+)(H(){G(D.2Q)I;1U{S.1C.7V("1A")}1V(3e){3B(19.3L,0);I}D.27()})();G(D.14.2G=
+)S.3K("69",H(){G(D.2Q)I;R(J =
+i=3D0;i<S.4W.K;i++)G(S.4W[i].3R){3B(19.3L,0);I}D.27()},Q);G(D.14.2k){J =
+a;(H(){G(D.2Q)I;G(S.3f!=3D"68"&&S.3f!=3D"1J"){3B(19.3L,0);I}G(a=3D=3D=3D1=
+2)a=3DD("V, =
+7A[7U=3D7S]").K;G(S.4W.K!=3Da){3B(19.3L,0);I}D.27()})()}D.W.1e(1b,"43",D.=
+27)}D.P(("7R,7Q,43,85,4y,4X,4V,7P,"+"7O,7N,89,53,51,7M,2A,"+"5o,7L,7K,8d,=
+3e").1R(","),H(i,b){D.17[b]=3DH(a){I a?7.2O(b,a):7.1P(b)}});J =
+F=3DH(a,c){J b=3Da.4k;1B(b&&b!=3Dc)1U{b=3Db.1d}1V(3e){b=3Dc}I =
+b=3D=3Dc};D(1b).2O("4X",H(){D("*").1e(S).4e()});D.17.1l({67:D.17.43,43:H(=
+g,d,c){G(1j g!=3D\'23\')I 7.67(g);J e=3Dg.1h(" ");G(e>=3D0){J =
+i=3Dg.3s(e,g.K);g=3Dg.3s(0,e)}c=3Dc||H(){};J =
+f=3D"2P";G(d)G(D.1D(d)){c=3Dd;d=3DU}N{d=3DD.3n(d);f=3D"6g"}J =
+h=3D7;D.3Y({1a:g,O:f,1O:"2K",L:d,1J:H(a,b){G(b=3D=3D"1W"||b=3D=3D"7J")h.2=
+K(i?D("<1v/>").3v(a.4U.1o(/<1m(.|\\s)*?\\/1m>/g,"")).2q(i):a.4U);h.P(c,[a=
+.4U,b,a])}});I 7},aL:H(){I D.3n(7.7I())},7I:H(){I 7.2l(H(){I =
+D.Y(7,"3V")?D.2d(7.aH):7}).1E(H(){I =
+7.34&&!7.3R&&(7.4J||/2A|6y/i.11(7.Y)||/1r|1G|3Q/i.11(7.O))}).2l(H(i,c){J =
+b=3DD(7).6e();I =
+b=3D=3DU?U:b.1q=3D=3D2p?D.2l(b,H(a,i){I{34:c.34,2x:a}}):{34:c.34,2x:b}}).=
+3p()}});D.P("7H,7G,7F,7D,7C,7B".1R(","),H(i,o){D.17[o]=3DH(f){I =
+7.2O(o,f)}});J B=3D1z();D.1l({3p:H(d,b,a,c){G(D.1D(b)){a=3Db;b=3DU}I =
+D.3Y({O:"2P",1a:d,L:b,1W:a,1O:c})},aE:H(b,a){I =
+D.3p(b,U,a,"1m")},aD:H(c,b,a){I =
+D.3p(c,b,a,"3z")},aC:H(d,b,a,c){G(D.1D(b)){a=3Db;b=3D{}}I =
+D.3Y({O:"6g",1a:d,L:b,1W:a,1O:c})},aA:H(a){D.1l(D.60,a)},60:{1a:5Z.5Q,26:=
+M,O:"2P",2T:0,7z:"4R/x-ax-3V-aw",7x:M,31:M,L:U,5Y:U,3Q:U,4Q:{2N:"4R/2N, =
+1r/2N",2K:"1r/2K",1m:"1r/4t, 4R/4t",3z:"4R/3z, =
+1r/4t",1r:"1r/as",4w:"*/*"}},4z:{},3Y:H(s){s=3DD.1l(M,s,D.1l(M,{},D.60,s)=
+);J g,2Z=3D/=3D\\?(&|$)/g,1u,L,O=3Ds.O.2r();G(s.L&&s.7x&&1j =
+s.L!=3D"23")s.L=3DD.3n(s.L);G(s.1O=3D=3D"4P"){G(O=3D=3D"2P"){G(!s.1a.1I(2=
+Z))s.1a+=3D(s.1a.1I(/\\?/)?"&":"?")+(s.4P||"7u")+"=3D?"}N =
+G(!s.L||!s.L.1I(2Z))s.L=3D(s.L?s.L+"&":"")+(s.4P||"7u")+"=3D?";s.1O=3D"3z=
+"}G(s.1O=3D=3D"3z"&&(s.L&&s.L.1I(2Z)||s.1a.1I(2Z))){g=3D"4P"+B++;G(s.L)s.=
+L=3D(s.L+"").1o(2Z,"=3D"+g+"$1");s.1a=3Ds.1a.1o(2Z,"=3D"+g+"$1");s.1O=3D"=
+1m";1b[g]=3DH(a){L=3Da;1W();1J();1b[g]=3D12;1U{2U =
+1b[g]}1V(e){}G(i)i.37(h)}}G(s.1O=3D=3D"1m"&&s.1Y=3D=3DU)s.1Y=3DQ;G(s.1Y=3D=
+=3D=3DQ&&O=3D=3D"2P"){J j=3D1z();J =
+k=3Ds.1a.1o(/(\\?|&)3m=3D.*?(&|$)/,"$ap=3D"+j+"$2");s.1a=3Dk+((k=3D=3Ds.1=
+a)?(s.1a.1I(/\\?/)?"&":"?")+"3m=3D"+j:"")}G(s.L&&O=3D=3D"2P"){s.1a+=3D(s.=
+1a.1I(/\\?/)?"&":"?")+s.L;s.L=3DU}G(s.26&&!D.4O++)D.W.1P("7H");J =
+n=3D/^(?:\\w+:)?\\/\\/([^\\/?#]+)/;G(s.1O=3D=3D"1m"&&O=3D=3D"2P"&&n.11(s.=
+1a)&&n.2D(s.1a)[1]!=3D5Z.al){J i=3DS.3H("6w")[0];J =
+h=3DS.3h("1m");h.4d=3Ds.1a;G(s.7t)h.aj=3Ds.7t;G(!g){J =
+l=3DQ;h.ah=3Dh.ag=3DH(){G(!l&&(!7.3f||7.3f=3D=3D"68"||7.3f=3D=3D"1J")){l=3D=
+M;1W();1J();i.37(h)}}}i.3U(h);I 12}J m=3DQ;J c=3D1b.7s?2B 7s("ae.ac"):2B =
+7r();G(s.5Y)c.6R(O,s.1a,s.31,s.5Y,s.3Q);N =
+c.6R(O,s.1a,s.31);1U{G(s.L)c.4B("ab-aa",s.7z);G(s.5S)c.4B("a9-5R-a8",D.4z=
+[s.1a]||"a7, a6 a5 a4 5N:5N:5N =
+a2");c.4B("X-9Z-9Y","7r");c.4B("9W",s.1O&&s.4Q[s.1O]?s.4Q[s.1O]+", =
+*/*":s.4Q.4w)}1V(e){}G(s.7m&&s.7m(c,s)=3D=3D=3DQ){s.26&&D.4O--;c.7l();I =
+Q}G(s.26)D.W.1P("7B",[c,s]);J =
+d=3DH(a){G(!m&&c&&(c.3f=3D=3D4||a=3D=3D"2T")){m=3DM;G(f){7k(f);f=3DU}1u=3D=
+a=3D=3D"2T"&&"2T"||!D.7j(c)&&"3e"||s.5S&&D.7h(c,s.1a)&&"7J"||"1W";G(1u=3D=
+=3D"1W"){1U{L=3DD.6X(c,s.1O,s.9S)}1V(e){1u=3D"5J"}}G(1u=3D=3D"1W"){J =
+b;1U{b=3Dc.5I("7g-5R")}1V(e){}G(s.5S&&b)D.4z[s.1a]=3Db;G(!g)1W()}N =
+D.5H(s,c,1u);1J();G(s.31)c=3DU}};G(s.31){J =
+f=3D4I(d,13);G(s.2T>0)3B(H(){G(c){c.7l();G(!m)d("2T")}},s.2T)}1U{c.9P(s.L=
+)}1V(e){D.5H(s,c,U,e)}G(!s.31)d();H =
+1W(){G(s.1W)s.1W(L,1u);G(s.26)D.W.1P("7C",[c,s])}H =
+1J(){G(s.1J)s.1J(c,1u);G(s.26)D.W.1P("7F",[c,s]);G(s.26&&!--D.4O)D.W.1P("=
+7G")}I =
+c},5H:H(s,a,b,e){G(s.3e)s.3e(a,b,e);G(s.26)D.W.1P("7D",[a,s,e])},4O:0,7j:=
+H(a){1U{I!a.1u&&5Z.9O=3D=3D"5p:"||(a.1u>=3D7e&&a.1u<9N)||a.1u=3D=3D7c||a.=
+1u=3D=3D9K||D.14.2k&&a.1u=3D=3D12}1V(e){}I Q},7h:H(a,c){1U{J =
+b=3Da.5I("7g-5R");I =
+a.1u=3D=3D7c||b=3D=3DD.4z[c]||D.14.2k&&a.1u=3D=3D12}1V(e){}I =
+Q},6X:H(a,c,b){J =
+d=3Da.5I("9J-O"),2N=3Dc=3D=3D"2N"||!c&&d&&d.1h("2N")>=3D0,L=3D2N?a.9I:a.4=
+U;G(2N&&L.1C.2j=3D=3D"5J")7p"5J";G(b)L=3Db(L,c);G(c=3D=3D"1m")D.5u(L);G(c=
+=3D=3D"3z")L=3D6u("("+L+")");I L},3n:H(a){J =
+s=3D[];G(a.1q=3D=3D2p||a.5w)D.P(a,H(){s.1p(3u(7.34)+"=3D"+3u(7.2x))});N =
+R(J j 1n =
+a)G(a[j]&&a[j].1q=3D=3D2p)D.P(a[j],H(){s.1p(3u(j)+"=3D"+3u(7))});N =
+s.1p(3u(j)+"=3D"+3u(D.1D(a[j])?a[j]():a[j]));I =
+s.6s("&").1o(/%20/g,"+")}});D.17.1l({1N:H(c,b){I =
+c?7.2g({1Z:"1N",2h:"1N",1y:"1N"},c,b):7.1E(":1G").P(H(){7.V.18=3D7.5D||""=
+;G(D.1g(7,"18")=3D=3D"2F"){J a=3DD("<"+7.2j+" =
+/>").6P("1c");7.V.18=3Da.1g("18");G(7.V.18=3D=3D"2F")7.V.18=3D"3I";a.21()=
+}}).3l()},1M:H(b,a){I =
+b?7.2g({1Z:"1M",2h:"1M",1y:"1M"},b,a):7.1E(":4j").P(H(){7.5D=3D7.5D||D.1g=
+(7,"18");7.V.18=3D"2F"}).3l()},78:D.17.2m,2m:H(a,b){I =
+D.1D(a)&&D.1D(b)?7.78.1w(7,19):a?7.2g({1Z:"2m",2h:"2m",1y:"2m"},a,b):7.P(=
+H(){D(7)[D(7).3F(":1G")?"1N":"1M"]()})},9G:H(b,a){I =
+7.2g({1Z:"1N"},b,a)},9F:H(b,a){I 7.2g({1Z:"1M"},b,a)},9E:H(b,a){I =
+7.2g({1Z:"2m"},b,a)},9D:H(b,a){I 7.2g({1y:"1N"},b,a)},9M:H(b,a){I =
+7.2g({1y:"1M"},b,a)},9C:H(c,a,b){I 7.2g({1y:a},c,b)},2g:H(k,j,i,g){J =
+h=3DD.77(j,i,g);I 7[h.36=3D=3D=3DQ?"P":"36"](H(){G(7.16!=3D1)I Q;J =
+f=3DD.1l({},h),p,1G=3DD(7).3F(":1G"),46=3D7;R(p 1n =
+k){G(k[p]=3D=3D"1M"&&1G||k[p]=3D=3D"1N"&&!1G)I =
+f.1J.1k(7);G(p=3D=3D"1Z"||p=3D=3D"2h"){f.18=3DD.1g(7,"18");f.33=3D7.V.33}=
+}G(f.33!=3DU)7.V.33=3D"1G";f.45=3DD.1l({},k);D.P(k,H(c,a){J e=3D2B =
+D.28(46,f,c);G(/2m|1N|1M/.11(a))e[a=3D=3D"2m"?1G?"1N":"1M":a](k);N{J =
+b=3Da.6r().1I(/^([+-]=3D)?([\\d+-.]+)(.*)$/),2b=3De.1t(M)||0;G(b){J =
+d=3D3d(b[2]),2M=3Db[3]||"2X";G(2M!=3D"2X"){46.V[c]=3D(d||1)+2M;2b=3D((d||=
+1)/e.1t(M))*2b;46.V[c]=3D2b+2M}G(b[1])d=3D((b[1]=3D=3D"-=3D"?-1:1)*d)+2b;=
+e.3G(2b,d,2M)}N e.3G(2b,a,"")}});I =
+M})},36:H(a,b){G(D.1D(a)||(a&&a.1q=3D=3D2p)){b=3Da;a=3D"28"}G(!a||(1j =
+a=3D=3D"23"&&!b))I A(7[0],a);I =
+7.P(H(){G(b.1q=3D=3D2p)A(7,a,b);N{A(7,a).1p(b);G(A(7,a).K=3D=3D1)b.1k(7)}=
+})},9X:H(b,c){J a=3DD.3O;G(b)7.36([]);7.P(H(){R(J =
+i=3Da.K-1;i>=3D0;i--)G(a[i].T=3D=3D7){G(c)a[i](M);a.7n(i,1)}});G(!c)7.5A(=
+);I 7}});J A=3DH(b,c,a){G(b){c=3Dc||"28";J =
+q=3DD.L(b,c+"36");G(!q||a)q=3DD.L(b,c+"36",D.2d(a))}I =
+q};D.17.5A=3DH(a){a=3Da||"28";I 7.P(H(){J =
+q=3DA(7,a);q.4s();G(q.K)q[0].1k(7)})};D.1l({77:H(b,a,c){J =
+d=3Db&&b.1q=3D=3Da0?b:{1J:c||!c&&a||D.1D(b)&&b,2u:b,41:c&&a||a&&a.1q!=3D9=
+t&&a};d.2u=3D(d.2u&&d.2u.1q=3D=3D4L?d.2u:D.28.5K[d.2u])||D.28.5K.74;d.5M=3D=
+d.1J;d.1J=3DH(){G(d.36!=3D=3DQ)D(7).5A();G(D.1D(d.5M))d.5M.1k(7)};I =
+d},41:{73:H(p,n,b,a){I =
+b+a*p},5P:H(p,n,b,a){I((-29.9r(p*29.9q)/2)+0.5)*a+b}},3O:[],48:U,28:H(b,c=
+,a){7.15=3Dc;7.T=3Db;7.1i=3Da;G(!c.3Z)c.3Z=3D{}}});D.28.44=3D{4D:H(){G(7.=
+15.2Y)7.15.2Y.1k(7.T,7.1z,7);(D.28.2Y[7.1i]||D.28.2Y.4w)(7);G(7.1i=3D=3D"=
+1Z"||7.1i=3D=3D"2h")7.T.V.18=3D"3I"},1t:H(a){G(7.T[7.1i]!=3DU&&7.T.V[7.1i=
+]=3D=3DU)I 7.T[7.1i];J r=3D3d(D.1g(7.T,7.1i,a));I =
+r&&r>-9p?r:3d(D.2a(7.T,7.1i))||0},3G:H(c,b,d){7.5V=3D1z();7.2b=3Dc;7.3l=3D=
+b;7.2M=3Dd||7.2M||"2X";7.1z=3D7.2b;7.2S=3D7.4N=3D0;7.4D();J e=3D7;H =
+t(a){I e.2Y(a)}t.T=3D7.T;D.3O.1p(t);G(D.48=3D=3DU){D.48=3D4I(H(){J =
+a=3DD.3O;R(J =
+i=3D0;i<a.K;i++)G(!a[i]())a.7n(i--,1);G(!a.K){7k(D.48);D.48=3DU}},13)}},1=
+N:H(){7.15.3Z[7.1i]=3DD.1K(7.T.V,7.1i);7.15.1N=3DM;7.3G(0,7.1t());G(7.1i=3D=
+=3D"2h"||7.1i=3D=3D"1Z")7.T.V[7.1i]=3D"9m";D(7.T).1N()},1M:H(){7.15.3Z[7.=
+1i]=3DD.1K(7.T.V,7.1i);7.15.1M=3DM;7.3G(7.1t(),0)},2Y:H(a){J =
+t=3D1z();G(a||t>7.15.2u+7.5V){7.1z=3D7.3l;7.2S=3D7.4N=3D1;7.4D();7.15.45[=
+7.1i]=3DM;J b=3DM;R(J i 1n =
+7.15.45)G(7.15.45[i]!=3D=3DM)b=3DQ;G(b){G(7.15.18!=3DU){7.T.V.33=3D7.15.3=
+3;7.T.V.18=3D7.15.18;G(D.1g(7.T,"18")=3D=3D"2F")7.T.V.18=3D"3I"}G(7.15.1M=
+)7.T.V.18=3D"2F";G(7.15.1M||7.15.1N)R(J p 1n =
+7.15.45)D.1K(7.T.V,p,7.15.3Z[p])}G(b)7.15.1J.1k(7.T);I Q}N{J =
+n=3Dt-7.5V;7.4N=3Dn/7.15.2u;7.2S=3DD.41[7.15.41||(D.41.5P?"5P":"73")](7.4=
+N,n,0,1,7.15.2u);7.1z=3D7.2b+((7.3l-7.2b)*7.2S);7.4D()}I =
+M}};D.1l(D.28,{5K:{9l:9j,9i:7e,74:9g},2Y:{2e:H(a){a.T.2e=3Da.1z},2c:H(a){=
+a.T.2c=3Da.1z},1y:H(a){D.1K(a.T.V,"1y",a.1z)},4w:H(a){a.T.V[a.1i]=3Da.1z+=
+a.2M}}});D.17.2i=3DH(){J b=3D0,1S=3D0,T=3D7[0],3q;G(T)ao(D.14){J =
+d=3DT.1d,4a=3DT,1s=3DT.1s,1Q=3DT.2z,5U=3D2k&&3r(5B)<9c&&!/9a/i.11(v),1g=3D=
+D.2a,3c=3D1g(T,"30")=3D=3D"3c";G(T.7y){J =
+c=3DT.7y();1e(c.1A+29.2f(1Q.1C.2e,1Q.1c.2e),c.1S+29.2f(1Q.1C.2c,1Q.1c.2c)=
+);1e(-1Q.1C.6b,-1Q.1C.6a)}N{1e(T.5X,T.5W);1B(1s){1e(1s.5X,1s.5W);G(42&&!/=
+^t(98|d|h)$/i.11(1s.2j)||2k&&!5U)2C(1s);G(!3c&&1g(1s,"30")=3D=3D"3c")3c=3D=
+M;4a=3D/^1c$/i.11(1s.2j)?4a:1s;1s=3D1s.1s}1B(d&&d.2j&&!/^1c|2K$/i.11(d.2j=
+)){G(!/^96|1T.*$/i.11(1g(d,"18")))1e(-d.2e,-d.2c);G(42&&1g(d,"33")!=3D"4j=
+")2C(d);d=3Dd.1d}G((5U&&(3c||1g(4a,"30")=3D=3D"5x"))||(42&&1g(4a,"30")!=3D=
+"5x"))1e(-1Q.1c.5X,-1Q.1c.5W);G(3c)1e(29.2f(1Q.1C.2e,1Q.1c.2e),29.2f(1Q.1=
+C.2c,1Q.1c.2c))}3q=3D{1S:1S,1A:b}}H =
+2C(a){1e(D.2a(a,"6V",M),D.2a(a,"6U",M))}H =
+1e(l,t){b+=3D3r(l,10)||0;1S+=3D3r(t,10)||0}I 3q};D.17.1l({30:H(){J =
+a=3D0,1S=3D0,3q;G(7[0]){J =
+b=3D7.1s(),2i=3D7.2i(),4c=3D/^1c|2K$/i.11(b[0].2j)?{1S:0,1A:0}:b.2i();2i.=
+1S-=3D25(7,\'94\');2i.1A-=3D25(7,\'aF\');4c.1S+=3D25(b,\'6U\');4c.1A+=3D2=
+5(b,\'6V\');3q=3D{1S:2i.1S-4c.1S,1A:2i.1A-4c.1A}}I 3q},1s:H(){J =
+a=3D7[0].1s;1B(a&&(!/^1c|2K$/i.11(a.2j)&&D.1g(a,\'30\')=3D=3D\'93\'))a=3D=
+a.1s;I D(a)}});D.P([\'5e\',\'5G\'],H(i,b){J =
+c=3D\'4y\'+b;D.17[c]=3DH(a){G(!7[0])I;I =
+a!=3D12?7.P(H(){7=3D=3D1b||7=3D=3DS?1b.92(!i?a:D(1b).2e(),i?a:D(1b).2c())=
+:7[c]=3Da}):7[0]=3D=3D1b||7[0]=3D=3DS?46[i?\'aI\':\'aJ\']||D.71&&S.1C[c]|=
+|S.1c[c]:7[0][c]}});D.P(["6N","4b"],H(i,b){J =
+c=3Di?"5e":"5G",4f=3Di?"6k":"6i";D.17["5s"+b]=3DH(){I =
+7[b.3y()]()+25(7,"57"+c)+25(7,"57"+4f)};D.17["90"+b]=3DH(a){I =
+7["5s"+b]()+25(7,"2C"+c+"4b")+25(7,"2C"+4f+"4b")+(a?25(7,"6S"+c)+25(7,"6S=
+"+4f):0)}})})();',62,669,'|||||||this|||||||||||||||||||||||||||||||||||i=
+f|function|return|var|length|data|true|else|type|each|false|for|document|=
+elem|null|style|event||nodeName|||test|undefined||browser|options|nodeTyp=
+e|fn|display|arguments|url|window|body|parentNode|add|msie|css|indexOf|pr=
+op|typeof|call|extend|script|in|replace|push|constructor|text|offsetParen=
+t|cur|status|div|apply|firstChild|opacity|now|left|while|documentElement|=
+isFunction|filter|className|hidden|handle|match|complete|attr|ret|hide|sh=
+ow|dataType|trigger|doc|split|top|table|try|catch|success|break|cache|hei=
+ght||remove|tbody|string|guid|num|global|ready|fx|Math|curCSS|start|scrol=
+lTop|makeArray|scrollLeft|max|animate|width|offset|tagName|safari|map|tog=
+gle||done|Array|find|toUpperCase|button|special|duration|id|copy|value|ha=
+ndler|ownerDocument|select|new|border|exec|stack|none|opera|nextSibling|p=
+ushStack|target|html|inArray|unit|xml|bind|GET|isReady|merge|pos|timeout|=
+delete|one|selected|px|step|jsre|position|async|preventDefault|overflow|n=
+ame|which|queue|removeChild|namespace|insertBefore|nth|removeData|fixed|p=
+arseFloat|error|readyState|multiFilter|createElement|rl|re|trim|end|_|par=
+am|first|get|results|parseInt|slice|childNodes|encodeURIComponent|append|=
+events|elems|toLowerCase|json|readyList|setTimeout|grep|mouseenter|color|=
+is|custom|getElementsByTagName|block|stopPropagation|addEventListener|cal=
+lee|proxy|mouseleave|timers|defaultView|password|disabled|last|has|append=
+Child|form|domManip|props|ajax|orig|set|easing|mozilla|load|prototype|cur=
+Anim|self|charCode|timerId|object|offsetChild|Width|parentOffset|src|unbi=
+nd|br|currentStyle|clean|float|visible|relatedTarget|previousSibling|hand=
+lers|isXMLDoc|on|setup|nodeIndex|unique|shift|javascript|child|RegExp|_de=
+fault|deep|scroll|lastModified|teardown|setRequestHeader|timeStamp|update=
+|empty|tr|getAttribute|innerHTML|setInterval|checked|fromElement|Number|j=
+Query|state|active|jsonp|accepts|application|dir|input|responseText|click=
+|styleSheets|unload|not|lastToggle|outline|mouseout|getPropertyValue|mous=
+eover|getComputedStyle|bindReady|String|padding|pageX|metaKey|keyCode|get=
+WH|andSelf|clientX|Left|all|visibility|container|index|init|triggered|rem=
+oveAttribute|classFilter|prevObject|submit|file|after|windowData|inner|cl=
+ient|globalEval|sibling|jquery|absolute|clone|wrapAll|dequeue|version|tri=
+ggerHandler|oldblock|ctrlKey|createTextNode|Top|handleError|getResponseHe=
+ader|parsererror|speeds|checkbox|old|00|radio|swing|href|Modified|ifModif=
+ied|lastChild|safari2|startTime|offsetTop|offsetLeft|username|location|aj=
+axSettings|getElementById|isSimple|values|selectedIndex|runtimeStyle|rsLe=
+ft|_load|loaded|DOMContentLoaded|clientTop|clientLeft|toElement|srcElemen=
+t|val|pageY|POST|unshift|Bottom|clientY|Right|fix|exclusive|detachEvent|c=
+loneNode|removeEventListener|swap|toString|join|attachEvent|eval|substr|h=
+ead|parse|textarea|reset|image|zoom|odd|even|before|prepend|exclude|expr|=
+quickClass|quickID|uuid|quickChild|continue|Height|textContent|appendTo|c=
+ontents|open|margin|evalScript|borderTopWidth|borderLeftWidth|parent|http=
+Data|setArray|CSS1Compat|compatMode|boxModel|cssFloat|linear|def|webkit|n=
+odeValue|speed|_toggle|eq|100|replaceWith|304|concat|200|alpha|Last|httpN=
+otModified|getAttributeNode|httpSuccess|clearInterval|abort|beforeSend|sp=
+lice|styleFloat|throw|colgroup|XMLHttpRequest|ActiveXObject|scriptCharset=
+|callback|fieldset|multiple|processData|getBoundingClientRect|contentType=
+|link|ajaxSend|ajaxSuccess|ajaxError|col|ajaxComplete|ajaxStop|ajaxStart|=
+serializeArray|notmodified|keypress|keydown|change|mouseup|mousedown|dblc=
+lick|focus|blur|stylesheet|hasClass|rel|doScroll|black|hover|solid|cancel=
+Bubble|returnValue|wheelDelta|view|round|shiftKey|resize|screenY|screenX|=
+relatedNode|mousemove|prevValue|originalTarget|offsetHeight|keyup|newValu=
+e|offsetWidth|eventPhase|detail|currentTarget|cancelable|bubbles|attrName=
+|attrChange|altKey|originalEvent|charAt|0n|substring|animated|header|noCo=
+nflict|line|enabled|innerText|contains|only|weight|font|gt|lt|uFFFF|u0128=
+|size|417|Boolean|Date|toggleClass|removeClass|addClass|removeAttr|replac=
+eAll|insertAfter|prependTo|wrap|contentWindow|contentDocument|iframe|chil=
+dren|siblings|prevAll|wrapInner|nextAll|outer|prev|scrollTo|static|margin=
+Top|next|inline|parents|able|cellSpacing|adobeair|cellspacing|522|maxLeng=
+th|maxlength|readOnly|400|readonly|fast|600|class|slow|1px|htmlFor|revers=
+e|10000|PI|cos|compatible|Function|setData|ie|ra|it|rv|getData|userAgent|=
+navigator|fadeTo|fadeIn|slideToggle|slideUp|slideDown|ig|responseXML|cont=
+ent|1223|NaN|fadeOut|300|protocol|send|setAttribute|option|dataFilter|css=
+Text|changed|be|Accept|stop|With|Requested|Object|can|GMT|property|1970|J=
+an|01|Thu|Since|If|Type|Content|XMLHTTP|th|Microsoft|td|onreadystatechang=
+e|onload|cap|charset|colg|host|tfoot|specified|with|1_|thead|leg|plain|at=
+tributes|opt|embed|urlencoded|www|area|hr|ajaxSetup|meta|post|getJSON|get=
+Script|marginLeft|img|elements|pageYOffset|pageXOffset|abbr|serialize|pix=
+elLeft'.split('|'),0,{}))
+------=_NextPart_000_00B4_01CB602B.8E524E50
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://edu.codepub.com/images/js/css.js
+
+$(document).ready(function(){
+=E3=80=80=E3=80=80$("input[type=3D'text']").addClass('input_blur');
+=E3=80=80=E3=80=80$("input[type=3D'password']").addClass('input_blur');
+    $("input[type=3D'submit']").addClass('button_style');
+    $("input[type=3D'reset']").addClass('button_style');
+    $("input[type=3D'button']").addClass('button_style');
+    $("input[type=3D'radio']").addClass('radio_style');
+    $("input[type=3D'checkbox']").addClass('checkbox_style');
+    $("input[type=3D'textarea']").addClass('textarea_style');
+    $("input[type=3D'file']").addClass('file_style');
+=E3=80=80=E3=80=80$("input[type=3D'file']").blur(function () { =
+this.className=3D'input_blur'; } );
+=E3=80=80=E3=80=80$("input[type=3D'file']").focus(function () { =
+this.className=3D'input_focus'; } );
+=E3=80=80=E3=80=80$("input[type=3D'password']").blur(function () { =
+this.className=3D'input_blur'; } );
+=E3=80=80=E3=80=80$("input[type=3D'password']").focus(function () { =
+this.className=3D'input_focus'; } );
+=E3=80=80=E3=80=80$("input[type=3D'text']").blur(function () { =
+this.className=3D'input_blur'; } );
+=E3=80=80=E3=80=80$("input[type=3D'text']").focus(function () { =
+this.className=3D'input_focus'; } );
+    $("textarea").blur(function () { this.className=3D'textarea_style'; =
+} );
+=E3=80=80=E3=80=80$("textarea").focus(function () { =
+this.className=3D'textarea_focus'; } )
+=E3=80=80=E3=80=80$(".table_list tr").mouseover(function () { =
+this.className=3D'mouseover'; } );
+=E3=80=80=E3=80=80$(".table_list tr").mouseout(function () { =
+this.className=3D''; } );
+=E3=80=80=E3=80=80$("#title").focus(function () { =
+this.className=3D'inputtitle'; } );
+=E3=80=80=E3=80=80$("#title").blur(function () { =
+this.className=3D'inputtitle'; } );
+
+    $('img[tag]').css({cursor:'pointer'}).click(function(){
+       var flag=3D$(this).attr('tag');
+       var fck=3D$('#'+$(this).attr('fck')+'___Frame');
+
+       var fckh=3Dfck.height();
+       (flag=3D=3D1)?fck.height(fckh+120):fck.height(fckh-120) ;
+    });
+
+});
+------=_NextPart_000_00B4_01CB602B.8E524E50
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://edu.codepub.com/images/js/common.js
+
+function openwinx(url,name,w,h)
+{
+    window.open(url,name,"top=3D100,left=3D400,width=3D" + w + =
+",height=3D" + h + =
+",toolbar=3Dno,menubar=3Dno,scrollbars=3Dyes,resizable=3Dno,location=3Dno=
+,status=3Dno");
+}
+
+function Dialog(url,name,w,h)
+{
+	return showModalDialog(url, name, 'dialogWidth:'+w+'px; =
+dialogHeight:'+h+'px; help: no; scroll: yes; status: no');
+}
+
+function redirect(url)
+{
+	if(url.lastIndexOf('/.') > 0)
+	{
+		url =3D url.replace(/\/(\.[a-zA-Z]+)([0-9]+)$/g, "/$2$1");
+	}
+	else if(url.match(/\/([a-z]+).html([0-9]+)$/)) {
+		url =3D url.replace(/\/([a-z]+).html([0-9]+)$/, "/$1-$2.html");
+	}
+	else if(url.match(/-.html([0-9]+)$/)) {
+		url =3D url.replace(/-.html([0-9]+)$/, "-$1.html");
+	}
+
+	if(url.indexOf('://') =3D=3D -1 && url.substr(0, 1) !=3D '/' && =
+url.substr(0, 1) !=3D '?') url =3D $('base').attr('href')+url;
+	location.href =3D url;
+}
+
+//=E6=B7=BB=E5=8A=A0=E6=94=B6=E8=97=8F=E5=A4=B9
+function myAddPanel(title,url)
+{
+    if ((typeof window.sidebar =3D=3D 'object') && (typeof =
+window.sidebar.addPanel =3D=3D 'function'))
+    {
+        window.sidebar.addPanel(title,url,"");
+    }
+    else
+    {
+        window.external.AddFavorite(url,title);
+    }
+}
+function confirmurl(url,message)
+{
+	if(confirm(message)) redirect(url);
+}
+
+function confirmform(form,message)
+{
+	if(confirm(message)) form.submit();
+}
+
+function getcookie(name)
+{
+    name =3D cookie_pre+name;
+	var arg =3D name + "=3D";
+	var alen =3D arg.length;
+	var clen =3D document.cookie.length;
+	var i =3D 0;
+	while(i < clen)
+	{
+		var j =3D i + alen;
+		if(document.cookie.substring(i, j) =3D=3D arg) return getcookieval(j);
+		i =3D document.cookie.indexOf(" ", i) + 1;
+		if(i =3D=3D 0) break;
+	}
+	return null;
+}
+
+function setcookie(name, value, days)
+{
+    name =3D cookie_pre+name;
+	var argc =3D setcookie.arguments.length;
+	var argv =3D setcookie.arguments;
+	var secure =3D (argc > 5) ? argv[5] : false;
+	var expire =3D new Date();
+	if(days=3D=3Dnull || days=3D=3D0) days=3D1;
+	expire.setTime(expire.getTime() + 3600000*24*days);
+	document.cookie =3D name + "=3D" + escape(value) + ("; path=3D" + =
+cookie_path) + ((cookie_domain =3D=3D '') ? "" : ("; domain=3D" + =
+cookie_domain)) + ((secure =3D=3D true) ? "; secure" : "") + =
+";expires=3D"+expire.toGMTString();
+}
+
+function delcookie(name)
+{
+    var exp =3D new Date();
+	exp.setTime (exp.getTime() - 1);
+	var cval =3D getcookie(name);
+    name =3D cookie_pre+name;
+	document.cookie =3D name+"=3D"+cval+";expires=3D"+exp.toGMTString();
+}
+
+function getcookieval(offset)
+{
+	var endstr =3D document.cookie.indexOf (";", offset);
+	if(endstr =3D=3D -1)
+	endstr =3D document.cookie.length;
+	return unescape(document.cookie.substring(offset, endstr));
+}
+
+function checkall(fieldid)
+{
+	if(fieldid=3D=3Dnull)
+	{
+		if($('#checkbox').attr('checked')=3D=3Dfalse)
+		{
+			$('input[type=3Dcheckbox]').attr('checked',true);
+		}
+		else
+		{
+			$('input[type=3Dcheckbox]').attr('checked',false);
+		}
+	}
+	else
+	{
+		var fieldids =3D '#'+fieldid;
+		var inputfieldids =3D 'input[boxid=3D'+fieldid+']';
+		if($(fieldids).attr('checked')=3D=3Dfalse)
+		{
+			$(inputfieldids).attr('checked',true);
+		}
+		else
+		{
+			$(inputfieldids).attr('checked',false);
+		}
+	}
+}
+
+function checkradio(radio)
+{
+	var result =3D false;
+	for(var i=3D0; i<radio.length; i++)
+	{
+		if(radio[i].checked)
+		{
+			result =3D true;
+			break;
+		}
+	}
+    return result;
+}
+
+function checkselect(select)
+{
+	var result =3D false;
+	for(var i=3D0;i<select.length;i++)
+	{
+		if(select[i].selected && select[i].value!=3D'' && =
+select[i].value!=3D0)
+		{
+			result =3D true;
+			break;
+		}
+	}
+    return result;
+}
+
+var flag=3Dfalse;
+function setpicWH(ImgD,w,h)
+{
+	var image=3Dnew Image();
+	image.src=3DImgD.src;
+	if(image.width>0 && image.height>0)
+	{
+		flag=3Dtrue;
+		if(image.width/image.height>=3D w/h)
+		{
+			if(image.width>w)
+			{
+				ImgD.width=3Dw;
+				ImgD.height=3D(image.height*w)/image.width;
+				ImgD.style.display=3D"block";
+			}else{
+				ImgD.width=3Dimage.width;
+				ImgD.height=3Dimage.height;
+				ImgD.style.display=3D"block";
+			}
+		}else{
+			if(image.height>h)
+			{
+				ImgD.height=3Dh;
+				ImgD.width=3D(image.width*h)/image.height;
+				ImgD.style.display=3D"block";
+			}else{
+				ImgD.width=3Dimage.width;
+				ImgD.height=3Dimage.height;
+				ImgD.style.display=3D"block";
+			}
+		}
+	}
+}
+
+var Browser =3D new Object();
+Browser.isMozilla =3D (typeof document.implementation !=3D 'undefined') =
+&& (typeof document.implementation.createDocument !=3D 'undefined') && =
+(typeof HTMLDocument!=3D'undefined');
+Browser.isIE =3D window.ActiveXObject ? true : false;
+Browser.isFirefox =3D =
+(navigator.userAgent.toLowerCase().indexOf("firefox")!=3D-1);
+Browser.isSafari =3D =
+(navigator.userAgent.toLowerCase().indexOf("safari")!=3D-1);
+Browser.isOpera =3D =
+(navigator.userAgent.toLowerCase().indexOf("opera")!=3D-1);
+
+var Common =3D new Object();
+Common.htmlEncode =3D function(str)
+{
+	return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, =
+'&lt;').replace(/>/g, '&gt;');
+}
+
+Common.trim =3D function(str)
+{
+	return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+
+Common.strlen =3D function (str)
+{
+	if(Browser.isFirefox)
+	{
+		Charset =3D document.characterSet;
+	}
+	else
+	{
+		Charset =3D document.charset;
+	}
+	if(Charset.toLowerCase() =3D=3D 'utf-8')
+	{
+		return str.replace(/[\u4e00-\u9fa5]/g, "***").length;
+	}
+	else
+	{
+		return str.replace(/[^\x00-\xff]/g, "**").length;
+	}
+}
+
+Common.isdate =3D function (str)
+{
+   var result=3Dstr.match(/^(\d{4})(-|\/)(\d{1,2})\2(\d{1,2})$/);
+   if(result=3D=3Dnull) return false;
+   var d=3Dnew Date(result[1], result[3]-1, result[4]);
+   return (d.getFullYear()=3D=3Dresult[1] && =
+d.getMonth()+1=3D=3Dresult[3] && d.getDate()=3D=3Dresult[4]);
+}
+
+Common.isnumber =3D function(val)
+{
+    var reg =3D /[\d|\.|,]+/;
+    return reg.test(val);
+}
+
+Common.isalphanumber =3D function (str)
+{
+	var result=3Dstr.match(/^[a-zA-Z0-9]+$/);
+	if(result=3D=3Dnull) return false;
+	return true;
+}
+
+Common.isint =3D function(val)
+{
+    var reg =3D /\d+/;
+    return reg.test(val);
+}
+
+Common.isemail =3D function(email)
+{
+    var reg =3D /([\w|_|\.|\+]+)@([-|\w]+)\.([A-Za-z]{2,4})/;
+    return reg.test( email );
+}
+
+Common.fixeventargs =3D function(e)
+{
+    var evt =3D (typeof e =3D=3D "undefined") ? window.event : e;
+    return evt;
+}
+
+Common.srcelement =3D function(e)
+{
+    if (typeof e =3D=3D "undefined") e =3D window.event;
+    var src =3D document.all ? e.srcElement : e.target;
+    return src;
+}
+
+Common.isdatetime =3D function(val)
+{
+	var result=3Dstr.match(/^(\d{4})(-|\/)(\d{1,2})\2(\d{1,2}) =
+(\d{1,2}):(\d{1,2}):(\d{1,2})$/);
+	if(result=3D=3Dnull) return false;
+	var d=3D new Date(result[1], result[3]-1, result[4], result[5], =
+result[6], result[7]);
+	return =
+(d.getFullYear()=3D=3Dresult[1]&&(d.getMonth()+1)=3D=3Dresult[3]&&d.getDa=
+te()=3D=3Dresult[4]&&d.getHours()=3D=3Dresult[5]&&d.getMinutes()=3D=3Dres=
+ult[6]&&d.getSeconds()=3D=3Dresult[7]);
+}
+
+var FileNum =3D 1;
+function AddInputFile(Field)
+{
+    FileNum++;
+	var fileTag =3D "<div id=3D'file_"+FileNum+"'><input type=3D'file' =
+name=3D'"+Field+"["+FileNum+"]' size=3D'20' =
+onchange=3D'javascript:AddInputFile(\""+Field+"\")'> <input =
+type=3D'text' name=3D'"+Field+"_description["+FileNum+"]' size=3D'20' =
+title=3D'=E5=90=8D=E7=A7=B0'> <input type=3D'button' =
+value=3D'=E5=88=A0=E9=99=A4' name=3D'Del' =
+onClick=3D'DelInputFile("+FileNum+");'></div>";
+	var fileObj =3D document.createElement("div");
+	fileObj.id =3D 'file_'+FileNum;
+	fileObj.innerHTML =3D fileTag;
+	document.getElementById("file_div").appendChild(fileObj);
+}
+
+function DelInputFile(FileNum)
+{
+    var DelObj =3D document.getElementById("file_"+FileNum);
+    document.getElementById("file_div").removeChild(DelObj);
+}
+
+function FilePreview(Url, IsShow)
+{
+	Obj =3D document.getElementById('FilePreview');
+	if(IsShow)
+	{
+		Obj.style.left =3D event.clientX+80;
+		Obj.style.top =3D event.clientY+20;
+		Obj.innerHTML =3D "<img src=3D'"+Url+"'>";
+		Obj.style.display =3D 'block';
+	}
+	else
+	{
+		Obj.style.display =3D 'none';
+	}
+}
+
+function setEditorSize(editorID,flag)
+{
+	var minHeight =3D 400;
+	var step =3D 150;
+	var e=3D$('#'+editorID);
+	var h =3DparseInt(e.height());
+	if(!flag && h<minHeight)
+	{
+		e.height(200);
+		return ;
+	}
+	return flag?(e.height(h+step)):(e.height(h-step));
+}
+
+function EditorSize(editorID)
+{
+	$('a[action]').parent('div').css({'text-align':'right'});
+	=
+$('a[action]').css({'font-size':'24px','font-weight':700,display:'block',=
+float:'right',width:'28px','text-align':'center'});
+	$('a[action]').click(function(){
+		var flag=3D parseInt($(this).attr('action'));
+		setEditorSize(editorID,flag);
+	});
+}
+
+function loginCheck(form)
+{
+	var username =3D form.username;
+	var password =3D form.password;
+	var cookietime =3D form.cookietime;
+	if(username.value =3D=3D =
+''){alert("=E8=AF=B7=E8=BE=93=E5=85=A5=E7=94=A8=E6=88=B7=E5=90=8D");usern=
+ame.focus();return false;}
+	if(password.value =3D=3D =
+''){alert("=E8=AF=B7=E8=BE=93=E5=85=A5=E5=AF=86=E7=A0=81");password.focus=
+();return false;}
+	var days =3D cookietime.value =3D=3D 0 ? 1 : cookietime.value/86400;
+	setcookie('username', username.value, days);
+	return true;
+}
+
+function modal(url, triggerid, id, type)
+{
+	id =3D '#' + id;
+	triggerid =3D '#' + triggerid;
+	switch(type)
+	{
+		case 'ajax':
+			$(id).jqm({ajax: url, modal:false, trigger: triggerid});
+		break;
+		default:
+			$(id).jqm();
+		break;
+	}
+	$(id).html('');
+	$(id).hide();
+}
+
+function menu_selected(id)
+{
+	$('#menu_'+id).addClass('selected');
+}
+
+function CutPic(textid,thumbUrl){
+  var thumb=3D $('#'+textid).val();
+	if(thumb=3D=3D'')
+	{
+		=
+alert('=E8=AF=B7=E5=85=88=E4=B8=8A=E4=BC=A0=E6=A0=87=E9=A2=98=E5=9B=BE=E7=
+=89=87');
+		$('#'+textid).focus();
+		return false;
+	}
+	else
+	{
+		if(thumb.indexOf('://') =3D=3D -1) thumb =3D thumbUrl+thumb;
+	}
+  var arr=3DDialog(phpcms_path + =
+'corpandresize/ui.php?'+thumb,'',700,500);
+  if(arr!=3Dnull){
+    $('#'+textid).val(arr);
+  }
+}
+
+function is_ie()
+{
+	if(!$.browser.msie)
+	{
+		$("body").prepend('<div id=3D"MM_msie" style=3D"border:#FF7300 solid =
+1px;padding:10px;color:#FF0000">=E6=9C=AC=E5=8A=9F=E8=83=BD=E5=8F=AA=E6=94=
+=AF=E6=8C=81IE=E6=B5=8F=E8=A7=88=E5=99=A8=EF=BC=8C=E8=AF=B7=E7=94=A8IE=E6=
+=B5=8F=E8=A7=88=E5=99=A8=E6=89=93=E5=BC=80=E3=80=82<div>');
+	}
+}
+
+function select_catids()
+{
+	$('#addbutton').attr('disabled','');
+
+}
+
+function transact(update,fromfiled,tofiled)
+{
+	if(update=3D=3D'delete')
+	{
+		var fieldvalue =3D $('#'+tofiled).val();
+
+		$("select[@id=3D"+tofiled+"] option").each(function()
+		{
+		   if($(this).val() =3D=3D fieldvalue){
+			$(this).remove();
+		   }
+		});
+	}
+	else
+	{
+		var fieldvalue =3D $('#'+fromfiled).val();
+		var have_exists =3D 0;
+		var len =3D $("select[@id=3D"+tofiled+"] option").length;
+		if(len>5)
+		{
+			alert('=E6=9C=80=E5=A4=9A=E6=B7=BB=E5=8A=A0 6 =E9=A1=B9');
+			return false;
+		}
+		$("select[@id=3D"+tofiled+"] option").each(function()
+		{
+		   if($(this).val() =3D=3D fieldvalue){
+			have_exists =3D 1;
+			=
+alert('=E5=B7=B2=E7=BB=8F=E6=B7=BB=E5=8A=A0=E5=88=B0=E5=88=97=E8=A1=A8=E4=
+=B8=AD');
+			return false;
+		   }
+		});
+		if(have_exists=3D=3D0)
+		{
+			fieldvalue =3D "<option =
+value=3D'"+fieldvalue+"'>"+fieldvalue+"</option>"
+			$('#'+tofiled).append(fieldvalue);
+			$('#deletebutton').attr('disabled','');
+		}
+	=09
+	}
+}
+var set_show =3D false;
+
+------=_NextPart_000_00B4_01CB602B.8E524E50
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://edu.codepub.com/images/js/login.js
+
+function loginSubmit(login, uc)
+{
+	var username =3D login.elements['username'];
+	var password =3D login.elements['password'];
+    if(!loginCheck(login)) return false;
+	if(uc =3D=3D 1) return true;
+	$.post(login.action, =
+'action=3Dajax&username=3D'+username.value+'&password=3D'+password.value,=
+ function(data){
+		if(data =3D=3D 1)
+		{
+			$('#logined_username').html(username.value);
+			$('#div_login').hide();
+			$('#div_logined').show();
+		}
+		else
+		{
+			alert('=E7=99=BB=E5=BD=95=E5=A4=B1=E8=B4=A5');
+			redirect(login.action);
+		}
+		username.value =3D password.value =3D '';
+	});
+	return false;
+}
+
+function logout(url)
+{
+	$.get(url+'&id=3D'+Math.random()*5, function(data){
+		if(data !=3D 1) alert(data);
+	});
+	$('#div_logined').hide();
+	$('#div_login').show();
+}
+
+function loginshow()
+{
+	var auth =3D getcookie('auth');
+	if(auth !=3D null)
+	{
+		$('#logined_username').html(unescape(getcookie('username')));
+		$('#div_login').hide();
+		$('#div_logined').show();
+	}
+	else
+	{
+		$('#div_logined').hide();
+		$('#div_login').show();
+	}
+}
+
+$(function(){
+   loginshow();
+});
+------=_NextPart_000_00B4_01CB602B.8E524E50
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://edu.codepub.com/images/js/validator.js
+
+var fk;
+var mode;
+validator=3D{
+	errinput : 'errinput',
+	errmsg : 'errmsg',
+	errcls : 'no',
+	yescls : 'yes',
+
+	require : /[^(^\s*)|(\s*$)]/,
+	email : /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/,
+	phone : =
+/^((\(\d{2,3}\))|(\d{3}\-))?(\(0\d{2,3}\)|0\d{2,3}-)?[1-9]\d{6,7}(\-\d{1,=
+4})?$/,
+	mobile : /^((\(\d{3}\))|(\d{3}\-))?13[0-9]\d{8}?$|15[0-9]\d{8}?$/,
+	url : =
+/^http:\/\/[A-Za-z0-9]+\.[A-Za-z0-9]+[\/=3D\?%\-&_~`@[\]\':+!]*([^<>\"\"]=
+)*$/,
+	idCard : "this.isIdCard(value)",
+	currency : /^\d+(\.\d+)?$/,
+	number : /^\d+$/,
+	zip : /^[1-9]\d{5}$/,
+	ip  : /^[\d\.]{7,15}$/,
+	qq : /^[1-9]\d{4,8}$/,
+	integer : /^[-\+]?\d+$/,
+	double : /^[-\+]?\d+(\.\d+)?$/,
+	english : /^[A-Za-z]+$/,
+	chinese : /^[\u0391-\uFFE5]+$/,
+	userName : /^[a-z_ ]\w{3,}$/i,
+	//unSafe : =
+/^(([A-Z]*|[a-z]*|\d*|[-_\~!@#\$%\^&\*\.\(\)\[\]\{\}<>\?\\\/\'\"]*)|.{0,5=
+})$|\s/,
+	unSafe : /[<>\?\#\$\*\&;\\\/\[\]\{\}=3D\(\)\.\^%,]/,
+	//safeStr : /[^#\'\"~\.\*\$&;\\\/\|]/,
+	isSafe : function(str){return !this.unSafe.test(str);},
+	safeString : "this.isSafe(value)",
+	filter : "this.doFilter(value)",
+	limit : "this.checkLimit(Common.strlen(value))",
+	limitB : "this.checkLimit(this.LenB(value))",
+	date : "this.isDate(value)",
+	repeat : "this.checkRepeat(value)",
+	range : "this.checkRange(value)",
+	compare : "this.checkCompare(value)",
+	custom : "this.Exec(value)",
+	group : "this.mustChecked()",
+	ajax: "this.doajax(errindex)",
+
+	isIdCard : function(number){
+	var date, Ai;
+	var verify =3D "10x98765432";
+	var Wi =3D [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2];
+	var area =3D =
+['','','','','','','','','','','','=E5=8C=97=E4=BA=AC','=E5=A4=A9=E6=B4=A5=
+','=E6=B2=B3=E5=8C=97','=E5=B1=B1=E8=A5=BF','=E5=86=85=E8=92=99=E5=8F=A4'=
+,'','','','','','=E8=BE=BD=E5=AE=81','=E5=90=89=E6=9E=97','=E9=BB=91=E9=BE=
+=99=E6=B1=9F','','','','','','','','=E4=B8=8A=E6=B5=B7','=E6=B1=9F=E8=8B=8F=
+','=E6=B5=99=E6=B1=9F','=E5=AE=89=E5=BE=AE','=E7=A6=8F=E5=BB=BA','=E6=B1=9F=
+=E8=A5=BF','=E5=B1=B1=E4=B8=9C','','','','=E6=B2=B3=E5=8D=97','=E6=B9=96=E5=
+=8C=97','=E6=B9=96=E5=8D=97','=E5=B9=BF=E4=B8=9C','=E5=B9=BF=E8=A5=BF','=E6=
+=B5=B7=E5=8D=97','','','','=E9=87=8D=E5=BA=86','=E5=9B=9B=E5=B7=9D','=E8=B4=
+=B5=E5=B7=9E','=E4=BA=91=E5=8D=97','=E8=A5=BF=E8=97=8F','','','','','',''=
+,'=E9=99=95=E8=A5=BF','=E7=94=98=E8=82=83','=E9=9D=92=E6=B5=B7','=E5=AE=81=
+=E5=A4=8F','=E6=96=B0=E7=96=86','','','','','','=E5=8F=B0=E6=B9=BE','',''=
+,'','','','','','','','=E9=A6=99=E6=B8=AF','=E6=BE=B3=E9=97=A8','','','',=
+'','','','','','=E5=9B=BD=E5=A4=96'];
+	var re =3D =
+number.match(/^(\d{2})\d{4}(((\d{2})(\d{2})(\d{2})(\d{3}))|((\d{4})(\d{2}=
+)(\d{2})(\d{3}[x\d])))$/i);
+	if(re =3D=3D null) return false;
+	if(re[1] >=3D area.length || area[re[1]] =3D=3D "") return false;
+	if(re[2].length =3D=3D 12){
+		Ai =3D number.substr(0, 17);
+		date =3D [re[9], re[10], re[11]].join("-");
+	} else {
+		Ai =3D number.substr(0, 6) + "19" + number.substr(6);
+		date =3D ["19" + re[4], re[5], re[6]].join("-");
+	}
+	if(!this.isDate(date, "ymd")) return false;
+	var sum =3D 0;
+	for(var i =3D 0;i<=3D16;i++){
+		sum +=3D Ai.charAt(i) * Wi[i];
+	}
+	Ai +=3D verify.charAt(sum%11);
+
+	return (number.length =3D=3D15 || number.length =3D=3D 18 && number =
+=3D=3D Ai);
+	},
+
+	isDate : function(op){
+		var formatString =3D this['element'].attr('format');
+		formatString =3D formatString || "ymd";
+		var m, year, month, day;
+		switch(formatString){
+		case "ymd" :
+			m =3D op.match(new =
+RegExp("^((\\d{4})|(\\d{2}))([-./])(\\d{1,2})\\4(\\d{1,2})$"));
+			if(m =3D=3D null ) return false;
+			day =3D m[6];
+			month =3D m[5]*1;
+			year =3D (m[2].length =3D=3D 4) ? m[2] : GetFullYear(parseInt(m[3], =
+10));
+		break;
+		case "dmy" :
+			m =3D op.match(new =
+RegExp("^(\\d{1,2})([-./])(\\d{1,2})\\2((\\d{4})|(\\d{2}))$"));
+			if(m =3D=3D null ) return false;
+			day =3D m[1];
+			month =3D m[3]*1;
+			year =3D (m[5].length =3D=3D 4) ? m[5] : GetFullYear(parseInt(m[6], =
+10));
+		break;
+		default :
+			break;
+		}
+		if(!parseInt(month)) return false;
+		month =3D month=3D=3D0 ?12:month;
+		var date =3D new Date(year, month-1, day);
+		return (typeof(date) =3D=3D "object" && year =3D=3D date.getFullYear() =
+&& month =3D=3D (date.getMonth()+1) && day =3D=3D date.getDate());
+		function GetFullYear(y){
+			return ((y<30 ? "20" : "19") + y)|0;
+		}
+	}, //end isDate
+	doFilter : function(value){
+		var filter =3Dthis['element'].attr('accept');
+		return new =
+RegExp("^.+\.(?=3DEXT)(EXT)$".replace(/EXT/g,filter.split(/\s*,\s*/).join=
+("|")),"gi").test(value);
+	},
+
+	checkLimit:function(len){
+		var minval=3Dthis['element'].attr('min') ||Number.MIN_VALUE;
+		var maxval=3Dthis['element'].attr('max') ||Number.MAX_VALUE;
+		return (minval<=3D len && len<=3Dmaxval);
+
+	},
+
+	LenB : function(str){
+		return str.replace(/[^\x00-\xff]/g,"**").length;
+	},
+
+	checkRepeat:function(value){
+		var to =3D this['element'].attr('to');
+		return value=3D=3DjQuery('input[name=3D"'+to+'"]').eq(0).val();
+	},
+
+	checkRange : function(value){
+		value =3D value|0;
+		var minval=3Dthis['element'].attr('min') || Number.MIN_VALUE;
+		var maxval=3Dthis['element'].attr('max') || Number.MAX_VALUE;
+		return (minval<=3Dvalue && value<=3Dmaxval);
+	},
+
+	checkCompare : function(value){
+		var compare=3Dthis['element'].attr('compare');
+		if(isNaN(value)) return false;
+		value =3D parseInt(value);
+		return eval(value+compare);
+	},
+
+	Exec : function(value){
+		var reg =3D this['element'].attr('regexp');
+		return new RegExp(reg,"gi").test(value);
+	},
+
+	mustChecked : function(){
+		var tagName=3Dthis['element'].attr('name');
+		var f=3Dthis['element'].parents('form');
+		var n=3Df.find('input[name=3D"'+tagName+'"][checked]').length;
+		var count =3D f.find('input[name=3D"'+tagName+'"]').length;
+		var minval=3Dthis['element'].attr('min') || 1;
+		var maxval=3Dthis['element'].attr('max') || count;
+		return (minval<=3Dn && n<=3Dmaxval);
+	},
+
+	doajax : function(value) {
+		var fk;
+		var element =3D this['element'];
+		var errindex =3D this['errindex'];
+		var url=3Dthis['element'].attr('url');
+		var mode =3D element.attr('mode') || 1 ;
+		var msgid =3D element.attr('msgid');
+		var val =3D this['element'].val();
+		var str_errmsg=3Dthis['element'].attr('msg');
+		var arr_errmsg =3D str_errmsg.indexOf('|') ? str_errmsg.split('|') =
+:str_errmsg;
+		var errmsg =3D arr_errmsg[errindex];
+		var type=3Dthis['element'].attr('type');
+		var errcls=3Dthis['errcls'];
+		var yescls=3Dthis['yescls'];
+		var param =3D val ?this['element'].attr('param') + '&value=3D' + val : =
+this['element'].attr('param');=09
+		var Charset =3D Browser.isIE ? document.charset : =
+document.characterSet;
+		var methodtype =3D (Charset.toLowerCase() =3D=3D 'utf-8') ? 'post' : =
+'get';
+		var method=3Dthis['element'].attr('method') || methodtype;
+		var s =3D $.ajax({
+			type: method,
+			url: url,
+			data: param,
+			cache: false,
+			async: false,
+			success: function(data){
+				data =3D data.replace(/(^\s*)|(\s*$)/g, "");
+				   if(data !=3D 'success')
+				   {
+					  errmsg =3D errmsg ? errmsg : data;
+					  fk =3D false;
+					  (type!=3D'checkbox' && type!=3D'radio' && =
+element.addClass('errinput'));
+					  if(mode =3D=3D 1)
+					  {
+						  if(msgid)
+						  {
+							  id =3D '#' + msgid;
+							  $(id).removeClass('yes');
+							  $(id).addClass('no');
+							  $(id).html(errmsg);
+						  }
+						  else
+						  {
+							  jQuery("<span tag=3D'err' =
+class=3D'"+errcls+"'></span>").html(errmsg).insertAfter(element);
+						  }
+
+					  }
+					  else if(mode =3D=3D 2)
+					  {
+						  alert(errmsg);
+					  }
+
+					  return false;
+				   }
+				   else
+				   {
+					   fk =3D true;
+					   if(msgid)
+						{
+							id =3D '#' + msgid;
+							$(id).removeClass('no');
+							$(id).addClass('yes');
+							$(id).html('');
+						}
+						else
+						{
+
+							jQuery("<span tag=3D'err' =
+class=3D'"+yescls+"'>&nbsp;</span>").insertAfter(element);
+						}
+					   return true;
+				   }
+			   }
+		 }).responseText;
+		 s =3D s.replace(/(^\s*)|(\s*$)/g, "");
+		 return s =3D=3D 'success' ? true : false;
+	}
+};
+
+validator.showErr=3Dfunction (element, errindex){
+	var str_errmsg=3Delement.attr('msg') ||'unkonwn';
+	var arr_errmsg =3D str_errmsg.split('|');
+	var errmsg =3D arr_errmsg[errindex] ? arr_errmsg[errindex]: =
+arr_errmsg[0];
+	var mode =3D element.attr('mode') || 1;
+	var msgid=3D element.attr('msgid');
+	var type=3Delement.attr('type');
+	(type!=3D'checkbox' && type!=3D'radio' && =
+element.addClass(this['errinput']));
+	if(mode =3D=3D 1)
+	{
+		if(msgid)
+		{
+			id =3D '#' + msgid;
+			$(id).removeClass('yes');
+			$(id).addClass('no');
+			$(id).html(errmsg);
+		}
+		else
+		{
+			jQuery("<span tag=3D'err' =
+class=3D'"+this['errcls']+"'></span>").html(errmsg).insertAfter(element);=
+
+		}
+	}
+	else
+	{
+		alert(errmsg);
+	}
+}
+
+validator.removeErr =3D  function(element){
+	element.removeClass(this['errinput']);
+	element.parent('*').find('span[tag=3D"err"]').remove();
+}
+
+validator.checkajax =3D function(element, datatype, errindex)
+{
+	var value=3DjQuery.trim(element.val());
+	this['element'] =3D element;
+	this['errindex'] =3D errindex;
+	validator.removeErr(element);
+	return eval(this[datatype]);
+}
+
+validator.checkDatatype =3D function(element,datatype){
+	var value=3DjQuery.trim(element.val());
+	this['element'] =3D element;
+	validator.removeErr(element);
+	switch(datatype){
+		case "idCard" :
+		case "date" :
+		case "repeat" :
+		case "range" :
+		case "compare" :
+		case "custom" :
+		case "group" :
+		case "limit" :
+		case "limitB" :
+		case "safeString" :
+		case "filter" :
+		return eval(this[datatype]);
+		break;
+
+		default:
+			return this[datatype].test(value);
+			break;
+		}
+}
+
+validator.check=3Dfunction(obj){
+	var datatype =3D obj.attr('datatype');
+	if(typeof(datatype) =3D=3D "undefined") return true;
+
+	if(obj.attr('require')!=3D"true" && obj.val()=3D=3D"") return true;
+	var datatypes =3D datatype.split('|');
+	var ok =3D true;
+
+	jQuery.each(datatypes,function(index,data){
+		if(typeof(validator[data]) =3D=3D "undefined") {
+			ok =3D false;
+			return  false;
+		}
+		if(data !=3D 'ajax')
+		{
+			if(validator.checkDatatype(obj,data)=3D=3Dfalse){
+				validator.showErr(obj, index);
+				return ok=3Dfalse;
+			}
+			else
+			{
+				var msgid=3D obj.attr('msgid');
+				if(msgid)
+				{
+					id =3D '#' + msgid;
+					$(id).removeClass('no');
+					$(id).addClass('yes');
+					$(id).html('');
+				}
+				else
+				{
+
+					jQuery("<span tag=3D'err' class=3D'yes'></span>").insertAfter(obj);
+				}
+			}
+		}
+		else
+		{
+			ok =3D validator.checkajax(obj, data, index);
+		}
+	});
+	return ok;
+}
+
+jQuery.fn.checkForm =3D function(m){
+	mode =3D (m=3D=3D1) ? 1 : 0;
+	var form=3DjQuery(this);
+	var elements =3D =
+form.find('input[require],select[require],textarea[require]');
+	elements.blur(function(index){
+		return validator.check(jQuery(this));
+	});
+
+	form.submit(function(){
+		var ok =3D true;
+		var errIndex=3D new Array();
+		var n=3D0;
+		elements.each(function(i){
+			if(validator.check(jQuery(this))=3D=3Dfalse){
+				ok =3D false;
+				errIndex[n++]=3Di;
+			};
+		});
+
+		if(ok=3D=3Dfalse){
+			elements.eq(errIndex[0]).focus().select();
+			return false;
+		}
+		if(document.getElementById('video_uploader') && !upLoading)
+		{
+			uploadFile();
+			return false;
+		}
+		if($('#f_filed_1') && set_show=3D=3Dfalse)
+		{
+			$("select[@id=3Dcatids] option").each(function()
+			{
+				$(this).attr('selected','selected');
+			});
+		}
+		if($('#hava_checked').val()=3D=3D0)
+		{
+			YP_checkform();
+			return false;
+		}
+		return true;
+	});
+}
+------=_NextPart_000_00B4_01CB602B.8E524E50
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://edu.codepub.com/data/js/comment_setting.js
+
+var setting =3D =
+{"ischecklogin":"1","ischeckcomment":"0","enablecheckcode":"1","maxnum":"=
+10","enabledkey":","};
+------=_NextPart_000_00B4_01CB602B.8E524E50
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: 7bit
+Content-Location: http://edu.codepub.com/count.php?contentid=5052
+
+$('#hits').html('79');
+$('#comments').html('0');
+$('#comments_top').html('0');
+------=_NextPart_000_00B4_01CB602B.8E524E50
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://edu.codepub.com/images/js/dropdown.js
+
+var cssdropdown=3D{
+disappeardelay: 250,=20
+disablemenuclick: false,=20
+enableswipe: 1,=20
+enableiframeshim: 1,=20
+dropmenuobj: null, ie: document.all, firefox: =
+document.getElementById&&!document.all, swipetimer: undefined, =
+bottomclip:0,
+
+getposOffset:function(what, offsettype){
+var totaloffset=3D(offsettype=3D=3D"left")? what.offsetLeft : =
+what.offsetTop;
+var parentEl=3Dwhat.offsetParent;
+while (parentEl!=3Dnull){
+totaloffset=3D(offsettype=3D=3D"left")? totaloffset+parentEl.offsetLeft =
+: totaloffset+parentEl.offsetTop;
+parentEl=3DparentEl.offsetParent;
+}
+return totaloffset;
+},
+
+swipeeffect:function(){
+if (this.bottomclip<parseInt(this.dropmenuobj.offsetHeight)){
+this.bottomclip+=3D10+(this.bottomclip/10)=20
+this.dropmenuobj.style.clip=3D"rect(0 auto "+this.bottomclip+"px 0)"
+}
+else
+return
+this.swipetimer=3DsetTimeout("cssdropdown.swipeeffect()", 10)
+},
+
+showhide:function(obj, e){
+if (this.ie || this.firefox)
+this.dropmenuobj.style.left=3Dthis.dropmenuobj.style.top=3D"-500px"
+if (e.type=3D=3D"click" && obj.visibility=3D=3Dhidden || =
+e.type=3D=3D"mouseover"){
+if (this.enableswipe=3D=3D1){
+if (typeof this.swipetimer!=3D"undefined")
+clearTimeout(this.swipetimer)
+obj.clip=3D"rect(0 auto 0 0)"=20
+this.bottomclip=3D0
+this.swipeeffect()
+}
+obj.visibility=3D"visible"
+}
+else if (e.type=3D=3D"click")
+obj.visibility=3D"hidden"
+},
+
+iecompattest:function(){
+return (document.compatMode && document.compatMode!=3D"BackCompat")? =
+document.documentElement : document.body
+},
+
+clearbrowseredge:function(obj, whichedge){
+var edgeoffset=3D0
+if (whichedge=3D=3D"rightedge"){
+var windowedge=3Dthis.ie && !window.opera? =
+this.iecompattest().scrollLeft+this.iecompattest().clientWidth-15 : =
+window.pageXOffset+window.innerWidth-15
+this.dropmenuobj.contentmeasure=3Dthis.dropmenuobj.offsetWidth
+if (windowedge-this.dropmenuobj.x < this.dropmenuobj.contentmeasure) =20
+edgeoffset=3Dthis.dropmenuobj.contentmeasure-obj.offsetWidth
+}
+else{
+var topedge=3Dthis.ie && !window.opera? this.iecompattest().scrollTop : =
+window.pageYOffset
+var windowedge=3Dthis.ie && !window.opera? =
+this.iecompattest().scrollTop+this.iecompattest().clientHeight-15 : =
+window.pageYOffset+window.innerHeight-18
+this.dropmenuobj.contentmeasure=3Dthis.dropmenuobj.offsetHeight
+if (windowedge-this.dropmenuobj.y < this.dropmenuobj.contentmeasure){=20
+edgeoffset=3Dthis.dropmenuobj.contentmeasure+obj.offsetHeight
+if ((this.dropmenuobj.y-topedge)<this.dropmenuobj.contentmeasure)=20
+edgeoffset=3Dthis.dropmenuobj.y+obj.offsetHeight-topedge
+}
+}
+return edgeoffset
+},
+
+dropit:function(obj, e, dropmenuID){
+if (this.dropmenuobj!=3Dnull)=20
+	this.dropmenuobj.style.visibility=3D"hidden"=20
+this.clearhidemenu()
+if (this.ie||this.firefox){
+obj.onmouseout=3Dfunction(){cssdropdown.delayhidemenu()}
+obj.onclick=3Dfunction(){return !cssdropdown.disablemenuclick}=20
+this.dropmenuobj=3Ddocument.getElementById(dropmenuID)
+if(!this.dropmenuobj) return;
+this.dropmenuobj.onmouseover=3Dfunction(){cssdropdown.clearhidemenu()}
+this.dropmenuobj.onmouseout=3Dfunction(e){cssdropdown.dynamichide(e)}
+this.dropmenuobj.onclick=3Dfunction(){cssdropdown.delayhidemenu()}
+this.showhide(this.dropmenuobj.style, e)
+this.dropmenuobj.x=3Dthis.getposOffset(obj, "left")
+this.dropmenuobj.y=3Dthis.getposOffset(obj, "top")
+this.dropmenuobj.style.left=3Dthis.dropmenuobj.x-this.clearbrowseredge(ob=
+j, "rightedge")+"px"
+this.dropmenuobj.style.top=3Dthis.dropmenuobj.y-this.clearbrowseredge(obj=
+, "bottomedge")+obj.offsetHeight+1+"px"
+this.positionshim()=20
+}
+},
+
+positionshim:function(){=20
+if (this.enableiframeshim && typeof this.shimobject!=3D"undefined"){
+if (this.dropmenuobj.style.visibility=3D=3D"visible"){
+this.shimobject.style.width=3Dthis.dropmenuobj.offsetWidth+"px"
+this.shimobject.style.height=3Dthis.dropmenuobj.offsetHeight+"px"
+this.shimobject.style.left=3Dthis.dropmenuobj.style.left
+this.shimobject.style.top=3Dthis.dropmenuobj.style.top
+}
+this.shimobject.style.display=3D(this.dropmenuobj.style.visibility=3D=3D"=
+visible")? "block" : "none"
+}
+},
+
+hideshim:function(){
+if (this.enableiframeshim && typeof this.shimobject!=3D"undefined")
+this.shimobject.style.display=3D'none'
+},
+
+contains_firefox:function(a, b) {
+while (b.parentNode)
+if ((b =3D b.parentNode) =3D=3D a)
+return true;
+return false;
+},
+
+dynamichide:function(e){
+var evtobj=3Dwindow.event? window.event : e
+if (this.ie&&!this.dropmenuobj.contains(evtobj.toElement))
+this.delayhidemenu()
+else if (this.firefox&&e.currentTarget!=3D evtobj.relatedTarget&& =
+!this.contains_firefox(evtobj.currentTarget, evtobj.relatedTarget))
+this.delayhidemenu()
+},
+
+delayhidemenu:function(){
+this.delayhide=3DsetTimeout("cssdropdown.dropmenuobj.style.visibility=3D'=
+hidden'; cssdropdown.hideshim()",this.disappeardelay)=20
+},
+
+clearhidemenu:function(){
+if (this.delayhide!=3D"undefined")
+clearTimeout(this.delayhide)
+},
+
+startchrome:function(){
+for (var ids=3D0; ids<arguments.length; ids++){
+var =
+menuitems=3Ddocument.getElementById(arguments[ids]).getElementsByTagName(=
+"a")
+for (var i=3D0; i<menuitems.length; i++){
+if (menuitems[i].getAttribute("rel")){
+var relvalue=3Dmenuitems[i].getAttribute("rel")
+menuitems[i].onmouseover=3Dfunction(e){
+var event=3Dtypeof e!=3D"undefined"? e : window.event
+cssdropdown.dropit(this,event,this.getAttribute("rel"))
+}
+}
+}
+}
+if (window.createPopup && !window.XmlHttpRequest){=20
+document.write('<IFRAME id=3D"iframeshim"  src=3D"" style=3D"display: =
+none; left: 0; top: 0; z-index: 90; position: absolute; filter: =
+progid:DXImageTransform.Microsoft.Alpha(style=3D0,opacity=3D0)" =
+frameBorder=3D"0" scrolling=3D"no"></IFRAME>')
+this.shimobject=3Ddocument.getElementById("iframeshim")=20
+}
+}
+
+}
+------=_NextPart_000_00B4_01CB602B.8E524E50
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://js.users.51.la/2393496.js
+
+document.write ('<a href=3D"http://www.51.la/?2393496" target=3D"_blank" =
+title=3D"&#x35;&#x31;&#x2E;&#x6C;&#x61;&#x20;&#x4E13;&#x4E1A;&#x3001;&#x5=
+14D;&#x8D39;&#x3001;&#x5F3A;&#x5065;&#x7684;&#x8BBF;&#x95EE;&#x7EDF;&#x8B=
+A1;">&#x7F51;&#x7AD9;&#x7EDF;&#x8BA1;</a>\n');
+var a3496tf=3D"51la";var a3496pu=3D"";var a3496pf=3D"51la";var =
+a3496su=3Dwindow.location;var a3496sf=3Ddocument.referrer;var =
+a3496of=3D"";var a3496op=3D"";var a3496ops=3D1;var a3496ot=3D1;var =
+a3496d=3Dnew Date();var a3496color=3D"";if =
+(navigator.appName=3D=3D"Netscape"){a3496color=3Dscreen.pixelDepth;} =
+else {a3496color=3Dscreen.colorDepth;}
+try{a3496tf=3Dtop.document.referrer;}catch(e){}
+try{a3496pu =3Dwindow.parent.location;}catch(e){}
+try{a3496pf=3Dwindow.parent.document.referrer;}catch(e){}
+try{a3496ops=3Ddocument.cookie.match(new RegExp("(^| =
+)AJSTAT_ok_pages=3D([^;]*)(;|$)"));a3496ops=3D(a3496ops=3D=3Dnull)?1: =
+(parseInt(unescape((a3496ops)[2]))+1);var a3496oe =3Dnew =
+Date();a3496oe.setTime(a3496oe.getTime()+60*60*1000);document.cookie=3D"A=
+JSTAT_ok_pages=3D"+a3496ops+ =
+";path=3D/;expires=3D"+a3496oe.toGMTString();a3496ot=3Ddocument.cookie.ma=
+tch(new RegExp("(^| =
+)AJSTAT_ok_times=3D([^;]*)(;|$)"));if(a3496ot=3D=3Dnull){a3496ot=3D1;}els=
+e{a3496ot=3DparseInt(unescape((a3496ot)[2])); =
+a3496ot=3D(a3496ops=3D=3D1)?(a3496ot+1):(a3496ot);}a3496oe.setTime(a3496o=
+e.getTime()+365*24*60*60*1000);document.cookie=3D"AJSTAT_ok_times=3D"+a34=
+96ot+";path=3D/;expires=3D"+a3496oe.toGMTString();}catch(e){}
+a3496of=3Da3496sf;if(a3496pf!=3D=3D"51la"){a3496of=3Da3496pf;}if(a3496tf!=
+=3D=3D"51la"){a3496of=3Da3496tf;}a3496op=3Da3496pu;try{lainframe}catch(e)=
+{a3496op=3Da3496su;}document.write('<img style=3D"width:0px;height:0px" =
+src=3D"http://web1.51.la:82/go.asp?svid=3D4&id=3D2393496&tpages=3D'+a3496=
+ops+'&ttimes=3D'+a3496ot+'&tzone=3D'+(0-a3496d.getTimezoneOffset()/60)+'&=
+tcolor=3D'+a3496color+'&sSize=3D'+screen.width+','+screen.height+'&referr=
+er=3D'+escape(a3496of)+'&vpage=3D'+escape(a3496op)+'" />');
+------=_NextPart_000_00B4_01CB602B.8E524E50--

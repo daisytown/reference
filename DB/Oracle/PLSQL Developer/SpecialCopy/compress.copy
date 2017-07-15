@@ -1,0 +1,10 @@
+;PL/SQL Developer SpecialCopy definition
+;<LINE_1> for first line
+;<LINE_*> for all other lines
+;<LINE_N> for last line
+;
+#define compress
+
+<line_1>
+<line_*>
+<line_n>

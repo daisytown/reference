@@ -1,0 +1,1 @@
+select max(sal) ×î¸ßÐ½Ë® from scott.emp;

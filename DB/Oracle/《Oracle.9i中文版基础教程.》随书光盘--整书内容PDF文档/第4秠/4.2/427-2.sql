@@ -1,0 +1,1 @@
+select  empno,ename,job,sal  from  scott.emp  where sal<=2000 group by job,empno,ename,sal

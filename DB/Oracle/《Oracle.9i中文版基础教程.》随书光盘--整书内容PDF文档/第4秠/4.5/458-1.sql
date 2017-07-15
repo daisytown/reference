@@ -1,0 +1,1 @@
+select count(*) ¼ÇÂ¼×ÜÊý from scott.emp;

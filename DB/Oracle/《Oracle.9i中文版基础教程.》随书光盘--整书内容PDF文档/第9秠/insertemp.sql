@@ -1,0 +1,1 @@
+insert into scott.emp(empno,ename,sal)  values(9000,'wang',2500);

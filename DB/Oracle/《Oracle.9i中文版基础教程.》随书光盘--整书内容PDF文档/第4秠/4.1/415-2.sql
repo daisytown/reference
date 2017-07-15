@@ -1,0 +1,1 @@
+desc  scott.dept;

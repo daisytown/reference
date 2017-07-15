@@ -1,0 +1,7 @@
+登记中最普通的触发器：
+Pre-Insert    --插入之前
+Pre-Update    --更新之前
+Pre-Delete    --删除之前
+Post-Insert    --插入之后
+Post-Update    --更新之后
+Post-Delete    --删除之后

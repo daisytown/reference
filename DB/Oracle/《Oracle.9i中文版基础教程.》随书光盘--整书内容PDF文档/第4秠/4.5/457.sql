@@ -1,0 +1,1 @@
+select avg(mgr) Æ½¾ùÐ½Ë® from scott.emp;

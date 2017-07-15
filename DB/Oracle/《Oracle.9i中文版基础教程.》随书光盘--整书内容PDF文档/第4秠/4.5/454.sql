@@ -1,0 +1,1 @@
+select mgr, power(mgr,2),power(mgr,3) from scott.emp;

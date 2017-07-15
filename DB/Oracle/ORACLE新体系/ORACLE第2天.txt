@@ -1,0 +1,371 @@
+回忆
+    ORACLE安装 和 删除 
+    启动和关闭
+    SQL*PLUS  windows下窗口版本
+               超级用户 system/manager
+                       sys/change_on_install
+               普通用户
+                       scott/tiger
+              DOS下的SQLPLUS版本
+    如何使用
+      命令show user
+      SQL语句
+难点
+    约束  如何给表加约束？？？
+
+SQL*PLUS环境命令
+  结束时可以写; 也可以不写
+  desc dept
+  show user
+  connect scott/tiger
+  set linesize 200
+  set pagesize 100
+  spool c:\aa.txt
+ 
+SQL语句
+  不需要分号结束的命令,sqlplus环境命令
+     show user
+     connect scott/tiger
+     desc dept
+     set linesize 200 
+     set pagesize 100
+ 
+ SQL语句结束时候一定要 有分号或者换行加/
+
+《1》DDL语句(数据定义语言) Data Define Language
+   create
+   alter
+   drop 
+   truncate 开头的语句 truncate table <表名>
+      特点:<1>建立和修改数据对象
+           <2>建立和修改直接存入库中,直接生效
+
+    建立表 
+       create table class(--班级表
+          classid number(2) primary key,
+          cname varchar2(20) not null);
+
+       /*wdsadsadsad
+         asdsadsadsadsad
+         多行注释  
+        */  
+       create table student( --学生表
+         xh number(4) primary key, --学号
+         name varchar2(10) not null, --姓名
+         sex  char(2)  check (sex in ('男','女')),--性别
+         birthday date,--生日
+         sal number(7,2), --奖学金 
+         classid number(2) references class(classid) --班级          
+       );
+
+ 外键引用的列一定是主键或有unique约束的列
+ 
+  alter table student add (shengfenzheng number(18));
+
+  drop table student;  删除结构
+  delete from student; 只删除数据，速度慢，数据可以恢复
+  truncate table student; 删除记录的 速度快 数据不能恢复
+
+ 《2》 DML语句(数据操作语言) Data Manupilate Language     
+   select
+   insert
+   delete
+   update
+     特点:<1>对数据起作用的
+         <2> 这些语句的修改是在内存中发生的
+             要想改动存入库中必须要commit语句
+
+ 
+  insert into student(xh,name,sex) 
+  values (&xh,'&n','&sd');
+  
+  insert into student(xh,name,sex) 
+  values (&学号,'&姓名','&性别');
+
+  转义字符 \
+  打开转义 set escape on
+   
+  insert into dept
+  values (90,'JO&HI','北京');
+
+  insert into dept
+  values (92,'JO\&HI','大家');
+
+
+ 《3》 TCL(事务控制语句) Transaction Control Language
+  commit;  提交  修改保存到数据库中
+  rollback; 回滚  取消内存中的改动
+  savepoint;保存点 分解事务的 把事务变小
+       DDL语句 会自动提交以前未提交的事务
+       关闭SQLplus工具 也会自动提交未提交的事务的
+  事务 -- 就是一个完整的对数据的DML操作
+  所有事务 都是要明确的提交和回滚的
+  --转账 
+    update 账目表
+    set 钱=钱-500
+    where 帐号='A';
+    update 账目表
+    set 钱=钱+500
+    where 帐号='B';
+    commit;
+
+
+    事务何时存在 DML语句中除select以外都会有事务
+   
+《《《《《《《注意》》》》》 / 重复运行上一条SQL语句   
+
+  commit;    结束上一个事务 并且开始一个新的事务
+
+  update student set sal = null where xh =1000;
+
+  savepoint c111;
+   
+  insert into student(xh,name,sex) values (1004,'MIKE','男');
+
+  rollback to c111; --撤销了插入的数据
+
+  rollback;  --从c111这个点回滚到事务的开始点
+
+《SQLPLUS规则》  
+   a)DML语句后跟上DDL语句 DML语句的事务会被自动提交
+   b)exit/quit命令 退出 SQLPLUS环境时也会自动提交事务
+      点小叉子关闭sqlplus窗口 事务都自动回滚了
+   c)非法操作是不能提交事务的 ，只能导致事务回滚
+ 
+《4》 DCL语句(数据控制语句) Data Control Language                    grant 授予权限
+     revoke 撤销权限
+   权限 select ,insert,delete,update 
+        all (select ,insert,delete,update 总和)
+   角色 connect （登陆数据库）,resource(建立表和对象)
+   
+   如何建一个自己的用户？
+     必须是超级用户才能建用户
+     --连接到超级用户
+     connect system/manager
+     --建立用户名zhangsan 密码m123 
+     create user zhangsan identified by m123;
+     --授予必要的权限connect 你能够连接
+                    resource 你能建表不受空间的限制,建立对象
+     grant connect,resource to zhangsan;
+     --这个普通用户就建好了 和scott用户的权限是一样的      
+     grant DBA to zhangsan; --张三的权限和System一样
+   
+     --改张三的密码
+    <<1>> 自己改自己的密码
+        connect zhangsan/m123
+        密码改为了mm1  
+        alter user zhangsan identified by mm1;
+    <<2>> 超级用户来改
+        connect system/manager
+        alter user zhangsan identified by mm1;  
+ 
+ 
+     
+
+   在scott/tiger这个用户下
+     grant select on dept to zhangsan;
+    在zhangsan下 可以使用select * from scott.dept;
+         看到结果
+    
+ 在scott/tiger这个用户下
+       revoke select on dept from zhangsan;撤销授权
+    在zhangsan下 可以使用select * from scott.dept;
+         看不到结果
+    
+
+
+约束
+   主键约束 --  每个表要有主键，唯一的标识一行数据
+   非空约束
+   唯一性约束
+   外键约束
+   检查约束
+     脚本(SCRIPT)
+        create table cla( --班级表
+          id number(2) primary key, --班级编号
+          cname varchar2(20) not null --班级名字
+       );
+
+        create table stu( --学生表
+          xh number(4) primary key, --学号是主键
+          xm varchar2(20) not null, --姓名非空
+          age number(2) check (age between 10 and 90),--年龄在10到90之间(10<= age  <=90 )
+          birthday date,
+          shenfenzheng number(18) unique, --身份证唯一  
+          classid number(2) references cla(id) -- 班级编号外键
+           --(引用的一定是主键或唯一性约束的字段)
+         );
+        
+      <1>建立表的同时使用约束
+  create table student( --学生表
+           xh number(4) primary key, --学号主键
+           xm varchar2(10) not null, --姓名不能为空
+           sex char(2)  check (sex in ('男','女')), --性别
+           birthday date unique, --日期
+           sal number(7,2) check (sal between 500 and 1000),--奖学金 sal >=500 and sal <=1000
+     classid number(2) references cla(id)
+        );  --必须要先有cla表才对
+            --一定先建立班级cla表
+ 
+   主键约束 primary key
+           not null
+           check 
+           unique 唯一约束           
+
+ create table student( --学生表
+           xh number(4) constraint pk_stu primary key, --学号主键
+           xm varchar2(10) constraint nn_stu not null, --姓名不能为空
+           sex char(2) constraint ck_stu_sex check (sex in ('男','女')), --性别
+           birthday date constraint uq_bir unique, --日期
+           sal number(7,2) constraint ck_sal check (sal between 500 and 1000)--奖学金 sal >=500 and sal <=1000
+        );
+      <2>建立约束的同时给约束指定名字，便于删除
+        create table cla( --班级表
+          id number(2) constraint pk_cla primary key, --班级编号
+          cname varchar2(20) constraint nn_cla not null --班级名字
+       );
+      
+      create table stu( --学生表
+          xh number(4) constraint pk_stu primary key, --学号是主键
+          xm varchar2(20) constraint nn_stu not null, --姓名非空
+          age number(2) constraint ck_stu check (age between 10 and 90),--年龄在10到90之间(10<= age  <=90 )
+          birthday date,
+          shenfenzheng number(18) constraint uq_stu unique, --身份证唯一  
+          classid number(2) constraint fk_stu references cla(id) -- 班级编号外键
+           --(引用的一定是另外表的主键或唯一性约束的字段)
+         );
+   
+ 
+      <3>建完表后加约束
+ 
+ 学生表student
+        create table student( --学生表
+           xh number(4), --学号
+           xm varchar2(10), --姓名
+           sex char(2), --性别
+           birthday date, --日期
+           sal number(7,2) --奖学金
+        );
+ 加约束
+   加主键
+    alter table student add constraint pk_stu
+    primary key (xh);
+   加非空
+    alter table student modify (xm not null);
+   检查约束
+    alter table student add check(sex in ('男','女'));
+    alter table student add constraint ck_sal check(sal between 500 and 1000));
+
+
+ 给student加班级字段
+   alter table student add (classid number(2));
+
+
+   班级表cla
+    create table cla( --班级表
+          id number(2), --班级编号
+          cname varchar2(20) --班级名字
+       );
+
+添加 主键
+ alter table cla add constraint pk_cla
+       primary key (id);
+加 not null
+ alter table cla modify 
+       (cname not null);
+
+               学生表student
+      create table student( --学生表
+          xh number(4) ,
+          xm varchar2(20) , --姓名非空
+          age number(2),--年龄在10到90之间(10<= age  <=90 )
+          birthday date,
+          shenfenzheng number(18), --身份证唯一  
+          classid number(2) -- 班级编号外键
+           --(引用的一定是另外表的主键或唯一性约束的字段)
+         );
+
+加外键约束
+alter table student add constraint fk_stu
+    foreign key (classid) references cla(id);
+
+加主键
+alter table student add constraint pk_stu
+ primary key (xh);
+
+加not null
+alter table student modify(xm not null);
+
+加检查约束
+alter table student add constraint cc_age
+ check (age >= 10 and age <=90);
+
+加唯一约束
+  alter table student add constraint 
+      uq_sfz unique(shenfenzheng);
+
+加外键约束
+ alter table student add constraint
+    fk_stu foreign key (classid)
+     references cla(id);
+
+如何删除约束
+   
+  alter table student drop constraint
+        fk_stu;
+可以用一个统一的格式来删除
+  alter table 表名 drop constraint 约束名
+
+  <4>如何查看约束?? 约束一定加在表上
+
+    一个表上到底有哪些约束???
+  select constraint_name,constraint_type
+      from user_constraints
+        where table_name = 'STUDENT'
+--查看表上有什么约束
+  select * from user_constraints;
+--查看约束作用在什么字段上
+  select * from user_cons_columns
+   where CONSTRAINT_NAME='PK_STU';
+
+user_constraints数据字典表
+
+
+  <5>约束是如何起作用的??
+
+       create table cla( --班级表
+          id number(2) constraint pk_cla primary key, --班级编号
+          cname varchar2(20) constraint nn_cla not null --班级名字
+       );
+      
+      create table stu( --学生表
+          xh number(4) constraint pk_stu primary key, --学号是主键
+          xm varchar2(20) constraint nn_stu not null, --姓名非空
+          age number(2) constraint ck_stu check (age between 10 and 90),--年龄在10到90之间(10<= age  <=90 )
+          birthday date,
+          shenfenzheng number(18) constraint uq_stu unique, --身份证唯一  
+          classid number(2) constraint fk_stu references cla(id) -- 班级编号外键
+           --(引用的一定是另外表的主键或唯一性约束unique的字段)
+         );
+   
+   主键 = 非空 + 唯一
+   非空 
+   唯一 = 有值的话  值要不同
+          null的话  都是可以的
+   外键 = 有值 一定要在被引用的表的数据中
+          null的话  是可以的
+
+ANSI SQL92 数据库的标准 
+  
+
+
+
+
+   
+
+
+
+
+   
+    
+ 

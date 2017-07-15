@@ -1,0 +1,1 @@
+select empno,ename,sal from scott.emp where sal<=2500

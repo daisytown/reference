@@ -1,0 +1,40 @@
+1、使用scott用户登录，利用语句锁定所有emp表中30部门的员工的纪录。（使用行级锁定）
+
+2、使用system用户企图更改刚才所定的纪录，在利用scott用户解锁刚才的纪录。
+
+3、分别使用共享锁，共享更新锁，排他锁锁定，emp,dept,salgrade三张表。
+
+4、复制emp表为myemp并对其进行范围分区，分区方法为sal<2000一个区，sal在2000-4000一个区，其他的在另外一个区中。
+
+5、复制emp表为myemp1并对其进行散列分区，分区字段为empno，分成2个区。
+
+6、复制emp表为myemp2并对其进行列表分区，分区字段为deptno，第一分区值列表为（10），第二为（20），第三为（30），共创建三个分区。
+
+7、分别导出emp,myemp,myemp1,myemp2以及其所有分区。
+
+8、利用system用户给scott的emp表创建同义词。
+
+9、创建一个序列，起始值为1。
+
+10、创建一张表只有一个字段id,利用序列的nextval方法给表插入纪录，并实现自动编号。
+
+11、为EMP的各字段建立必要的索引，使得如下查询能使用上索引
+   select * from emp where ename like 'S%'; 
+   
+   select * from emp where job='MANAGER';
+ 
+   select * from emp where hiredate>to_date('1982','yyyy');
+
+
+
+
+
+
+
+
+
+
+
+
+
+

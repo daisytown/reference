@@ -1,0 +1,1 @@
+select min(sal) вНиып╫к╝ from scott.emp;

@@ -1,0 +1,134 @@
+<如何来用DOM技术>
+  例子： 动态的页面 转化成 静态的页面
+
+   适用在大型网站高点击率的页面
+   要求相应速度快的页面
+  缺点：不是实时的，与用户的交互会差一点
+
+ A) 数据库中的表  转化为 XML文件
+     JDBC   IO操作
+
+ B) 为XML文件 设计 XSL文件
+     XSL XPath 设计一个XSL模版
+
+ C) XSL+XML  生成一个 html文件
+     DOM Transformer对象进行转换
+     例子 ch12-5
+
+以SQLSERVER数据库中的pubs下的表authors为例
+实现动态页面转化为静态页面
+
+a) 程序GetAuthors.java 
+    读取数据库 生成authors.xml文件
+
+b) 程序authors.xslt为authors.xml所编写的xsl transform文件
+   它和authors.xsl文件的结构完全一样，
+   用途是在tranform中使用xslt文件而不是xsl文件
+
+c) 程序GenHtml.java 
+    结合authors.xml和authors.xslt文件 生成静态的htm文件
+
+
+
+msutil.jar
+msbase.jar
+mssqlserver.jar
+
+为sqlserver的JDBC驱动程序 （3个jar包）   
+
+
+让这个任务自动执行，写一个everyday.bat文件
+   在任务计划中注册这个文件每1分钟自动运行一次
+everyday.bat文件的内容如下
+ //JDK的主目录
+ set JAVA_HOME=c:\jdk  
+ //设置类路径
+ set CLASSPATH=.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;f:\msbase.jar;f:\mssqlserver.jar;f:\msutil.jar
+ //设置PATH路径
+ set PATH=%PATH%;%JAVA_HOME%\bin;
+
+ //编译
+ javac GetAuthors.java
+ javac GenHtml.java
+
+ //执行
+ java GetAuthors
+ java GenHtml
+
+第一行是设置 类路径 把sqlserver驱动的JAR包添加到路径中
+第二行是命令行 运行程序GetAuthors.class
+第三行是命令行 运行程序GenHtml.class
+
+
+authors.htm是最后生成的htm静态页面
+
+XML与JAVASCRIPT
+  JavaScript 
+     JAVA --  面向对象的编程语言 sun公司
+     JavaScript --  基于对象的编成语言 NetScape公司
+     JScript -- 微软发明的 类似JavaScript
+     特点：  客户端运行
+            IE解释执行
+ 
+     
+   asp/jsp 服务器上运行
+           IIS/J2EE服务器解释执行 
+
+
+   JavaScript如何操作XML文件???
+    思路:
+         用JavaScript实现DOM规范 
+         微软提供实现好的activex控件
+           new ActiveXObject()//注册activex控件   
+       //引用安装好的DOM activex对象  
+  <1> var xmlDoc = new ActiveXObject("Msxml2.DOMDocument.4.0");
+     //异步处理模式 为false
+  <2> xmlDoc.async=false;
+    //加载XML文件 
+  <3>  xmlDoc.load("people.xml");
+
+    if(xmlDoc.parseError.errorCode != 0) //判断加载是否有错
+ window.alert(xmlDoc.parseError.reason); //有错的话打印错误原因
+ else //没有错
+ window.alert(xmlDoc.documentElement.xml);
+   xmlDoc.documentElement.xml 整个XML文件
+     xmlDoc 代表的是XML文档
+     xmlDoc.documentElement 代表根元素
+     xmlDoc.documentElement.xml 代表根元素在内的XML文件
+     xmlDoc.documentElement.childNodes; 根元素下的子元素的数组
+     xmlDoc.documentElement.attributes; 根元素的属性
+
+  var childs = root.selectNodes("PERSON/NAME");
+     满足PERSON/NAME条件的所有节点
+
+
+直接用javascript写一个htm文件(authors1.htm) 
+   读取authors.xml文件
+   看文件authors1.htm 含有javascript代码
+
+验证数据的有效性
+      正则表达式 javascript
+         E-MAIL地址
+         IP地址
+         日期
+         身份证
+
+ 
+
+
+ 
+
+
+
+
+
+
+
+   
+    
+  
+
+
+
+
+

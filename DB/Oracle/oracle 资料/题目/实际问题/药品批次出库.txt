@@ -1,0 +1,43 @@
+药品批次出库
+
+医院药品都实行效期管理,效期早的药品先使用,请设计一个程序
+来按效期使用药品.
+
+药品库存表kc
+create table kc(
+id number(2) primary key, --药品id
+ypname varchar2(20),--药品名称
+num number(5) --数量
+);
+
+insert into kc values (1,'青霉素',3000);
+insert into kc values (2,'双黄连',4000);
+
+
+药品批次库存表batchkc
+create table batchkc(
+id number(2) references kc(id), --药品id
+validdate date, --到期时间
+bnum number(5), --数量
+primary key (id,validdate)
+);
+
+insert into batchkc values (1,'01-5月-04',2500);
+insert into batchkc values (1,'01-12月-04',500);
+
+insert into batchkc values (2,'12-1月-04',1000);
+insert into batchkc values (2,'07-6月-04',1000);
+insert into batchkc values (2,'13-8月-04',1000);
+insert into batchkc values (2,'13-12月-05',1000);
+
+程序要求:
+1.使用触发器来维护两个表之间的库存的一致性
+2.对药品出库时,能正确选择批次，
+
+出库青霉素2700支
+  1,'01-5月-04',2500
+  1,'01-12月-04',200
+
+
+
+前台程序使用jsp,后台程序使用PL/SQL编写

@@ -1,0 +1,1 @@
+select  empno 编号,ename 姓名,job 工作,sal 薪水 from scott.emp

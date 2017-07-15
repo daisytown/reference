@@ -1,0 +1,62 @@
+触发器
+
+1.编写一个触发器实现如下功能：
+  对修改职工薪金的操作进行合法性检查：
+   a) 修改后的薪金要大于修改前的薪金
+   b) 工资增量不能超过原工资的10%
+   c) 目前没有单位的职工不能涨工资
+
+create or replace trigger tr1 
+after update of sal on emp
+for each row
+begin
+  if :new.sal <= :old.sal then
+       raise_application_error(-20001,'修改后的薪金要大于修改前的薪金');
+  elsif :new.sal > :old.sal * 1.1 then
+       raise_application_error(-20002,'工资增量不能超过原工资的10%');    
+  elsif :old.deptno is null then
+       raise_application_error(-20003,'没有单位的职工不能涨工资');           
+  end if;
+end;
+
+
+   
+2. 在emp表上编写一个触发器，实现如下功能：
+  当插入或删除的职工记录属于10号部门时，记录下操作时间,语句的种类(插入/删除),
+和涉及的员工号
+  
+--建立日志表
+  create table logtable(
+       serial number primary key, --序号
+       dmltime date,  --时间
+       dmltype varchar2(20), --DML种类
+       empno number --员工号
+); 
+  
+--建立序列(用于产生logtable的序号)
+ create sequence seq1;
+
+--建立触发器
+ create or replace trigger tr2
+ after insert or delete on emp
+ for each row
+ when (new.deptno = 10 or old.deptno = 10)  --插入或删除的职工记录属于10号部门时触发  
+ --when的条件成立的时候触发
+ --对新值和旧值引用的时候不要用:
+               
+ begin
+   if inserting then --插入
+      insert into logtable values (seq1.nextval,
+                                   sysdate,
+                                   'insert语句',
+                                   :new.empno);
+   elsif deleting then --删除
+       insert into logtable values (seq1.nextval,
+                                   sysdate,
+                                   'delete语句',
+                                   :old.empno);          
+   end if;
+--updating 修改
+ end;
+
+   

@@ -1,0 +1,6 @@
+NLSSort([#]char, nlsparam)
+/*
+SELECT * FROM TEAM ORDER BY NLSSORT(队名,'NLS_SORT = SCHINESE_PINYIN_M');--按照拼音排序
+SELECT * FROM TEAM ORDER BY NLSSORT(队名,'NLS_SORT = SCHINESE_STROKE_M');--按照笔划（第一顺序）、部首（第二顺序）排序
+SELECT * FROM TEAM ORDER BY NLSSORT(队名,'NLS_SORT = SCHINESE_RADICAL_M');--按照部首（第一顺序）、笔划（第二顺序）排序
+*/

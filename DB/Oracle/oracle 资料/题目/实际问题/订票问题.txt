@@ -1,0 +1,16 @@
+--飞机票订票
+
+北京到香港的飞机票目前还剩3张，现在在海淀、通州、丰台和石景山的4各订票点都
+同时要订北京到香港的飞机票，那么必然有一个订票点不能订到票，请设计一个
+订票程序来保证飞机票的正确订出。
+
+飞机票订票表的结构如下：
+create table ticket(
+id number(3) primary key,   --唯一id
+route varchar2(20) not null, --航线名称
+num number(3)   --票的余数
+);
+--有3张余票
+insert into ticket values (1,'北京到香港',3);
+
+（考虑使用锁和事务）

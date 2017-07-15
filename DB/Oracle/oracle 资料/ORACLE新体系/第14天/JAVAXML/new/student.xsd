@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="gb2312"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="roster" type="rosterType"/>
+	<xs:complexType name="rosterType">
+		<xs:sequence>
+			<xs:element name="student" type="studentType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="studentType">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string"/>
+			<xs:element name="sex" type="sexType"/>
+			<xs:element name="birthday" type="xs:date"/>
+			<xs:element name="score" type="scoreType"/>
+			<xs:element name="skill" type="xs:string" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="ID" type="xs:string"/>
+	</xs:complexType>
+	<xs:simpleType name="sexType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="男"/>
+			<xs:enumeration value="女"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="scoreType">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:maxExclusive value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

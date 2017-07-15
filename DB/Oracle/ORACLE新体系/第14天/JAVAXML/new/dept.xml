@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="GB2312"?><!-- dept 表 --><depts>	<dept deptno="D10">		<dname>ACCOUNTING</dname>		<loc>NEW YORK</loc>	</dept>	<dept deptno="D20">		<dname>RESEARCH</dname>		<loc>DALLAS</loc>	</dept>	<dept deptno="D30">		<dname>SALES</dname>		<loc>CHICAGO</loc>	</dept>	<dept deptno="D40">		<dname>OPERATIONS</dname>		<loc>BOSTON</loc>	</dept></depts>

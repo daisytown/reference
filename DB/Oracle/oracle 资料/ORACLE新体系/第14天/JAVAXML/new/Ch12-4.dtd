@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!ELEMENT booklist (book+)>
+<!ELEMENT book (code, title, authorlist, price)>
+<!ATTLIST book
+    sales (N | Y) #REQUIRED
+>
+<!ELEMENT code (#PCDATA)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT authorlist (author+)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT price (#PCDATA)>

@@ -1,0 +1,543 @@
+PL/SQL块
+  declare
+
+  begin
+   --SQL语句
+   --直接写的SQL语句(DML/TCL)
+   --间接写execute immediate <DDL/DCL命令字符串> 
+   --select 语句
+        <1>必须带有into子句
+         select empno into eno from emp
+           where empno =7369;
+        <2>只能查到一行**********
+        <3>字段个数必须和变量的个数一致
+  exception
+    --异常
+    when <异常名字> then --特定异常
+        <处理语句>
+    when others then  --所有异常都可捕获
+        <处理语句>   
+  end;
+
+<例子>
+   编写程序 向DEPT表中插入一条记录，
+   从键盘输入数据，如果
+      数据类型输入错误要有提示
+      无法插入记录 也要有提示
+      只能输入正数,如果有负数提示 
+   declare
+    n number;
+    no dept.deptno%type;
+    nm dept.dname%type;
+    lc dept.loc%type;
+    exp exception;   --异常的变量
+    exp1 exception;
+    num number:=0;  --计数器
+    pragma exception_init(exp,-1); --预定义语句
+         --(-1错误和异常变量关联)
+    pragma exception_init(exp1,-1476);
+    e1 exception; --自定义异常变量
+   begin
+    --输入值
+     no := '&编号';
+     num := num + 1;
+     if no < 0 then
+        raise e1;    --自定义异常的引发
+     end if;
+
+     nm := '&名称';
+     num := num +1;
+
+     lc := '&地址';  
+     num := num +1;
+
+     n := 10 /0;     
+
+     insert into dept values (no,nm,lc);
+     num := num +1;
+     commit;
+
+   exception
+     --自定义异常
+     when e1 then
+        dbms_output.put_line('编号不能为负数'); 
+     --数据类型不对
+     when value_error then 
+        if num =0 then  
+         dbms_output.put_line('编号数据类型不对'); 
+        elsif num = 1 then
+         dbms_output.put_line('名称数据类型不对'); 
+        elsif num =2 then
+         dbms_output.put_line('地址数据类型不对'); 
+        end if;
+        rollback;
+     --主键冲突
+     when exp then
+         --sqlcode全局变量 异常错误号
+         --sqlerrm全局变量 异常的文字信息  
+         --dbms_output.put_line('异常的编号:'||sqlcode);
+         --dbms_output.put_line('异常的内容:'||sqlerrm);
+         --dbms_output.put_line('编号已存在') ;
+         rollback;
+     --非预定义异常(关联错误号) 
+     when exp1 then
+         --dbms_output.put_line('0做了除数') ; 
+         raise_application_error(-20001,'0做了除数'); --引起一个自定义的错误
+         --预先保留-20001 到 -29999编号
+         rollback; 
+     --其他的异常 
+     when others then
+         dbms_output.put_line('异常的编号:'||sqlcode);
+         dbms_output.put_line('异常的内容:'||sqlerrm);
+        -- dbms_output.put_line('出现错误');
+         rollback;
+   end;  
+
+--    insert into dept values (40,'asdf','asdf');
+<简单的做法>
+  --存放异常的
+   create table save_exp(
+      bh number,
+      wz varchar2(1000) 
+   );
+
+   declare
+    no dept.deptno%type;
+    nm dept.dname%type;
+    lc dept.loc%type;
+    errno number;
+    errtext varchar2(1000); 
+   begin
+     no := '&编号';
+     nm := '&名称';
+     lc := '&地址';
+  
+     insert into dept values (no,nm,lc);
+     commit; 
+   exception
+    when others then
+      rollback;
+      errno := sqlcode;
+      errtext := sqlerrm;       
+      insert into save_exp values (errno,errtext);
+      commit; 
+   end;
+
+<游标>  内存中的一块区域,存放的是select 的结果
+   
+
+   1。 隐式游标
+     单条sql语句所产生的结果集合 
+       用关键字SQL表示隐式游标
+        4个属性 %rowcount  影响的记录的行数  整数
+                %found     影响到了记录 true
+                %notfound  没有影响到记录 true
+                %isopen    是否打开  布尔值 永远是false
+
+         多条sql语句 隐式游标SQL永远指的是最后一条sql语句的结果
+         主要使用在update 和 delete语句上      
+
+   2。 显式游标
+      select语句上 使用显式游标
+      明确能访问结果集
+         for循环游标
+         参数游标 
+           解决多行记录的查询问题
+         fetch游标
+
+显示游标
+   需要明确定义
+   (1)FOR循环游标 (常用的一种游标) 
+
+ --<1>定义游标
+ --<2>定义游标变量
+ --<3>使用for循环来使用这个游标
+
+  --前向游标 只能往一个方向走
+  --效率很高
+
+      declare
+        --类型定义
+        cursor cc is select empno,ename,job,sal
+         from emp where job = 'MANAGER';
+        --定义一个游标变量
+        ccrec cc%rowtype;
+
+
+      begin
+         --for循环
+         for ccrec in cc loop
+            dbms_output.put_line(ccrec.empno||'-'||ccrec.ename||'-'||ccrec.job||'-'||ccrec.sal);
+
+         end loop; 
+       
+      end;
+   (2) fetch游标
+     --使用的时候 必须要明确的打开和关闭
+
+      declare
+        --类型定义
+        cursor cc is select empno,ename,job,sal
+         from emp where job = 'MANAGER';
+        --定义一个游标变量
+        ccrec cc%rowtype;
+
+
+      begin
+        --打开游标
+         open cc;
+        --loop循环
+         loop
+            --提取一行数据到ccrec中 
+            fetch cc into ccrec;         
+            --判断是否提取到值，没取到值就退出
+            --取到值cc%notfound 是false
+            --取不到值cc%notfound 是true 
+            exit when cc%notfound;
+            dbms_output.put_line(ccrec.empno||'-'||ccrec.ename||'-'||ccrec.job||'-'||ccrec.sal);            
+
+         end loop; 
+        --关闭
+         close cc;  
+       
+      end;
+  游标的属性4种
+       %notfound  fetch是否提到数据 没有true 提到false
+       %found      fetch是否提到数据 有true 没提到false
+       %rowcount  已经取出的记录的条数
+       %isopen    布尔值 游标是否打开
+
+ declare
+        --类型定义
+        cursor cc is select empno,ename,job,sal
+         from emp where job = 'MANAGER';
+        --定义一个游标变量
+        ccrec cc%rowtype;
+   
+
+      begin
+        --打开游标
+         open cc;
+        --loop循环
+         loop
+            --提取一行数据到ccrec中 
+            fetch cc into ccrec;         
+            --判断是否提取到值，没取到值就退出
+            --取到值cc%notfound 是false
+            --取不到值cc%notfound 是true 
+            exit when (cc%notfound or cc%rowcount =3);
+
+            dbms_output.put_line(cc%rowcount||'-'||ccrec.empno||'-'||ccrec.ename||'-'||ccrec.job||'-'||ccrec.sal);            
+
+         end loop; 
+        --关闭
+         close cc;  
+       
+      end;
+
+<例子>
+  declare
+       cursor cc is select dept.dname,
+        emp.ename,emp.sal from
+         dept,emp where dept.deptno = emp.deptno;
+       ccrec cc%rowtype;
+  begin
+      for ccrec in cc loop
+      
+       dbms_output.put_line(ccrec.dname||'-'||ccrec.ename||'-'||ccrec.sal);
+      end loop;
+   
+
+  end;  
+   (3)参数游标
+ 按部门编号的顺序输出部门经理的名字
+     declare
+       --部门
+       cursor c1 is select deptno from dept;
+       --参数游标c2,定义参数的时候
+       --只能指定类型,不能指定长度  
+       --参数只能出现在select语句=号的右侧
+       cursor c2(no number,pjob varchar2) is select emp.* from emp
+         where deptno = no and job=pjob;
+
+    /*
+       no = 10  pjob = 'MANAGER'
+          select * from emp where deptno = 10 and job = 'MANAGER';   
+     */
+       c1rec c1%rowtype;
+       c2rec c2%rowtype;
+       --定义变量的时候要指定长度
+       v_job varchar2(20);
+     begin
+       --部门
+        for c1rec in c1 loop
+          --参数在游标中使用
+          for c2rec in c2(c1rec.deptno,'MANAGER') loop
+            dbms_output.put_line(c1rec.deptno||'-'||c2rec.ename);
+
+          end loop; 
+        end loop; 
+     end; 
+<综合例子>
+  求购买的商品包括了顾客"Dennis"所购买商品的顾客（姓名）；**************
+   思路:
+      Dennis (A,B)
+
+      别的顾客 (A,B,C) (A,C) (B,C)  C
+  declare
+   --Dennis所购买的商品
+   cursor cdennis is select productid
+         from purcase where customerid=(
+           select customerid from
+           customer where name = 'Dennis');
+   --除Dennis以外的每个顾客
+   cursor ccust is select customerid
+        from customer where name <> 'Dennis';
+   --每个顾客购买的商品
+   cursor cprod(id varchar2) is
+     select productid from purcase
+          where customerid = id;
+
+   j number ;
+   i number;
+   c1rec cdennis%rowtype;
+   c2rec ccust%rowtype;
+   c3rec cprod%rowtype;
+   cname varchar2(10);
+  begin
+    --顾客循环
+    for c2rec in ccust loop
+     i:=0; 
+     j:=0;
+     for c1rec in cdennis loop
+        i := i + 1;
+        
+      --每个顾客买的东西
+       for c3rec in cprod(c2rec.customerid) loop
+
+           if (c3rec.productid = c1rec.productid) then
+               j := j + 1;
+           end if;
+
+        end loop;   
+      
+     end loop;
+                        
+       if (i=j) then
+        select name into cname from
+           customer where customerid = c2rec.customerid;
+        DBMS_output.put_line(cname);        
+       end if; 
+
+    end loop;
+
+  end;
+  (4)引用游标/动态游标
+        select语句是动态的
+     declare
+       --定义一个类型(ref cursor)弱类型    
+       type cur is ref cursor;
+         --强类型(返回的结果集有要求)
+       type cur1 is ref cursor return emp%rowtype;
+       --定义一个ref cursor类型的变量   
+       cura cur;
+       --
+       c1rec emp%rowtype;
+       c2rec dept%rowtype;
+     begin
+  DBMS_output.put_line('输出员工')   ;       
+       open cura for select * from emp;
+       loop
+         fetch cura into c1rec;   
+         exit when cura%notfound;
+         DBMS_output.put_line(c1rec.ename)   ;
+       end loop ;
+  DBMS_output.put_line('输出部门')   ;
+       open cura for select * from dept;
+       loop
+         fetch cura into c2rec;   
+         exit when cura%notfound;
+         DBMS_output.put_line(c2rec.dname)   ;
+
+       end loop;  
+       close cura;
+    end;
+
+>>>>>存储过程和函数
+  没有名字的PL/SQL块(匿名)
+  有名字的PL/SQL块(子程序-存储过程和函数)
+存储过程
+      create or replace procedure p1
+      as 
+      begin
+      exception
+      end; 
+
+<最简单的存储过程>
+       create or replace procedure p_jd
+       as
+         hello varchar2(20);  
+       begin
+        select 'Hello World' into hello from dual;
+        dbms_output.put_line(hello);
+       end;
+ 执行存储过程的方法
+      <1> execute p_jd;     (SQL*PLUS中SQL>)
+      <2> begin
+           p_jd;
+          end;  
+ 带参数的存储过程
+   --输入参数in
+   --不写in的参数都是输入参数 
+   --根据部门编号查员工姓名
+    create or replace procedure p_getemp(no  number) 
+    as
+      cursor c1 is select * from emp
+       where deptno = no;
+      c1rec c1%rowtype;
+    begin
+  --       no := 20; 输入参数是不能赋值的
+       for c1rec in c1 loop
+        dbms_output.put_line(c1rec.ename);
+       end loop;
+    end;     
+   --输出参数out
+   --根据部门编号查出部门的平均工资,返回平均工资的值
+   -- in 输入 (在procedure中是不能赋值的)
+   --  out 输出 (在procedure中是能赋值的)
+-- 定义参数是不能指定长度的
+ --定义变量是必须指定长度的
+
+    create or replace procedure p_getavgsal(no  number,avgsal out number) 
+    -- no   输入参数
+    -- avgsal  输出参数 
+    as
+     aa varchar2(10); --变量
+    begin
+       select avg(sal) into avgsal
+       from emp where deptno = no;  
+    end;     
+    调用它只能使用PL/SQL块
+        declare
+         av number;
+        begin          
+          p_getavgsal(10,av);
+          dbms_output.put_line('平均工资:'||round(av,2));
+        end;        
+   --一个参数同时可以输入,也可以输出
+   --输入输出参数
+    create or replace procedure 
+    p_getavgsal(n in out number) 
+    as
+
+    begin
+       select avg(sal) into n
+       from emp where deptno = n;  
+    end; 
+    
+   declare
+         av number;
+        begin          
+          av  := 10;
+          p_getavgsal(av);
+          dbms_output.put_line('平均工资:'||round(av,2));
+        end;        
+  --带多个参数的存储过程
+     create or replace procedure 
+      p_getM(no number,pjob varchar2) as
+       --参数游标c2,定义参数的时候
+       --只能指定类型,不能指定长度  
+       --参数只能出现在select语句=号的右侧
+       cursor c2(no1 number,pjob1 varchar2) is select * from emp
+         where deptno = no1 and job=pjob1;
+
+       c2rec c2%rowtype;
+       --定义变量的时候要指定长度
+       v_job varchar2(20);
+     begin
+
+          --参数在游标中使用
+          for c2rec in c2(no,pjob) loop
+            dbms_output.put_line(c2rec.deptno||'-'||c2rec.ename);
+
+          end loop; 
+
+     end; 
+   
+    调用方法:execute p_getm(10,'MANAGER'); --按位置
+   -- no = 10 , pjob = 'MANAGER'
+           
+      execute p_getm(pjob => 'MANAGER',no => 10);
+   --按参数的名字 来传值
+
+  函数:
+    必须要有返回值 
+    只能返回一个值
+   
+   --根据部门编号查出部门的平均工资,返回平均工资的值(利用函数)
+    create or replace function 
+    f_getavgsal(no number) 
+    return number
+    as
+      avgsal number(7,2);
+    begin
+       select avg(sal) into avgsal
+       from emp where deptno = no; 
+       --返回值 
+       return avgsal;   
+    end;   
+  
+--带输出参数
+ --每个部门的平均工资和工资总额
+ --一个函数返回2个值
+create or replace function 
+    f_getavgsal(no number,sumsal out number) 
+    return number
+    as
+      avgsal number(7,2);
+    begin
+       --平均工资
+       select avg(sal) into avgsal
+       from emp where deptno = no; 
+       --工资总额
+       select sum(sal) into sumsal
+       from emp where deptno = no;
+       --返回值 
+       return avgsal;   
+    end;     
+
+  --调用方法
+     <1>PL/SQL块调用 
+      declare
+       aa number;
+      begin
+        aa := f_getavgsal(10)  ;
+        dbms_output.put_line(to_char(aa));
+      end;  
+    <2> SQL语句来调用(DML) 
+       select f_getavgsal(10) from dual;
+
+       select deptno,f_getavgsal(deptno) from dept;
+
+    <3> 
+       create or replace function f1
+       return number
+       as
+         update emp set comm = 1000 
+          where job='CLERK';
+         return sql%rowcount;
+       end;
+      --select语句是无法调用它的,因为其中含有修改语句
+
+
+ 
+
+
+
+
+
+
+
+
+
+

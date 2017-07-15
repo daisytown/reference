@@ -1,0 +1,1 @@
+select sal from scott.emp where job='MANAGER'

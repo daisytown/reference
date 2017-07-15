@@ -1,0 +1,1 @@
+delete from scott.test where empno>=7500 and empno<=8000;

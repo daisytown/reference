@@ -1,0 +1,13 @@
+--自动编号
+
+医院门诊挂号，要求号连续，并且退的号要能重用，每次挂号向号表中插入一条记录，
+退号从号表中删除一条记录，请设计一个方案来实现。
+
+号表的结构如下
+create table register(
+id number(10) primary key,  --连续号
+section varchar2(20), --挂号科室
+register_date date --挂号日期
+);
+
+(使用序列)

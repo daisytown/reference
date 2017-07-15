@@ -1,0 +1,1 @@
+select count(distinct job ) 工作类别总数 from scott.emp;

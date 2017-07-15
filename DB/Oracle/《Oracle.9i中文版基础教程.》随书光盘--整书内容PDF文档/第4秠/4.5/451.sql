@@ -1,0 +1,1 @@
+select mgr, mgr/100,ceil(mgr/100) from scott.emp;
